@@ -1,0 +1,16 @@
+{
+  "name": "baijiaxing-guide",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generate.mjs",
+    "audit": "node scripts/audit-links.mjs && node scripts/audit-layout.mjs",
+    "audit:links": "node scripts/audit-links.mjs",
+    "audit:layout": "node scripts/audit-layout.mjs",
+    "keywords": "node scripts/build-keyword-library.mjs",
+    "test:tools": "node scripts/test-tools.mjs",
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  }
+}

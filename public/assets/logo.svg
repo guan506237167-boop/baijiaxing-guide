@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Chinese Surname Guide logo</title>
+  <desc id="desc">A seal-style logo with the Chinese character for surname.</desc>
+  <rect width="128" height="128" rx="28" fill="#9F3528"/>
+  <circle cx="64" cy="64" r="40" fill="#FFF7EC"/>
+  <text x="64" y="76" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="800" fill="#9F3528">姓</text>
+  <path d="M31 96H97" stroke="#E4C99E" stroke-width="5" stroke-linecap="round"/>
+</svg>

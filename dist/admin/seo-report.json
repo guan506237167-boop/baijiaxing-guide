@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-06-28T13:57:08.120Z",
+  "totals": {
+    "average": 99,
+    "pages": 25,
+    "pass": 25,
+    "review": 0,
+    "fix": 0
+  },
+  "reports": [
+    {
+      "path": "/",
+      "score": 100,
+      "titleLength": 73,
+      "descriptionLength": 131,
+      "wordCount": 527,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 0,
+      "issues": []
+    },
+    {
+      "path": "/guides/",
+      "score": 100,
+      "titleLength": 64,
+      "descriptionLength": 134,
+      "wordCount": 356,
+      "h1": 1,
+      "h2": 3,
+      "faqs": 0,
+      "issues": []
+    },
+    {
+      "path": "/chinese-surnames/",
+      "score": 100,
+      "titleLength": 71,
+      "descriptionLength": 124,
+      "wordCount": 444,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/common-chinese-surnames/",
+      "score": 100,
+      "titleLength": 71,
+      "descriptionLength": 121,
+      "wordCount": 612,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/chinese-surname-meaning/",
+      "score": 100,
+      "titleLength": 70,
+      "descriptionLength": 127,
+      "wordCount": 436,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/chinese-surname-origin/",
+      "score": 100,
+      "titleLength": 69,
+      "descriptionLength": 126,
+      "wordCount": 439,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/hundred-family-surnames/",
+      "score": 100,
+      "titleLength": 66,
+      "descriptionLength": 124,
+      "wordCount": 441,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surname-lookup/",
+      "score": 100,
+      "titleLength": 72,
+      "descriptionLength": 118,
+      "wordCount": 524,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/rare-chinese-surnames/",
+      "score": 100,
+      "titleLength": 67,
+      "descriptionLength": 110,
+      "wordCount": 426,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/chinese-surname-pronunciation/",
+      "score": 100,
+      "titleLength": 67,
+      "descriptionLength": 106,
+      "wordCount": 428,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/li/",
+      "score": 100,
+      "titleLength": 59,
+      "descriptionLength": 101,
+      "wordCount": 475,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/wang/",
+      "score": 100,
+      "titleLength": 61,
+      "descriptionLength": 103,
+      "wordCount": 475,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/zhang/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 104,
+      "wordCount": 473,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/liu/",
+      "score": 100,
+      "titleLength": 60,
+      "descriptionLength": 102,
+      "wordCount": 474,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/chen/",
+      "score": 100,
+      "titleLength": 61,
+      "descriptionLength": 103,
+      "wordCount": 476,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/yang/",
+      "score": 100,
+      "titleLength": 61,
+      "descriptionLength": 103,
+      "wordCount": 471,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/huang/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 104,
+      "wordCount": 476,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/zhao/",
+      "score": 100,
+      "titleLength": 61,
+      "descriptionLength": 103,
+      "wordCount": 470,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/wu/",
+      "score": 100,
+      "titleLength": 59,
+      "descriptionLength": 101,
+      "wordCount": 473,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/surnames/zhou/",
+      "score": 100,
+      "titleLength": 61,
+      "descriptionLength": 103,
+      "wordCount": 471,
+      "h1": 1,
+      "h2": 5,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/chinese-surnames-faq/",
+      "score": 100,
+      "titleLength": 70,
+      "descriptionLength": 116,
+      "wordCount": 251,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/about/",
+      "score": 92,
+      "titleLength": 51,
+      "descriptionLength": 137,
+      "wordCount": 158,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/contact/",
+      "score": 92,
+      "titleLength": 58,
+      "descriptionLength": 126,
+      "wordCount": 112,
+      "h1": 1,
+      "h2": 2,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/privacy/",
+      "score": 92,
+      "titleLength": 57,
+      "descriptionLength": 128,
+      "wordCount": 126,
+      "h1": 1,
+      "h2": 3,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    },
+    {
+      "path": "/terms/",
+      "score": 92,
+      "titleLength": 56,
+      "descriptionLength": 115,
+      "wordCount": 127,
+      "h1": 1,
+      "h2": 3,
+      "faqs": 0,
+      "issues": [
+        "thin content"
+      ]
+    }
+  ]
+}

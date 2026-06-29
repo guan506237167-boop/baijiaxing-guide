@@ -1,7 +1,7 @@
 # Chinese Surname Guide
-- Home: https://www.chinesesurnameguide.com/
-- Surname lookup: https://www.chinesesurnameguide.com/surname-lookup/
-- Common Chinese surnames: https://www.chinesesurnameguide.com/common-chinese-surnames/
-- Chinese surname meanings: https://www.chinesesurnameguide.com/chinese-surname-meaning/
-- Hundred Family Surnames: https://www.chinesesurnameguide.com/hundred-family-surnames/
-- Sitemap: https://www.chinesesurnameguide.com/sitemap.xml
+- Home: https://www.chinesefamilynames.com/
+- Surname lookup: https://www.chinesefamilynames.com/surname-lookup/
+- Common Chinese surnames: https://www.chinesefamilynames.com/common-chinese-surnames/
+- Chinese surname meanings: https://www.chinesefamilynames.com/chinese-surname-meaning/
+- Hundred Family Surnames: https://www.chinesefamilynames.com/hundred-family-surnames/
+- Sitemap: https://www.chinesefamilynames.com/sitemap.xml

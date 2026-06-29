@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 const SITE = {
   name: "Chinese Surname Guide",
-  url: "https://www.chinesesurnameguide.com",
+  url: "https://www.chinesefamilynames.com",
   description: "Explore Chinese surnames, common family names, surname meanings, origins, pronunciation notes, and Hundred Family Surnames context.",
   assetVersion: "20260628-images-01"
 };

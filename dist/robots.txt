@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.chinesesurnameguide.com/sitemap.xml
+Sitemap: https://www.chinesefamilynames.com/sitemap.xml

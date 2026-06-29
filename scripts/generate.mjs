@@ -227,6 +227,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <span>Site</span>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
+        <a href="/chinese-surnames-faq/">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
       </div>
@@ -400,7 +401,7 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
 function surnamePage(item) {
   return pageLayout({
     title: `${item.pinyin} Surname Meaning, Origin, Chinese Character, and Variants`,
-    description: `Learn the ${item.pinyin} Chinese surname, character ${item.hanzi}, common romanized forms, meaning notes, and origin context.`,
+    description: `Learn the ${item.pinyin} Chinese surname, character ${item.hanzi}, common romanized forms, meaning notes, origin context, and related lookup guidance.`,
     path: `/surnames/${item.slug}/`,
     h1: `${item.pinyin} Surname`,
     intro: `A focused guide to the ${item.pinyin} surname, its Chinese character, romanized variants, and basic origin context.`,
@@ -425,7 +426,7 @@ function surnamePage(item) {
 }
 
 await writePage("/", pageLayout({
-  title: "Chinese Surname Guide: Meanings, Origins, Common Family Names, and Lookup",
+  title: "Chinese Surname Guide: Meanings, Origins, and Lookup",
   description: SITE.description,
   path: "/",
   h1: "Chinese Surname Guide",
@@ -494,7 +495,7 @@ await writePage("/guides/", pageLayout({
 }));
 
 await writePage("/chinese-surnames/", supportArticle({
-  title: "Chinese Surnames: Family Name Order, Characters, Meanings, and Variants",
+  title: "Chinese Surnames: Name Order, Characters, Meanings, and Variants",
   description: "Learn how Chinese surnames work, why the family name comes first, and why one surname can have multiple romanized spellings.",
   path: "/chinese-surnames/",
   h1: "Chinese Surnames",
@@ -508,7 +509,7 @@ await writePage("/chinese-surnames/", supportArticle({
 }));
 
 await writePage("/common-chinese-surnames/", pageLayout({
-  title: "Most Common Chinese Surnames List with Characters, Pinyin, and Variants",
+  title: "Most Common Chinese Surnames: Characters, Pinyin, and Variants",
   description: "Browse common Chinese surnames with simplified characters, pinyin spellings, romanized variants, and quick meaning notes.",
   path: "/common-chinese-surnames/",
   h1: "Most Common Chinese Surnames",
@@ -567,7 +568,7 @@ await writePage("/hundred-family-surnames/", supportArticle({
 }));
 
 await writePage("/surname-lookup/", pageLayout({
-  title: "Chinese Surname Lookup Tool by Character, Pinyin, and Romanized Spelling",
+  title: "Chinese Surname Lookup by Character, Pinyin, and Spelling",
   description: "Use the Chinese surname lookup tool to search common family names by pinyin, Chinese character, or romanized variants.",
   path: "/surname-lookup/",
   h1: "Chinese Surname Lookup",
@@ -607,7 +608,7 @@ await writePage("/rare-chinese-surnames/", supportArticle({
 
 await writePage("/chinese-surname-pronunciation/", supportArticle({
   title: "Chinese Surname Pronunciation: Pinyin, Tones, and English Spellings",
-  description: "Learn basic Chinese surname pronunciation issues, including pinyin, tones, and why English spellings vary.",
+  description: "Learn basic Chinese surname pronunciation issues, including pinyin, tones, regional romanization, and why English spellings vary.",
   path: "/chinese-surname-pronunciation/",
   h1: "Chinese Surname Pronunciation",
   intro: "Chinese surname pronunciation is easier when you separate character, pinyin, tone, and romanized spelling.",
@@ -719,7 +720,6 @@ async function buildSeoReport() {
   const rows = reports.map((item) => `<tr><td><a href="${item.path}">${item.path}</a></td><td>${item.score}</td><td>${item.titleLength}</td><td>${item.descriptionLength}</td><td>${item.wordCount}</td><td>${item.h1}/${item.h2}</td><td>${item.faqs}</td><td>${escapeHtml(item.issues.join("; ") || "None")}</td></tr>`).join("");
   await mkdir("dist/admin", { recursive: true });
   await writeFile("dist/admin/seo-report.json", JSON.stringify({ generatedAt: new Date().toISOString(), totals, reports }, null, 2), "utf8");
-  await writePage("/admin/seo-report/", `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pre-Publish SEO Check</title><meta name="robots" content="noindex,nofollow"><meta name="description" content="Internal publishing QA report for Chinese Surname Guide pages."><link rel="canonical" href="${absolute("/admin/seo-report/")}"><link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}"></head><body class="seo-report-page"><main><section class="content-section report-hero"><p class="eyebrow">Publishing QA</p><h1>Pre-Publish SEO Check</h1><p>Internal publishing checks for title, description, headings, FAQ, canonical, schema, sitemap, internal links, images, and content depth.</p><div class="report-summary"><div><strong>${totals.average}</strong><span>Average score</span></div><div><strong>${totals.pages}</strong><span>Pages</span></div><div><strong>${totals.pass}</strong><span>Pass</span></div><div><strong>${totals.review}</strong><span>Review</span></div><div><strong>${totals.fix}</strong><span>Fix</span></div></div></section><section class="content-section"><div class="table-wrap"><table class="seo-table"><thead><tr><th>URL</th><th>Score</th><th>Title</th><th>Description</th><th>Words</th><th>H1/H2</th><th>FAQ</th><th>Issues</th></tr></thead><tbody>${rows}</tbody></table></div></section></main></body></html>`);
 }
 
 function auditPage(page, html, sitemap) {

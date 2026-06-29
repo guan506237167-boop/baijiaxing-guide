@@ -47,7 +47,7 @@ for (const asset of await readdir("public/assets")) {
 }
 await copyFile("public/_headers", "dist/_headers");
 for (const file of await readdir("public")) {
-  if (file.endsWith(".html") || file === "_redirects") await copyFile(join("public", file), join("dist", file));
+  if (file.endsWith(".html")) await copyFile(join("public", file), join("dist", file));
 }
 
 function escapeHtml(value) {

@@ -8,7 +8,7 @@ const SITE = {
   assetVersion: "20260628-images-01"
 };
 
-const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
+const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-9D7CV8SXGQ";
 const keywordRows = parseCsv(await readFile("docs/keyword-library/baijiaxing-keyword-library.csv", "utf8"));
 const referenceKeywords = keywordRows.filter((row) => row.category === "reference-list").slice(0, 16);
 const meaningKeywords = keywordRows.filter((row) => row.category === "meaning-origin").slice(0, 24);

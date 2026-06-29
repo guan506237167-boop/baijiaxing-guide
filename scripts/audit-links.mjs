@@ -9,6 +9,10 @@ const htmlIssues = [];
 const internalInlinks = new Map();
 
 for (const file of htmlFiles) {
+  if (/[/\\]google[a-z0-9]+\.html$/i.test(file)) {
+    continue;
+  }
+
   const html = await readFile(file, "utf8");
   const hasDescription = /<meta\s+name="description"\s+content="[^"]+"/i.test(html);
   const hasCanonical = /<link\s+rel="canonical"\s+href="[^"]+"/i.test(html);

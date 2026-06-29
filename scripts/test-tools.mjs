@@ -6,7 +6,7 @@ const common = await readFile("dist/common-chinese-surnames/index.html", "utf8")
 const baijiaxing = await readFile("dist/hundred-family-surnames/index.html", "utf8");
 
 assert(home.includes("Chinese Surname Guide"), "Home should contain site brand");
-assert(home.includes("Find a Chinese surname starting point"), "Home should contain lookup tool");
+assert(home.includes("Variant Search"), "Home should contain surname guide value cards");
 assert(lookup.includes("Chinese Surname Lookup"), "Lookup page should render");
 assert(common.includes("Common surname reference table"), "Common surnames page should contain the table");
 assert(baijiaxing.includes("Hundred Family Surnames"), "Baijiaxing guide should render");

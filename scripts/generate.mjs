@@ -458,11 +458,11 @@ await writePage("/", pageLayout({
         <figcaption><strong>百家姓</strong><small>classic surname reference</small></figcaption>
       </figure>
     </section>
-    <section class="surname-stats" aria-label="Surname guide strengths">
-      <div><strong>10</strong><span>starter surname profiles</span></div>
-      <div><strong>4</strong><span>research paths</span></div>
-      <div><strong>Baijiaxing</strong><span>classic text context</span></div>
-      <div><strong>Pinyin</strong><span>variant spelling support</span></div>
+    <section class="surname-stats" aria-label="What this surname guide helps you research">
+      <div><strong>Surname Guides</strong><span>meaning, character, pinyin, and common English spellings</span></div>
+      <div><strong>Origin Notes</strong><span>historical context without unsupported genealogy claims</span></div>
+      <div><strong>Baijiaxing Context</strong><span>read the classic text as cultural reference</span></div>
+      <div><strong>Variant Search</strong><span>look up forms such as Li, Lee, Wang, Wong, and Ng</span></div>
     </section>
     <section class="surname-section surname-grid-section">
       <div class="section-heading"><p class="eyebrow">Top Surnames</p><h2>Start with major Chinese family names</h2></div>

@@ -816,21 +816,24 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .sidebar-card{paddi
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .sidebar-card h2{margin:8px 0 16px;color:#241f1a;font-size:23px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .sidebar-link-list{gap:14px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .sidebar-link-list a{padding:0 0 14px;border-bottom-color:#e6dac8}
-.page-guides .article-search{grid-template-columns:minmax(390px,1.1fr) minmax(420px,.9fr);gap:42px;align-items:center!important;padding:28px clamp(28px,4.4vw,56px)!important}
-.page-guides .article-search h2{font-size:clamp(28px,2.7vw,36px);line-height:1.12;margin-top:10px!important}
+.page-guides .content-section:not(.article-search){padding:34px clamp(34px,4.8vw,64px)!important}
+.page-guides .section-heading{margin-bottom:20px}
+.page-guides .article-search{grid-template-columns:minmax(390px,1.1fr) minmax(420px,.9fr);gap:42px;align-items:center!important;padding:34px clamp(34px,4.8vw,64px)!important}
+.page-guides .article-search h2{font-size:clamp(28px,2.7vw,36px);line-height:1.12;margin-top:12px!important}
 .page-guides .site-search-form{max-width:650px;justify-self:start}
+.page-guides .guide-card{padding:22px 24px;gap:10px}
 body:not(.page-guides) .article-search{grid-template-columns:1fr;gap:20px;align-items:start!important;padding:28px 32px!important;overflow:hidden}
 body:not(.page-guides) .article-search h2{font-size:clamp(27px,2.5vw,34px);line-height:1.1;margin-top:10px!important;white-space:nowrap}
 .site-search-form{grid-template-columns:minmax(0,1fr) minmax(96px,auto);gap:16px}
 .site-search-form label{gap:9px;color:#302820}
 .site-search-form input{height:54px;border-radius:9px;padding:0 16px;background:#fffdf9}
 .site-search-form button{min-height:54px;border-radius:9px;padding:0 24px;font-size:15px}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section .eyebrow{margin-bottom:14px}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section .eyebrow{margin-bottom:16px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section h2{margin-top:0;margin-bottom:22px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .table-wrap{margin-top:8px;border-radius:8px;overflow:auto}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section td{padding:15px 18px}
 @media(max-width:980px){.surname-hero{grid-template-columns:1fr;min-height:auto;padding:48px 22px 70px}.surname-photo-card,.surname-photo-card img{min-height:380px}.surname-stats,.origin-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.surname-section .animal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:980px){body:not(.page-guides) .article-search h2{white-space:normal}.page-guides .article-search{grid-template-columns:1fr}}
-@media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
+@media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }

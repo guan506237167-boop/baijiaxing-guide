@@ -37,7 +37,9 @@ const guides = [
   { title: "Rare Chinese Surnames", path: "/rare-chinese-surnames/", category: "Reference Lists", description: "Understand rare, uncommon, compound, and historically notable Chinese surnames." },
   { title: "Chinese Surname Pronunciation", path: "/chinese-surname-pronunciation/", category: "Pronunciation", description: "Read basic pinyin and romanization notes for Chinese surnames in English." },
   { title: "Liu Surname Meaning", path: "/liu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Liu surname meaning, character, variants, origin context, and lookup notes." },
-  { title: "Chen Surname Meaning", path: "/chen-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Chen surname meaning, character, variants, origin context, and lookup notes." }
+  { title: "Chen Surname Meaning", path: "/chen-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Chen surname meaning, character, variants, origin context, and lookup notes." },
+  { title: "Li Surname Origin", path: "/li-surname-origin/", category: "Origin Guides", description: "A focused guide to Li surname origin, character, variants, meaning context, and research notes." },
+  { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." }
 ];
 
 const pages = [];
@@ -648,6 +650,34 @@ await writePage("/chen-surname-meaning/", supportArticle({
     "For research, start with the Chinese character and known family romanization, then compare origin notes, regional records, and related surname profiles."
   ],
   related: [guides[2], guides[3], guides[5], { title: "Chen Surname Profile", path: "/surnames/chen/", category: "Surname Profiles", description: "Character, variants, and quick facts for Chen." }]
+}));
+
+await writePage("/li-surname-origin/", supportArticle({
+  title: "Li Surname Origin, Meaning, Character, and Family Name Notes",
+  description: "Learn Li surname origin, the Chinese character Li, common variants such as Lee and Lei, meaning context, and research notes.",
+  path: "/li-surname-origin/",
+  h1: "Li Surname Origin",
+  intro: "Li is one of the most common Chinese surnames, so origin research should separate broad cultural notes from family-specific genealogy.",
+  answer: "The Li surname is usually written 李 in simplified and traditional Chinese. It is widely associated with the plum or plum tree character in modern explanations, while family-specific origin depends on lineage records, regional history, and romanization background.",
+  details: [
+    "Li may appear as Lee, Lei, or other forms in overseas communities. The same romanized spelling can come from different dialect or migration histories.",
+    "A practical research path is to confirm the Chinese character first, then compare pinyin, family documents, regional records, and related surname profiles."
+  ],
+  related: [guides[3], guides[2], guides[5], { title: "Li Surname Profile", path: "/surnames/li/", category: "Surname Profiles", description: "Character, variants, and quick facts for Li." }]
+}));
+
+await writePage("/wang-surname-origin/", supportArticle({
+  title: "Wang Surname Origin, Meaning, Character, and Variant Spellings",
+  description: "Learn Wang surname origin, the Chinese character Wang, variants such as Wong and Ong, meaning context, and lookup notes.",
+  path: "/wang-surname-origin/",
+  h1: "Wang Surname Origin",
+  intro: "Wang is a major Chinese surname with a clear character meaning, but family origin still needs historical and regional context.",
+  answer: "The Wang surname is written 王, a character meaning king or ruler. As a family name, Wang should be understood through lineage and regional history, not only through the literal meaning of the character.",
+  details: [
+    "Wang can appear as Wong, Ong, or other variants depending on Cantonese, Hokkien, dialect background, and older romanization systems.",
+    "For surname research, start with the character 王, then compare family records, regional spelling, migration route, and common surname reference lists."
+  ],
+  related: [guides[3], guides[2], guides[5], { title: "Wang Surname Profile", path: "/surnames/wang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wang." }]
 }));
 
 for (const item of surnames) {

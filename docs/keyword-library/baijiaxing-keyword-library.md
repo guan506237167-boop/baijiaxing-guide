@@ -104,8 +104,8 @@
 | wong surname origin | 880 | LOW | informational | single surname article / cluster page | P1 |
 | lee surname origin | 880 | LOW | informational | single surname article / cluster page | P1 |
 | lee surname history | 880 | LOW | informational | single surname article / cluster page | P1 |
-| li surname origin | 720 | LOW | informational | single surname article / cluster page | P1 |
-| wang surname origin | 720 | LOW | informational | single surname article / cluster page | P1 |
+| li surname origin | 720 | LOW | informational | published article 2026-07-01 | P1 |
+| wang surname origin | 720 | LOW | informational | published article 2026-07-01 | P1 |
 | origin of the surname long | 720 | LOW | informational | single surname article / cluster page | P1 |
 | long surname origin | 720 | LOW | informational | single surname article / cluster page | P1 |
 | kang surname origin | 720 | LOW | informational | single surname article / cluster page | P1 |

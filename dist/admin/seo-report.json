@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-30T09:34:44.880Z",
+  "generatedAt": "2026-06-30T22:56:16.589Z",
   "totals": {
     "average": 99,
-    "pages": 27,
-    "pass": 27,
+    "pages": 29,
+    "pass": 29,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 395,
+      "wordCount": 433,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -141,11 +141,33 @@
       "issues": []
     },
     {
+      "path": "/li-surname-origin/",
+      "score": 100,
+      "titleLength": 60,
+      "descriptionLength": 124,
+      "wordCount": 449,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/wang-surname-origin/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 120,
+      "wordCount": 438,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
       "path": "/surnames/li/",
       "score": 100,
       "titleLength": 59,
       "descriptionLength": 126,
-      "wordCount": 476,
+      "wordCount": 473,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
@@ -156,7 +178,7 @@
       "score": 100,
       "titleLength": 61,
       "descriptionLength": 128,
-      "wordCount": 476,
+      "wordCount": 473,
       "h1": 1,
       "h2": 5,
       "faqs": 6,

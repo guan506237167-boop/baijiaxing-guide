@@ -42,7 +42,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .intro{m
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .eyebrow{background:rgba(125,37,31,.08);border-color:rgba(125,37,31,.18);color:#7d251f}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1180px;gap:34px;margin-bottom:38px}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main{display:grid;gap:24px;min-width:0}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{width:100%;max-width:none!important;margin:0!important;padding:28px 32px!important;border-radius:10px;background:rgba(255,253,247,.96)!important;border:1px solid rgba(207,190,143,.68)!important;box-shadow:0 16px 38px rgba(31,29,24,.08)!important}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{width:100%;max-width:none!important;margin:0!important;padding:34px 40px!important;border-radius:10px;background:rgba(255,253,247,.96)!important;border:1px solid rgba(207,190,143,.68)!important;box-shadow:0 16px 38px rgba(31,29,24,.08)!important}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.article-body{background:#fffdf8!important}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-body p{max-width:none;margin:0 0 15px;color:#3d342b}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-body p:last-child{margin-bottom:0}
@@ -67,6 +67,10 @@ body:not(.page-guides) .article-search h2{font-size:clamp(27px,2.5vw,34px);line-
 .site-search-form label{gap:9px;color:#302820}
 .site-search-form input{height:54px;border-radius:9px;padding:0 16px;background:#fffdf9}
 .site-search-form button{min-height:54px;border-radius:9px;padding:0 24px;font-size:15px}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section .eyebrow{margin-bottom:14px}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section h2{margin-top:0;margin-bottom:22px}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .table-wrap{margin-top:8px;border-radius:8px;overflow:auto}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section td{padding:15px 18px}
 @media(max-width:980px){.surname-hero{grid-template-columns:1fr;min-height:auto;padding:48px 22px 70px}.surname-photo-card,.surname-photo-card img{min-height:380px}.surname-stats,.origin-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.surname-section .animal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:980px){body:not(.page-guides) .article-search h2{white-space:normal}.page-guides .article-search{grid-template-columns:1fr}}
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}

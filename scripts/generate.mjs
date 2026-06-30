@@ -35,7 +35,9 @@ const guides = [
   { title: "Hundred Family Surnames", path: "/hundred-family-surnames/", category: "Classic Text", description: "A practical explanation of the Baijiaxing text and how to read it today." },
   { title: "Surname Lookup", path: "/surname-lookup/", category: "Tools", description: "Look up common Chinese surnames by pinyin, character, or romanized variants." },
   { title: "Rare Chinese Surnames", path: "/rare-chinese-surnames/", category: "Reference Lists", description: "Understand rare, uncommon, compound, and historically notable Chinese surnames." },
-  { title: "Chinese Surname Pronunciation", path: "/chinese-surname-pronunciation/", category: "Pronunciation", description: "Read basic pinyin and romanization notes for Chinese surnames in English." }
+  { title: "Chinese Surname Pronunciation", path: "/chinese-surname-pronunciation/", category: "Pronunciation", description: "Read basic pinyin and romanization notes for Chinese surnames in English." },
+  { title: "Liu Surname Meaning", path: "/liu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Liu surname meaning, character, variants, origin context, and lookup notes." },
+  { title: "Chen Surname Meaning", path: "/chen-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Chen surname meaning, character, variants, origin context, and lookup notes." }
 ];
 
 const pages = [];
@@ -618,6 +620,34 @@ await writePage("/chinese-surname-pronunciation/", supportArticle({
     "When accuracy matters, ask for the Chinese character first, then read the pinyin and regional spelling notes."
   ],
   related: [guides[0], guides[1], guides[5], guides[2]]
+}));
+
+await writePage("/liu-surname-meaning/", supportArticle({
+  title: "Liu Surname Meaning, Origin, Character, and Variants",
+  description: "Learn Liu surname meaning, the Chinese character Liu, common variants such as Lau, origin context, and how to research this family name.",
+  path: "/liu-surname-meaning/",
+  h1: "Liu Surname Meaning",
+  intro: "Liu is one of the most important Chinese surnames, so its meaning is best read through character, lineage, and historical context.",
+  answer: "The Liu surname is usually written 刘 in simplified Chinese. In surname research, Liu should be understood mainly as a lineage name rather than a simple literal word with one fixed personal meaning.",
+  details: [
+    "Common romanized forms can include Liu, Lau, and Low, depending on language background, dialect, migration history, and family records.",
+    "A Liu surname page should separate general surname meaning from personal genealogy. The page can explain the name, but family-specific origin still depends on documents and oral history."
+  ],
+  related: [guides[2], guides[3], guides[5], { title: "Liu Surname Profile", path: "/surnames/liu/", category: "Surname Profiles", description: "Character, variants, and quick facts for Liu." }]
+}));
+
+await writePage("/chen-surname-meaning/", supportArticle({
+  title: "Chen Surname Meaning, Origin, Character, and Variants",
+  description: "Learn Chen surname meaning, the Chinese character Chen, common variants such as Chan and Tan, origin context, and lookup notes.",
+  path: "/chen-surname-meaning/",
+  h1: "Chen Surname Meaning",
+  intro: "Chen is a very common Chinese surname with strong links to lineage, place names, and regional romanization variants.",
+  answer: "The Chen surname is written 陈 in simplified Chinese. It is commonly connected with an ancient state name and lineage identity rather than a simple modern word meaning.",
+  details: [
+    "Chen may appear as Chan, Tan, or other variants in overseas communities, depending on dialect, romanization system, and family migration route.",
+    "For research, start with the Chinese character and known family romanization, then compare origin notes, regional records, and related surname profiles."
+  ],
+  related: [guides[2], guides[3], guides[5], { title: "Chen Surname Profile", path: "/surnames/chen/", category: "Surname Profiles", description: "Character, variants, and quick facts for Chen." }]
 }));
 
 for (const item of surnames) {

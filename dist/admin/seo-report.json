@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-29T23:34:46.629Z",
+  "generatedAt": "2026-06-30T09:34:44.880Z",
   "totals": {
     "average": 99,
-    "pages": 25,
-    "pass": 25,
+    "pages": 27,
+    "pass": 27,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 357,
+      "wordCount": 395,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -113,6 +113,28 @@
       "titleLength": 67,
       "descriptionLength": 129,
       "wordCount": 429,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/liu-surname-meaning/",
+      "score": 100,
+      "titleLength": 52,
+      "descriptionLength": 136,
+      "wordCount": 444,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/chen-surname-meaning/",
+      "score": 100,
+      "titleLength": 53,
+      "descriptionLength": 127,
+      "wordCount": 431,
       "h1": 1,
       "h2": 4,
       "faqs": 6,

@@ -39,7 +39,9 @@ const guides = [
   { title: "Liu Surname Meaning", path: "/liu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Liu surname meaning, character, variants, origin context, and lookup notes." },
   { title: "Chen Surname Meaning", path: "/chen-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Chen surname meaning, character, variants, origin context, and lookup notes." },
   { title: "Li Surname Origin", path: "/li-surname-origin/", category: "Origin Guides", description: "A focused guide to Li surname origin, character, variants, meaning context, and research notes." },
-  { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." }
+  { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." },
+  { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Wu surname meaning, character, romanized variants, and origin context." },
+  { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." }
 ];
 
 const pages = [];
@@ -678,6 +680,36 @@ await writePage("/wang-surname-origin/", supportArticle({
     "For surname research, start with the character 王, then compare family records, regional spelling, migration route, and common surname reference lists."
   ],
   related: [guides[3], guides[2], guides[5], { title: "Wang Surname Profile", path: "/surnames/wang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wang." }]
+}));
+
+await writePage("/wu-surname-meaning/", supportArticle({
+  title: "Wu Surname Meaning, Character, Origin Context, and Variants",
+  description: "Learn Wu surname meaning, the Chinese character Wu, common variants such as Ng and Woo, and how to read surname meaning in context.",
+  path: "/wu-surname-meaning/",
+  h1: "Wu Surname Meaning",
+  intro: "Wu is a common Chinese surname whose meaning is better read through lineage and historical context than through a simple word translation.",
+  answer: "The Wu surname is commonly written 吴 in simplified Chinese. In surname reference, Wu is usually explained through historical state and lineage context, while overseas forms such as Ng or Woo may reflect regional pronunciation rather than a different family meaning.",
+  details: [
+    "The main mistake is treating a surname like a modern vocabulary word. For Wu, the family-name meaning is tied to historical usage, regional pronunciation, and written character confirmation.",
+    "If your family uses Ng, Woo, or another romanized form, the safest research path is to confirm the Chinese character first. Different romanizations can point to different dialect backgrounds.",
+    "Use this page as a meaning guide, then open the Wu profile or broader origin pages when you need character, pinyin, and variant comparisons."
+  ],
+  related: [guides[2], guides[3], guides[5], { title: "Wu Surname Profile", path: "/surnames/wu/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wu." }]
+}));
+
+await writePage("/zhang-surname-origin/", supportArticle({
+  title: "Zhang Surname Origin, Character, Meaning Notes, and Variants",
+  description: "Learn Zhang surname origin, Chinese character Zhang, common variants such as Cheung and Chang, and how to research this family name.",
+  path: "/zhang-surname-origin/",
+  h1: "Zhang Surname Origin",
+  intro: "Zhang is one of the major Chinese surnames, and its origin is often researched together with character, pinyin, and romanized variants.",
+  answer: "The Zhang surname is written 张 in simplified Chinese and is often associated with the idea of drawing or stretching a bow. As a family name, origin research should focus on lineage records, regional pronunciation, and variant spellings such as Cheung or Chang.",
+  details: [
+    "Zhang, Cheung, and Chang can appear in different English-language records depending on dialect, migration route, and romanization system. The written Chinese character is the key anchor.",
+    "For a quick reference page, start with the character 张, Mandarin pinyin Zhang, and common variants. For deeper genealogy, compare ancestral place, clan records, and older spelling forms.",
+    "This article supports the broader Chinese surname origin cluster and links back to surname lookup for users who arrive with a romanized spelling."
+  ],
+  related: [guides[3], guides[2], guides[5], { title: "Zhang Surname Profile", path: "/surnames/zhang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Zhang." }]
 }));
 
 for (const item of surnames) {

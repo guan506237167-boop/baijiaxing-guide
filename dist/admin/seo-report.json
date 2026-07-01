@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-30T22:56:16.589Z",
+  "generatedAt": "2026-07-01T23:13:48.851Z",
   "totals": {
     "average": 99,
-    "pages": 29,
-    "pass": 29,
+    "pages": 31,
+    "pass": 31,
     "review": 0,
     "fix": 0
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 433,
+      "wordCount": 469,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -157,6 +157,28 @@
       "titleLength": 62,
       "descriptionLength": 120,
       "wordCount": 438,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/wu-surname-meaning/",
+      "score": 100,
+      "titleLength": 59,
+      "descriptionLength": 131,
+      "wordCount": 488,
+      "h1": 1,
+      "h2": 4,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/zhang-surname-origin/",
+      "score": 100,
+      "titleLength": 60,
+      "descriptionLength": 132,
+      "wordCount": 485,
       "h1": 1,
       "h2": 4,
       "faqs": 6,

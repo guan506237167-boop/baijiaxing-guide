@@ -382,7 +382,11 @@ function simpleLegalPage({ title, description, path, h1, intro, sections }) {
   });
 }
 
-function supportArticle({ title, description, path, h1, intro, answer, details, related }) {
+function articleSections(sections = []) {
+  return sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("");
+}
+
+function supportArticle({ title, description, path, h1, intro, answer, details, sections = [], related }) {
   return pageLayout({
     title,
     description,
@@ -398,6 +402,7 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
         <p class="lead-answer">${escapeHtml(answer)}</p>
         ${details.map((item) => `<p>${escapeHtml(item)}</p>`).join("")}
       </section>
+      ${articleSections(sections)}
       ${relatedGuidesBlock("Related surname guides", related)}
       ${faqBlock(standardFaqs())}
     `
@@ -694,6 +699,36 @@ await writePage("/wu-surname-meaning/", supportArticle({
     "If your family uses Ng, Woo, or another romanized form, the safest research path is to confirm the Chinese character first. Different romanizations can point to different dialect backgrounds.",
     "Use this page as a meaning guide, then open the Wu profile or broader origin pages when you need character, pinyin, and variant comparisons."
   ],
+  sections: [
+    {
+      title: "How to understand the Wu surname meaning",
+      paragraphs: [
+        "The Wu surname should not be read like a simple dictionary word. In surname research, the written character, historical usage, regional speech, and family records matter more than a single English translation. The character 吴 is the main anchor for this page. Once the character is confirmed, the surname can be compared with Mandarin pinyin Wu and overseas spellings such as Ng or Woo.",
+        "This distinction is important because many English searches begin from a romanized spelling. A person may know the family name as Wu in one document, Woo in another, or Ng in a Cantonese-speaking context. Those spellings can represent the same written surname in some cases, but they should not be assumed to be identical without checking the Chinese character."
+      ]
+    },
+    {
+      title: "Wu, Ng, and Woo in overseas records",
+      paragraphs: [
+        "Overseas Chinese surname records often preserve older romanization habits, dialect pronunciation, immigration office spelling, or family preference. That is why one surname can appear differently across passports, school records, business documents, and family history notes. Wu is common as a Mandarin pinyin form. Ng and Woo can appear in communities where Cantonese, Hokkien, or other regional pronunciation systems influenced English spelling.",
+        "For practical research, start with the spelling you have, then look for the Chinese character in family documents, gravestones, clan association material, wedding records, old letters, or bilingual certificates. Without the character, the meaning remains uncertain. With the character, the search becomes much clearer because you can separate surname identity from spelling variation."
+      ]
+    },
+    {
+      title: "Origin context and family research",
+      paragraphs: [
+        "Wu is often discussed through historical state and lineage context, but a general surname article cannot prove an individual family tree. A surname page can explain broad reference points; genealogy needs specific family records, ancestral place names, generation poems, clan books, and sometimes specialist research. That is why this page uses cautious wording instead of claiming one universal origin for every Wu family.",
+        "If you are building a family-history note, record the surname character, romanized spelling, known dialect, ancestral region if available, and the oldest reliable document you have. Those details are more useful than a vague meaning line. For SEO and user value, the page should help readers understand what can be known from a surname article and what still needs personal family evidence."
+      ]
+    },
+    {
+      title: "Common mistakes when researching Wu",
+      paragraphs: [
+        "The first mistake is assuming every Wu spelling has the same character. Some romanized spellings overlap across different Chinese characters or dialect backgrounds. The second mistake is treating a symbolic explanation as genealogy proof. A character meaning can be useful, but it does not tell you where a specific family came from.",
+        "The safer approach is to use this page as a starting point, then compare the Wu surname profile, broader Chinese surname origin pages, and any family documents you can find. That structure keeps the article useful for casual readers while still respecting the limits of surname research."
+      ]
+    }
+  ],
   related: [guides[2], guides[3], guides[5], { title: "Wu Surname Profile", path: "/surnames/wu/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wu." }]
 }));
 
@@ -708,6 +743,36 @@ await writePage("/zhang-surname-origin/", supportArticle({
     "Zhang, Cheung, and Chang can appear in different English-language records depending on dialect, migration route, and romanization system. The written Chinese character is the key anchor.",
     "For a quick reference page, start with the character 张, Mandarin pinyin Zhang, and common variants. For deeper genealogy, compare ancestral place, clan records, and older spelling forms.",
     "This article supports the broader Chinese surname origin cluster and links back to surname lookup for users who arrive with a romanized spelling."
+  ],
+  sections: [
+    {
+      title: "Why Zhang origin needs more than one sentence",
+      paragraphs: [
+        "Zhang is one of the most common Chinese surnames, so a useful origin page has to separate general reference information from individual genealogy. The character 张 is widely associated with drawing, stretching, or opening a bow. That meaning note is helpful, but it is not the same as proving the origin of a particular family line. A reader searching for Zhang surname origin may want a broad cultural explanation, a character note, or a path for personal ancestry research.",
+        "The safest structure is to begin with the character and pinyin, then explain variant spellings and research limits. This gives the user an immediate answer while preventing overclaiming. It also makes the page easier for search engines and AI systems to extract because the key facts are clear near the top."
+      ]
+    },
+    {
+      title: "Zhang, Cheung, and Chang spellings",
+      paragraphs: [
+        "Zhang is the standard Mandarin pinyin spelling, but many families use Cheung, Chang, Cheong, or other forms in English-language contexts. These spellings can come from dialect pronunciation, older romanization systems, local spelling conventions, or immigration history. A spelling in English is therefore a clue, not final proof.",
+        "When researching a family name, the written Chinese character is the best anchor. If the character is 张, then Zhang, Cheung, or Chang may all point back to the same surname in different records. If the character is unknown, compare multiple documents before deciding. This matters for users who arrive from a passport spelling, family story, or old certificate and need a practical next step."
+      ]
+    },
+    {
+      title: "How to research a Zhang family line",
+      paragraphs: [
+        "Start with the most concrete facts: the Chinese character, the oldest known English spelling, the dialect spoken by older relatives, and any ancestral place name. Then look for clan records, family books, grave inscriptions, temple records, or bilingual documents. A surname origin article can point the direction, but personal lineage depends on evidence from a specific family branch.",
+        "For a simple family note, record the character 张, the current spelling used by the family, known variants, and any regional information. If the family uses Cheung or Chang, keep those spellings in the note rather than replacing them with pinyin. Older spellings are part of migration history and can help match external records."
+      ]
+    },
+    {
+      title: "How this page fits the surname cluster",
+      paragraphs: [
+        "This Zhang article should connect users to broader pages about Chinese surname meaning, Chinese surname origin, common Chinese surnames, and the surname lookup tool. That internal structure is important because many visitors do not know whether they need a meaning page, a profile page, or a research guide.",
+        "For future content, Zhang can support deeper articles about romanization, common surname rankings, overseas Chinese surnames, and how to compare Mandarin and Cantonese spellings. The current page should therefore remain clear, expandable, and careful with claims."
+      ]
+    }
   ],
   related: [guides[3], guides[2], guides[5], { title: "Zhang Surname Profile", path: "/surnames/zhang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Zhang." }]
 }));

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/generate.mjs",
-    "audit": "node scripts/audit-links.mjs && node scripts/audit-layout.mjs",
+    "audit": "node scripts/audit-links.mjs && node scripts/audit-layout.mjs && node scripts/audit-content-depth.mjs",
     "audit:links": "node scripts/audit-links.mjs",
     "audit:layout": "node scripts/audit-layout.mjs",
     "keywords": "node scripts/build-keyword-library.mjs",

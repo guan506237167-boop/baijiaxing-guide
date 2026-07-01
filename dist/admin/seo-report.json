@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T23:13:48.851Z",
+  "generatedAt": "2026-07-01T23:44:25.952Z",
   "totals": {
     "average": 99,
     "pages": 31,
@@ -167,9 +167,9 @@
       "score": 100,
       "titleLength": 59,
       "descriptionLength": 131,
-      "wordCount": 488,
+      "wordCount": 973,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
       "issues": []
     },
@@ -178,9 +178,9 @@
       "score": 100,
       "titleLength": 60,
       "descriptionLength": 132,
-      "wordCount": 485,
+      "wordCount": 950,
       "h1": 1,
-      "h2": 4,
+      "h2": 8,
       "faqs": 6,
       "issues": []
     },

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-02T03:31:04.703Z",
+  "generatedAt": "2026-07-02T23:34:18.609Z",
   "totals": {
     "average": 98,
-    "pages": 31,
-    "pass": 30,
+    "pages": 32,
+    "pass": 31,
     "review": 0,
     "fix": 1
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 469,
+      "wordCount": 489,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -183,6 +183,17 @@
       "wordCount": 1674,
       "h1": 1,
       "h2": 11,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/lee-surname-meaning/",
+      "score": 100,
+      "titleLength": 74,
+      "descriptionLength": 141,
+      "wordCount": 1489,
+      "h1": 1,
+      "h2": 9,
       "faqs": 6,
       "issues": []
     },

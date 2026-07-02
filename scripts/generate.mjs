@@ -41,7 +41,8 @@ const guides = [
   { title: "Li Surname Origin", path: "/li-surname-origin/", category: "Origin Guides", description: "A focused guide to Li surname origin, character, variants, meaning context, and research notes." },
   { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." },
   { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Wu surname meaning, character, romanized variants, and origin context." },
-  { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." }
+  { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." },
+  { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." }
 ];
 
 const pages = [];
@@ -839,6 +840,34 @@ await writePage("/zhang-surname-origin/", supportArticle({
   related: [guides[3], guides[2], guides[5], { title: "Zhang Surname Profile", path: "/surnames/zhang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Zhang." }]
 }));
 
+await writePage("/lee-surname-meaning/", supportArticle({
+  title: "Lee Surname Meaning, Chinese Character Possibilities, Origin, and Variants",
+  description: "Learn Lee surname meaning, why Lee can match more than one Chinese surname, and how to verify character, pinyin, dialect, and family records.",
+  path: "/lee-surname-meaning/",
+  h1: "Lee Surname Meaning",
+  intro: "Lee is one of the most familiar English spellings for Chinese family names, but the spelling alone is not enough to prove the exact Chinese character.",
+  answer: "Lee surname meaning depends on the Chinese character behind the English spelling. In many Chinese surname contexts, Lee commonly corresponds to Li, written 李, but Lee can also reflect regional romanization, dialect, immigration spelling, or non-Chinese surnames. The safest research step is to confirm the written character first.",
+  details: [
+    "If the family character is 李, the surname is usually read as Li in Mandarin pinyin and often explained through the character connected with plum or plum tree in modern reference contexts. In overseas records, the same family may use Lee because of older romanization or local spelling habits.",
+    "Do not assume every Lee surname has the same origin. The spelling appears in many communities and can represent different linguistic histories. A Chinese surname page should separate English spelling, Chinese character, pinyin, dialect form, and genealogy evidence.",
+    "For genealogy research, collect the oldest documents available: Chinese character if known, family book, gravestone, clan association record, immigration record, ancestral place, and any older spelling used by the family."
+  ],
+  sections: [
+    { title: "Why Lee needs character verification", paragraphs: [
+      "The English spelling Lee is easy to search, but it is not precise enough for serious surname research. In Mandarin pinyin, 李 is written Li, while Lee often appears in English-language contexts because of older romanization, Cantonese-influenced spelling, immigration office choices, or family preference. That means a page about Lee surname meaning should not stop at one translation.",
+      "The first question is whether the family has a Chinese character. If the character is 李, the reader can compare the Li profile, common surname lists, and meaning notes for that character. If the character is unknown, the spelling Lee should be treated as a clue rather than proof."
+    ]},
+    { title: "Meaning when Lee corresponds to Li 李", paragraphs: [
+      "When Lee corresponds to 李, the surname is one of the most common Chinese surnames. The character is often associated with plum or plum tree in modern explanations, but that literal note is not the same as a full family origin. Like many Chinese surnames, the character can carry meaning while the actual family line may relate to older historical, regional, or lineage traditions.",
+      "This distinction matters because simple surname-meaning lists can make the answer look finished too quickly. A useful article should explain the character meaning, then immediately clarify that genealogy requires evidence beyond a dictionary-style meaning."
+    ]},
+    { title: "Romanization and dialect risk", paragraphs: [
+      "Lee can appear in overseas Chinese communities where names were recorded through Cantonese, Hokkien, Hakka, older postal spellings, or English-speaking officials. Some families standardized one spelling after migration even when the Mandarin pinyin would look different. In records, Lee may appear alongside Li, Lei, or other spellings depending on time period and region.",
+      "For this reason, family researchers should not merge every Lee record automatically. Compare character, birthplace, dialect group, generation names, and family documents. If two people share the spelling Lee but have different characters or different ancestral places, they may not share the same surname background."
+    ]}
+  ],
+  related: [guides[2], guides[3], guides[1], guides[5], guides[10]].filter(Boolean)
+}));
 for (const item of surnames) {
   await writePage(`/surnames/${item.slug}/`, surnamePage(item));
 }

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-01T23:44:25.952Z",
+  "generatedAt": "2026-07-02T00:24:33.690Z",
   "totals": {
-    "average": 99,
+    "average": 77,
     "pages": 31,
-    "pass": 31,
+    "pass": 9,
     "review": 0,
-    "fix": 0
+    "fix": 22
   },
   "reports": [
     {
@@ -32,144 +32,168 @@
     },
     {
       "path": "/chinese-surnames/",
-      "score": 100,
+      "score": 69,
       "titleLength": 64,
       "descriptionLength": 124,
       "wordCount": 444,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/common-chinese-surnames/",
-      "score": 100,
+      "score": 69,
       "titleLength": 62,
       "descriptionLength": 121,
       "wordCount": 611,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/chinese-surname-meaning/",
-      "score": 100,
+      "score": 69,
       "titleLength": 70,
       "descriptionLength": 127,
       "wordCount": 437,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/chinese-surname-origin/",
-      "score": 100,
+      "score": 69,
       "titleLength": 69,
       "descriptionLength": 126,
       "wordCount": 440,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/hundred-family-surnames/",
-      "score": 100,
+      "score": 69,
       "titleLength": 66,
       "descriptionLength": 124,
       "wordCount": 442,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surname-lookup/",
-      "score": 100,
+      "score": 69,
       "titleLength": 57,
       "descriptionLength": 118,
       "wordCount": 523,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/rare-chinese-surnames/",
-      "score": 100,
+      "score": 69,
       "titleLength": 67,
       "descriptionLength": 110,
       "wordCount": 427,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/chinese-surname-pronunciation/",
-      "score": 100,
+      "score": 69,
       "titleLength": 67,
       "descriptionLength": 129,
       "wordCount": 429,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/liu-surname-meaning/",
-      "score": 100,
+      "score": 69,
       "titleLength": 52,
       "descriptionLength": 136,
       "wordCount": 444,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/chen-surname-meaning/",
-      "score": 100,
+      "score": 69,
       "titleLength": 53,
       "descriptionLength": 127,
       "wordCount": 431,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/li-surname-origin/",
-      "score": 100,
+      "score": 69,
       "titleLength": 60,
       "descriptionLength": 124,
       "wordCount": 449,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/wang-surname-origin/",
-      "score": 100,
+      "score": 69,
       "titleLength": 62,
       "descriptionLength": 120,
       "wordCount": 438,
       "h1": 1,
       "h2": 4,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/wu-surname-meaning/",
       "score": 100,
       "titleLength": 59,
       "descriptionLength": 131,
-      "wordCount": 973,
+      "wordCount": 1086,
       "h1": 1,
-      "h2": 8,
+      "h2": 9,
       "faqs": 6,
       "issues": []
     },
@@ -178,121 +202,141 @@
       "score": 100,
       "titleLength": 60,
       "descriptionLength": 132,
-      "wordCount": 950,
+      "wordCount": 1063,
       "h1": 1,
-      "h2": 8,
+      "h2": 9,
       "faqs": 6,
       "issues": []
     },
     {
       "path": "/surnames/li/",
-      "score": 100,
+      "score": 69,
       "titleLength": 59,
       "descriptionLength": 126,
       "wordCount": 473,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/wang/",
-      "score": 100,
+      "score": 69,
       "titleLength": 61,
       "descriptionLength": 128,
       "wordCount": 473,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/zhang/",
-      "score": 100,
+      "score": 69,
       "titleLength": 62,
       "descriptionLength": 129,
       "wordCount": 474,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/liu/",
-      "score": 100,
+      "score": 69,
       "titleLength": 60,
       "descriptionLength": 127,
       "wordCount": 475,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/chen/",
-      "score": 100,
+      "score": 69,
       "titleLength": 61,
       "descriptionLength": 128,
       "wordCount": 477,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/yang/",
-      "score": 100,
+      "score": 69,
       "titleLength": 61,
       "descriptionLength": 128,
       "wordCount": 472,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/huang/",
-      "score": 100,
+      "score": 69,
       "titleLength": 62,
       "descriptionLength": 129,
       "wordCount": 477,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/zhao/",
-      "score": 100,
+      "score": 69,
       "titleLength": 61,
       "descriptionLength": 128,
       "wordCount": 471,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/wu/",
-      "score": 100,
+      "score": 69,
       "titleLength": 59,
       "descriptionLength": 126,
       "wordCount": 474,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/surnames/zhou/",
-      "score": 100,
+      "score": 69,
       "titleLength": 61,
       "descriptionLength": 128,
       "wordCount": 472,
       "h1": 1,
       "h2": 5,
       "faqs": 6,
-      "issues": []
+      "issues": [
+        "thin content: under 1000 words"
+      ]
     },
     {
       "path": "/chinese-surnames-faq/",
@@ -315,7 +359,7 @@
       "h2": 2,
       "faqs": 0,
       "issues": [
-        "thin content"
+        "thin support content"
       ]
     },
     {
@@ -328,7 +372,7 @@
       "h2": 2,
       "faqs": 0,
       "issues": [
-        "thin content"
+        "thin support content"
       ]
     },
     {
@@ -341,7 +385,7 @@
       "h2": 3,
       "faqs": 0,
       "issues": [
-        "thin content"
+        "thin support content"
       ]
     },
     {
@@ -354,7 +398,7 @@
       "h2": 3,
       "faqs": 0,
       "issues": [
-        "thin content"
+        "thin support content"
       ]
     }
   ]

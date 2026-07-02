@@ -47,9 +47,9 @@ Do not publish a new surname article as a short placeholder.
 
 | Page type | Minimum visible words | Target words |
 |---|---:|---:|
-| New meaning/origin guide | 800 | 900-1200 |
-| Surname profile | 700 | 850-1100 |
-| Reference list page | 700 | 900-1300 |
+| New meaning/origin guide | 1000 | 1000-1400 |
+| Surname profile | 1000 | 1000-1300 |
+| Reference list page | 1000 | 1000-1400 |
 | FAQ/support page | Not forced | Judge by task completeness |
 
 Every surname content page must explain character, pinyin, romanized variants, meaning limits, origin limits, research path, related guides, and page-specific FAQ. Existing short profile pages should be treated as rewrite candidates, not as the quality benchmark.

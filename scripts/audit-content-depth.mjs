@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const minimumWords = 800;
+const minimumWords = 1000;
 const pages = [
   "/wu-surname-meaning/",
   "/zhang-surname-origin/"

@@ -727,6 +727,13 @@ await writePage("/wu-surname-meaning/", supportArticle({
         "The first mistake is assuming every Wu spelling has the same character. Some romanized spellings overlap across different Chinese characters or dialect backgrounds. The second mistake is treating a symbolic explanation as genealogy proof. A character meaning can be useful, but it does not tell you where a specific family came from.",
         "The safer approach is to use this page as a starting point, then compare the Wu surname profile, broader Chinese surname origin pages, and any family documents you can find. That structure keeps the article useful for casual readers while still respecting the limits of surname research."
       ]
+    },
+    {
+      title: "What to record before deeper research",
+      paragraphs: [
+        "Before moving from a meaning page into genealogy research, write down the exact Chinese character, the English spelling used by your family, any older spelling in documents, and the region or dialect mentioned by relatives. These details prevent a common problem: searching only for Wu while ignoring Ng, Woo, or older forms that may appear in immigration, school, or association records.",
+        "A useful personal note does not need to prove the whole family tree immediately. It should preserve the evidence you already have and separate confirmed facts from possible explanations. That makes later research easier, especially when comparing surname dictionaries, clan records, grave inscriptions, and bilingual documents."
+      ]
     }
   ],
   related: [guides[2], guides[3], guides[5], { title: "Wu Surname Profile", path: "/surnames/wu/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wu." }]
@@ -771,6 +778,13 @@ await writePage("/zhang-surname-origin/", supportArticle({
       paragraphs: [
         "This Zhang article should connect users to broader pages about Chinese surname meaning, Chinese surname origin, common Chinese surnames, and the surname lookup tool. That internal structure is important because many visitors do not know whether they need a meaning page, a profile page, or a research guide.",
         "For future content, Zhang can support deeper articles about romanization, common surname rankings, overseas Chinese surnames, and how to compare Mandarin and Cantonese spellings. The current page should therefore remain clear, expandable, and careful with claims."
+      ]
+    },
+    {
+      title: "Practical next steps for Zhang research",
+      paragraphs: [
+        "If you are researching Zhang from an English spelling, first confirm whether the family character is 张. Then collect variant spellings such as Zhang, Cheung, Chang, Cheong, or older local forms instead of forcing every record into modern pinyin. Older spellings can preserve migration history and may help match documents that would not appear under a pinyin-only search.",
+        "After the character is confirmed, compare the family region, dialect background, and any ancestral place name. A broad origin page can explain the surname, but a family branch needs specific records. This is why the page gives a clear origin overview while still pointing readers toward evidence-based genealogy work."
       ]
     }
   ],
@@ -897,9 +911,18 @@ function auditPage(page, html, sitemap) {
     || page.path.includes("surname")
     || ["/chinese-surnames/", "/common-chinese-surnames/", "/hundred-family-surnames/", "/rare-chinese-surnames/"].includes(page.path);
   if (needsFaq && page.path !== "/guides/" && faqCount < 2) issues.push("missing FAQ");
-  if (wordCount < 180) issues.push("thin content");
-  let score = Math.max(54, Math.min(100, 100 - issues.length * 8 + (wordCount > 520 ? 4 : 0)));
+  if (requiresFullArticleDepth(page.path) && wordCount < 1000) issues.push("thin content: under 1000 words");
+  else if (!requiresFullArticleDepth(page.path) && wordCount < 180) issues.push("thin support content");
+  let score = 100 - issues.length * 8 + (wordCount >= 1000 ? 4 : 0);
+  if (requiresFullArticleDepth(page.path) && wordCount < 1000) score = Math.min(score, 69);
+  score = Math.max(54, Math.min(100, score));
   return { path: page.path, score, titleLength: title.length, descriptionLength: description.length, wordCount, h1, h2, faqs: faqCount, issues };
+}
+
+function requiresFullArticleDepth(path) {
+  if (["/", "/about/", "/contact/", "/privacy/", "/terms/", "/guides/", "/chinese-surnames-faq/"].includes(path)) return false;
+  if (path.startsWith("/admin/")) return false;
+  return true;
 }
 
 function clientScript() {

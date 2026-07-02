@@ -3,6 +3,11 @@ import { join } from "node:path";
 
 const minimumWords = 1000;
 const pages = [
+  "/chinese-surnames/",
+  "/common-chinese-surnames/",
+  "/chinese-surname-meaning/",
+  "/chinese-surname-origin/",
+  "/hundred-family-surnames/",
   "/wu-surname-meaning/",
   "/zhang-surname-origin/"
 ];

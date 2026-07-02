@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-07-02T00:24:33.690Z",
+  "generatedAt": "2026-07-02T01:45:52.351Z",
   "totals": {
-    "average": 77,
+    "average": 88,
     "pages": 31,
-    "pass": 9,
+    "pass": 20,
     "review": 0,
-    "fix": 22
+    "fix": 11
   },
   "reports": [
     {
@@ -32,68 +32,58 @@
     },
     {
       "path": "/chinese-surnames/",
-      "score": 69,
+      "score": 100,
       "titleLength": 64,
       "descriptionLength": 124,
-      "wordCount": 444,
+      "wordCount": 1055,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/common-chinese-surnames/",
-      "score": 69,
+      "score": 100,
       "titleLength": 62,
       "descriptionLength": 121,
-      "wordCount": 611,
+      "wordCount": 1029,
       "h1": 1,
-      "h2": 5,
+      "h2": 7,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/chinese-surname-meaning/",
-      "score": 69,
+      "score": 100,
       "titleLength": 70,
       "descriptionLength": 127,
-      "wordCount": 437,
+      "wordCount": 1048,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/chinese-surname-origin/",
-      "score": 69,
+      "score": 100,
       "titleLength": 69,
       "descriptionLength": 126,
-      "wordCount": 440,
+      "wordCount": 1051,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/hundred-family-surnames/",
-      "score": 69,
+      "score": 100,
       "titleLength": 66,
       "descriptionLength": 124,
-      "wordCount": 442,
+      "wordCount": 1053,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/surname-lookup/",
@@ -110,90 +100,78 @@
     },
     {
       "path": "/rare-chinese-surnames/",
-      "score": 69,
+      "score": 100,
       "titleLength": 67,
       "descriptionLength": 110,
-      "wordCount": 427,
+      "wordCount": 1038,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/chinese-surname-pronunciation/",
-      "score": 69,
+      "score": 100,
       "titleLength": 67,
       "descriptionLength": 129,
-      "wordCount": 429,
+      "wordCount": 1040,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/liu-surname-meaning/",
-      "score": 69,
+      "score": 100,
       "titleLength": 52,
       "descriptionLength": 136,
-      "wordCount": 444,
+      "wordCount": 1055,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/chen-surname-meaning/",
-      "score": 69,
+      "score": 100,
       "titleLength": 53,
       "descriptionLength": 127,
-      "wordCount": 431,
+      "wordCount": 1042,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/li-surname-origin/",
-      "score": 69,
+      "score": 100,
       "titleLength": 60,
       "descriptionLength": 124,
-      "wordCount": 449,
+      "wordCount": 1060,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/wang-surname-origin/",
-      "score": 69,
+      "score": 100,
       "titleLength": 62,
       "descriptionLength": 120,
-      "wordCount": 438,
+      "wordCount": 1049,
       "h1": 1,
-      "h2": 4,
+      "h2": 6,
       "faqs": 6,
-      "issues": [
-        "thin content: under 1000 words"
-      ]
+      "issues": []
     },
     {
       "path": "/wu-surname-meaning/",
       "score": 100,
       "titleLength": 59,
       "descriptionLength": 131,
-      "wordCount": 1086,
+      "wordCount": 1697,
       "h1": 1,
-      "h2": 9,
+      "h2": 11,
       "faqs": 6,
       "issues": []
     },
@@ -202,9 +180,9 @@
       "score": 100,
       "titleLength": 60,
       "descriptionLength": 132,
-      "wordCount": 1063,
+      "wordCount": 1674,
       "h1": 1,
-      "h2": 9,
+      "h2": 11,
       "faqs": 6,
       "issues": []
     },

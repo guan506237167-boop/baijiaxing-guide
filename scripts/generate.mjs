@@ -403,6 +403,22 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
         ${details.map((item) => `<p>${escapeHtml(item)}</p>`).join("")}
       </section>
       ${articleSections(sections)}
+      <section class="content-section article-body">
+        <h2>How to verify a Chinese surname carefully</h2>
+        <p>The safest way to research a Chinese surname is to separate the written character from the English spelling. A romanized form can be useful, but it is not enough by itself. The same English spelling may appear across different dialects, older romanization systems, or immigration records. The written Chinese character is usually the strongest anchor for meaning, origin notes, and comparison with surname lists.</p>
+        <p>After the character is confirmed, record the pinyin, regional pronunciation, older spellings, and any family document that supports the name. For overseas families, a surname may appear differently in passports, school records, gravestones, clan association documents, or business records. Keeping those variants together helps avoid false matches and makes deeper research more reliable.</p>
+        <p>A general surname guide can explain common meanings, historical patterns, and romanized variants, but it cannot prove a private family tree. Treat the page as a reference starting point. For genealogy, compare ancestral place names, family books, generation poems, temple records, and the oldest reliable documents available to the family.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>What this page can and cannot prove</h2>
+        <p>A surname page can give a reader the character, pinyin, broad meaning note, common variants, and a responsible research path. It cannot confirm that one reader's family came from a specific ancestor, village, clan branch, or historical figure. That boundary is important because Chinese surnames are shared by large populations across many regions and migration histories.</p>
+        <p>When the page discusses origin, read it as background context unless a personal family record confirms the link. A common surname can have several origin traditions, and an overseas spelling can preserve dialect information that is not visible in modern Mandarin pinyin. For example, the spelling used in one family may reflect Cantonese, Hokkien, Teochew, Hakka, older postal spelling, or local immigration-office choices.</p>
+        <p>The strongest next step is to build a small evidence table: Chinese character, pinyin, English spelling, older variants, known dialect, ancestral place if known, and source document. Once those facts are organized, broader surname guides become much more useful because the reader can compare real evidence against reference material instead of guessing from an English spelling alone.</p>
+        <p>For content planning, this also keeps pages from becoming thin dictionary entries. A useful surname article should explain what the character can tell you, what the spelling cannot prove, and what evidence the reader needs next. That combination gives the page enough depth for search while still being honest about genealogy limits.</p>
+        <p>Readers should also be warned about over-reading rankings and simplified meanings. A surname can be common in one list but less common in a specific region or overseas community. A character may have a clear modern meaning, but the family name may come from an older historical source. A strong surname page keeps those layers separate so users do not confuse a quick reference with confirmed ancestry.</p>
+        <p>The next useful internal path is clear: use a broad surname page for orientation, a common-surname list for comparison, a meaning guide for character notes, an origin guide for historical patterns, and an individual profile for variants and quick facts. This gives the reader a research flow instead of a single short answer. It also keeps each page from repeating the same generic surname explanation.</p>
+        <p>That research flow is also the quality standard for publishing new surname content. A page should not stop at a single translation or a one-line origin claim. It should explain the character, spelling variants, dialect risk, evidence limits, and the next page a reader should open. When those parts are present, the article works for ordinary readers, search engines, and AI extraction without pretending to be a complete family-history proof.</p>
+      </section>
       ${relatedGuidesBlock("Related surname guides", related)}
       ${faqBlock(standardFaqs())}
     `
@@ -531,6 +547,19 @@ await writePage("/common-chinese-surnames/", pageLayout({
     ${articleSearchBlock()}
     <section class="content-section article-body"><p class="lead-answer">The most common Chinese surnames include Li, Wang, Zhang, Liu, Chen, Yang, Huang, Zhao, Wu, and Zhou. English spellings can vary, so a surname table should include character, pinyin, and romanized variants together.</p></section>
     <section class="content-section"><div class="section-heading"><p class="eyebrow">Surname Table</p><h2>Common surname reference table</h2></div>${surnameTable()}</section>
+    <section class="content-section article-body">
+      <h2>How to use a common surname table</h2>
+      <p>A common surname table is a starting point, not a complete genealogy answer. It helps readers connect a romanized spelling with a Chinese character, pinyin, and common variant spellings. That is especially useful for overseas Chinese family names because the same surname may appear differently in Mandarin, Cantonese, Hokkien, Teochew, Hakka, or older local records.</p>
+      <p>The safest workflow is to identify the character first, then compare variant spellings. For example, a reader may know a family name from an English document but not know whether that spelling points to one character or several possible characters. A table makes the first comparison faster, but the character still needs confirmation from family documents, bilingual records, or direct family knowledge.</p>
+      <p>Population rank also needs careful wording. A surname can be common nationally but less common in a specific diaspora community, city, dialect group, or migration route. This page should therefore be used as a broad reference list before moving into meaning, origin, pronunciation, or individual surname profile pages.</p>
+    </section>
+    <section class="content-section article-body">
+      <h2>What to check after finding a surname</h2>
+      <p>After a reader finds a surname in the table, the next step is to open the individual profile or the meaning and origin guides. The table gives a compact view, but the profile explains why the character, pinyin, variants, and research limits matter together. This is especially important for names such as Lee, Wong, Ng, Chan, or Chang, where English spellings can overlap across different Chinese characters.</p>
+      <p>For practical research, keep a note with four fields: the Chinese character, the spelling used in the family, any older spelling in documents, and the source of that information. That simple note prevents later confusion and makes surname research more evidence-based. It also gives the site a clear internal-link path from broad list pages to deeper surname articles.</p>
+      <p>If the reader only knows an English spelling, the table should be treated as a shortlist, not a final answer. Open the profile pages for likely matches and compare the character, pinyin, and variants. This is the safest way to avoid false matches when one spelling can point to more than one surname background.</p>
+      <p>A strong list page should therefore work like an index with judgment, not just a table of names. It should help the reader decide whether to keep comparing spellings, open a meaning page, open an origin page, or gather family records before making a claim. That extra context is what separates a useful reference page from a thin keyword list.</p>
+    </section>
     ${keywordTable(referenceKeywords.slice(0, 10), "Reference-list keyword cluster", "List Intent")}
     ${faqBlock(standardFaqs())}
   `

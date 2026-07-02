@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-02T23:34:18.609Z",
+  "generatedAt": "2026-07-02T23:45:12.772Z",
   "totals": {
     "average": 98,
-    "pages": 32,
-    "pass": 31,
+    "pages": 33,
+    "pass": 32,
     "review": 0,
     "fix": 1
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 489,
+      "wordCount": 509,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -192,6 +192,17 @@
       "titleLength": 74,
       "descriptionLength": 141,
       "wordCount": 1489,
+      "h1": 1,
+      "h2": 9,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/ng-surname-meaning/",
+      "score": 100,
+      "titleLength": 76,
+      "descriptionLength": 136,
+      "wordCount": 1449,
       "h1": 1,
       "h2": 9,
       "faqs": 6,

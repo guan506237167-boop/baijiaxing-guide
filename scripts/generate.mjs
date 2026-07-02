@@ -42,7 +42,8 @@ const guides = [
   { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." },
   { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Wu surname meaning, character, romanized variants, and origin context." },
   { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." },
-  { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." }
+  { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." },
+  { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." }
 ];
 
 const pages = [];
@@ -868,6 +869,35 @@ await writePage("/lee-surname-meaning/", supportArticle({
   ],
   related: [guides[2], guides[3], guides[1], guides[5], guides[10]].filter(Boolean)
 }));
+await writePage("/ng-surname-meaning/", supportArticle({
+  title: "Ng Surname Meaning, Chinese Characters, Cantonese Spelling, and Lookup Notes",
+  description: "Learn Ng surname meaning, why Ng often needs Chinese character verification, and how to compare Cantonese, Mandarin, and family records.",
+  path: "/ng-surname-meaning/",
+  h1: "Ng Surname Meaning",
+  intro: "Ng is a common romanized surname spelling in overseas Chinese communities, but the English spelling alone does not identify one exact Chinese character in every case.",
+  answer: "Ng surname meaning depends on the Chinese character behind the spelling. In many Cantonese contexts, Ng commonly corresponds to Wu, written 吴 or 吳, but Ng can also appear through regional spelling systems and family-specific romanization. Confirm the written character before treating any meaning as final.",
+  details: [
+    "If Ng corresponds to 吴 or 吳, the surname is usually read as Wu in Mandarin pinyin and Ng in many Cantonese-style English records.",
+    "The spelling can look unfamiliar to English readers because the initial consonant cluster is not pronounced like a typical English word. That makes pronunciation, romanization, and character verification especially important.",
+    "For genealogy research, the useful evidence is not only the English spelling. Look for the Chinese character, ancestral place, dialect group, older documents, clan association records, and family inscriptions."
+  ],
+  sections: [
+    { title: "Why Ng is usually a romanization question first", paragraphs: [
+      "A search for Ng surname meaning often begins with the English spelling, but the spelling is only the surface layer. Many overseas Chinese names were recorded through Cantonese, Hokkien, Hakka, older local systems, or immigration paperwork. Ng is especially tied to Cantonese-style spelling, so a useful page must explain romanization before giving a simplified meaning note.",
+      "This is why character verification matters. If the family character is 吴 or 吳, the reader can connect Ng with the broader Wu surname profile. If the character is unknown, the spelling Ng should be treated as a clue to investigate, not as complete proof of origin or meaning."
+    ]},
+    { title: "Meaning when Ng corresponds to Wu 吴 or 吳", paragraphs: [
+      "When Ng corresponds to 吴 or 吳, it belongs to a major Chinese surname group commonly written Wu in Mandarin pinyin. Like many Chinese surnames, the character has historical and lineage associations that are more important than a one-word dictionary translation. A meaning page should therefore explain the character connection while avoiding exaggerated origin claims.",
+      "The simplified character 吴 and traditional character 吳 may appear in different documents depending on region, time period, and writing system. A family may use Ng in English, Wu in Mandarin pinyin, and 吳 in older records. Keeping those forms together helps readers avoid splitting one family line into separate names during research."
+    ]},
+    { title: "Research checklist for Ng families", paragraphs: [
+      "Start with the oldest reliable record that shows the Chinese character. Then compare English spellings used by different relatives, dialect group, ancestral village or county, gravestone inscriptions, family books, and association records. If older relatives pronounce the surname differently from Mandarin Wu, that is not an error; it may be a clue to the family's regional background.",
+      "For content planning, Ng also deserves internal links to Wu surname meaning, Chinese surname pronunciation, common Chinese surnames, and surname lookup. Many users searching Ng will not know whether they need pronunciation help, meaning help, or genealogy research guidance, so the page should route them clearly."
+    ]}
+  ],
+  related: [guides[3], guides[2], guides[5], { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "Character and meaning notes for Wu." }]
+}));
+
 for (const item of surnames) {
   await writePage(`/surnames/${item.slug}/`, surnamePage(item));
 }

@@ -445,6 +445,25 @@ function surnamePage(item) {
         <div class="fact-card"><strong>Quick facts</strong><span>Character: ${escapeHtml(item.hanzi)}</span><span>Pinyin: ${escapeHtml(item.pinyin)}</span><span>Variants: ${escapeHtml(item.variants)}</span></div>
         <div class="fact-card"><strong>Meaning note</strong><span>${escapeHtml(item.meaning)}</span></div>
       </section>
+      <section class="content-section article-body">
+        <h2>How to read the ${escapeHtml(item.pinyin)} surname carefully</h2>
+        <p>The safest starting point for the ${escapeHtml(item.pinyin)} surname is the written character ${escapeHtml(item.hanzi)}, not the English spelling alone. English forms such as ${escapeHtml(item.variants)} can preserve Mandarin, Cantonese, Hokkien, Teochew, Hakka, older postal spelling, or immigration-record choices. That means one spelling can sometimes point to more than one Chinese character, and one character can appear under several English forms.</p>
+        <p>For practical research, write down four facts before making a deeper claim: the Chinese character, the pinyin, the English spelling used by the family, and the oldest source where the spelling appears. A passport, family book, grave inscription, clan association document, school record, or old business registration may preserve a clue that a modern list cannot show by itself.</p>
+        <p>The meaning note should also be read with caution. A Chinese character may have a modern literal meaning, but a surname can come from older places, states, titles, official posts, clan branches, or historical naming traditions. The literal character is useful, but it is not the same thing as a proven family origin.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>Origin context and evidence limits</h2>
+        <p>${escapeHtml(item.origin)} This background can help a reader understand why the surname appears in Chinese reference lists, but it does not prove that a specific modern family descends from one named ancestor or one historical place. Many Chinese surnames are shared by large populations across different regions, dialect groups, and migration histories.</p>
+        <p>A responsible surname page should therefore separate three layers: broad cultural meaning, historical origin traditions, and private genealogy evidence. This page can explain the first two layers. The third layer depends on family records, ancestral hometown information, generation poems, temple documents, and older documents that belong to the specific family line.</p>
+        <p>If the reader only knows an English spelling, treat this page as a research starting point. Compare variants, check the character, open the common surname list, and then move into meaning or origin pages. This prevents the common mistake of assuming that a familiar English spelling automatically identifies the exact Chinese surname background.</p>
+      </section>
+      <section class="content-section article-body">
+        <h2>What to check next</h2>
+        <p>After reading this ${escapeHtml(item.pinyin)} profile, the best next step is to compare it with the broader Chinese surname guides. The meaning page explains why literal translation can be limited. The origin page explains common origin patterns such as places, states, titles, and lineage traditions. The common surname list helps readers compare high-frequency names and spelling variants.</p>
+        <p>For overseas families, keep a small evidence table with character, pinyin, English spelling, older spelling, dialect clue, ancestral place if known, and source document. That table makes later research more accurate and reduces the risk of matching the family to the wrong surname profile.</p>
+        <p>This page is written as an educational reference, not a certified genealogy report. It can help readers ask better questions, organize spellings, and understand surname context, but personal lineage claims should be checked against family evidence.</p>
+        <p>For advertising review and reader trust, this profile should stand alone with enough context to explain the surname, its spelling risk, its evidence limits, and the next research action for careful family-name study across documents, regions, generations, spellings, family records, and archive notes.</p>
+      </section>
       ${keywordTable(keywordRows.filter((row) => item.keywords.includes(row.keyword)).slice(0, 8), `${item.pinyin} surname keyword cluster`, "Surname Intent")}
       ${relatedGuidesBlock("Continue surname research", [guides[1], guides[2], guides[3], guides[5]])}
       ${faqBlock(standardFaqs())}

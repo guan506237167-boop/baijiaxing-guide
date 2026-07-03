@@ -845,7 +845,7 @@ await writePage("/lee-surname-meaning/", supportArticle({
   title: "Lee Surname Meaning, Chinese Character Possibilities, Origin, and Variants",
   description: "Learn Lee surname meaning, why Lee can match more than one Chinese surname, and how to verify character, pinyin, dialect, and family records.",
   path: "/lee-surname-meaning/",
-  h1: "Lee Surname Meaning",
+  h1: "Lee Surname Meaning, Chinese Character Possibilities, Origin, and Variants",
   intro: "Lee is one of the most familiar English spellings for Chinese family names, but the spelling alone is not enough to prove the exact Chinese character.",
   answer: "Lee surname meaning depends on the Chinese character behind the English spelling. In many Chinese surname contexts, Lee commonly corresponds to Li, written 李, but Lee can also reflect regional romanization, dialect, immigration spelling, or non-Chinese surnames. The safest research step is to confirm the written character first.",
   details: [
@@ -873,7 +873,7 @@ await writePage("/ng-surname-meaning/", supportArticle({
   title: "Ng Surname Meaning, Chinese Characters, Cantonese Spelling, and Lookup Notes",
   description: "Learn Ng surname meaning, why Ng often needs Chinese character verification, and how to compare Cantonese, Mandarin, and family records.",
   path: "/ng-surname-meaning/",
-  h1: "Ng Surname Meaning",
+  h1: "Ng Surname Meaning, Chinese Characters, Cantonese Spelling, and Lookup Notes",
   intro: "Ng is a common romanized surname spelling in overseas Chinese communities, but the English spelling alone does not identify one exact Chinese character in every case.",
   answer: "Ng surname meaning depends on the Chinese character behind the spelling. In many Cantonese contexts, Ng commonly corresponds to Wu, written 吴 or 吳, but Ng can also appear through regional spelling systems and family-specific romanization. Confirm the written character before treating any meaning as final.",
   details: [

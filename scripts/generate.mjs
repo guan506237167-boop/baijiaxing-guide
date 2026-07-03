@@ -1082,7 +1082,7 @@ body::before{content:"\\767E\\5BB6\\59D3";position:fixed;right:-34px;top:92px;z-
 .guide-card{background:linear-gradient(180deg,#fffdf8,#f2eadb)}.guide-card span{color:#7d251f}.content-section th{background:#ded2bd}.site-footer{background:#1f211f}
 body:not(.page-home):not(.page-guides):not(.seo-report-page){background:#ece5d6}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero{max-width:1180px;padding-top:42px;padding-bottom:24px}
-body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero h1{color:#1e211f;text-shadow:none}
+body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero h1{max-width:920px;color:#1e211f;font-size:clamp(28px,2.25vw,34px);line-height:1.16;text-shadow:none}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .intro{max-width:820px;color:#5b5145;font-size:17px;line-height:1.68}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .page-hero .eyebrow{background:rgba(125,37,31,.08);border-color:rgba(125,37,31,.18);color:#7d251f}
 body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{max-width:1180px;gap:34px;margin-bottom:38px}

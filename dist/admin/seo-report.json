@@ -1,13 +1,24 @@
 {
-  "generatedAt": "2026-07-03T09:17:09.831Z",
+  "generatedAt": "2026-07-03T23:46:56.104Z",
   "totals": {
     "average": 98,
-    "pages": 33,
-    "pass": 32,
+    "pages": 34,
+    "pass": 33,
     "review": 0,
     "fix": 1
   },
   "reports": [
+    {
+      "path": "/huang-surname-meaning/",
+      "score": 100,
+      "titleLength": 78,
+      "descriptionLength": 132,
+      "wordCount": 1590,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 6,
+      "issues": []
+    },
     {
       "path": "/",
       "score": 100,
@@ -24,7 +35,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 509,
+      "wordCount": 528,
       "h1": 1,
       "h2": 3,
       "faqs": 0,

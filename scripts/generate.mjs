@@ -43,7 +43,8 @@ const guides = [
   { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Wu surname meaning, character, romanized variants, and origin context." },
   { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." },
   { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." },
-  { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." }
+  { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." },
+  { title: "Huang Surname Meaning", path: "/huang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Huang surname meaning, character, variants, origin context, and research cautions." }
 ];
 
 const pages = [];
@@ -426,6 +427,42 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
     `
   });
 }
+
+await writePage("/huang-surname-meaning/", supportArticle({
+  title: "Huang Surname Meaning: Character, Origin Context, Variants, and Research Notes",
+  description: "Learn the Huang surname meaning, Chinese character, common variants, origin context, and safe research steps for family-name lookup.",
+  path: "/huang-surname-meaning/",
+  h1: "Huang Surname Meaning",
+  intro: "Huang is a common Chinese surname usually written with the character 黄, often explained through the meaning yellow while also carrying historical surname context.",
+  answer: "The Huang surname is usually written 黄 in simplified Chinese and is commonly explained through the character meaning yellow. For family-name research, however, Huang should be read as a surname with character, pinyin, variant spellings, regional romanization, and origin traditions, not only as a literal color word.",
+  details: [
+    "Common English forms can include Huang and Wong, while some regional or family records may preserve older spellings. The written character is the safest anchor before reading deeper meaning or origin notes.",
+    "A Huang surname page should help readers separate quick character meaning from genealogy evidence, because the same broad surname can appear across many regions, dialect groups, and migration histories."
+  ],
+  sections: [
+    { title: "What Huang means as a Chinese surname", paragraphs: [
+      "In a basic dictionary sense, 黄 is associated with yellow. That simple meaning is useful because it helps English readers remember the character, but it is not enough to explain a family line. A Chinese surname can preserve an older place, state, clan, title, or lineage tradition even when the modern character has an obvious literal meaning.",
+      "For this reason, the safest answer is layered: Huang is commonly written 黄, pronounced Huang in pinyin, often connected with the meaning yellow, and researched as a historical surname rather than a color description of one family. This keeps the page useful without making unsupported claims."
+    ]},
+    { title: "Huang, Wong, and romanization risk", paragraphs: [
+      "The spelling Huang normally reflects Mandarin pinyin. The spelling Wong may appear in Cantonese or overseas contexts, but it can also overlap with other surname situations depending on family history and written character. English spelling alone is therefore not enough to confirm the exact surname background.",
+      "A careful reader should collect the Chinese character from family records, inscriptions, bilingual documents, or older relatives before relying on a meaning page. If only the English spelling is known, compare several candidate surnames and mark the answer as uncertain until the character is confirmed."
+    ]},
+    { title: "Origin context without overclaiming genealogy", paragraphs: [
+      "Huang is widely represented in Chinese surname reference lists and has several historical origin traditions. A public guide can summarize that broad context, but it cannot prove that a modern reader descends from one named branch, village, official, or historical figure. That proof belongs to family records, ancestral-place evidence, generation poems, and local lineage material.",
+      "This boundary matters because common surnames are shared by many unrelated families. A meaningful surname page should not turn every reader into the same origin story. It should show the likely research path and explain what evidence is still needed."
+    ]},
+    { title: "How to research the Huang surname carefully", paragraphs: [
+      "Start with a small evidence table: Chinese character, pinyin, English spelling, older spelling, known dialect, ancestral place if known, and source document. This table is more useful than copying a single online origin claim because it lets the reader compare real family evidence with reference pages.",
+      "Then compare the Huang profile with broader Chinese surname meaning and origin guides. The meaning page explains character interpretation. The origin page explains common patterns such as places, states, titles, and lineage traditions. The common surname list helps compare variants and neighboring spellings."
+    ]},
+    { title: "When this guide is enough and when it is not", paragraphs: [
+      "This guide is enough when the reader wants a clear introduction to Huang meaning, character, pinyin, variants, and research cautions. It is not enough when the reader wants a verified family tree, a migration route, or a proven connection to a named historical ancestor.",
+      "If the goal is genealogy, use this page as a starting point, then move to family documents. If the goal is cultural understanding, the main takeaway is simpler: Huang is a major Chinese surname whose visible character meaning is only one layer of a much longer surname tradition."
+    ]}
+  ],
+  related: [guides[2], guides[3], guides[1], guides[5], guides[15]].filter(Boolean)
+}));
 
 function surnamePage(item) {
   return pageLayout({

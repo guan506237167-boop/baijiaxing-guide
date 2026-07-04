@@ -44,7 +44,8 @@ const guides = [
   { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." },
   { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." },
   { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." },
-  { title: "Huang Surname Meaning", path: "/huang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Huang surname meaning, character, variants, origin context, and research cautions." }
+  { title: "Huang Surname Meaning", path: "/huang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Huang surname meaning, character, variants, origin context, and research cautions." },
+  { title: "Yang Surname Meaning", path: "/yang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Yang surname meaning, character, variants, origin context, and family-name research cautions." }
 ];
 
 const pages = [];
@@ -462,6 +463,42 @@ await writePage("/huang-surname-meaning/", supportArticle({
     ]}
   ],
   related: [guides[2], guides[3], guides[1], guides[5], guides[15]].filter(Boolean)
+}));
+
+await writePage("/yang-surname-meaning/", supportArticle({
+  title: "Yang Surname Meaning: Character, Origin Context, Variants, and Research Notes",
+  description: "Learn the Yang surname meaning, Chinese character, common variants, origin context, and careful research steps for surname lookup.",
+  path: "/yang-surname-meaning/",
+  h1: "Yang Surname Meaning",
+  intro: "Yang is a common Chinese surname often written 杨, with a character commonly connected with poplar or willow-like tree meanings in modern explanations.",
+  answer: "The Yang surname is commonly written 杨 in simplified Chinese and explained through a tree-related character meaning. For surname research, Yang should be read through character, pinyin, variants, regional spelling, and historical context rather than as a simple literal translation.",
+  details: [
+    "Yang is usually pinyin, while Yeung and other spellings may appear in Cantonese or overseas records. The safest research step is to confirm the written Chinese character before relying on any meaning or origin explanation.",
+    "A public Yang surname guide can explain common meaning notes and research cautions, but it cannot prove one reader's private genealogy without family records."
+  ],
+  sections: [
+    { title: "What Yang means as a Chinese surname", paragraphs: [
+      "In modern character explanation, 杨 is often associated with poplar or willow-like tree meanings. That can help English readers remember the character, but a surname is not always explained by the modern dictionary meaning alone. Chinese surnames can preserve older places, states, clans, titles, and lineage traditions.",
+      "The responsible answer is therefore layered: Yang is a major Chinese surname, often written 杨, pronounced Yang in pinyin, and commonly explained through a tree-related character. The meaning is useful, but it should be connected with historical surname context and evidence limits."
+    ]},
+    { title: "Yang, Yeung, and spelling variants", paragraphs: [
+      "The spelling Yang usually reflects Mandarin pinyin. Yeung can appear in Cantonese contexts, and overseas records may contain other forms depending on immigration offices, dialect pronunciation, and family choice. A romanized spelling can point in the right direction, but it does not replace the written character.",
+      "This matters because English readers often begin with a passport spelling or family business name. That spelling is useful evidence, but it should be compared with Chinese characters from family documents, grave inscriptions, clan records, old letters, or direct family knowledge."
+    ]},
+    { title: "Origin context and genealogy limits", paragraphs: [
+      "Yang appears in common Chinese surname lists and has historical origin traditions, but a general reference page cannot identify every modern family branch. Many people share the surname across different regions and migration routes. A page that names one origin too confidently can mislead readers whose family evidence points elsewhere.",
+      "The better approach is to explain common origin patterns and then show what evidence is still needed. Ancestral place, generation poems, family books, temple records, and older bilingual documents are stronger than a quick online surname meaning."
+    ]},
+    { title: "How to research Yang carefully", paragraphs: [
+      "Start by building a simple evidence note: character, pinyin, English spelling, older spelling, known dialect, ancestral place if known, and document source. This note prevents the reader from mixing different Yang branches or assuming that a single spelling proves a full origin story.",
+      "After that, compare the Yang profile with broader surname meaning and origin guides. The meaning page helps explain why literal translation is limited. The origin page helps explain common historical patterns. The common surname list helps place Yang beside other major names and variants."
+    ]},
+    { title: "When this answer is enough", paragraphs: [
+      "This guide is enough when the goal is to understand the basic Yang surname meaning, character, pinyin, variants, and research path. It is not enough when the goal is a verified family tree or a proven ancestral branch. For that, the reader needs family-specific evidence.",
+      "A useful surname page should leave the reader with clarity instead of false certainty. Yang can be introduced through its character meaning, but deeper family history should stay tied to documents, places, and older records."
+    ]}
+  ],
+  related: [guides[2], guides[3], guides[1], guides[5], guides[16]].filter(Boolean)
 }));
 
 function surnamePage(item) {

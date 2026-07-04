@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-03T23:46:56.104Z",
+  "generatedAt": "2026-07-04T00:02:17.511Z",
   "totals": {
     "average": 98,
-    "pages": 34,
-    "pass": 33,
+    "pages": 35,
+    "pass": 34,
     "review": 0,
     "fix": 1
   },
@@ -14,6 +14,17 @@
       "titleLength": 78,
       "descriptionLength": 132,
       "wordCount": 1590,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/yang-surname-meaning/",
+      "score": 100,
+      "titleLength": 77,
+      "descriptionLength": 130,
+      "wordCount": 1532,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
@@ -35,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 528,
+      "wordCount": 548,
       "h1": 1,
       "h2": 3,
       "faqs": 0,

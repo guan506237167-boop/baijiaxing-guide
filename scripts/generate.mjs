@@ -46,7 +46,10 @@ const guides = [
   { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." },
   { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." },
   { title: "Huang Surname Meaning", path: "/huang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Huang surname meaning, character, variants, origin context, and research cautions." },
-  { title: "Yang Surname Meaning", path: "/yang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Yang surname meaning, character, variants, origin context, and family-name research cautions." }
+  { title: "Yang Surname Meaning", path: "/yang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Yang surname meaning, character, variants, origin context, and family-name research cautions." },
+
+  { title: 'Wong Surname Meaning', path: '/wong-surname-meaning/', category: 'Meaning Guides', description: 'Verify Wong through characters and romanization.' },
+  { title: 'Lam Surname Origin', path: '/lam-surname-origin/', category: 'Origin Guides', description: 'Research Lam through Cantonese spelling and records.' },
 ];
 
 const pages = [];
@@ -1067,6 +1070,291 @@ await writePage("/terms/", simpleLegalPage({
   ]
 }));
 
+
+const dailyArticles20260706 = [
+  {
+    "title": "Wong Surname Meaning: Characters, Romanization, and Research Checks",
+    "path": "/wong-surname-meaning/",
+    "description": "Understand Wong surname meaning through Chinese characters, Cantonese romanization, Huang/Wang links, and family research checks.",
+    "h1": "Wong Surname Meaning: Characters, Romanization, and Research Checks",
+    "intro": "Wong is a romanized Chinese surname spelling that may correspond to different Chinese characters, so meaning depends on the character.",
+    "answer": "Wong surname meaning depends on the Chinese character behind the English spelling; it often corresponds to Huang or Wang in Mandarin contexts, but family records should verify the exact character before assigning a meaning.",
+    "details": [
+      "For wong surname meaning, the useful answer starts with the reader's situation rather than a broad definition. Someone searching this phrase usually wants to make a decision, compare a few choices, or avoid a mistake before spending time or money. The safest reading is to treat romanization, character verification, and surname research as practical guidance with cultural context, not as a fixed rule that applies to every family, meal, product, or tradition. That matters for family history, pronunciation checks, and surname meaning lookup, because a short answer can be technically correct but still fail if it does not explain what the reader should check next.",
+      "A strong page should give the main answer early, then separate cultural meaning, practical judgment, common mistakes, and the next reader path. That structure helps a beginner get oriented quickly while still giving enough detail for search engines and answer engines to extract a clear explanation.",
+      "The key boundary is responsibility. Wong Surname Meaning can be useful and interesting, but the page should not promise guaranteed luck, perfect compatibility, permanent results, or universal family history. It should show how to evaluate the topic and when to keep checking context."
+    ],
+    "sections": [
+      {
+        "title": "Why Wong needs character verification",
+        "paragraphs": [
+          "The direct answer is this: Wong surname meaning depends on the Chinese character behind the English spelling; it often corresponds to Huang or Wang in Mandarin contexts, but family records should verify the exact character before assigning a meaning. The first decision is not whether the topic is important in theory, but whether it solves the reader's actual problem. If the reader is choosing a product, planning a gift, learning a technique, or researching a family name, the page should give a usable next step instead of only repeating background information.",
+          "A common scenario is a visitor who knows one phrase but not the surrounding context. They may know the English spelling, the product name, a symbolic color, or the tutorial label, yet still be unsure which detail matters. This is why the opening answer needs to define the topic and immediately explain how to use that definition in real life."
+        ]
+      },
+      {
+        "title": "Common character links behind Wong",
+        "paragraphs": [
+          "Cultural context gives the topic meaning, but it should not turn into decoration. The reader needs to know where the idea fits, why people care about it, and which claims should be treated carefully. For wong surname meaning, the strongest explanation connects tradition with a practical situation: choosing, learning, comparing, gifting, or researching.",
+          "The cautious approach is to describe symbolism as symbolism. A color can express a wish, a surname can point toward a lineage clue, a knot can represent connection, and a tool can support reflection. None of those meanings should be written as a guaranteed outcome. Clear boundaries make the page more trustworthy and more useful for long-term SEO."
+        ]
+      },
+      {
+        "title": "How to research a Wong family line",
+        "paragraphs": [
+          "The practical check is to compare the visible details. Look at material, spelling, source, date, use case, photo evidence, or the exact question the visitor is trying to answer. If those details are missing, the page should say so. A responsible guide gives the reader a checklist rather than pretending one short answer covers every case.",
+          "A good comparison also explains tradeoffs. A beginner may need ease before beauty. A gift buyer may need presentation before technical depth. A researcher may need primary records before a neat story. A culture-focused reader may need meaning and limitations together. Those tradeoffs are what make the article feel written for a person rather than generated for a keyword."
+        ]
+      },
+      {
+        "title": "Mistakes in surname meaning pages",
+        "paragraphs": [
+          "The most common mistake is overgeneralizing. Readers often want a single best answer, but wong surname meaning usually depends on context. The page should warn against vague product descriptions, missing character evidence, unclear tutorial steps, or symbolic claims that sound stronger than the tradition supports.",
+          "Another mistake is ignoring the next action. After reading, the visitor should know whether to compare related guides, use a tool, check a material list, review pronunciation, or look for a better product photo. A page that ends without a next step wastes attention and weakens internal linking."
+        ]
+      },
+      {
+        "title": "Reader paths for genealogy and naming",
+        "paragraphs": [
+          "Different readers need different paths. Beginners should start with the simplest working version. Buyers should check quality signals before style. Gift givers should match symbolism with the recipient and occasion. Researchers should verify spelling, source, and historical context before repeating a claim.",
+          "This reader-path section is also where internal links matter. The article should route people toward the closest guide instead of dumping every related page at the end. Natural routing helps visitors continue and helps search engines understand the topical cluster."
+        ]
+      },
+      {
+        "title": "Final research rule",
+        "paragraphs": [
+          "The final decision rule is simple: use wong surname meaning as a structured reference, then check the detail that changes the answer. If the detail is material, inspect construction and care. If the detail is culture, keep the wording bounded. If the detail is family history, verify the character or source. If the detail is a learning task, practice the simplest version first.",
+          "This makes the page useful today and expandable later. Product blocks, paid reports, printable guides, or affiliate recommendations can be added only after the core explanation is strong enough to stand on its own. That is the standard these new pages should follow."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the simplest safe version",
+          "It reduces confusion and makes the first result easier to judge"
+        ],
+        [
+          "Buyer or gift giver",
+          "Check material, size, photos, and explanation",
+          "Good presentation should not hide weak construction or vague claims"
+        ],
+        [
+          "Researcher",
+          "Verify source, spelling, date, or cultural context",
+          "A clean claim is not reliable unless the evidence behind it is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read meaning and limitation together",
+          "Symbolic language is useful when it stays responsible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer about wong surname meaning?",
+        "a": "Wong surname meaning depends on the Chinese character behind the English spelling; it often corresponds to Huang or Wang in Mandarin contexts, but family records should verify the exact character before assigning a meaning."
+      },
+      {
+        "q": "What is the biggest mistake with wong surname meaning?",
+        "a": "The biggest mistake is treating one symbolic or practical rule as universal. The better approach is to check the use case, source, material, spelling, or learning context before making a decision."
+      },
+      {
+        "q": "Can wong surname meaning be used for buying or paid products later?",
+        "a": "Yes, but only after the free explanation is useful on its own. Product or report offers should support the reader's decision instead of replacing clear guidance."
+      },
+      {
+        "q": "How should a beginner use this wong surname meaning guide?",
+        "a": "A beginner should read the answer first, follow the checklist, avoid overclaiming, and then move to the most closely related guide for the next step."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning",
+        "description": "Read meaning patterns."
+      },
+      {
+        "title": "Chinese Surname Pronunciation",
+        "path": "/chinese-surname-pronunciation/",
+        "category": "Pronunciation",
+        "description": "Compare romanization forms."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tool",
+        "description": "Search known surname profiles."
+      }
+    ]
+  },
+  {
+    "title": "Lam Surname Origin: Cantonese Spelling, Characters, and Genealogy Notes",
+    "path": "/lam-surname-origin/",
+    "description": "Read Lam surname origin with Cantonese spelling, possible Chinese characters, Lin connections, and practical genealogy checks.",
+    "h1": "Lam Surname Origin: Cantonese Spelling, Characters, and Genealogy Notes",
+    "intro": "Lam is usually a Cantonese-style romanization, and its origin should be checked through the Chinese character and family records.",
+    "answer": "Lam surname origin is usually researched through Cantonese romanization and the Chinese character behind the spelling; in many cases it corresponds to Lin in Mandarin pinyin, but records must confirm the family character.",
+    "details": [
+      "For lam surname origin, the useful answer starts with the reader's situation rather than a broad definition. Someone searching this phrase usually wants to make a decision, compare a few choices, or avoid a mistake before spending time or money. The safest reading is to treat Cantonese spelling and family-history verification as practical guidance with cultural context, not as a fixed rule that applies to every family, meal, product, or tradition. That matters for genealogy research, surname origin lookup, and romanization comparison, because a short answer can be technically correct but still fail if it does not explain what the reader should check next.",
+      "A strong page should give the main answer early, then separate cultural meaning, practical judgment, common mistakes, and the next reader path. That structure helps a beginner get oriented quickly while still giving enough detail for search engines and answer engines to extract a clear explanation.",
+      "The key boundary is responsibility. Lam Surname Origin can be useful and interesting, but the page should not promise guaranteed luck, perfect compatibility, permanent results, or universal family history. It should show how to evaluate the topic and when to keep checking context."
+    ],
+    "sections": [
+      {
+        "title": "Why Lam is usually a spelling clue first",
+        "paragraphs": [
+          "The direct answer is this: Lam surname origin is usually researched through Cantonese romanization and the Chinese character behind the spelling; in many cases it corresponds to Lin in Mandarin pinyin, but records must confirm the family character. The first decision is not whether the topic is important in theory, but whether it solves the reader's actual problem. If the reader is choosing a product, planning a gift, learning a technique, or researching a family name, the page should give a usable next step instead of only repeating background information.",
+          "A common scenario is a visitor who knows one phrase but not the surrounding context. They may know the English spelling, the product name, a symbolic color, or the tutorial label, yet still be unsure which detail matters. This is why the opening answer needs to define the topic and immediately explain how to use that definition in real life."
+        ]
+      },
+      {
+        "title": "Possible character and Lin connections",
+        "paragraphs": [
+          "Cultural context gives the topic meaning, but it should not turn into decoration. The reader needs to know where the idea fits, why people care about it, and which claims should be treated carefully. For lam surname origin, the strongest explanation connects tradition with a practical situation: choosing, learning, comparing, gifting, or researching.",
+          "The cautious approach is to describe symbolism as symbolism. A color can express a wish, a surname can point toward a lineage clue, a knot can represent connection, and a tool can support reflection. None of those meanings should be written as a guaranteed outcome. Clear boundaries make the page more trustworthy and more useful for long-term SEO."
+        ]
+      },
+      {
+        "title": "Genealogy checks for Lam families",
+        "paragraphs": [
+          "The practical check is to compare the visible details. Look at material, spelling, source, date, use case, photo evidence, or the exact question the visitor is trying to answer. If those details are missing, the page should say so. A responsible guide gives the reader a checklist rather than pretending one short answer covers every case.",
+          "A good comparison also explains tradeoffs. A beginner may need ease before beauty. A gift buyer may need presentation before technical depth. A researcher may need primary records before a neat story. A culture-focused reader may need meaning and limitations together. Those tradeoffs are what make the article feel written for a person rather than generated for a keyword."
+        ]
+      },
+      {
+        "title": "Mistakes in Lam origin research",
+        "paragraphs": [
+          "The most common mistake is overgeneralizing. Readers often want a single best answer, but lam surname origin usually depends on context. The page should warn against vague product descriptions, missing character evidence, unclear tutorial steps, or symbolic claims that sound stronger than the tradition supports.",
+          "Another mistake is ignoring the next action. After reading, the visitor should know whether to compare related guides, use a tool, check a material list, review pronunciation, or look for a better product photo. A page that ends without a next step wastes attention and weakens internal linking."
+        ]
+      },
+      {
+        "title": "Reader paths for family history",
+        "paragraphs": [
+          "Different readers need different paths. Beginners should start with the simplest working version. Buyers should check quality signals before style. Gift givers should match symbolism with the recipient and occasion. Researchers should verify spelling, source, and historical context before repeating a claim.",
+          "This reader-path section is also where internal links matter. The article should route people toward the closest guide instead of dumping every related page at the end. Natural routing helps visitors continue and helps search engines understand the topical cluster."
+        ]
+      },
+      {
+        "title": "Final research rule",
+        "paragraphs": [
+          "The final decision rule is simple: use lam surname origin as a structured reference, then check the detail that changes the answer. If the detail is material, inspect construction and care. If the detail is culture, keep the wording bounded. If the detail is family history, verify the character or source. If the detail is a learning task, practice the simplest version first.",
+          "This makes the page useful today and expandable later. Product blocks, paid reports, printable guides, or affiliate recommendations can be added only after the core explanation is strong enough to stand on its own. That is the standard these new pages should follow."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the simplest safe version",
+          "It reduces confusion and makes the first result easier to judge"
+        ],
+        [
+          "Buyer or gift giver",
+          "Check material, size, photos, and explanation",
+          "Good presentation should not hide weak construction or vague claims"
+        ],
+        [
+          "Researcher",
+          "Verify source, spelling, date, or cultural context",
+          "A clean claim is not reliable unless the evidence behind it is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read meaning and limitation together",
+          "Symbolic language is useful when it stays responsible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer about lam surname origin?",
+        "a": "Lam surname origin is usually researched through Cantonese romanization and the Chinese character behind the spelling; in many cases it corresponds to Lin in Mandarin pinyin, but records must confirm the family character."
+      },
+      {
+        "q": "What is the biggest mistake with lam surname origin?",
+        "a": "The biggest mistake is treating one symbolic or practical rule as universal. The better approach is to check the use case, source, material, spelling, or learning context before making a decision."
+      },
+      {
+        "q": "Can lam surname origin be used for buying or paid products later?",
+        "a": "Yes, but only after the free explanation is useful on its own. Product or report offers should support the reader's decision instead of replacing clear guidance."
+      },
+      {
+        "q": "How should a beginner use this lam surname origin guide?",
+        "a": "A beginner should read the answer first, follow the checklist, avoid overclaiming, and then move to the most closely related guide for the next step."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surname Origin",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin",
+        "description": "Read origin research patterns."
+      },
+      {
+        "title": "Common Chinese Surnames",
+        "path": "/common-chinese-surnames/",
+        "category": "Reference",
+        "description": "Compare common surname forms."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tool",
+        "description": "Search surname spellings."
+      }
+    ]
+  }
+];
+
+function dailyArticlePage20260706(article) {
+  const rows = article.table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
+  const body = `
+    ${articleSearchBlock()}
+    <section class="content-section article-body">
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+    </section>
+    ${article.sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("")}
+    <section class="content-section"><p class="eyebrow">Decision Table</p><h2>${escapeHtml(article.table.title)}</h2><div class="table-wrap"><table><thead><tr>${article.table.headers.map((header) => `<th>${escapeHtml(header)}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table></div></section>
+    ${relatedGuidesBlock("Related guides", article.related)}
+    ${faqBlock(article.faqs)}
+  `;
+  return pageLayout({
+    title: article.title,
+    description: article.description,
+    path: article.path,
+    h1: article.h1,
+    intro: article.intro,
+    faqs: article.faqs,
+    pageType: "Article",
+    articleSidebar: true,
+    heroLabel: "New guide",
+    body
+  });
+}
+
+for (const article of dailyArticles20260706) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 await writeFile("dist/toolkit.js", clientScript(), "utf8");
 await writeFile("dist/styles.css", css() + themeCss(), "utf8");
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
@@ -1235,6 +1523,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
 
 
 

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-05T01:34:04.849Z",
+  "generatedAt": "2026-07-05T23:27:17.777Z",
   "totals": {
     "average": 98,
-    "pages": 36,
-    "pass": 35,
+    "pages": 38,
+    "pass": 37,
     "review": 0,
     "fix": 1
   },
@@ -46,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 568,
+      "wordCount": 591,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -413,6 +413,28 @@
       "issues": [
         "thin support content"
       ]
+    },
+    {
+      "path": "/wong-surname-meaning/",
+      "score": 100,
+      "titleLength": 67,
+      "descriptionLength": 129,
+      "wordCount": 1344,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/lam-surname-origin/",
+      "score": 100,
+      "titleLength": 71,
+      "descriptionLength": 126,
+      "wordCount": 1342,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
     }
   ]
 }

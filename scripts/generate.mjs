@@ -40,6 +40,7 @@ const guides = [
   { title: "Chen Surname Meaning", path: "/chen-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Chen surname meaning, character, variants, origin context, and lookup notes." },
   { title: "Li Surname Origin", path: "/li-surname-origin/", category: "Origin Guides", description: "A focused guide to Li surname origin, character, variants, meaning context, and research notes." },
   { title: "Wang Surname Origin", path: "/wang-surname-origin/", category: "Origin Guides", description: "A focused guide to Wang surname origin, character, variants, meaning context, and research notes." },
+  { title: "Zhao Surname Meaning", path: "/zhao-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Zhao surname meaning, character, origin context, Baijiaxing position, and romanized variants." },
   { title: "Wu Surname Meaning", path: "/wu-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Wu surname meaning, character, romanized variants, and origin context." },
   { title: "Zhang Surname Origin", path: "/zhang-surname-origin/", category: "Origin Guides", description: "A focused guide to Zhang surname origin, character, meaning notes, and romanized variants." },
   { title: "Lee Surname Meaning", path: "/lee-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Lee surname meaning, Chinese character possibilities, romanization risk, and research notes." },
@@ -811,6 +812,42 @@ await writePage("/wang-surname-origin/", supportArticle({
   related: [guides[3], guides[2], guides[5], { title: "Wang Surname Profile", path: "/surnames/wang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wang." }]
 }));
 
+await writePage("/zhao-surname-meaning/", supportArticle({
+  title: "Zhao Surname Meaning, Origin Context, Baijiaxing Position, and Variants",
+  description: "Learn Zhao surname meaning, Chinese character Zhao, origin context, Baijiaxing position, common variants, and careful research steps.",
+  path: "/zhao-surname-meaning/",
+  h1: "Zhao Surname Meaning",
+  intro: "Zhao is a major Chinese surname and is famous as the first surname in the traditional Hundred Family Surnames text.",
+  answer: "The Zhao surname is usually written 赵 in simplified Chinese and 趙 in traditional Chinese. In surname research, Zhao should be read through character, pinyin, historical context, and family evidence rather than through one simple English meaning line.",
+  details: [
+    "Zhao is especially important in Chinese surname reference because it appears first in the classic Hundred Family Surnames text, even though modern surname ranking is a separate question.",
+    "Common romanized forms can include Zhao, Chao, Chiu, or regional spellings depending on dialect, family history, and older records. The written character is the safest anchor before reading meaning or origin notes."
+  ],
+  sections: [
+    { title: "What Zhao means as a Chinese surname", paragraphs: [
+      "Zhao is best understood as a historical family name rather than a modern vocabulary word. The character 赵 or 趙 identifies the surname, while the meaning and origin need to be read through Chinese surname history, regional records, and family evidence. A short translation is not enough to explain a family line.",
+      "For English readers, the most useful first answer is layered: Zhao is the Mandarin pinyin form, 赵 is the simplified character, 趙 is the traditional character, and the surname is strongly represented in Chinese history and surname reference texts. That gives a clear starting point without pretending to prove one family genealogy."
+    ]},
+    { title: "Why Zhao appears first in Hundred Family Surnames", paragraphs: [
+      "Zhao is famous because it appears as the first surname in the traditional Hundred Family Surnames text. That position is historically and culturally important, but it should not be confused with being the most common surname today. Classic text order and modern population ranking are different things.",
+      "This distinction helps readers avoid a common mistake. A surname can be prominent in a classic text for historical reasons while modern frequency data tells a different story. A useful Zhao page should explain both layers: cultural prominence in Baijiaxing and practical surname research in modern records."
+    ]},
+    { title: "Zhao, Chao, Chiu, and spelling variants", paragraphs: [
+      "Zhao is the standard Mandarin pinyin spelling, but overseas records may show Chao, Chiu, or other forms. These spellings can reflect older romanization, Cantonese or regional pronunciation, immigration records, or family preference. The spelling alone is a clue, not final proof.",
+      "If a family record uses Chao or Chiu, do not automatically replace it with Zhao without checking the Chinese character. Older spellings can preserve migration history and may be the key to matching documents, gravestones, clan association records, or family books."
+    ]},
+    { title: "How to research Zhao carefully", paragraphs: [
+      "Start with the character. If the family character is 赵 or 趙, then the reader can compare Zhao with Baijiaxing, common surname lists, origin guides, and individual surname profiles. If the character is unknown, gather older documents before treating any meaning explanation as final.",
+      "A useful research note should include Chinese character, English spelling, older spellings, known dialect, ancestral place if known, and the source document. This prevents the page from becoming a thin dictionary lookup and gives the reader an evidence-based path for deeper family research."
+    ]},
+    { title: "What this page can and cannot prove", paragraphs: [
+      "This page can explain Zhao as a surname, show its character forms, discuss Baijiaxing context, and list research cautions. It cannot prove that a reader descends from a specific historical branch, official, village, or clan without family evidence.",
+      "The best next step is to compare this page with the Zhao surname profile, broader Chinese surname origin guides, and any family records available. That keeps the answer useful for casual readers while respecting the limits of genealogy research."
+    ]}
+  ],
+  related: [guides[2], guides[3], guides[4], guides[5], { title: "Zhao Surname Profile", path: "/surnames/zhao/", category: "Surname Profiles", description: "Character, variants, and quick facts for Zhao." }].filter(Boolean)
+}));
+
 await writePage("/wu-surname-meaning/", supportArticle({
   title: "Wu Surname Meaning, Character, Origin Context, and Variants",
   description: "Learn Wu surname meaning, the Chinese character Wu, common variants such as Ng and Woo, and how to read surname meaning in context.",
@@ -1198,6 +1235,8 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
+
 
 
 

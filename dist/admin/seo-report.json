@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-04T00:02:17.511Z",
+  "generatedAt": "2026-07-05T01:34:04.849Z",
   "totals": {
     "average": 98,
-    "pages": 35,
-    "pass": 34,
+    "pages": 36,
+    "pass": 35,
     "review": 0,
     "fix": 1
   },
@@ -24,7 +24,7 @@
       "score": 100,
       "titleLength": 77,
       "descriptionLength": 130,
-      "wordCount": 1532,
+      "wordCount": 1533,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
@@ -46,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 548,
+      "wordCount": 568,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -183,6 +183,17 @@
       "wordCount": 1022,
       "h1": 1,
       "h2": 6,
+      "faqs": 6,
+      "issues": []
+    },
+    {
+      "path": "/zhao-surname-meaning/",
+      "score": 100,
+      "titleLength": 71,
+      "descriptionLength": 133,
+      "wordCount": 1542,
+      "h1": 1,
+      "h2": 11,
       "faqs": 6,
       "issues": []
     },

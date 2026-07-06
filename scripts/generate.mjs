@@ -50,6 +50,8 @@ const guides = [
 
   { title: 'Wong Surname Meaning', path: '/wong-surname-meaning/', category: 'Meaning Guides', description: 'Verify Wong through characters and romanization.' },
   { title: 'Lam Surname Origin', path: '/lam-surname-origin/', category: 'Origin Guides', description: 'Research Lam through Cantonese spelling and records.' },
+  { title: 'Wong Surname Origin', path: '/wong-surname-origin/', category: 'Origin Guides', description: 'Research Wong origin through characters and Cantonese spelling.' },
+  { title: 'Long Surname Origin', path: '/long-surname-origin/', category: 'Origin Guides', description: 'Check Long surname characters, origin clues, and spelling limits.' },
 ];
 
 const pages = [];
@@ -434,7 +436,7 @@ function supportArticle({ title, description, path, h1, intro, answer, details, 
 }
 
 await writePage("/huang-surname-meaning/", supportArticle({
-  title: "Huang Surname Meaning: Character, Origin Context, Variants, and Research Notes",
+  title: "Huang Surname Meaning: Character, Origin, and Variants",
   description: "Learn the Huang surname meaning, Chinese character, common variants, origin context, and safe research steps for family-name lookup.",
   path: "/huang-surname-meaning/",
   h1: "Huang Surname Meaning",
@@ -470,7 +472,7 @@ await writePage("/huang-surname-meaning/", supportArticle({
 }));
 
 await writePage("/yang-surname-meaning/", supportArticle({
-  title: "Yang Surname Meaning: Character, Origin Context, Variants, and Research Notes",
+  title: "Yang Surname Meaning: Character, Origin, and Variants",
   description: "Learn the Yang surname meaning, Chinese character, common variants, origin context, and careful research steps for surname lookup.",
   path: "/yang-surname-meaning/",
   h1: "Yang Surname Meaning",
@@ -816,7 +818,7 @@ await writePage("/wang-surname-origin/", supportArticle({
 }));
 
 await writePage("/zhao-surname-meaning/", supportArticle({
-  title: "Zhao Surname Meaning, Origin Context, Baijiaxing Position, and Variants",
+  title: "Zhao Surname Meaning: Baijiaxing Origin and Variants",
   description: "Learn Zhao surname meaning, Chinese character Zhao, origin context, Baijiaxing position, common variants, and careful research steps.",
   path: "/zhao-surname-meaning/",
   h1: "Zhao Surname Meaning",
@@ -956,10 +958,10 @@ await writePage("/zhang-surname-origin/", supportArticle({
 }));
 
 await writePage("/lee-surname-meaning/", supportArticle({
-  title: "Lee Surname Meaning, Chinese Character Possibilities, Origin, and Variants",
+  title: "Lee Surname Meaning: Characters, Origin, and Variants",
   description: "Learn Lee surname meaning, why Lee can match more than one Chinese surname, and how to verify character, pinyin, dialect, and family records.",
   path: "/lee-surname-meaning/",
-  h1: "Lee Surname Meaning, Chinese Character Possibilities, Origin, and Variants",
+  h1: "Lee Surname Meaning: Characters, Origin, and Variants",
   intro: "Lee is one of the most familiar English spellings for Chinese family names, but the spelling alone is not enough to prove the exact Chinese character.",
   answer: "Lee surname meaning depends on the Chinese character behind the English spelling. In many Chinese surname contexts, Lee commonly corresponds to Li, written 李, but Lee can also reflect regional romanization, dialect, immigration spelling, or non-Chinese surnames. The safest research step is to confirm the written character first.",
   details: [
@@ -984,10 +986,10 @@ await writePage("/lee-surname-meaning/", supportArticle({
   related: [guides[2], guides[3], guides[1], guides[5], guides[10]].filter(Boolean)
 }));
 await writePage("/ng-surname-meaning/", supportArticle({
-  title: "Ng Surname Meaning, Chinese Characters, Cantonese Spelling, and Lookup Notes",
+  title: "Ng Surname Meaning: Characters and Cantonese Notes",
   description: "Learn Ng surname meaning, why Ng often needs Chinese character verification, and how to compare Cantonese, Mandarin, and family records.",
   path: "/ng-surname-meaning/",
-  h1: "Ng Surname Meaning, Chinese Characters, Cantonese Spelling, and Lookup Notes",
+  h1: "Ng Surname Meaning: Characters and Cantonese Notes",
   intro: "Ng is a common romanized surname spelling in overseas Chinese communities, but the English spelling alone does not identify one exact Chinese character in every case.",
   answer: "Ng surname meaning depends on the Chinese character behind the spelling. In many Cantonese contexts, Ng commonly corresponds to Wu, written 吴 or 吳, but Ng can also appear through regional spelling systems and family-specific romanization. Confirm the written character before treating any meaning as final.",
   details: [
@@ -1198,10 +1200,10 @@ const dailyArticles20260706 = [
     ]
   },
   {
-    "title": "Lam Surname Origin: Cantonese Spelling, Characters, and Genealogy Notes",
+    "title": "Lam Surname Origin: Characters and Genealogy Notes",
     "path": "/lam-surname-origin/",
     "description": "Read Lam surname origin with Cantonese spelling, possible Chinese characters, Lin connections, and practical genealogy checks.",
-    "h1": "Lam Surname Origin: Cantonese Spelling, Characters, and Genealogy Notes",
+    "h1": "Lam Surname Origin: Characters and Genealogy Notes",
     "intro": "Lam is usually a Cantonese-style romanization, and its origin should be checked through the Chinese character and family records.",
     "answer": "Lam surname origin is usually researched through Cantonese romanization and the Chinese character behind the spelling; in many cases it corresponds to Lin in Mandarin pinyin, but records must confirm the family character.",
     "details": [
@@ -1313,6 +1315,241 @@ const dailyArticles20260706 = [
         "path": "/common-chinese-surnames/",
         "category": "Reference",
         "description": "Compare common surname forms."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tool",
+        "description": "Search surname spellings."
+      }
+    ]
+  },
+  {
+    "title": "Long Surname Origin: Characters, Meanings, and Research Checks",
+    "path": "/long-surname-origin/",
+    "description": "Research Long surname origin through Chinese characters, possible meanings, romanization limits, genealogy clues, and family-record checks.",
+    "h1": "Long Surname Origin: Characters, Meanings, and Research Checks",
+    "intro": "Long surname origin depends on the Chinese character behind the spelling, because English romanization can hide different surname forms.",
+    "answer": "Long surname origin should be researched by first identifying the Chinese character, then checking romanization, regional spelling, family records, and historical context before assigning a meaning.",
+    "details": [
+      "Long looks like a simple English surname, but in Chinese surname research the spelling is only a clue. It may represent different characters, dialect pronunciations, or family-line records depending on the household.",
+      "The most useful first step is to find the written Chinese character used by the family. Without that character, a meaning page can only give possibilities. With the character, the research becomes more specific and less speculative.",
+      "This article is written for genealogy beginners, naming researchers, and people checking family background. It keeps origin claims bounded because surname history is easy to oversimplify.",
+      "For overseas families, the research path often includes translation gaps. A relative may remember a village name by sound, an old document may use a colonial spelling, and a modern database may require pinyin. Keeping those forms together prevents a false conclusion that the family has changed surnames when only the recording system changed.",
+      "Name research also needs humility. Some origin stories are widely repeated because they are memorable, not because they are proven for every branch. If a source does not explain character, place, period, and evidence, treat it as background reading rather than a final family-history answer.",
+      "When a record is incomplete, mark it as uncertain instead of forcing one answer. That habit is especially useful for families with migration history, because one missing character can change the whole interpretation."
+    ],
+    "sections": [
+      {
+        "title": "Why the character comes first",
+        "paragraphs": [
+          "Chinese surnames are written with characters, while English spellings are romanized approximations. Long may look precise in English, but the same spelling can appear through different dialects, transcription habits, or migration records. That is why the character is the anchor for serious research.",
+          "If you are checking your own family line, ask relatives, look at old documents, inspect grave inscriptions, or review clan records before relying on a website list. A public surname guide can explain patterns, but private family records decide the exact branch."
+        ]
+      },
+      {
+        "title": "Possible meanings and origin clues",
+        "paragraphs": [
+          "Some readers associate Long with the dragon character, but that should not be assumed without evidence. Surname meaning can come from a character's literal sense, a place name, an ancestral title, a historical event, or a later spelling tradition.",
+          "A responsible origin explanation separates known character meaning from family-specific history. It is acceptable to say that a character can suggest a meaning; it is weaker to say that every person with the spelling Long shares one origin story."
+        ]
+      },
+      {
+        "title": "Romanization and regional spelling",
+        "paragraphs": [
+          "Romanization changes across Mandarin pinyin, Cantonese forms, older postal spellings, and overseas community habits. A family that migrated through Hong Kong, Southeast Asia, or North America may preserve a spelling that does not match modern Mandarin pinyin.",
+          "When you compare records, keep a list of spelling variants and dates. A ship record, school document, passport, and clan book may not use the same spelling. The safest method is to connect those spellings back to the same written character."
+        ]
+      },
+      {
+        "title": "Common mistakes in Long surname research",
+        "paragraphs": [
+          "The first mistake is treating one online meaning as the whole origin. The second is assuming the English word long explains the Chinese surname. The third is merging unrelated families because the romanized spelling matches.",
+          "Another mistake is ignoring generational or regional records. A surname can be common enough that two families share a spelling but not a recent ancestor. Good research uses location, character, dialect, and documents together."
+        ]
+      },
+      {
+        "title": "Practical research path",
+        "paragraphs": [
+          "Start with the family character. Then record known places, dialect background, older spellings, and relatives' names. After that, compare surname dictionaries and historical notes. If the evidence conflicts, keep both possibilities until a stronger source appears.",
+          "For casual readers, the short answer is enough: Long origin depends on character verification. For family-history work, the next step is the surname lookup and broader Chinese surname origin guide."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": ["Reader goal", "What to check", "Why it matters"],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the one detail that changes the answer",
+          "It prevents the article from becoming a broad definition with no action"
+        ],
+        [
+          "Buyer or gift giver",
+          "Compare use case, photos, material, and maintenance",
+          "A practical purchase needs more than a decorative claim"
+        ],
+        [
+          "Researcher",
+          "Verify calendar, spelling, character, or source context",
+          "Clean wording is not reliable unless the evidence is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read symbolic meaning with its limits",
+          "Responsible wording keeps cultural content useful and credible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the origin of the Long surname?",
+        "a": "Long surname origin depends on the Chinese character and family records behind the English spelling."
+      },
+      {
+        "q": "Does Long always mean dragon?",
+        "a": "No. It may be associated with a dragon-related character in some cases, but the exact character must be verified."
+      },
+      {
+        "q": "Why is romanization not enough?",
+        "a": "Romanization can merge different dialects, older spellings, and characters into the same English form."
+      },
+      {
+        "q": "How should beginners research Long surname origin?",
+        "a": "Start with the family character, then compare regional records, spelling variants, and genealogy sources."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surname Origin",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin",
+        "description": "Read origin research patterns."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning",
+        "description": "Understand character-based meaning."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tool",
+        "description": "Search known surname profiles."
+      }
+    ]
+  },
+  {
+    "title": "Wong Surname Origin: Cantonese Spelling, Huang/Wang Links, and Records",
+    "path": "/wong-surname-origin/",
+    "description": "Understand Wong surname origin through Cantonese romanization, possible Huang or Wang character links, migration records, and genealogy checks.",
+    "h1": "Wong Surname Origin: Cantonese Spelling, Huang/Wang Links, and Records",
+    "intro": "Wong surname origin is usually researched through Cantonese-style spelling and the Chinese character used by the family.",
+    "answer": "Wong surname origin can point to different Chinese characters, commonly linked with Huang or Wang in Mandarin contexts, so the correct origin depends on family character evidence and records.",
+    "details": [
+      "Wong is one of the most familiar overseas Chinese surname spellings, but it is not a single guaranteed origin label. The spelling often reflects Cantonese or other southern pronunciation habits.",
+      "A person searching Wong origin may be comparing family history, name meaning, pronunciation, or a genealogy record. The first answer should therefore explain the character problem before telling a neat story.",
+      "This guide extends the Wong meaning page by focusing on origin research: character identification, migration spelling, regional context, and practical record checks.",
+      "For overseas Wong families, the strongest clues often appear outside a surname dictionary. Immigration papers, association records, ancestral tablets, old envelopes, school documents, and family gravestones may preserve the spelling and character together. Those records are more useful than a generic list when the goal is personal genealogy.",
+      "A practical research note is to keep Huang-linked and Wang-linked possibilities separate until the character is confirmed. Mixing them creates a clean-looking but unreliable story. Once the character is known, pronunciation guides and surname histories become much easier to use responsibly.",
+      "If family members disagree about spelling, preserve every version with dates and places. The disagreement may reveal migration routes, school records, or dialect shifts rather than a true conflict in surname origin.",
+      "For public articles, write Wong origin as a research process rather than a final family verdict. That wording gives readers a usable answer while respecting the limits of public surname data."
+    ],
+    "sections": [
+      {
+        "title": "Why Wong has multiple possible links",
+        "paragraphs": [
+          "In many cases, Wong corresponds to Mandarin Huang or Wang, depending on the written Chinese character. Both are major surname lines, and both can appear as Wong in overseas communities. That means the English spelling alone cannot decide the origin.",
+          "The practical first step is to find the character used by the family. If the character is 黄, the research path differs from 王. If another character is involved, the path changes again. Good surname work begins with that written evidence."
+        ]
+      },
+      {
+        "title": "Cantonese spelling and migration records",
+        "paragraphs": [
+          "Wong became common in many English-language contexts because Cantonese-speaking communities migrated through Hong Kong, Guangdong, Southeast Asia, North America, and other regions. Documents often preserved a community spelling rather than modern pinyin.",
+          "Older records may also vary. A family might appear as Wong in one document, Huang in a Mandarin-based record, or another spelling in a local transcript. Rather than treating the variation as an error, researchers should map it back to the same character and family branch."
+        ]
+      },
+      {
+        "title": "Meaning versus origin",
+        "paragraphs": [
+          "Meaning and origin are related but not identical. A character may have a literal meaning, while the surname's family origin may involve geography, lineage, official title, migration, or clan history. A short meaning answer cannot replace origin research.",
+          "For example, a character's dictionary meaning may be easy to state, but the reason a family carries that character may require records. This distinction keeps the article useful and prevents overclaiming."
+        ]
+      },
+      {
+        "title": "Common mistakes with Wong origin",
+        "paragraphs": [
+          "The first mistake is assuming every Wong family has the same Mandarin equivalent. The second is copying a famous origin story without checking whether it applies to the family character. The third is ignoring regional spelling habits.",
+          "Another common issue is treating pronunciation as proof. Pronunciation can help narrow the search, but written character, place, date, and family records carry more weight."
+        ]
+      },
+      {
+        "title": "Research path for Wong families",
+        "paragraphs": [
+          "Ask for the Chinese character, then collect older spellings, ancestral place names, dialect background, and family documents. Compare those details with surname references only after the basic evidence is organized.",
+          "If the goal is casual learning, start with the Wong meaning page. If the goal is family history, move from character to records before making a final origin claim."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Quick decision table",
+      "headers": ["Reader goal", "What to check", "Why it matters"],
+      "rows": [
+        [
+          "Beginner",
+          "Start with the one detail that changes the answer",
+          "It prevents the article from becoming a broad definition with no action"
+        ],
+        [
+          "Buyer or gift giver",
+          "Compare use case, photos, material, and maintenance",
+          "A practical purchase needs more than a decorative claim"
+        ],
+        [
+          "Researcher",
+          "Verify calendar, spelling, character, or source context",
+          "Clean wording is not reliable unless the evidence is clear"
+        ],
+        [
+          "Culture-focused reader",
+          "Read symbolic meaning with its limits",
+          "Responsible wording keeps cultural content useful and credible"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Where does the Wong surname come from?",
+        "a": "Wong origin depends on the Chinese character behind the spelling and is often linked with Cantonese romanization."
+      },
+      {
+        "q": "Is Wong the same as Huang?",
+        "a": "Sometimes. Wong may correspond to Huang in Mandarin when the character is 黄, but it can also correspond to other characters."
+      },
+      {
+        "q": "Can Wong also be Wang?",
+        "a": "Yes, in some romanization contexts Wong may correspond to Wang, so family character evidence is needed."
+      },
+      {
+        "q": "What is the best first step for Wong genealogy?",
+        "a": "Find the family Chinese character, then compare spelling variants, regional records, and migration documents."
+      }
+    ],
+    "related": [
+      {
+        "title": "Wong Surname Meaning",
+        "path": "/wong-surname-meaning/",
+        "category": "Meaning",
+        "description": "Read character-based meaning notes."
+      },
+      {
+        "title": "Chinese Surname Pronunciation",
+        "path": "/chinese-surname-pronunciation/",
+        "category": "Pronunciation",
+        "description": "Compare romanization patterns."
       },
       {
         "title": "Surname Lookup",
@@ -1523,6 +1760,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
 
 
 

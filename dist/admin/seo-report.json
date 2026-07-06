@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-05T23:27:17.777Z",
+  "generatedAt": "2026-07-06T23:19:07.115Z",
   "totals": {
     "average": 98,
-    "pages": 38,
-    "pass": 37,
+    "pages": 40,
+    "pass": 39,
     "review": 0,
     "fix": 1
   },
@@ -11,9 +11,9 @@
     {
       "path": "/huang-surname-meaning/",
       "score": 100,
-      "titleLength": 78,
+      "titleLength": 54,
       "descriptionLength": 132,
-      "wordCount": 1590,
+      "wordCount": 1587,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
@@ -22,9 +22,9 @@
     {
       "path": "/yang-surname-meaning/",
       "score": 100,
-      "titleLength": 77,
+      "titleLength": 53,
       "descriptionLength": 130,
-      "wordCount": 1533,
+      "wordCount": 1530,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
@@ -46,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 591,
+      "wordCount": 618,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -189,9 +189,9 @@
     {
       "path": "/zhao-surname-meaning/",
       "score": 100,
-      "titleLength": 71,
+      "titleLength": 52,
       "descriptionLength": 133,
-      "wordCount": 1542,
+      "wordCount": 1540,
       "h1": 1,
       "h2": 11,
       "faqs": 6,
@@ -222,9 +222,9 @@
     {
       "path": "/lee-surname-meaning/",
       "score": 100,
-      "titleLength": 74,
+      "titleLength": 53,
       "descriptionLength": 141,
-      "wordCount": 1468,
+      "wordCount": 1464,
       "h1": 1,
       "h2": 9,
       "faqs": 6,
@@ -233,9 +233,9 @@
     {
       "path": "/ng-surname-meaning/",
       "score": 100,
-      "titleLength": 76,
+      "titleLength": 50,
       "descriptionLength": 136,
-      "wordCount": 1429,
+      "wordCount": 1423,
       "h1": 1,
       "h2": 9,
       "faqs": 6,
@@ -428,11 +428,33 @@
     {
       "path": "/lam-surname-origin/",
       "score": 100,
-      "titleLength": 71,
+      "titleLength": 50,
       "descriptionLength": 126,
-      "wordCount": 1342,
+      "wordCount": 1338,
       "h1": 1,
       "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/long-surname-origin/",
+      "score": 100,
+      "titleLength": 62,
+      "descriptionLength": 139,
+      "wordCount": 1012,
+      "h1": 1,
+      "h2": 10,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/wong-surname-origin/",
+      "score": 100,
+      "titleLength": 70,
+      "descriptionLength": 143,
+      "wordCount": 1004,
+      "h1": 1,
+      "h2": 10,
       "faqs": 4,
       "issues": []
     }

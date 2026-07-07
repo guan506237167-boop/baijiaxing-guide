@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-06T23:19:07.115Z",
+  "generatedAt": "2026-07-07T23:24:27.887Z",
   "totals": {
-    "average": 98,
-    "pages": 40,
-    "pass": 39,
+    "average": 99,
+    "pages": 42,
+    "pass": 41,
     "review": 0,
     "fix": 1
   },
@@ -46,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 618,
+      "wordCount": 648,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -455,6 +455,28 @@
       "wordCount": 1004,
       "h1": 1,
       "h2": 10,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/lee-surname-origin/",
+      "score": 100,
+      "titleLength": 68,
+      "descriptionLength": 129,
+      "wordCount": 1176,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/ng-surname-origin/",
+      "score": 100,
+      "titleLength": 77,
+      "descriptionLength": 135,
+      "wordCount": 1094,
+      "h1": 1,
+      "h2": 11,
       "faqs": 4,
       "issues": []
     }

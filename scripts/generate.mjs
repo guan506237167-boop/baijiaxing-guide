@@ -52,6 +52,9 @@ const guides = [
   { title: 'Lam Surname Origin', path: '/lam-surname-origin/', category: 'Origin Guides', description: 'Research Lam through Cantonese spelling and records.' },
   { title: 'Wong Surname Origin', path: '/wong-surname-origin/', category: 'Origin Guides', description: 'Research Wong origin through characters and Cantonese spelling.' },
   { title: 'Long Surname Origin', path: '/long-surname-origin/', category: 'Origin Guides', description: 'Check Long surname characters, origin clues, and spelling limits.' },
+  {"title":"Lee Surname Origin","path":"/lee-surname-origin/","category":"Origin Guides","description":"Research Lee surname origin through Chinese characters and family records."},
+  {"title":"Ng Surname Origin","path":"/ng-surname-origin/","category":"Origin Guides","description":"Research Ng surname origin through Cantonese spelling and character evidence."},
+
 ];
 
 const pages = [];
@@ -1589,6 +1592,265 @@ function dailyArticlePage20260706(article) {
 }
 
 for (const article of dailyArticles20260706) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260708 = [
+  {
+    "title": "Lee Surname Origin: Chinese Characters, Li Links, and Research Steps",
+    "path": "/lee-surname-origin/",
+    "description": "Research Lee surname origin through Chinese characters, Li romanization, regional spellings, family records, and genealogy clues.",
+    "h1": "Lee Surname Origin: Chinese Characters, Li Links, and Research Steps",
+    "intro": "Lee surname origin cannot be confirmed from the English spelling alone because Lee can represent different Chinese characters and regional romanizations.",
+    "answer": "Lee surname origin is usually researched by identifying the Chinese character first; many Lee families connect to 鏉? written Li in Mandarin pinyin, but the correct origin depends on family records, dialect background, migration history, and older spellings.",
+    "details": [
+      "If you are researching the Lee surname, do not start by forcing every record into one modern spelling. Start with the oldest evidence your family has. A passport, grave inscription, clan association record, family book, temple record, school document, or immigration paper may preserve the character or a regional pronunciation that a modern search result cannot show.",
+      "The English spelling Lee is common across Chinese, Korean, and other East Asian contexts, so a Chinese surname page has to be careful. In a Chinese context, Lee often points toward 鏉? which is Li in Mandarin pinyin. Yet English spelling alone is not proof. Some families kept Lee because of Cantonese, Hokkien, older romanization, local official spelling, or migration paperwork.",
+      "A good first note for personal research has four fields: character, English spelling, dialect or language clue, and oldest source. Without those fields, a meaning or origin claim stays broad. With those fields, the search becomes more specific and less likely to mix unrelated families.",
+      "For casual cultural learning, it is reasonable to say that Lee is commonly connected with Li 鏉? For genealogy, the wording needs more caution. The visitor should understand the likely link without treating it as a verified family tree."
+    ],
+    "sections": [
+      {
+        "title": "Why the Chinese character comes first",
+        "paragraphs": [
+          "The written character is the anchor for Chinese surname research. 鏉? 榛? 鍒? and other characters can sound or be written differently across regions, and English spelling may flatten those differences. If the family character is known, the origin path becomes much cleaner.",
+          "When the character is not known, collect clues before choosing a meaning. Ask whether older relatives pronounce the name closer to Lee, Li, Lei, Lai, or another form. Check whether documents mention Cantonese, Hakka, Hokkien, Teochew, Mandarin, Hong Kong, Taiwan, Singapore, Malaysia, or a specific ancestral village."
+        ]
+      },
+      {
+        "title": "Lee, Li, and regional spelling",
+        "paragraphs": [
+          "Li is the modern Mandarin pinyin form for 鏉? one of the most common Chinese surnames. Lee is widely used in overseas communities because families often migrated before pinyin became standard or came from regions where another romanization was more natural.",
+          "That spelling history matters. Changing every Lee record to Li can erase migration evidence. For family research, keep the spelling exactly as it appears in each document, then add the character when confirmed. Different spellings can become clues rather than errors."
+        ]
+      },
+      {
+        "title": "Origin meaning versus family origin",
+        "paragraphs": [
+          "Many quick explanations connect 鏉?with plum or plum tree language. That character note is useful, but it is not the same thing as a proven origin for one family. A surname can carry historical lineages, regional branches, and migration routes that cannot be solved by a single dictionary meaning.",
+          "The safer sentence is this: Lee often corresponds to Li 鏉?in Chinese surname research, and 鏉?has common character meanings, but personal origin needs family-specific evidence. That keeps the article helpful without pretending to verify ancestry from a spelling alone."
+        ]
+      },
+      {
+        "title": "Documents that help Lee surname research",
+        "paragraphs": [
+          "The best documents are the ones closest to the family line. Look for Chinese characters on grave markers, ancestral tablets, old letters, clan books, marriage records, school records, association documents, business signs, immigration files, and family seals. A small photo of one character can be more useful than a long online summary.",
+          "If the family has no written character, build a timeline. Record the oldest known ancestor, place of residence, spoken language, migration date, and each spelling used in documents. The timeline may reveal why Lee was used and whether it should be compared with Li, Lei, Lai, or another form."
+        ]
+      },
+      {
+        "title": "Common mistakes with Lee surname origin",
+        "paragraphs": [
+          "The first mistake is assuming Lee always means the same Chinese character. The second is copying a famous origin story without checking whether it belongs to the family. The third is replacing family spellings with pinyin and losing evidence from older records.",
+          "Another mistake is using population rank as personal proof. Li is extremely common, but a common surname does not identify a specific branch. Treat rank and meaning as background, then verify character and records before making a family claim."
+        ]
+      },
+      {
+        "title": "Best next step for researchers",
+        "paragraphs": [
+          "If you only need a cultural overview, read the Lee meaning page and compare the Chinese surname list. If you are building family notes, create an evidence table with character, spelling, source, date, place, and confidence level. That habit prevents later confusion.",
+          "If the character turns out to be 鏉? continue with Li and Lee records together. If the character is different, follow that character instead of forcing the family into the most common answer. The right path is the one supported by records."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Casual reader",
+          "Common Lee and Li connection",
+          "It gives a useful cultural starting point"
+        ],
+        [
+          "Family researcher",
+          "Chinese character and oldest source",
+          "The spelling alone cannot prove origin"
+        ],
+        [
+          "Diaspora family",
+          "Older spellings and dialect clues",
+          "Migration records often preserve non-pinyin forms"
+        ],
+        [
+          "Genealogy note",
+          "Character, spelling, place, date, confidence",
+          "A structured note prevents false matches"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is Lee a Chinese surname?",
+        "a": "Yes, Lee can be a Chinese surname, and it often corresponds to Li 鏉? but the exact character should be verified through family records."
+      },
+      {
+        "q": "Is Lee the same as Li?",
+        "a": "Lee often represents Li in overseas Chinese romanization, but family records are needed before treating the two spellings as the same family line."
+      },
+      {
+        "q": "What is the origin of the Lee surname?",
+        "a": "Lee surname origin depends on the Chinese character and family history behind the spelling; many Chinese Lee families connect to 鏉?"
+      },
+      {
+        "q": "How should beginners research Lee surname origin?",
+        "a": "Beginners should first look for the Chinese character, older spellings, regional language clues, and the oldest document that records the surname."
+      }
+    ],
+    "related": [
+      {
+        "title": "Lee Surname Meaning",
+        "path": "/lee-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Character possibilities and meaning cautions."
+      },
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "category": "Reference",
+        "description": "Browse common Chinese family names."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Understand surname meaning and limits."
+      }
+    ]
+  },
+  {
+    "title": "Ng Surname Origin: Chinese Characters, Cantonese Spelling, and Research Steps",
+    "path": "/ng-surname-origin/",
+    "description": "Research Ng surname origin through Chinese characters, Cantonese romanization, Wu and Huang links, family records, and migration clues.",
+    "h1": "Ng Surname Origin: Chinese Characters, Cantonese Spelling, and Research Steps",
+    "intro": "Ng surname origin usually depends on the Chinese character behind the spelling, because Ng can represent more than one surname in overseas records.",
+    "answer": "Ng surname origin should be researched by first identifying the Chinese character; Ng often represents 鍚?in Cantonese-style spelling and may also appear in other surname contexts, so family records, dialect background, and older documents are essential.",
+    "details": [
+      "Ng is one of the clearest examples of why Chinese surname research cannot rely on English spelling alone. The spelling is short, common in overseas communities, and strongly tied to regional pronunciation. A reader may know the family name as Ng for generations while not knowing which Chinese character older relatives used.",
+      "In many Cantonese contexts, Ng corresponds to 鍚? written Wu in Mandarin pinyin. In other contexts, similar spellings can point to different characters or regional conventions. That is why the first practical step is character verification, not a broad origin story.",
+      "If you are researching a family line, collect documents before choosing a meaning. A gravestone, clan association record, old envelope, family book, wedding document, school record, or business sign may show the character. Even a partial photo can help when the English spelling is ambiguous.",
+      "For general learning, it is fair to explain the common Ng-Wu link. For personal genealogy, keep the language bounded. A surname origin page can guide the search, but it cannot prove a reader's ancestry without family-specific evidence."
+    ],
+    "sections": [
+      {
+        "title": "Why Ng needs a character check",
+        "paragraphs": [
+          "Ng is a romanized spelling, not a Chinese character. That difference matters because romanization systems try to represent sound, while surname research needs the written form. If the family character is 鍚? the research path points toward Wu-related surname material. If the character differs, the path changes.",
+          "The character check also protects against false confidence. A search result may say Ng means one thing, but the answer may only fit one character. Family documents are stronger than a generic list because they connect the spelling to the actual family record."
+        ]
+      },
+      {
+        "title": "Ng, Wu, and Cantonese romanization",
+        "paragraphs": [
+          "Wu is the Mandarin pinyin form for 鍚? Ng is a common Cantonese-style spelling for the same character in many overseas communities. That does not make one spelling more correct than the other; they serve different historical and language contexts.",
+          "For diaspora research, keep Ng in the family record instead of replacing it with Wu everywhere. Immigration files, school records, association memberships, and business documents may use Ng consistently. Those spellings help trace migration and community history."
+        ]
+      },
+      {
+        "title": "Origin notes and meaning limits",
+        "paragraphs": [
+          "Wu surname material often connects 鍚?with historical state and lineage traditions. Those background notes are useful, but they should not be treated as a personal proof. A large surname can have many branches and regional stories.",
+          "The safest reading is to separate three layers: the English spelling Ng, the Chinese character if known, and the specific family evidence. The first layer is visible. The second layer is likely but needs confirmation. The third layer is what turns a broad surname guide into a family history note."
+        ]
+      },
+      {
+        "title": "What records to collect",
+        "paragraphs": [
+          "Start with the oldest record that shows the surname. Look for Chinese characters on graves, ancestral tablets, red envelopes, family registers, old letters, seals, school forms, or community association documents. Ask relatives whether they remember an ancestral village, dialect group, or older spelling.",
+          "If no character is available, create a working file rather than a final conclusion. Record every spelling, date, place, language clue, and source. When a character appears later, the earlier clues can be checked again instead of thrown away."
+        ]
+      },
+      {
+        "title": "Common Ng surname mistakes",
+        "paragraphs": [
+          "The first mistake is assuming Ng always equals one character without checking. The second is ignoring the family spelling because pinyin looks more modern. The third is treating surname meaning as genealogy proof.",
+          "Another mistake is confusing similar overseas spellings. Short surnames can be easy to mix in search results. Use the character, dialect clue, and family location to narrow the result before copying an origin explanation."
+        ]
+      },
+      {
+        "title": "Best next step after this page",
+        "paragraphs": [
+          "If you only need the common explanation, compare Ng with Wu surname meaning and the broader Chinese surnames guide. If you are working on genealogy, build a small evidence table and keep uncertain claims marked as possible rather than confirmed.",
+          "When the character is confirmed as 鍚? continue into Wu-focused meaning and origin material. When the character is not confirmed, keep the research question open. That is slower, but it is more accurate than choosing the most common result too early."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Casual reader",
+          "Common Ng and Wu connection",
+          "It explains the likely romanization pattern"
+        ],
+        [
+          "Family researcher",
+          "Chinese character in records",
+          "The character decides the correct origin path"
+        ],
+        [
+          "Diaspora family",
+          "Cantonese spelling and migration documents",
+          "Older spellings preserve community history"
+        ],
+        [
+          "Genealogy note",
+          "Evidence table with confidence level",
+          "It separates likely clues from confirmed facts"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "Is Ng a Chinese surname?",
+        "a": "Yes. Ng is a Chinese surname spelling in many overseas communities, often linked with 鍚?in Cantonese-style romanization."
+      },
+      {
+        "q": "Is Ng the same as Wu?",
+        "a": "Ng often corresponds to Wu 鍚? but the family character should be verified before treating the spellings as the same line."
+      },
+      {
+        "q": "What is the origin of the Ng surname?",
+        "a": "Ng surname origin depends on the Chinese character and family records behind the spelling; many Ng families connect to Wu 鍚?"
+      },
+      {
+        "q": "How should beginners research Ng surname origin?",
+        "a": "Beginners should look for the Chinese character, older documents, dialect clues, ancestral place, and the oldest source that records the surname."
+      }
+    ],
+    "related": [
+      {
+        "title": "Ng Surname Meaning",
+        "path": "/ng-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Character possibilities and lookup cautions."
+      },
+      {
+        "title": "Wu Surname Meaning",
+        "path": "/wu-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read the common Wu character path."
+      },
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "category": "Reference",
+        "description": "Browse common Chinese family names."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260708) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 

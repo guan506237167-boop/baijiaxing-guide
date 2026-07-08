@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-07T23:24:27.887Z",
+  "generatedAt": "2026-07-08T23:26:50.821Z",
   "totals": {
     "average": 99,
-    "pages": 42,
-    "pass": 41,
+    "pages": 44,
+    "pass": 43,
     "review": 0,
     "fix": 1
   },
@@ -46,7 +46,7 @@
       "score": 100,
       "titleLength": 64,
       "descriptionLength": 134,
-      "wordCount": 648,
+      "wordCount": 681,
       "h1": 1,
       "h2": 3,
       "faqs": 0,
@@ -475,6 +475,28 @@
       "titleLength": 77,
       "descriptionLength": 135,
       "wordCount": 1094,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/tan-surname-meaning/",
+      "score": 100,
+      "titleLength": 60,
+      "descriptionLength": 125,
+      "wordCount": 1009,
+      "h1": 1,
+      "h2": 11,
+      "faqs": 4,
+      "issues": []
+    },
+    {
+      "path": "/luo-surname-meaning/",
+      "score": 100,
+      "titleLength": 66,
+      "descriptionLength": 130,
+      "wordCount": 1029,
       "h1": 1,
       "h2": 11,
       "faqs": 4,

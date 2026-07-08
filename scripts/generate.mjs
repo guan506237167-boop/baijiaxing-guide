@@ -47,6 +47,8 @@ const guides = [
   { title: "Ng Surname Meaning", path: "/ng-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Ng surname meaning, Chinese character possibilities, Cantonese romanization, and lookup cautions." },
   { title: "Huang Surname Meaning", path: "/huang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Huang surname meaning, character, variants, origin context, and research cautions." },
   { title: "Yang Surname Meaning", path: "/yang-surname-meaning/", category: "Meaning Guides", description: "A focused guide to Yang surname meaning, character, variants, origin context, and family-name research cautions." },
+  { title: "Tan Surname Meaning", path: "/tan-surname-meaning/", category: "Meaning Guides", description: "Research Tan surname meaning through character checks, regional spelling, and family records." },
+  { title: "Luo Surname Meaning", path: "/luo-surname-meaning/", category: "Meaning Guides", description: "Understand Luo surname meaning, variant spellings, origin context, and research limits." },
 
   { title: 'Wong Surname Meaning', path: '/wong-surname-meaning/', category: 'Meaning Guides', description: 'Verify Wong through characters and romanization.' },
   { title: 'Lam Surname Origin', path: '/lam-surname-origin/', category: 'Origin Guides', description: 'Research Lam through Cantonese spelling and records.' },
@@ -1851,6 +1853,271 @@ const dailyArticles20260708 = [
 ];
 
 for (const article of dailyArticles20260708) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+
+const dailyArticles20260709 = [
+  {
+    "title": "Tan Surname Meaning: Characters, Origins, and Research Notes",
+    "path": "/tan-surname-meaning/",
+    "description": "Research Tan surname meaning through Chinese character checks, regional spelling, origin context, and family record evidence.",
+    "h1": "Tan Surname Meaning: Characters, Origins, and Research Notes",
+    "intro": "Tan surname meaning depends on the Chinese character behind the spelling because Tan can represent different regional surname forms.",
+    "answer": "Tan surname meaning cannot be confirmed from English spelling alone; verify the Chinese character, dialect background, older documents, and family records before choosing an origin explanation.",
+    "details": [
+      "This guide focuses on Tan surname meaning because the search intent is practical. The reader needs a clear answer, the first checks to make, and a way to avoid weak assumptions.",
+      "The topic can look simple, but the useful answer depends on details such as material, use case, spelling, source evidence, scale, or construction quality. A short page would miss those details.",
+      "This article is built to work as a standalone answer and as part of the larger site cluster. It links broader guides and gives enough context for the reader to decide what to read next.",
+      "Use the information as educational guidance. It can support buying, research, cultural learning, or craft planning, but it should not be treated as a guarantee, certification, or professional advice.",
+      "For Tan, the practical research path is to write down every known version of the family name before choosing a meaning. A family may have an English spelling, a Mandarin pinyin spelling, a dialect pronunciation, and one or more Chinese characters recorded in older papers. Keeping those forms together prevents the common error of matching the English word Tan to the first attractive origin story found online.",
+      "When explaining the surname to relatives or children, separate three layers: what the character can mean, what surname-history sources say in general, and what your own documents can prove. That distinction makes the page more useful than a simple meaning list because it respects both cultural interest and evidence."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Tan surname meaning",
+        "paragraphs": [
+          "Most visitors searching for Tan surname meaning want a decision, not a dictionary entry. They may be choosing a product, comparing care instructions, checking a surname, or planning a craft project.",
+          "A useful answer therefore begins with what changes the outcome. The reader should know what is safe to decide immediately and what still needs checking."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "The first check is the Chinese character. English spelling can hide differences between Mandarin, Cantonese, Hokkien, Teochew, Hakka, and older local romanization systems.",
+          "The second check is the oldest source. A family book, grave marker, clan record, immigration paper, or older document is stronger evidence than a modern search result."
+        ]
+      },
+      {
+        "title": "How to interpret the result",
+        "paragraphs": [
+          "After the first check, read the result in context. Product names, surname spellings, and craft labels are starting points. They become more reliable when connected with materials, documents, measurements, and actual use.",
+          "This is also where internal links help. A reader who needs a broader framework can move to the main guide, while a reader with a narrow question can continue to a focused related page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is treating every Tan family as one surname branch. The spelling can be shared by families with different characters or regional histories.",
+          "Another mistake is using a dictionary meaning as genealogy proof. A character meaning is useful background, but family origin needs records."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a set, writing a family note, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is content planning. Because Tan surname meaning connects to several related searches, the page can support topical authority without becoming thin or repetitive."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If the reader only needed the short answer, the answer block and table are enough. If accuracy matters, continue with the related guides and verify the practical detail that affects the decision.",
+          "For future updates, this article can support product recommendations, printable checklists, paid reports, or comparison tools. The important rule is to keep the page useful before adding monetization."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Material, source, size, or use case",
+          "Small details change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and care requirements",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for Tan surname meaning?",
+        "a": "Tan surname meaning cannot be confirmed from English spelling alone; verify the Chinese character, dialect background, older documents, and family records before choosing an origin explanation."
+      },
+      {
+        "q": "What should I check first for Tan surname meaning?",
+        "a": "Check the detail that changes the answer: material, use case, source, spelling, size, construction, or quality signal."
+      },
+      {
+        "q": "Is Tan surname meaning enough for a final decision?",
+        "a": "It is enough for a starting point, but important buying or research decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "How does this page fit the site?",
+        "a": "It supports the broader guide cluster by answering a focused search query and linking readers to more complete reference pages."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "category": "Reference",
+        "description": "Browse common Chinese family names."
+      },
+      {
+        "title": "Chinese Surname Meanings",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read surname meanings carefully."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin Guides",
+        "description": "Understand origin patterns and limits."
+      }
+    ]
+  },
+  {
+    "title": "Luo Surname Meaning: Character Notes, Origin Context, and Variants",
+    "path": "/luo-surname-meaning/",
+    "description": "Understand Luo surname meaning, common character notes, origin context, variant spellings, and careful family-name research steps.",
+    "h1": "Luo Surname Meaning: Character Notes, Origin Context, and Variants",
+    "intro": "Luo surname meaning is useful as a reference topic, but personal family origin still depends on character evidence and records.",
+    "answer": "Luo surname meaning should be researched by confirming the Chinese character, checking variant spellings, and separating general surname history from verified family origin.",
+    "details": [
+      "This guide focuses on Luo surname meaning because the search intent is practical. The reader needs a clear answer, the first checks to make, and a way to avoid weak assumptions.",
+      "The topic can look simple, but the useful answer depends on details such as material, use case, spelling, source evidence, scale, or construction quality. A short page would miss those details.",
+      "This article is built to work as a standalone answer and as part of the larger site cluster. It links broader guides and gives enough context for the reader to decide what to read next.",
+      "Use the information as educational guidance. It can support buying, research, cultural learning, or craft planning, but it should not be treated as a guarantee, certification, or professional advice.",
+      "For Luo, start by recording the exact Chinese character and any older spelling used by the family. Large surnames can have well-known historical narratives, but a personal branch may preserve a different regional route, dialect form, or migration clue. Treat the spelling as an entry point, not as proof by itself.",
+      "A good research note should therefore include the modern spelling, the character, pronunciation clues, document source, and uncertainty level. This lets a reader use the meaning as cultural context while still understanding why family records matter more than a short dictionary explanation.",
+      "If the surname is being used for a family-history page, a school project, or a name explanation, note what is confirmed and what is only general background. That small note prevents overclaiming and makes the research easier to update when better family evidence appears."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Luo surname meaning",
+        "paragraphs": [
+          "Most visitors searching for Luo surname meaning want a decision, not a dictionary entry. They may be choosing a product, comparing care instructions, checking a surname, or planning a craft project.",
+          "A useful answer therefore begins with what changes the outcome. The reader should know what is safe to decide immediately and what still needs checking."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "The first check is whether Luo is the spelling used in Mandarin pinyin or whether older family records use another form. Variant spellings can preserve migration history.",
+          "The second check is whether the article is explaining a broad surname tradition or a specific family branch. Those are different levels of evidence."
+        ]
+      },
+      {
+        "title": "How to interpret the result",
+        "paragraphs": [
+          "After the first check, read the result in context. Product names, surname spellings, and craft labels are starting points. They become more reliable when connected with materials, documents, measurements, and actual use.",
+          "This is also where internal links help. A reader who needs a broader framework can move to the main guide, while a reader with a narrow question can continue to a focused related page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is assuming a popular origin story applies to every Luo family. Major surnames often have multiple branches and regional histories.",
+          "Another mistake is dropping older spellings after finding pinyin. Keep both forms in notes because older spellings may match immigration, clan, or cemetery records."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a set, writing a family note, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is content planning. Because Luo surname meaning connects to several related searches, the page can support topical authority without becoming thin or repetitive."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If the reader only needed the short answer, the answer block and table are enough. If accuracy matters, continue with the related guides and verify the practical detail that affects the decision.",
+          "For future updates, this article can support product recommendations, printable checklists, paid reports, or comparison tools. The important rule is to keep the page useful before adding monetization."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Material, source, size, or use case",
+          "Small details change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and care requirements",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for Luo surname meaning?",
+        "a": "Luo surname meaning should be researched by confirming the Chinese character, checking variant spellings, and separating general surname history from verified family origin."
+      },
+      {
+        "q": "What should I check first for Luo surname meaning?",
+        "a": "Check the detail that changes the answer: material, use case, source, spelling, size, construction, or quality signal."
+      },
+      {
+        "q": "Is Luo surname meaning enough for a final decision?",
+        "a": "It is enough for a starting point, but important buying or research decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "How does this page fit the site?",
+        "a": "It supports the broader guide cluster by answering a focused search query and linking readers to more complete reference pages."
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "category": "Reference",
+        "description": "Browse common Chinese family names."
+      },
+      {
+        "title": "Chinese Surname Meanings",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read surname meanings carefully."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin Guides",
+        "description": "Understand origin patterns and limits."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260709) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 

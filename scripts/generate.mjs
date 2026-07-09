@@ -295,6 +295,18 @@ function standardFaqs() {
   ];
 }
 
+
+function surnameGuidesIntroBlock() {
+  return `<section class="content-section article-body"><h2>How to use the Chinese surname guide library</h2><p>The surname guide library is meant to prevent the biggest mistake in English surname research: treating an English spelling as the whole answer. A spelling such as Lee, Wong, Ng, Chan, Chang, or Tan can preserve dialect, older romanization, immigration paperwork, or family preference. The written Chinese character is usually the strongest anchor for meaning and origin notes.</p><p>Use the lookup tool if you already know a spelling or character. Use common surname lists when you need broad comparison. Use meaning pages when you want to understand the character and its limits. Use origin pages when you need historical context such as old states, places, titles, or lineage traditions. Baijiaxing pages explain the classic text as cultural reference, not as a modern census list.</p><p>For careful research, keep the evidence layers separate. A general article can explain character, pinyin, spelling variants, and common origin patterns. It cannot prove a private family tree without records. Family books, gravestones, clan association documents, old certificates, ancestral place names, and generation poems matter more than a short online meaning line.</p><p>This structure makes the site useful for casual readers, students, writers, and families beginning surname research. It also gives each page a clear job inside the site instead of turning the guide library into a loose list of links.</p></section>`;
+}
+
+function surnameLookupGuideBlock() {
+  return `<section class="content-section article-body"><h2>How to use surname lookup responsibly</h2><p>The lookup tool is a starting point, not a genealogy certificate. Entering a spelling such as Lee, Wong, Ng, Chen, Chan, or Zhang can help you find likely surname pages, but the result still needs character confirmation. One English spelling may match more than one Chinese surname, and one Chinese surname may appear under several English spellings.</p><p>The best workflow is to collect the spelling you know, then look for the Chinese character in family records, old documents, gravestones, clan association papers, bilingual certificates, or direct family knowledge. Once the character is known, pinyin, meaning notes, origin context, and Baijiaxing references become much more reliable.</p><p>If you only know the English spelling, treat the lookup result as a shortlist. Open the likely profile pages, compare characters and variants, then write down what is confirmed and what is still uncertain. That habit prevents false matches and makes later research easier.</p><p>For overseas families, do not discard older spellings too quickly. A spelling that looks unusual may preserve Cantonese, Hokkien, Teochew, Hakka, postal romanization, or an immigration-office convention. Those clues can be valuable when comparing records across countries and generations.</p><p>After the lookup result, the next useful action is to open both the profile page and the broader meaning or origin page. The profile gives the compact facts, while the larger guide explains why spellings change and why origin claims need evidence. This keeps the tool useful without pretending that a search box can solve a full family-history question by itself.</p><p>A useful lookup note should contain at least five fields: spelling, Chinese character, pinyin, known variant spellings, and source of evidence. If the source is only memory or a modern English document, mark it as unconfirmed. If the source is a family book, inscription, bilingual certificate, or older record, keep the exact wording because old spellings can help match later records.</p><p>The lookup page is also a routing page. It should send readers to the common surname table for comparison, meaning pages for character notes, origin pages for historical patterns, and Baijiaxing pages for classic cultural context. Those links make the tool more useful than a simple search result.</p></section>`;
+}
+
+function surnameFaqIntroBlock() {
+  return `<section class="content-section article-body"><h2>How to read surname FAQ answers</h2><p>Chinese surname answers need careful wording because meaning, origin, pronunciation, and genealogy are related but not identical. A character may have a literal meaning, a surname may have historical origin stories, and a family may have private records that confirm a specific branch. Those layers should not be merged into one simple sentence.</p><p>Use this FAQ for orientation, then move into the lookup tool, common surname table, meaning pages, or origin pages depending on what evidence you already have. If you only know an English spelling, start with lookup. If you already know the character, open the profile and compare pinyin, variants, and origin notes.</p></section>`;
+}
 function faqBlock(faqs) {
   const grouped = [
     { title: "Basics", hint: "Names and order", items: faqs.slice(0, 2) },
@@ -622,6 +634,7 @@ await writePage("/guides/", pageLayout({
   intro: "Browse reference pages, meaning guides, origin guides, and surname lookup tools.",
   body: `
     ${articleSearchBlock()}
+    ${surnameGuidesIntroBlock()}
     <section class="content-section latest-guides"><div class="section-heading"><p class="eyebrow">Guide Library</p><h2>Browse all surname guides</h2></div>${guideFilterBlock()}<div class="guide-grid">${guides.map(guideCard).join("")}</div></section>
     ${keywordTable(meaningKeywords.slice(0, 10), "Meaning and origin keyword cluster", "Publishing Queue")}
   `
@@ -733,6 +746,7 @@ await writePage("/surname-lookup/", pageLayout({
       <div class="result-card" data-surname-result hidden></div>
     </section></section>
     <section class="content-section article-body"><p class="lead-answer">A good Chinese surname lookup should match more than one spelling. Lee may point to Li, Wong may point to Wang or Huang depending on character, and Ng may point to Wu or Huang depending on regional usage.</p></section>
+    ${surnameLookupGuideBlock()}
     ${surnameTable()}
     ${faqBlock(standardFaqs())}
   `
@@ -1030,7 +1044,7 @@ await writePage("/chinese-surnames-faq/", pageLayout({
   h1: "Chinese Surnames FAQ",
   intro: "Use this FAQ for quick answers about Chinese family names, common spellings, and surname history.",
   faqs: standardFaqs(),
-  body: `${articleSearchBlock()}${faqBlock(standardFaqs())}`
+  body: `${articleSearchBlock()}${surnameFaqIntroBlock()}${faqBlock(standardFaqs())}<section class="content-section article-body"><h2>What to do after reading the FAQ</h2><p>If you are checking a family name, first confirm the Chinese character. Then compare the profile page, common surname table, meaning page, and origin page. If the character is unknown, keep the English spelling as a clue and gather older documents before making a claim.</p><p>The FAQ gives short answers, but surname research becomes reliable only when spelling, character, family records, and historical context are kept separate. That is the standard used across this site.</p><p>For English readers, this distinction matters because many searches begin with romanized names. Lee, Li, Lei, Wong, Wang, Huang, Ng, Wu, Chan, Chen, Chang, and Zhang can overlap in ways that are not obvious from English spelling alone. The safest answer usually starts with the Chinese character, then checks pinyin, regional spelling, and family evidence.</p><p>If the goal is casual learning, the FAQ may be enough. If the goal is writing, family-history research, classroom material, or a paid digital worksheet later, use the deeper pages and keep notes about what is confirmed. A responsible surname site should help readers avoid false certainty, not just give a short list of names.</p><p>This is also useful for future content and monetization. Any downloadable worksheet, report, or surname research checklist should follow the same structure: spelling, character, variants, source evidence, meaning note, origin context, and limits. That way the product can be useful without creating unsupported genealogy claims.</p><p>For readers who want a fast answer, the FAQ can identify the right direction. For readers who care about accuracy, the next step is evidence collection. The site should encourage both needs: quick orientation for casual learning, and careful source tracking for family-history work. That balance is especially important for an English site because many visitors arrive with partial spellings from overseas documents.</p><p>A surname question is usually not finished until the character is confirmed. Once the character is known, the reader can compare simplified and traditional forms, Mandarin pinyin, regional spellings, and related profile pages. Without the character, the safest answer is a shortlist with cautions.</p><p>For practical use, write the confirmed facts separately from possible explanations. Put the character, pinyin, English spelling, variant spellings, source document, and known region in separate lines. Then use the guide pages to interpret those facts. This habit is simple, but it prevents many wrong matches when several surnames share similar English spellings.</p><p>The FAQ should therefore be treated as a map. It tells the reader whether to use the lookup tool, surname table, meaning page, origin guide, pronunciation page, or Baijiaxing article next. That makes the page useful even when the reader arrives with only partial information.</p></section>`
 }));
 
 await writePage("/about/", simpleInfoPage({
@@ -2195,6 +2209,298 @@ function requiresFullArticleDepth(path) {
   if (["/", "/about/", "/contact/", "/privacy/", "/terms/", "/guides/", "/chinese-surnames-faq/"].includes(path)) return false;
   if (path.startsWith("/admin/")) return false;
   return true;
+}
+
+
+const dailyArticles20260710 = [
+  {
+    "title": "Chan Surname Meaning: Chinese Characters, Chen Connection, and Research Notes",
+    "path": "/chan-surname-meaning/",
+    "description": "Research Chan surname meaning through Chinese characters, Chen surname connection, Cantonese romanization, variants, and family record checks.",
+    "h1": "Chan Surname Meaning: Chinese Characters, Chen Connection, and Research Notes",
+    "intro": "Chan surname meaning usually needs character verification because Chan is often a Cantonese romanization, commonly connected with Chen 陈, but it is not enough by itself.",
+    "answer": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 陈, but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge.",
+    "details": [
+      "This article focuses on Chan Surname Meaning because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
+      "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
+      "The page is written as both a standalone answer and a routing page. It gives the reader enough information to act, then points toward broader guides, tools, and related pages when the question needs more depth.",
+      "Use the information as educational guidance. It can support cultural learning, buying decisions, family-name research, craft planning, or content planning, but it should not be treated as legal, medical, financial, genealogy-certified, or guaranteed luck advice.",
+      "The first practical check is the Chinese character. Without the character, Chan should be treated as a spelling clue rather than a final surname identification.",
+      "The second check is region and language background. Cantonese, Hakka, Hokkien, Teochew, Mandarin, and immigration records can preserve different spellings for related or separate surnames."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Chan Surname Meaning",
+        "paragraphs": [
+          "Most visitors searching for Chan Surname Meaning are not looking for a decorative paragraph. They want to make a decision, confirm a fact, choose a product, understand a cultural symbol, or avoid a common mistake.",
+          "That means the useful answer should begin with what changes the outcome. A page can rank for a keyword and still disappoint the reader if it hides the practical decision behind vague background writing."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check old documents, bilingual certificates, gravestones, clan association records, family books, and known ancestral places.",
+          "Check whether the reader is asking for meaning, origin, pronunciation, or genealogy. Those are related but not identical tasks."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "After the first answer, keep the evidence layers separate. A zodiac phrase, surname spelling, product label, or craft name can be a useful clue, but the reliable conclusion depends on the supporting details around it.",
+          "This is where internal links matter. A visitor with a broad question should move to a main guide, while a visitor with a narrow buying, lookup, or tutorial question should continue to a focused page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The most common mistake is assuming Chan always has one fixed meaning. The spelling usually points toward a character search, not a complete answer.",
+          "Another mistake is merging Chan, Chen, Tan, and other similar-looking spellings without evidence. Character confirmation is the safer path."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a lightweight product, checking a date, planning a gift, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is topical authority. The page supports the larger site cluster by answering a focused query in enough detail, then linking the visitor toward more complete tools and reference pages."
+        ]
+      },
+      {
+        "title": "Decision framework",
+        "paragraphs": [
+          "Use a simple three-part framework: confirm the main fact, check the detail that can change the answer, then choose the next page or action. This keeps the article useful instead of turning it into a loose essay.",
+          "If the question involves a product, inspect construction, size, material, photos, and use case. If it involves culture, keep the wording bounded. If it involves family history, verify the character or source. If it involves a tool result, preserve the input date or context that produced the answer."
+        ]
+      },
+      {
+        "title": "When to use a broader guide",
+        "paragraphs": [
+          "Use this page when the question is specifically about Chan Surname Meaning. Use a broader guide when the reader needs comparison, background, or a complete step-by-step workflow.",
+          "The broader guide is especially useful when several similar terms overlap. A product buyer may need comparison pages, a learner may need tutorial order, and a researcher may need meaning, origin, pronunciation, and source notes together."
+        ]
+      },
+      {
+        "title": "Practical next step",
+        "paragraphs": [
+          "If the character is 陈, read the Chen surname page next and record Chan as a regional spelling.",
+          "Next, use the surname lookup, Chen meaning guide, Chinese surname pronunciation page, and origin guide to keep evidence organized."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chan Surname Meaning?",
+        "a": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 陈, but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge."
+      },
+      {
+        "q": "Can Chan Surname Meaning be used for buying or paid products later?",
+        "a": "Yes, if the page keeps practical checks visible. Product or paid-report content should explain the decision path instead of relying on decorative wording."
+      },
+      {
+        "q": "Why is this page longer than a short definition?",
+        "a": "Because the reader usually needs tradeoffs, cautions, examples, and next steps. Thin pages are weak for SEO and weak for user trust."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Next, use the surname lookup, Chen meaning guide, Chinese surname pronunciation page, and origin guide to keep evidence organized."
+      }
+    ],
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search by spelling, pinyin, or character."
+      },
+      {
+        "title": "Chinese Surname Meanings",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Understand what surname meanings can and cannot prove."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin Guides",
+        "description": "Read origin patterns and research limits."
+      }
+    ],
+    "table": {
+      "title": "How to use Chan Surname Meaning as a decision page",
+      "headers": [
+        "Reader need",
+        "What to check",
+        "Next action"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Confirm the main fact or product use case",
+          "Read the lead answer and save the exact page"
+        ],
+        [
+          "Accuracy",
+          "Check date, character, material, or construction detail",
+          "Use the related guide before deciding"
+        ],
+        [
+          "Buying or planning",
+          "Compare practical fit instead of decorative wording",
+          "Move to product, tutorial, or lookup pages"
+        ],
+        [
+          "Deeper research",
+          "Keep evidence and interpretation separate",
+          "Record the source and continue through the guide cluster"
+        ]
+      ]
+    }
+  },
+  {
+    "title": "Chow Surname Meaning: Zhou Connection, Cantonese Spelling, and Origin Limits",
+    "path": "/chow-surname-meaning/",
+    "description": "Understand Chow surname meaning through likely Zhou 周 connection, Cantonese spelling, character checks, variants, and cautious family-name research.",
+    "h1": "Chow Surname Meaning: Zhou Connection, Cantonese Spelling, and Origin Limits",
+    "intro": "Chow surname meaning usually starts with romanization. Chow may correspond to Zhou 周 in many family-name contexts, but the Chinese character should be confirmed before making a genealogy claim.",
+    "answer": "Chow is commonly linked with the Chinese surname Zhou 周 in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records.",
+    "details": [
+      "This article focuses on Chow Surname Meaning because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
+      "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
+      "The page is written as both a standalone answer and a routing page. It gives the reader enough information to act, then points toward broader guides, tools, and related pages when the question needs more depth.",
+      "Use the information as educational guidance. It can support cultural learning, buying decisions, family-name research, craft planning, or content planning, but it should not be treated as legal, medical, financial, genealogy-certified, or guaranteed luck advice.",
+      "The first practical check is whether the family has the Chinese character. If the character is 周, the page can connect the spelling to Zhou and broader Zhou surname notes.",
+      "The second check is the source of the spelling. Chow may appear in overseas documents, family records, restaurant names, school records, or older immigration paperwork."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Chow Surname Meaning",
+        "paragraphs": [
+          "Most visitors searching for Chow Surname Meaning are not looking for a decorative paragraph. They want to make a decision, confirm a fact, choose a product, understand a cultural symbol, or avoid a common mistake.",
+          "That means the useful answer should begin with what changes the outcome. A page can rank for a keyword and still disappoint the reader if it hides the practical decision behind vague background writing."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check whether the spelling was chosen by family preference, dialect pronunciation, passport convention, or later English standardization.",
+          "Check whether the reader needs a quick meaning note or a careful research workflow."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "After the first answer, keep the evidence layers separate. A zodiac phrase, surname spelling, product label, or craft name can be a useful clue, but the reliable conclusion depends on the supporting details around it.",
+          "This is where internal links matter. A visitor with a broad question should move to a main guide, while a visitor with a narrow buying, lookup, or tutorial question should continue to a focused page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The most common mistake is treating the English word Chow as the meaning of the surname. In surname research, the Chinese character matters more than the English-looking spelling.",
+          "Another mistake is claiming one origin for every Chow family. Public surname pages can explain broad patterns but cannot prove a private family tree."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a reliable reference before taking action. That action may be buying a lightweight product, checking a date, planning a gift, choosing craft supplies, or deciding whether a deeper guide is needed.",
+          "A second use case is topical authority. The page supports the larger site cluster by answering a focused query in enough detail, then linking the visitor toward more complete tools and reference pages."
+        ]
+      },
+      {
+        "title": "Decision framework",
+        "paragraphs": [
+          "Use a simple three-part framework: confirm the main fact, check the detail that can change the answer, then choose the next page or action. This keeps the article useful instead of turning it into a loose essay.",
+          "If the question involves a product, inspect construction, size, material, photos, and use case. If it involves culture, keep the wording bounded. If it involves family history, verify the character or source. If it involves a tool result, preserve the input date or context that produced the answer."
+        ]
+      },
+      {
+        "title": "When to use a broader guide",
+        "paragraphs": [
+          "Use this page when the question is specifically about Chow Surname Meaning. Use a broader guide when the reader needs comparison, background, or a complete step-by-step workflow.",
+          "The broader guide is especially useful when several similar terms overlap. A product buyer may need comparison pages, a learner may need tutorial order, and a researcher may need meaning, origin, pronunciation, and source notes together."
+        ]
+      },
+      {
+        "title": "Practical next step",
+        "paragraphs": [
+          "If the character is 周, compare the Zhou surname profile and the common Chinese surname table.",
+          "Next, use the lookup tool, pronunciation guide, and surname origin article to record confirmed facts separately from possible explanations."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chow Surname Meaning?",
+        "a": "Chow is commonly linked with the Chinese surname Zhou 周 in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records."
+      },
+      {
+        "q": "Can Chow Surname Meaning be used for buying or paid products later?",
+        "a": "Yes, if the page keeps practical checks visible. Product or paid-report content should explain the decision path instead of relying on decorative wording."
+      },
+      {
+        "q": "Why is this page longer than a short definition?",
+        "a": "Because the reader usually needs tradeoffs, cautions, examples, and next steps. Thin pages are weak for SEO and weak for user trust."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Next, use the lookup tool, pronunciation guide, and surname origin article to record confirmed facts separately from possible explanations."
+      }
+    ],
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search by spelling, pinyin, or character."
+      },
+      {
+        "title": "Chinese Surname Meanings",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Understand what surname meanings can and cannot prove."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin Guides",
+        "description": "Read origin patterns and research limits."
+      }
+    ],
+    "table": {
+      "title": "How to use Chow Surname Meaning as a decision page",
+      "headers": [
+        "Reader need",
+        "What to check",
+        "Next action"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Confirm the main fact or product use case",
+          "Read the lead answer and save the exact page"
+        ],
+        [
+          "Accuracy",
+          "Check date, character, material, or construction detail",
+          "Use the related guide before deciding"
+        ],
+        [
+          "Buying or planning",
+          "Compare practical fit instead of decorative wording",
+          "Move to product, tutorial, or lookup pages"
+        ],
+        [
+          "Deeper research",
+          "Keep evidence and interpretation separate",
+          "Record the source and continue through the guide cluster"
+        ]
+      ]
+    }
+  }
+];
+
+for (const article of dailyArticles20260710) {
+  await writePage(article.path, dailyArticlePage20260706(article));
 }
 
 function clientScript() {

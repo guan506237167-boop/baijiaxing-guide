@@ -15,19 +15,57 @@ const meaningKeywords = keywordRows.filter((row) => row.category === "meaning-or
 const generalKeywords = keywordRows.filter((row) => row.category === "general").slice(0, 16);
 
 const surnames = [
-  { slug: "li", hanzi: "李", pinyin: "Li", variants: "Lee, Lei", rank: 1, meaning: "Often explained through the character for plum or plum tree in modern reference contexts.", origin: "Li is one of the most common Chinese surnames and appears across many regional romanization systems.", keywords: ["li surname origin", "li surname meaning", "li chinese surname"] },
-  { slug: "wang", hanzi: "王", pinyin: "Wang", variants: "Wong, Ong", rank: 2, meaning: "The character Wang means king or ruler.", origin: "Wang is widely used in Mandarin and appears as Wong or Ong in some Cantonese, Hokkien, or regional communities.", keywords: ["wang surname origin", "wang surname meaning", "wong surname origin"] },
-  { slug: "zhang", hanzi: "张", pinyin: "Zhang", variants: "Cheung, Chang", rank: 3, meaning: "The character is associated with drawing or stretching a bow.", origin: "Zhang is a major Mandarin surname with common romanized forms such as Cheung and Chang in overseas communities.", keywords: ["zhang surname origin", "zhang surname meaning", "zhang chinese surname"] },
-  { slug: "liu", hanzi: "刘", pinyin: "Liu", variants: "Lau, Low", rank: 4, meaning: "The surname is usually treated as a lineage name rather than a simple literal-word surname.", origin: "Liu is historically important and strongly represented in Chinese history and overseas Chinese communities.", keywords: ["liu surname meaning", "liu surname origin", "liu chinese surname"] },
-  { slug: "chen", hanzi: "陈", pinyin: "Chen", variants: "Chan, Tan", rank: 5, meaning: "Chen is commonly connected with an ancient state name and lineage identity.", origin: "Chen is a very common Chinese surname, while Chan and Tan are common regional romanizations.", keywords: ["chen surname meaning", "chen surname origin", "chan surname meaning"] },
-  { slug: "yang", hanzi: "杨", pinyin: "Yang", variants: "Yeung", rank: 6, meaning: "The character is associated with poplar or willow-like trees in common explanations.", origin: "Yang is a common surname across Mandarin-speaking regions and appears as Yeung in some Cantonese romanization.", keywords: ["yang surname origin", "yang surname meaning", "yang chinese surname"] },
-  { slug: "huang", hanzi: "黄", pinyin: "Huang", variants: "Wong, Ng", rank: 7, meaning: "The character Huang means yellow.", origin: "Huang is common in Mandarin contexts; Wong and Ng can appear as related regional romanization forms depending on language and family history.", keywords: ["huang surname origin", "huang surname meaning", "wong surname meaning"] },
-  { slug: "zhao", hanzi: "赵", pinyin: "Zhao", variants: "Chao, Chiu", rank: 8, meaning: "Zhao is usually understood as a historical lineage and place-linked surname.", origin: "Zhao is famous as the first surname in the traditional Hundred Family Surnames text.", keywords: ["zhao surname meaning", "zhao surname origin", "zhao chinese surname"] },
-  { slug: "wu", hanzi: "吴", pinyin: "Wu", variants: "Ng, Woo", rank: 9, meaning: "Wu is tied to a historical state and lineage identity.", origin: "Wu is common in Mandarin, while Ng and Woo are frequent overseas romanization forms.", keywords: ["wu surname meaning", "wu surname origin", "ng surname origin"] },
-  { slug: "zhou", hanzi: "周", pinyin: "Zhou", variants: "Chou, Chow", rank: 10, meaning: "Zhou is associated with an ancient dynasty and lineage tradition.", origin: "Zhou appears in Mandarin as Zhou and in older or regional romanizations as Chou or Chow.", keywords: ["zhou surname meaning", "zhou surname origin", "zhou chinese surname"] }
+  { slug: "li", hanzi: "\u674e", pinyin: "Li", variants: "Lee, Lei", rank: 1, meaning: "Often explained through the character for plum or plum tree in modern reference contexts.", origin: "Li is one of the most common Chinese surnames and appears across many regional romanization systems.", keywords: ["li surname origin", "li surname meaning", "li chinese surname"] },
+  { slug: "wang", hanzi: "\u738b", pinyin: "Wang", variants: "Wong, Ong", rank: 2, meaning: "The character Wang means king or ruler.", origin: "Wang is widely used in Mandarin and appears as Wong or Ong in some Cantonese, Hokkien, or regional communities.", keywords: ["wang surname origin", "wang surname meaning", "wong surname origin"] },
+  { slug: "zhang", hanzi: "\u5f20", pinyin: "Zhang", variants: "Cheung, Chang", rank: 3, meaning: "The character is associated with drawing or stretching a bow.", origin: "Zhang is a major Mandarin surname with common romanized forms such as Cheung and Chang in overseas communities.", keywords: ["zhang surname origin", "zhang surname meaning", "zhang chinese surname"] },
+  { slug: "liu", hanzi: "\u5218", pinyin: "Liu", variants: "Lau, Low", rank: 4, meaning: "The surname is usually treated as a lineage name rather than a simple literal-word surname.", origin: "Liu is historically important and strongly represented in Chinese history and overseas Chinese communities.", keywords: ["liu surname meaning", "liu surname origin", "liu chinese surname"] },
+  { slug: "chen", hanzi: "\u9648", pinyin: "Chen", variants: "Chan, Tan", rank: 5, meaning: "Chen is commonly connected with an ancient state name and lineage identity.", origin: "Chen is a very common Chinese surname, while Chan and Tan are common regional romanizations.", keywords: ["chen surname meaning", "chen surname origin", "chan surname meaning"] },
+  { slug: "yang", hanzi: "\u6768", pinyin: "Yang", variants: "Yeung", rank: 6, meaning: "The character is associated with poplar or willow-like trees in common explanations.", origin: "Yang is a common surname across Mandarin-speaking regions and appears as Yeung in some Cantonese romanization.", keywords: ["yang surname origin", "yang surname meaning", "yang chinese surname"] },
+  { slug: "huang", hanzi: "\u9ec4", pinyin: "Huang", variants: "Wong, Ng", rank: 7, meaning: "The character Huang means yellow.", origin: "Huang is common in Mandarin contexts; Wong and Ng can appear as related regional romanization forms depending on language and family history.", keywords: ["huang surname origin", "huang surname meaning", "wong surname meaning"] },
+  { slug: "zhao", hanzi: "\u8d75", pinyin: "Zhao", variants: "Chao, Chiu", rank: 8, meaning: "Zhao is usually understood as a historical lineage and place-linked surname.", origin: "Zhao is famous as the first surname in the traditional Hundred Family Surnames text.", keywords: ["zhao surname meaning", "zhao surname origin", "zhao chinese surname"] },
+  { slug: "wu", hanzi: "\u5434", pinyin: "Wu", variants: "Ng, Woo", rank: 9, meaning: "Wu is tied to a historical state and lineage identity.", origin: "Wu is common in Mandarin, while Ng and Woo are frequent overseas romanization forms.", keywords: ["wu surname meaning", "wu surname origin", "ng surname origin"] },
+  { slug: "zhou", hanzi: "\u5468", pinyin: "Zhou", variants: "Chou, Chow", rank: 10, meaning: "Zhou is associated with an ancient dynasty and lineage tradition.", origin: "Zhou appears in Mandarin as Zhou and in older or regional romanizations as Chou or Chow.", keywords: ["zhou surname meaning", "zhou surname origin", "zhou chinese surname"] }
 ];
 
 const guides = [
+  {
+  "title": "Chinese Name Seal Gift: Surname Characters, Design Checks, and Safe Wording",
+  "path": "/chinese-name-seal-gift/",
+  "category": "Gift Guides",
+  "description": "Plan a Chinese name seal gift with confirmed surname characters, seal script risks, design proof, and careful family-name wording."
+},
+  {
+  "title": "Chinese Surname Family Tree Printable: Characters, Records, and Evidence Notes",
+  "path": "/chinese-surname-family-tree-printable/",
+  "category": "Research Guides",
+  "description": "Create a Chinese surname family tree printable with characters, romanization, records, source notes, and cautious origin wording."
+},
+  {
+  "title": "Chinese Surname Jewelry Meaning: Character Checks Before Necklaces and Rings",
+  "path": "/chinese-surname-jewelry-meaning/",
+  "category": "Meaning Guides",
+  "description": "Check Chinese surname jewelry meaning before necklaces, rings, bracelets, engraving, family gifts, and character-based designs."
+},
+  {
+  "title": "Chinese Family Name Gift Ideas: Characters, Records, and Safe Wording",
+  "path": "/chinese-family-name-gift-ideas/",
+  "category": "Gift Guides",
+  "description": "Plan Chinese family name gift ideas with surname characters, family records, safe wording, design checks, and cultural limits."
+},
+  {
+  "title": "How to Find Your Chinese Surname Character from Family Records",
+  "path": "/find-your-chinese-surname-character/",
+  "category": "Research Guides",
+  "description": "Find your Chinese surname character from family records, romanization clues, dialect notes, inscriptions, and genealogy sources."
+},
+  {
+  "title": "Chinese Surname Tattoo Meaning: Character Checks and Risks",
+  "path": "/chinese-surname-tattoo-meaning/",
+  "category": "Meaning Guides",
+  "description": "Check Chinese surname tattoo meaning, character accuracy, family evidence, font choice, cultural risk, and safer alternatives."
+},
+  {"title": "Cantonese Surnames", "path": "/cantonese-surnames/", "category": "Pronunciation", "description": "Understand Cantonese surname spellings, Chinese characters, and family record checks."},
+  {"title": "Chinese Last Names for Genealogy", "path": "/chinese-last-names-genealogy/", "category": "Origin Guides", "description": "Research Chinese last names through characters, dialects, romanization, and records."},
   { title: "Chinese Surnames", path: "/chinese-surnames/", category: "Core Guides", description: "A clear introduction to Chinese family names, order, romanization, and cultural context." },
   { title: "Most Common Chinese Surnames", path: "/common-chinese-surnames/", category: "Reference Lists", description: "Browse common Chinese surnames with characters, pinyin, and romanization notes." },
   { title: "Chinese Surname Meanings", path: "/chinese-surname-meaning/", category: "Meaning Guides", description: "Understand how surname meanings work and why many names need historical context." },
@@ -56,10 +94,320 @@ const guides = [
   { title: 'Long Surname Origin', path: '/long-surname-origin/', category: 'Origin Guides', description: 'Check Long surname characters, origin clues, and spelling limits.' },
   {"title":"Lee Surname Origin","path":"/lee-surname-origin/","category":"Origin Guides","description":"Research Lee surname origin through Chinese characters and family records."},
   {"title":"Ng Surname Origin","path":"/ng-surname-origin/","category":"Origin Guides","description":"Research Ng surname origin through Cantonese spelling and character evidence."},
+  {"title":"Zhou Surname Meaning","path":"/zhou-surname-meaning/","category":"Meaning Guides","description":"Understand Zhou surname meaning, character context, romanized variants, and research limits."},
+  {"title":"Xu Surname Meaning","path":"/xu-surname-meaning/","category":"Meaning Guides","description":"Understand Xu surname meaning, possible characters, romanization checks, and research limits."},
+  {"title":"Wang Surname Meaning","path":"/wang-surname-meaning/","category":"Meaning Guides","description":"Understand Wang surname meaning, character context, variants, and research limits."},
+  {"title":"Chen Surname Origin","path":"/chen-surname-origin/","category":"Origin Guides","description":"Research Chen surname origin through character, variants, and family evidence."},
 
+  { title: "Find Your Chinese Surname Character: Records, Spelling, and Lookup Steps", path: "/find-your-chinese-surname-character/", category: "Research Guides", description: "Find your Chinese surname character by comparing family records, romanized spellings, dialect clues, and source evidence." },
+  { title: "Chinese Family Name Gift Ideas: Characters, Prints, and Safe Wording", path: "/chinese-family-name-gift-ideas/", category: "Gift Guides", description: "Plan Chinese family name gift ideas with confirmed characters, framed prints, seal-style art, genealogy notes, and careful wording." },
 ];
 
 const pages = [];
+
+const geoMicroPatches20260716 = new Map([
+  [
+    "/chinese-surname-pronunciation/",
+    {
+      "path": "/chinese-surname-pronunciation/",
+      "quick": "Quick answer: Chinese surname pronunciation should be tied to a specific written character and language variety, because one English spelling may represent different Mandarin, Cantonese, or other regional readings.",
+      "facts": [
+        [
+          "Main task",
+          "Pronounce a Chinese family name accurately"
+        ],
+        [
+          "Best input",
+          "The written Chinese character"
+        ],
+        [
+          "Context needed",
+          "Mandarin, Cantonese, Hokkien, Hakka, or another family variety"
+        ],
+        [
+          "Evidence limit",
+          "Romanized spelling alone may be ambiguous"
+        ]
+      ],
+      "evidence": "Prefer a family-confirmed pronunciation or a dictionary entry for the exact character and stated language variety.",
+      "examples": "Li and Lee, Chen and Chan, Huang and Wong, Wu and Ng, and Zhou and Chow",
+      "mistakes": "Do not silently replace a family's established pronunciation with modern Mandarin pinyin.",
+      "faq": [
+        [
+          "Why is the same surname pronounced differently?",
+          "Regional languages, romanization systems, and migration records can preserve different readings of the same character."
+        ],
+        [
+          "Is pinyin always the correct family pronunciation?",
+          "Pinyin gives a Mandarin reading, but a family may use another language variety or established spelling."
+        ]
+      ],
+      "dataAnchor": "Pronunciation confidence = exact character + named language variety + family or dictionary confirmation."
+    }
+  ],
+  [
+    "/chinese-surname-origin/",
+    {
+      "path": "/chinese-surname-origin/",
+      "quick": "Quick answer: A Chinese surname origin page can summarize documented traditions for a character, but it cannot prove one family's ancestry without records linking people, dates, and places.",
+      "facts": [
+        [
+          "Main task",
+          "Understand traditions associated with a surname character"
+        ],
+        [
+          "Strong evidence",
+          "Dated histories, inscriptions, local gazetteers, clan records, and family documents"
+        ],
+        [
+          "Common complication",
+          "One surname can have multiple origin traditions and branches"
+        ],
+        [
+          "Use limit",
+          "General origin stories do not establish a personal lineage"
+        ]
+      ],
+      "evidence": "Separate early textual traditions from later clan claims and from evidence specific to an individual family.",
+      "examples": "place-derived names, titles, ancestral names, adopted surnames, and later branch migrations",
+      "mistakes": "Do not connect a modern family to a famous ancestor only because the surname character matches.",
+      "faq": [
+        [
+          "Can one Chinese surname have several origins?",
+          "Yes. The same character may be associated with multiple historical traditions and unrelated family branches."
+        ],
+        [
+          "How can I verify my own family's origin?",
+          "Build a documented chain from recent family records backward before comparing it with regional or clan histories."
+        ]
+      ],
+      "dataAnchor": "Origin claim strength = dated source + exact character + place context + documented family link."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260716(path, html) {
+  const patch = geoMicroPatches20260716.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260716"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260716">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+
+const geoMicroPatches20260715 = new Map([
+  [
+    "/surname-lookup/",
+    {
+      "path": "/surname-lookup/",
+      "quick": "Quick answer: A Chinese surname lookup is most reliable when it starts with the exact written character and then compares pronunciation, romanization, family records, and regional context.",
+      "facts": [
+        [
+          "Main task",
+          "Identify or research a Chinese family name"
+        ],
+        [
+          "Best input",
+          "A written Chinese character linked to the family"
+        ],
+        [
+          "Supporting evidence",
+          "Passports, certificates, inscriptions, clan records, and relatives' handwriting"
+        ],
+        [
+          "Use limit",
+          "A spelling match alone cannot prove ancestry"
+        ]
+      ],
+      "evidence": "Family-linked written records are stronger evidence than an English spelling, because one spelling can represent multiple characters and dialect histories.",
+      "examples": "Lee and Li, Wong and Huang, Chan and Chen, Ng and Wu, and older immigration spellings",
+      "mistakes": "Do not convert a family spelling to modern pinyin and discard the original spelling or source document.",
+      "faq": [
+        [
+          "Can I find the Chinese character from an English surname?",
+          "You can find candidates, but you need family evidence to confirm the correct character."
+        ],
+        [
+          "Why does one surname have several spellings?",
+          "Dialect pronunciation, historical romanization, and immigration records created multiple English forms."
+        ]
+      ],
+      "dataAnchor": "Surname lookup confidence = confirmed character + original spelling + regional pronunciation + family-linked source."
+    }
+  ],
+  [
+    "/chinese-last-names-genealogy/",
+    {
+      "path": "/chinese-last-names-genealogy/",
+      "quick": "Quick answer: Chinese surname genealogy should begin with verified family documents and places, then use the surname character to connect records without assuming that everyone with the same name shares one lineage.",
+      "facts": [
+        [
+          "Main task",
+          "Trace a family line through surname evidence"
+        ],
+        [
+          "Start with",
+          "Names, dates, places, relationships, and original documents"
+        ],
+        [
+          "Useful sources",
+          "Household records, immigration files, grave inscriptions, clan books, and oral history"
+        ],
+        [
+          "Use limit",
+          "Shared surname does not prove a shared recent ancestor"
+        ]
+      ],
+      "evidence": "A documented chain connecting people, dates, and places is stronger than a famous surname-origin story or a same-name match.",
+      "examples": "family trees, village records, generation names, immigration certificates, cemetery records, and clan associations",
+      "mistakes": "Do not attach a family to a famous ancestor or migration story without a record chain that bridges the generations.",
+      "faq": [
+        [
+          "Is a clan genealogy always accurate?",
+          "It can be valuable evidence, but names, dates, editions, and family links should still be cross-checked."
+        ],
+        [
+          "Where should overseas families start?",
+          "Start with the oldest reliable local records, preserve original spellings, and work backward to a place and written character."
+        ]
+      ],
+      "dataAnchor": "Genealogy evidence chain = person + relationship + date + place + document, repeated across generations."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260715(path, html) {
+  const patch = geoMicroPatches20260715.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260715"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260715">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+
+const geoMicroPatches20260714 = new Map([
+  [
+    "/lee-surname-meaning/",
+    {
+      "path": "/lee-surname-meaning/",
+      "quick": "Quick answer: Lee surname meaning depends on the confirmed Chinese character, because the English spelling Lee can represent different East Asian names and several romanization histories.",
+      "facts": [
+        [
+          "Main topic",
+          "Lee surname meaning"
+        ],
+        [
+          "First check",
+          "Confirm the written Chinese character before using a meaning"
+        ],
+        [
+          "Evidence source",
+          "Family records, inscriptions, clan notes, immigration papers, or relatives' handwriting"
+        ],
+        [
+          "Use limit",
+          "A spelling can suggest a path, but it cannot prove one family's origin"
+        ]
+      ],
+      "evidence": "The strongest evidence is a written surname character connected to the family, not the English spelling alone.",
+      "examples": "family books, grave markers, old envelopes, clan association records, passports, and regional romanization notes",
+      "mistakes": "Do not assume every Lee is the same Chinese character or the same family origin.",
+      "faq": [
+        [
+          "Is Lee always Li in Chinese?",
+          "No. Lee often connects to Li in Mandarin contexts, but the correct answer depends on the family character and regional spelling history."
+        ],
+        [
+          "Can a meaning prove my ancestry?",
+          "No. Meaning can explain the character, but ancestry needs family-specific evidence."
+        ]
+      ],
+      "dataAnchor": "Lee surname meaning decision = confirmed character + romanization history + family record evidence + cautious origin wording."
+    }
+  ],
+  [
+    "/cantonese-surnames/",
+    {
+      "path": "/cantonese-surnames/",
+      "quick": "Quick answer: Cantonese surnames should be checked by spelling, pronunciation, Chinese character, and family record context because one English form can hide several character possibilities.",
+      "facts": [
+        [
+          "Main topic",
+          "Cantonese surnames"
+        ],
+        [
+          "First check",
+          "Match the romanized spelling to a written Chinese character"
+        ],
+        [
+          "Evidence source",
+          "Hong Kong records, clan records, family inscriptions, immigration documents, and older spellings"
+        ],
+        [
+          "Use limit",
+          "Pronunciation clues help research but do not confirm ancestry by themselves"
+        ]
+      ],
+      "evidence": "Reliable surname research combines written character evidence with regional spelling and family document context.",
+      "examples": "Wong, Lee, Ng, Lam, Chan, Ho, Lau, Cheung, and other Cantonese-style romanizations",
+      "mistakes": "Do not convert every Cantonese spelling into Mandarin pinyin before preserving the original record.",
+      "faq": [
+        [
+          "Why do Cantonese surnames look different from pinyin?",
+          "Many families kept older or regional romanizations before Mandarin pinyin became common internationally."
+        ],
+        [
+          "What should I record first?",
+          "Record the English spelling exactly as used by the family, then add the confirmed Chinese character and source."
+        ]
+      ],
+      "dataAnchor": "Cantonese surname research decision = original spelling + confirmed character + regional context + family source."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260714(path, html) {
+  const patch = geoMicroPatches20260714.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260714"')) return html;
+  const block = blockForGeoMicroPatch20260714(patch);
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+function blockForGeoMicroPatch20260714(patch) {
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+    <h2>Quick Answer and Evidence Check</h2>
+    <p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>
+    ${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+}
+
+
 
 await rm("dist", { recursive: true, force: true });
 await mkdir("dist/assets", { recursive: true });
@@ -200,6 +548,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:image" content="${SITE.url}/assets/surname-archive-hero.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609779333813540" crossorigin="anonymous"></script>
   ${analyticsSnippet()}
   ${schema}
 </head>
@@ -248,7 +597,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <span>Site</span>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
-        <a href="/chinese-surnames-faq/">FAQ</a>
+        <a href="/faq/">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
       </div>
@@ -335,8 +684,9 @@ function articleSearchBlock() {
 }
 
 function guideCard(guide) {
-  return `<a class="guide-card" href="${guide.path}" data-guide-card data-guide-category="${slugify(guide.category)}">
-    <span>${escapeHtml(guide.category)}</span>
+  const category = guide.category || "Related";
+  return `<a class="guide-card" href="${guide.path}" data-guide-card data-guide-category="${slugify(category)}">
+    <span>${escapeHtml(category)}</span>
     <strong>${escapeHtml(guide.title)}</strong>
     <p>${escapeHtml(guide.description)}</p>
   </a>`;
@@ -393,8 +743,27 @@ function adSlot(position) {
   return `<aside class="ad-slot" data-ad-position="${position}" aria-label="Advertisement area">Advertisement</aside>`;
 }
 
+function supplementalInfoBlock(path) {
+  if (path === "/about/") {
+    return `<section class="content-section article-body"><h2>Editorial standards</h2><p>The site is maintained as a practical English-language reference. Pages are written to answer a specific visitor question first, then explain context, common mistakes, and the next useful page. Content may be updated when better examples, clearer wording, or stronger internal links are needed.</p><p>The site avoids unsupported claims. Cultural meanings, product notes, learning tips, and comparison pages should help readers make better decisions, but they should not promise guaranteed personal outcomes or replace professional advice.</p></section><section class="content-section article-body"><h2>Commercial disclosure</h2><p>The site may use display advertising, affiliate links, digital products, or direct product pages in the future. Commercial sections should be clearly separated from editorial explanations, and recommendations should remain tied to practical checks such as material, use case, safety, quality, source evidence, or reader intent.</p></section><section class="content-section article-body"><h2>Ownership and review process</h2><p>The site is operated as part of an independent content portfolio. Pages are reviewed for clarity, usefulness, internal navigation, and commercial suitability before major monetization features are added. When a page is updated, the goal is to make the answer more useful, not to inflate claims or hide uncertainty.</p><p>Readers should be able to understand what the site covers, what it does not cover, and how to contact the operator if a correction is needed. This is especially important for topics that mix cultural context, product choices, tutorials, family-name research, or symbolic interpretation.</p></section>`;
+  }
+  if (path === "/contact/") {
+    return `<section class="content-section article-body"><h2>Editorial and business contact</h2><p>Contact messages may be used to review corrections, improve page clarity, evaluate relevant partnerships, or respond to site-related questions. For correction requests, include the page URL, the specific sentence, and the reason the change is needed.</p><p>For business inquiries, describe the site, product, service, or collaboration clearly. The site does not accept partnerships that require misleading claims, fake reviews, unsupported health or luck promises, or hidden advertising.</p></section><section class="content-section article-body"><h2>Privacy of messages</h2><p>Email messages are handled only for communication, correction review, and business follow-up. Do not send sensitive identity documents, payment details, passwords, or private personal records by email.</p></section><section class="content-section article-body"><h2>Message handling limits</h2><p>Contact is intended for site-related communication, not private consultation. The site may respond to factual corrections, broken links, unclear wording, advertising questions, affiliate discussions, or relevant product/service proposals. It may not respond to vague promotional outreach, requests for hidden paid placement, or messages unrelated to the site topic.</p><p>If a correction is accepted, the page may be updated without publishing a separate notice. If a request is outside the site scope, the message may simply be archived without further action.</p></section>`;
+  }
+  return "";
+}
+
+function supplementalLegalBlock(path) {
+  if (path === "/privacy/") {
+    return `<section class="content-section article-body"><h2>Cookies, analytics, and advertising partners</h2><p>The site may use cookies, analytics scripts, hosting logs, and advertising technologies to understand traffic, measure page performance, prevent abuse, and support free public content. Advertising partners may process browser or device signals according to their own privacy policies and consent tools.</p></section><section class="content-section article-body"><h2>Email and voluntary information</h2><p>If a visitor sends an email, the message may include an email address, page URL, correction notes, and any details the visitor chooses to provide. That information is used to respond, review the issue, improve the site, or keep a basic record of business communication.</p></section><section class="content-section article-body"><h2>Future paid features</h2><p>If checkout, digital reports, subscriptions, or user accounts are added later, this policy should be reviewed and updated before those features go live. Payment secrets, API keys, and private credentials must not be stored in public frontend code.</p></section><section class="content-section article-body"><h2>Visitor choices and retention</h2><p>Visitors can limit cookies through browser settings and can choose not to send email or voluntary information. Basic hosting, security, and analytics logs may be retained for a reasonable period to diagnose errors, measure content performance, and protect the site from abuse. The site does not build public user profiles in its current form.</p></section>`;
+  }
+  if (path === "/terms/") {
+    return `<section class="content-section article-body"><h2>Advertising, affiliate, and product boundaries</h2><p>The site may include display ads, affiliate links, direct products, downloadable reports, or service pages. Commercial content should not require misleading claims, fake reviews, hidden sponsorship, or guarantees that cannot be supported. Visitors are responsible for evaluating whether a product, tool, or guide fits their own situation.</p></section><section class="content-section article-body"><h2>Accuracy and updates</h2><p>Pages may be corrected, expanded, reorganized, or removed when better information is available or when the site structure changes. The site aims to keep explanations useful and clear, but no page can cover every regional, personal, product, or historical variation.</p></section><section class="content-section article-body"><h2>Permitted use</h2><p>Visitors may read and reference the site for personal learning. Automated scraping, copying large portions of the site, impersonating the site, or using the content to create misleading commercial claims is not permitted without written permission.</p></section><section class="content-section article-body"><h2>External links and third parties</h2><p>The site may link to third-party websites, product pages, payment processors, analytics tools, or advertising platforms. Those services are governed by their own policies and terms. A link does not mean the site controls the third-party service or guarantees its availability, pricing, accuracy, shipping, refund handling, or support quality.</p></section>`;
+  }
+  return "";
+}
 function simpleInfoPage({ title, description, path, h1, intro, body }) {
-  return pageLayout({ title, description, path, h1, intro, body, heroLabel: "Site information" });
+  return pageLayout({ title, description, path, h1, intro, body: body + supplementalInfoBlock(path), heroLabel: "Site information" });
 }
 
 function simpleLegalPage({ title, description, path, h1, intro, sections }) {
@@ -405,7 +774,7 @@ function simpleLegalPage({ title, description, path, h1, intro, sections }) {
     h1,
     intro,
     heroLabel: "Legal information",
-    body: sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p></section>`).join("")
+    body: sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2><p>${escapeHtml(section.text)}</p></section>`).join("") + supplementalLegalBlock(path)
   });
 }
 
@@ -457,16 +826,16 @@ await writePage("/huang-surname-meaning/", supportArticle({
   description: "Learn the Huang surname meaning, Chinese character, common variants, origin context, and safe research steps for family-name lookup.",
   path: "/huang-surname-meaning/",
   h1: "Huang Surname Meaning",
-  intro: "Huang is a common Chinese surname usually written with the character 黄, often explained through the meaning yellow while also carrying historical surname context.",
-  answer: "The Huang surname is usually written 黄 in simplified Chinese and is commonly explained through the character meaning yellow. For family-name research, however, Huang should be read as a surname with character, pinyin, variant spellings, regional romanization, and origin traditions, not only as a literal color word.",
+  intro: "Huang is a common Chinese surname usually written with the character 姒? often explained through the meaning yellow while also carrying historical surname context.",
+  answer: "The Huang surname is usually written 姒?in simplified Chinese and is commonly explained through the character meaning yellow. For family-name research, however, Huang should be read as a surname with character, pinyin, variant spellings, regional romanization, and origin traditions, not only as a literal color word.",
   details: [
     "Common English forms can include Huang and Wong, while some regional or family records may preserve older spellings. The written character is the safest anchor before reading deeper meaning or origin notes.",
     "A Huang surname page should help readers separate quick character meaning from genealogy evidence, because the same broad surname can appear across many regions, dialect groups, and migration histories."
   ],
   sections: [
     { title: "What Huang means as a Chinese surname", paragraphs: [
-      "In a basic dictionary sense, 黄 is associated with yellow. That simple meaning is useful because it helps English readers remember the character, but it is not enough to explain a family line. A Chinese surname can preserve an older place, state, clan, title, or lineage tradition even when the modern character has an obvious literal meaning.",
-      "For this reason, the safest answer is layered: Huang is commonly written 黄, pronounced Huang in pinyin, often connected with the meaning yellow, and researched as a historical surname rather than a color description of one family. This keeps the page useful without making unsupported claims."
+      "In a basic dictionary sense, 姒?is associated with yellow. That simple meaning is useful because it helps English readers remember the character, but it is not enough to explain a family line. A Chinese surname can preserve an older place, state, clan, title, or lineage tradition even when the modern character has an obvious literal meaning.",
+      "For this reason, the safest answer is layered: Huang is commonly written 姒? pronounced Huang in pinyin, often connected with the meaning yellow, and researched as a historical surname rather than a color description of one family. This keeps the page useful without making unsupported claims."
     ]},
     { title: "Huang, Wong, and romanization risk", paragraphs: [
       "The spelling Huang normally reflects Mandarin pinyin. The spelling Wong may appear in Cantonese or overseas contexts, but it can also overlap with other surname situations depending on family history and written character. English spelling alone is therefore not enough to confirm the exact surname background.",
@@ -493,16 +862,16 @@ await writePage("/yang-surname-meaning/", supportArticle({
   description: "Learn the Yang surname meaning, Chinese character, common variants, origin context, and careful research steps for surname lookup.",
   path: "/yang-surname-meaning/",
   h1: "Yang Surname Meaning",
-  intro: "Yang is a common Chinese surname often written 杨, with a character commonly connected with poplar or willow-like tree meanings in modern explanations.",
-  answer: "The Yang surname is commonly written 杨 in simplified Chinese and explained through a tree-related character meaning. For surname research, Yang should be read through character, pinyin, variants, regional spelling, and historical context rather than as a simple literal translation.",
+  intro: "Yang is a common Chinese surname often written 閺? with a character commonly connected with poplar or willow-like tree meanings in modern explanations.",
+  answer: "The Yang surname is commonly written 閺?in simplified Chinese and explained through a tree-related character meaning. For surname research, Yang should be read through character, pinyin, variants, regional spelling, and historical context rather than as a simple literal translation.",
   details: [
     "Yang is usually pinyin, while Yeung and other spellings may appear in Cantonese or overseas records. The safest research step is to confirm the written Chinese character before relying on any meaning or origin explanation.",
     "A public Yang surname guide can explain common meaning notes and research cautions, but it cannot prove one reader's private genealogy without family records."
   ],
   sections: [
     { title: "What Yang means as a Chinese surname", paragraphs: [
-      "In modern character explanation, 杨 is often associated with poplar or willow-like tree meanings. That can help English readers remember the character, but a surname is not always explained by the modern dictionary meaning alone. Chinese surnames can preserve older places, states, clans, titles, and lineage traditions.",
-      "The responsible answer is therefore layered: Yang is a major Chinese surname, often written 杨, pronounced Yang in pinyin, and commonly explained through a tree-related character. The meaning is useful, but it should be connected with historical surname context and evidence limits."
+      "In modern character explanation, 閺?is often associated with poplar or willow-like tree meanings. That can help English readers remember the character, but a surname is not always explained by the modern dictionary meaning alone. Chinese surnames can preserve older places, states, clans, titles, and lineage traditions.",
+      "The responsible answer is therefore layered: Yang is a major Chinese surname, often written 閺? pronounced Yang in pinyin, and commonly explained through a tree-related character. The meaning is useful, but it should be connected with historical surname context and evidence limits."
     ]},
     { title: "Yang, Yeung, and spelling variants", paragraphs: [
       "The spelling Yang usually reflects Mandarin pinyin. Yeung can appear in Cantonese contexts, and overseas records may contain other forms depending on immigration offices, dialect pronunciation, and family choice. A romanized spelling can point in the right direction, but it does not replace the written character.",
@@ -600,7 +969,7 @@ await writePage("/", pageLayout({
       </div>
       <figure class="surname-photo-card" aria-label="Chinese genealogy archive scene">
         <img src="/assets/surname-archive-hero.webp" alt="Premium Chinese genealogy archive table with old books, brush, rice paper, and seal stone">
-        <figcaption><strong>百家姓</strong><small>classic surname reference</small></figcaption>
+        <figcaption><strong>閻ф儳顔嶆慨?/strong><small>classic surname reference</small></figcaption>
       </figure>
     </section>
     <section class="surname-stats" aria-label="What this surname guide helps you research">
@@ -739,7 +1108,7 @@ await writePage("/surname-lookup/", pageLayout({
     <section class="tool-page"><section class="tool-panel">
       <div class="tool-copy"><p class="eyebrow">Lookup Tool</p><h2>Find surname details</h2><p>Enter a pinyin spelling, common English spelling, or Chinese character.</p></div>
       <form class="calculator-form match-form" data-surname-form>
-        <label>Surname or spelling<input name="surname" placeholder="Lee, Wang, 陈, Ng"></label>
+        <label>Surname or spelling<input name="surname" placeholder="Lee, Wang, 闂? Ng"></label>
         <label>Goal<select name="goal"><option value="meaning">Meaning</option><option value="origin">Origin</option><option value="common">Common surname list</option></select></label>
         <button type="submit">Look up</button>
       </form>
@@ -786,7 +1155,7 @@ await writePage("/liu-surname-meaning/", supportArticle({
   path: "/liu-surname-meaning/",
   h1: "Liu Surname Meaning",
   intro: "Liu is one of the most important Chinese surnames, so its meaning is best read through character, lineage, and historical context.",
-  answer: "The Liu surname is usually written 刘 in simplified Chinese. In surname research, Liu should be understood mainly as a lineage name rather than a simple literal word with one fixed personal meaning.",
+  answer: "The Liu surname is usually written 閸?in simplified Chinese. In surname research, Liu should be understood mainly as a lineage name rather than a simple literal word with one fixed personal meaning.",
   details: [
     "Common romanized forms can include Liu, Lau, and Low, depending on language background, dialect, migration history, and family records.",
     "A Liu surname page should separate general surname meaning from personal genealogy. The page can explain the name, but family-specific origin still depends on documents and oral history."
@@ -800,7 +1169,7 @@ await writePage("/chen-surname-meaning/", supportArticle({
   path: "/chen-surname-meaning/",
   h1: "Chen Surname Meaning",
   intro: "Chen is a very common Chinese surname with strong links to lineage, place names, and regional romanization variants.",
-  answer: "The Chen surname is written 陈 in simplified Chinese. It is commonly connected with an ancient state name and lineage identity rather than a simple modern word meaning.",
+  answer: "The Chen surname is written 闂?in simplified Chinese. It is commonly connected with an ancient state name and lineage identity rather than a simple modern word meaning.",
   details: [
     "Chen may appear as Chan, Tan, or other variants in overseas communities, depending on dialect, romanization system, and family migration route.",
     "For research, start with the Chinese character and known family romanization, then compare origin notes, regional records, and related surname profiles."
@@ -814,7 +1183,7 @@ await writePage("/li-surname-origin/", supportArticle({
   path: "/li-surname-origin/",
   h1: "Li Surname Origin",
   intro: "Li is one of the most common Chinese surnames, so origin research should separate broad cultural notes from family-specific genealogy.",
-  answer: "The Li surname is usually written 李 in simplified and traditional Chinese. It is widely associated with the plum or plum tree character in modern explanations, while family-specific origin depends on lineage records, regional history, and romanization background.",
+  answer: "The Li surname is usually written 閺?in simplified and traditional Chinese. It is widely associated with the plum or plum tree character in modern explanations, while family-specific origin depends on lineage records, regional history, and romanization background.",
   details: [
     "Li may appear as Lee, Lei, or other forms in overseas communities. The same romanized spelling can come from different dialect or migration histories.",
     "A practical research path is to confirm the Chinese character first, then compare pinyin, family documents, regional records, and related surname profiles."
@@ -828,29 +1197,62 @@ await writePage("/wang-surname-origin/", supportArticle({
   path: "/wang-surname-origin/",
   h1: "Wang Surname Origin",
   intro: "Wang is a major Chinese surname with a clear character meaning, but family origin still needs historical and regional context.",
-  answer: "The Wang surname is written 王, a character meaning king or ruler. As a family name, Wang should be understood through lineage and regional history, not only through the literal meaning of the character.",
+  answer: "The Wang surname is written 閻? a character meaning king or ruler. As a family name, Wang should be understood through lineage and regional history, not only through the literal meaning of the character.",
   details: [
     "Wang can appear as Wong, Ong, or other variants depending on Cantonese, Hokkien, dialect background, and older romanization systems.",
-    "For surname research, start with the character 王, then compare family records, regional spelling, migration route, and common surname reference lists."
+    "For surname research, start with the character 閻? then compare family records, regional spelling, migration route, and common surname reference lists."
   ],
   related: [guides[3], guides[2], guides[5], { title: "Wang Surname Profile", path: "/surnames/wang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wang." }]
 }));
 
+await writePage("/wang-surname-meaning/", supportArticle({
+  title: "Wang Surname Meaning: Character, Variants, and Research Notes",
+  description: "Learn Wang surname meaning, Chinese character, common variants such as Wong and Ong, and how to research this family name carefully.",
+  path: "/wang-surname-meaning/",
+  h1: "Wang Surname Meaning",
+  intro: "Wang is one of the most common Chinese surnames, but its meaning still needs character, spelling, and family-record context.",
+  answer: "The Wang surname is written with the character for king or ruler in modern explanation, but as a family name it should be read through surname history, regional spelling, and family evidence rather than as a simple personal meaning.",
+  details: ["Common English forms can include Wang, Wong, and Ong, depending on Mandarin pinyin, Cantonese, Hokkien, older romanization, or family preference.", "The written Chinese character is the safest anchor. English spelling alone can point in the right direction, but it cannot prove meaning, origin, or genealogy by itself.", "A Wang surname page should explain character meaning, variant spellings, origin limits, and the next records to check."],
+  sections: [
+    { title: "What Wang means as a Chinese surname", paragraphs: ["The character commonly used for Wang has the dictionary meaning king or ruler. That meaning is easy to remember and often appears in quick surname explanations.", "The responsible answer is layered: Wang is the Mandarin pinyin spelling, the character has a ruler-related meaning, and the surname should be researched through historical and family evidence."] },
+    { title: "Wang, Wong, Ong, and romanization risk", paragraphs: ["Wang is standard Mandarin pinyin, while Wong and Ong may appear in Cantonese, Hokkien, overseas, or older romanization contexts.", "If a family uses Wong or Ong, the first task is to confirm the Chinese character from documents, relatives, gravestones, clan association papers, or older bilingual records."] },
+    { title: "Origin context without overclaiming", paragraphs: ["Wang has many historical origin traditions because it is a very common surname. A public guide can summarize broad patterns, but it cannot prove that a modern reader descends from one named royal line, village, or historical figure.", "A surname can have a famous character meaning and historical associations, but individual genealogy still requires documents."] },
+    { title: "How to research Wang carefully", paragraphs: ["Build a small evidence table with the Chinese character, pinyin, English spelling, older variants, known dialect, ancestral place if known, and source document.", "Then compare the Wang meaning page with the Wang origin page, the common Chinese surnames list, and the surname lookup tool."] }
+  ],
+  related: [guides[2], guides[3], guides[1], guides[5], { title: "Wang Surname Profile", path: "/surnames/wang/", category: "Surname Profiles", description: "Character, variants, and quick facts for Wang." }].filter(Boolean)
+}));
+
+await writePage("/chen-surname-origin/", supportArticle({
+  title: "Chen Surname Origin: Character, Variants, and Family Research",
+  description: "Learn Chen surname origin, Chinese character context, variants such as Chan and Tan, and how to research Chen family-name evidence.",
+  path: "/chen-surname-origin/",
+  h1: "Chen Surname Origin",
+  intro: "Chen is a major Chinese surname whose origin should be read through character evidence, historical place context, and regional romanization.",
+  answer: "Chen surname origin is commonly discussed through historical state and place-name context, but a specific family origin still depends on character confirmation, ancestral-place records, and family documents.",
+  details: ["Chen may appear as Chen, Chan, Tan, or other variants in English depending on language background, dialect, and migration history.", "The written character is the starting point. After that, origin notes can be compared with family records, clan documents, gravestones, and regional histories.", "A responsible origin guide should give context without pretending to verify every reader's genealogy."],
+  sections: [
+    { title: "What Chen origin means in a public guide", paragraphs: ["A public Chen origin guide can explain broad historical patterns: the surname is associated with old place and state-name traditions, appears widely in Chinese surname reference, and is represented across many regional communities.", "Because Chen is common, many unrelated families can share the same surname. A page that gives only one origin story can mislead readers."] },
+    { title: "Chen, Chan, Tan, and spelling variants", paragraphs: ["Chen is Mandarin pinyin. Chan may appear in Cantonese contexts, and Tan may appear in other regional or overseas contexts.", "If the family spelling is Chan or Tan, the reader should confirm the character before using a Chen origin explanation."] },
+    { title: "Evidence needed for family origin", paragraphs: ["For family-specific origin, the strongest evidence can include family books, ancestral village names, generation poems, temple records, gravestones, bilingual certificates, clan association documents, and older immigration papers.", "The minimum research table should include Chinese character, English spelling, older spelling, known dialect, ancestral place, oldest known ancestor, and source document."] },
+    { title: "What this page should not claim", paragraphs: ["This page should not claim that every Chen family has one identical origin, one ancestor, or one migration route.", "The practical value is clarity: Chen is a major surname with rich historical context, but family-specific origin remains an evidence question."] }
+  ],
+  related: [guides[3], guides[2], guides[1], guides[5], { title: "Chen Surname Profile", path: "/surnames/chen/", category: "Surname Profiles", description: "Character, variants, and quick facts for Chen." }].filter(Boolean)
+}));
 await writePage("/zhao-surname-meaning/", supportArticle({
   title: "Zhao Surname Meaning: Baijiaxing Origin and Variants",
   description: "Learn Zhao surname meaning, Chinese character Zhao, origin context, Baijiaxing position, common variants, and careful research steps.",
   path: "/zhao-surname-meaning/",
   h1: "Zhao Surname Meaning",
   intro: "Zhao is a major Chinese surname and is famous as the first surname in the traditional Hundred Family Surnames text.",
-  answer: "The Zhao surname is usually written 赵 in simplified Chinese and 趙 in traditional Chinese. In surname research, Zhao should be read through character, pinyin, historical context, and family evidence rather than through one simple English meaning line.",
+  answer: "The Zhao surname is usually written 鐠?in simplified Chinese and 鐡?in traditional Chinese. In surname research, Zhao should be read through character, pinyin, historical context, and family evidence rather than through one simple English meaning line.",
   details: [
     "Zhao is especially important in Chinese surname reference because it appears first in the classic Hundred Family Surnames text, even though modern surname ranking is a separate question.",
     "Common romanized forms can include Zhao, Chao, Chiu, or regional spellings depending on dialect, family history, and older records. The written character is the safest anchor before reading meaning or origin notes."
   ],
   sections: [
     { title: "What Zhao means as a Chinese surname", paragraphs: [
-      "Zhao is best understood as a historical family name rather than a modern vocabulary word. The character 赵 or 趙 identifies the surname, while the meaning and origin need to be read through Chinese surname history, regional records, and family evidence. A short translation is not enough to explain a family line.",
-      "For English readers, the most useful first answer is layered: Zhao is the Mandarin pinyin form, 赵 is the simplified character, 趙 is the traditional character, and the surname is strongly represented in Chinese history and surname reference texts. That gives a clear starting point without pretending to prove one family genealogy."
+      "Zhao is best understood as a historical family name rather than a modern vocabulary word. The character 鐠?or 鐡?identifies the surname, while the meaning and origin need to be read through Chinese surname history, regional records, and family evidence. A short translation is not enough to explain a family line.",
+      "For English readers, the most useful first answer is layered: Zhao is the Mandarin pinyin form, 鐠?is the simplified character, 鐡?is the traditional character, and the surname is strongly represented in Chinese history and surname reference texts. That gives a clear starting point without pretending to prove one family genealogy."
     ]},
     { title: "Why Zhao appears first in Hundred Family Surnames", paragraphs: [
       "Zhao is famous because it appears as the first surname in the traditional Hundred Family Surnames text. That position is historically and culturally important, but it should not be confused with being the most common surname today. Classic text order and modern population ranking are different things.",
@@ -861,7 +1263,7 @@ await writePage("/zhao-surname-meaning/", supportArticle({
       "If a family record uses Chao or Chiu, do not automatically replace it with Zhao without checking the Chinese character. Older spellings can preserve migration history and may be the key to matching documents, gravestones, clan association records, or family books."
     ]},
     { title: "How to research Zhao carefully", paragraphs: [
-      "Start with the character. If the family character is 赵 or 趙, then the reader can compare Zhao with Baijiaxing, common surname lists, origin guides, and individual surname profiles. If the character is unknown, gather older documents before treating any meaning explanation as final.",
+      "Start with the character. If the family character is 鐠?or 鐡? then the reader can compare Zhao with Baijiaxing, common surname lists, origin guides, and individual surname profiles. If the character is unknown, gather older documents before treating any meaning explanation as final.",
       "A useful research note should include Chinese character, English spelling, older spellings, known dialect, ancestral place if known, and the source document. This prevents the page from becoming a thin dictionary lookup and gives the reader an evidence-based path for deeper family research."
     ]},
     { title: "What this page can and cannot prove", paragraphs: [
@@ -878,7 +1280,7 @@ await writePage("/wu-surname-meaning/", supportArticle({
   path: "/wu-surname-meaning/",
   h1: "Wu Surname Meaning",
   intro: "Wu is a common Chinese surname whose meaning is better read through lineage and historical context than through a simple word translation.",
-  answer: "The Wu surname is commonly written 吴 in simplified Chinese. In surname reference, Wu is usually explained through historical state and lineage context, while overseas forms such as Ng or Woo may reflect regional pronunciation rather than a different family meaning.",
+  answer: "The Wu surname is commonly written 閸?in simplified Chinese. In surname reference, Wu is usually explained through historical state and lineage context, while overseas forms such as Ng or Woo may reflect regional pronunciation rather than a different family meaning.",
   details: [
     "The main mistake is treating a surname like a modern vocabulary word. For Wu, the family-name meaning is tied to historical usage, regional pronunciation, and written character confirmation.",
     "If your family uses Ng, Woo, or another romanized form, the safest research path is to confirm the Chinese character first. Different romanizations can point to different dialect backgrounds.",
@@ -888,7 +1290,7 @@ await writePage("/wu-surname-meaning/", supportArticle({
     {
       title: "How to understand the Wu surname meaning",
       paragraphs: [
-        "The Wu surname should not be read like a simple dictionary word. In surname research, the written character, historical usage, regional speech, and family records matter more than a single English translation. The character 吴 is the main anchor for this page. Once the character is confirmed, the surname can be compared with Mandarin pinyin Wu and overseas spellings such as Ng or Woo.",
+        "The Wu surname should not be read like a simple dictionary word. In surname research, the written character, historical usage, regional speech, and family records matter more than a single English translation. The character 閸?is the main anchor for this page. Once the character is confirmed, the surname can be compared with Mandarin pinyin Wu and overseas spellings such as Ng or Woo.",
         "This distinction is important because many English searches begin from a romanized spelling. A person may know the family name as Wu in one document, Woo in another, or Ng in a Cantonese-speaking context. Those spellings can represent the same written surname in some cases, but they should not be assumed to be identical without checking the Chinese character."
       ]
     },
@@ -930,17 +1332,17 @@ await writePage("/zhang-surname-origin/", supportArticle({
   path: "/zhang-surname-origin/",
   h1: "Zhang Surname Origin",
   intro: "Zhang is one of the major Chinese surnames, and its origin is often researched together with character, pinyin, and romanized variants.",
-  answer: "The Zhang surname is written 张 in simplified Chinese and is often associated with the idea of drawing or stretching a bow. As a family name, origin research should focus on lineage records, regional pronunciation, and variant spellings such as Cheung or Chang.",
+  answer: "The Zhang surname is written 瀵?in simplified Chinese and is often associated with the idea of drawing or stretching a bow. As a family name, origin research should focus on lineage records, regional pronunciation, and variant spellings such as Cheung or Chang.",
   details: [
     "Zhang, Cheung, and Chang can appear in different English-language records depending on dialect, migration route, and romanization system. The written Chinese character is the key anchor.",
-    "For a quick reference page, start with the character 张, Mandarin pinyin Zhang, and common variants. For deeper genealogy, compare ancestral place, clan records, and older spelling forms.",
+    "For a quick reference page, start with the character 瀵? Mandarin pinyin Zhang, and common variants. For deeper genealogy, compare ancestral place, clan records, and older spelling forms.",
     "This article supports the broader Chinese surname origin cluster and links back to surname lookup for users who arrive with a romanized spelling."
   ],
   sections: [
     {
       title: "Why Zhang origin needs more than one sentence",
       paragraphs: [
-        "Zhang is one of the most common Chinese surnames, so a useful origin page has to separate general reference information from individual genealogy. The character 张 is widely associated with drawing, stretching, or opening a bow. That meaning note is helpful, but it is not the same as proving the origin of a particular family line. A reader searching for Zhang surname origin may want a broad cultural explanation, a character note, or a path for personal ancestry research.",
+        "Zhang is one of the most common Chinese surnames, so a useful origin page has to separate general reference information from individual genealogy. The character 瀵?is widely associated with drawing, stretching, or opening a bow. That meaning note is helpful, but it is not the same as proving the origin of a particular family line. A reader searching for Zhang surname origin may want a broad cultural explanation, a character note, or a path for personal ancestry research.",
         "The safest structure is to begin with the character and pinyin, then explain variant spellings and research limits. This gives the user an immediate answer while preventing overclaiming. It also makes the page easier for search engines and AI systems to extract because the key facts are clear near the top."
       ]
     },
@@ -948,14 +1350,14 @@ await writePage("/zhang-surname-origin/", supportArticle({
       title: "Zhang, Cheung, and Chang spellings",
       paragraphs: [
         "Zhang is the standard Mandarin pinyin spelling, but many families use Cheung, Chang, Cheong, or other forms in English-language contexts. These spellings can come from dialect pronunciation, older romanization systems, local spelling conventions, or immigration history. A spelling in English is therefore a clue, not final proof.",
-        "When researching a family name, the written Chinese character is the best anchor. If the character is 张, then Zhang, Cheung, or Chang may all point back to the same surname in different records. If the character is unknown, compare multiple documents before deciding. This matters for users who arrive from a passport spelling, family story, or old certificate and need a practical next step."
+        "When researching a family name, the written Chinese character is the best anchor. If the character is 瀵? then Zhang, Cheung, or Chang may all point back to the same surname in different records. If the character is unknown, compare multiple documents before deciding. This matters for users who arrive from a passport spelling, family story, or old certificate and need a practical next step."
       ]
     },
     {
       title: "How to research a Zhang family line",
       paragraphs: [
         "Start with the most concrete facts: the Chinese character, the oldest known English spelling, the dialect spoken by older relatives, and any ancestral place name. Then look for clan records, family books, grave inscriptions, temple records, or bilingual documents. A surname origin article can point the direction, but personal lineage depends on evidence from a specific family branch.",
-        "For a simple family note, record the character 张, the current spelling used by the family, known variants, and any regional information. If the family uses Cheung or Chang, keep those spellings in the note rather than replacing them with pinyin. Older spellings are part of migration history and can help match external records."
+        "For a simple family note, record the character 瀵? the current spelling used by the family, known variants, and any regional information. If the family uses Cheung or Chang, keep those spellings in the note rather than replacing them with pinyin. Older spellings are part of migration history and can help match external records."
       ]
     },
     {
@@ -968,7 +1370,7 @@ await writePage("/zhang-surname-origin/", supportArticle({
     {
       title: "Practical next steps for Zhang research",
       paragraphs: [
-        "If you are researching Zhang from an English spelling, first confirm whether the family character is 张. Then collect variant spellings such as Zhang, Cheung, Chang, Cheong, or older local forms instead of forcing every record into modern pinyin. Older spellings can preserve migration history and may help match documents that would not appear under a pinyin-only search.",
+        "If you are researching Zhang from an English spelling, first confirm whether the family character is 瀵? Then collect variant spellings such as Zhang, Cheung, Chang, Cheong, or older local forms instead of forcing every record into modern pinyin. Older spellings can preserve migration history and may help match documents that would not appear under a pinyin-only search.",
         "After the character is confirmed, compare the family region, dialect background, and any ancestral place name. A broad origin page can explain the surname, but a family branch needs specific records. This is why the page gives a clear origin overview while still pointing readers toward evidence-based genealogy work."
       ]
     }
@@ -982,19 +1384,19 @@ await writePage("/lee-surname-meaning/", supportArticle({
   path: "/lee-surname-meaning/",
   h1: "Lee Surname Meaning: Characters, Origin, and Variants",
   intro: "Lee is one of the most familiar English spellings for Chinese family names, but the spelling alone is not enough to prove the exact Chinese character.",
-  answer: "Lee surname meaning depends on the Chinese character behind the English spelling. In many Chinese surname contexts, Lee commonly corresponds to Li, written 李, but Lee can also reflect regional romanization, dialect, immigration spelling, or non-Chinese surnames. The safest research step is to confirm the written character first.",
+  answer: "Lee surname meaning depends on the Chinese character behind the English spelling. In many Chinese surname contexts, Lee commonly corresponds to Li, written 閺? but Lee can also reflect regional romanization, dialect, immigration spelling, or non-Chinese surnames. The safest research step is to confirm the written character first.",
   details: [
-    "If the family character is 李, the surname is usually read as Li in Mandarin pinyin and often explained through the character connected with plum or plum tree in modern reference contexts. In overseas records, the same family may use Lee because of older romanization or local spelling habits.",
+    "If the family character is 閺? the surname is usually read as Li in Mandarin pinyin and often explained through the character connected with plum or plum tree in modern reference contexts. In overseas records, the same family may use Lee because of older romanization or local spelling habits.",
     "Do not assume every Lee surname has the same origin. The spelling appears in many communities and can represent different linguistic histories. A Chinese surname page should separate English spelling, Chinese character, pinyin, dialect form, and genealogy evidence.",
     "For genealogy research, collect the oldest documents available: Chinese character if known, family book, gravestone, clan association record, immigration record, ancestral place, and any older spelling used by the family."
   ],
   sections: [
     { title: "Why Lee needs character verification", paragraphs: [
-      "The English spelling Lee is easy to search, but it is not precise enough for serious surname research. In Mandarin pinyin, 李 is written Li, while Lee often appears in English-language contexts because of older romanization, Cantonese-influenced spelling, immigration office choices, or family preference. That means a page about Lee surname meaning should not stop at one translation.",
-      "The first question is whether the family has a Chinese character. If the character is 李, the reader can compare the Li profile, common surname lists, and meaning notes for that character. If the character is unknown, the spelling Lee should be treated as a clue rather than proof."
+      "The English spelling Lee is easy to search, but it is not precise enough for serious surname research. In Mandarin pinyin, this surname is written Li, while Lee often appears in English-language contexts because of older romanization, Cantonese-influenced spelling, immigration office choices, or family preference. That means a page about Lee surname meaning should not stop at one translation.",
+      "The first question is whether the family has a Chinese character. If the character is 閺? the reader can compare the Li profile, common surname lists, and meaning notes for that character. If the character is unknown, the spelling Lee should be treated as a clue rather than proof."
     ]},
-    { title: "Meaning when Lee corresponds to Li 李", paragraphs: [
-      "When Lee corresponds to 李, the surname is one of the most common Chinese surnames. The character is often associated with plum or plum tree in modern explanations, but that literal note is not the same as a full family origin. Like many Chinese surnames, the character can carry meaning while the actual family line may relate to older historical, regional, or lineage traditions.",
+    { title: "Meaning when Lee corresponds to Li", paragraphs: [
+      "When Lee corresponds to 閺? the surname is one of the most common Chinese surnames. The character is often associated with plum or plum tree in modern explanations, but that literal note is not the same as a full family origin. Like many Chinese surnames, the character can carry meaning while the actual family line may relate to older historical, regional, or lineage traditions.",
       "This distinction matters because simple surname-meaning lists can make the answer look finished too quickly. A useful article should explain the character meaning, then immediately clarify that genealogy requires evidence beyond a dictionary-style meaning."
     ]},
     { title: "Romanization and dialect risk", paragraphs: [
@@ -1010,20 +1412,20 @@ await writePage("/ng-surname-meaning/", supportArticle({
   path: "/ng-surname-meaning/",
   h1: "Ng Surname Meaning: Characters and Cantonese Notes",
   intro: "Ng is a common romanized surname spelling in overseas Chinese communities, but the English spelling alone does not identify one exact Chinese character in every case.",
-  answer: "Ng surname meaning depends on the Chinese character behind the spelling. In many Cantonese contexts, Ng commonly corresponds to Wu, written 吴 or 吳, but Ng can also appear through regional spelling systems and family-specific romanization. Confirm the written character before treating any meaning as final.",
+  answer: "Ng surname meaning depends on the Chinese character behind the spelling. In many Cantonese contexts, Ng commonly corresponds to Wu. Confirm the written character before treating any meaning as final.",
   details: [
-    "If Ng corresponds to 吴 or 吳, the surname is usually read as Wu in Mandarin pinyin and Ng in many Cantonese-style English records.",
+    "If Ng corresponds to Wu, the surname is usually read as Wu in Mandarin pinyin and Ng in many Cantonese-style English records.",
     "The spelling can look unfamiliar to English readers because the initial consonant cluster is not pronounced like a typical English word. That makes pronunciation, romanization, and character verification especially important.",
     "For genealogy research, the useful evidence is not only the English spelling. Look for the Chinese character, ancestral place, dialect group, older documents, clan association records, and family inscriptions."
   ],
   sections: [
     { title: "Why Ng is usually a romanization question first", paragraphs: [
       "A search for Ng surname meaning often begins with the English spelling, but the spelling is only the surface layer. Many overseas Chinese names were recorded through Cantonese, Hokkien, Hakka, older local systems, or immigration paperwork. Ng is especially tied to Cantonese-style spelling, so a useful page must explain romanization before giving a simplified meaning note.",
-      "This is why character verification matters. If the family character is 吴 or 吳, the reader can connect Ng with the broader Wu surname profile. If the character is unknown, the spelling Ng should be treated as a clue to investigate, not as complete proof of origin or meaning."
+      "This is why character verification matters. If the family character is 閸?or 閸? the reader can connect Ng with the broader Wu surname profile. If the character is unknown, the spelling Ng should be treated as a clue to investigate, not as complete proof of origin or meaning."
     ]},
-    { title: "Meaning when Ng corresponds to Wu 吴 or 吳", paragraphs: [
-      "When Ng corresponds to 吴 or 吳, it belongs to a major Chinese surname group commonly written Wu in Mandarin pinyin. Like many Chinese surnames, the character has historical and lineage associations that are more important than a one-word dictionary translation. A meaning page should therefore explain the character connection while avoiding exaggerated origin claims.",
-      "The simplified character 吴 and traditional character 吳 may appear in different documents depending on region, time period, and writing system. A family may use Ng in English, Wu in Mandarin pinyin, and 吳 in older records. Keeping those forms together helps readers avoid splitting one family line into separate names during research."
+    { title: "Meaning when Ng corresponds to Wu", paragraphs: [
+      "When Ng corresponds to 閸?or 閸? it belongs to a major Chinese surname group commonly written Wu in Mandarin pinyin. Like many Chinese surnames, the character has historical and lineage associations that are more important than a one-word dictionary translation. A meaning page should therefore explain the character connection while avoiding exaggerated origin claims.",
+      "Simplified and traditional written forms may appear in different documents depending on region, time period, and writing system. A family may use Ng in English and Wu in Mandarin pinyin in different records. Keeping those forms together helps readers avoid splitting one family line into separate names during research."
     ]},
     { title: "Research checklist for Ng families", paragraphs: [
       "Start with the oldest reliable record that shows the Chinese character. Then compare English spellings used by different relatives, dialect group, ancestral village or county, gravestone inscriptions, family books, and association records. If older relatives pronounce the surname differently from Mandarin Wu, that is not an error; it may be a clue to the family's regional background.",
@@ -1047,6 +1449,42 @@ await writePage("/chinese-surnames-faq/", pageLayout({
   body: `${articleSearchBlock()}${surnameFaqIntroBlock()}${faqBlock(standardFaqs())}<section class="content-section article-body"><h2>What to do after reading the FAQ</h2><p>If you are checking a family name, first confirm the Chinese character. Then compare the profile page, common surname table, meaning page, and origin page. If the character is unknown, keep the English spelling as a clue and gather older documents before making a claim.</p><p>The FAQ gives short answers, but surname research becomes reliable only when spelling, character, family records, and historical context are kept separate. That is the standard used across this site.</p><p>For English readers, this distinction matters because many searches begin with romanized names. Lee, Li, Lei, Wong, Wang, Huang, Ng, Wu, Chan, Chen, Chang, and Zhang can overlap in ways that are not obvious from English spelling alone. The safest answer usually starts with the Chinese character, then checks pinyin, regional spelling, and family evidence.</p><p>If the goal is casual learning, the FAQ may be enough. If the goal is writing, family-history research, classroom material, or a paid digital worksheet later, use the deeper pages and keep notes about what is confirmed. A responsible surname site should help readers avoid false certainty, not just give a short list of names.</p><p>This is also useful for future content and monetization. Any downloadable worksheet, report, or surname research checklist should follow the same structure: spelling, character, variants, source evidence, meaning note, origin context, and limits. That way the product can be useful without creating unsupported genealogy claims.</p><p>For readers who want a fast answer, the FAQ can identify the right direction. For readers who care about accuracy, the next step is evidence collection. The site should encourage both needs: quick orientation for casual learning, and careful source tracking for family-history work. That balance is especially important for an English site because many visitors arrive with partial spellings from overseas documents.</p><p>A surname question is usually not finished until the character is confirmed. Once the character is known, the reader can compare simplified and traditional forms, Mandarin pinyin, regional spellings, and related profile pages. Without the character, the safest answer is a shortlist with cautions.</p><p>For practical use, write the confirmed facts separately from possible explanations. Put the character, pinyin, English spelling, variant spellings, source document, and known region in separate lines. Then use the guide pages to interpret those facts. This habit is simple, but it prevents many wrong matches when several surnames share similar English spellings.</p><p>The FAQ should therefore be treated as a map. It tells the reader whether to use the lookup tool, surname table, meaning page, origin guide, pronunciation page, or Baijiaxing article next. That makes the page useful even when the reader arrives with only partial information.</p></section>`
 }));
 
+await writePage("/faq/", pageLayout({
+  title: "FAQ | Chinese Family Names",
+  description: "Quick access to common questions about Chinese surnames, family name order, meanings, romanization, and Baijiaxing.",
+  path: "/faq/",
+  h1: "Chinese Surnames FAQ",
+  intro: "Use this page as the general FAQ entry for Chinese Family Names.",
+  faqs: standardFaqs(),
+  body: `${articleSearchBlock()}
+    <section class="content-section article-body">
+      <h2>How this FAQ is organized</h2>
+      <p>This general FAQ keeps the simple /faq/ address available for visitors and search engines. The deeper reference version is also available at <a href="/chinese-surnames-faq/">Chinese Surnames FAQ</a>. Both routes help readers reach practical answers about Chinese surname order, family name meanings, romanization, Baijiaxing, and common English spellings.</p>
+      <p>Surname research is often confusing because English spellings do not always map to one Chinese character. Lee, Li, Lei, Wong, Wang, Huang, Ng, Wu, Chan, Chen, Chang, and Zhang can overlap across dialects, regions, and migration records. The FAQ helps readers separate quick learning from confirmed family-history evidence.</p>
+    </section>
+    ${faqBlock(standardFaqs())}
+    <section class="content-section article-body">
+      <h2>Family name order questions</h2>
+      <p>In Chinese naming order, the family name usually comes before the given name. English writing may reverse that order, especially in overseas documents, school records, passports, articles, and family-history notes. A careful answer should identify the surname position before interpreting meaning.</p>
+      <p>When the order is unclear, compare the Chinese characters, family records, and how relatives write the name. Do not assume that the first English word is always the surname in every source.</p>
+      <h2>Meaning and origin questions</h2>
+      <p>A surname meaning page can explain a character, historical association, pronunciation, and common usage, but it cannot prove a private family origin by itself. Many surnames have broad historical stories, multiple branches, and regional variations.</p>
+      <p>For reliable research, keep the character, spelling, region, document source, and oral family evidence separate. This prevents a common mistake: choosing the most famous origin story and treating it as confirmed ancestry.</p>
+      <h2>Romanization questions</h2>
+      <p>Romanization is a clue, not a final answer. Mandarin pinyin, Cantonese spellings, Hokkien spellings, older postal spellings, and immigration records can all produce different English forms. The same English spelling may point to different Chinese characters, and the same Chinese character may appear under different English spellings.</p>
+      <p>The safest workflow is to confirm the Chinese character first, then compare pronunciation and spelling variants. If the character is unknown, use the lookup pages as a shortlist rather than a final claim.</p>
+      <h2>Best next page</h2>
+      <p>If you know the spelling, use the surname lookup. If you need a broad list, open common Chinese surnames. If you are researching Baijiaxing, open the Hundred Family Surnames page. If you need accuracy, collect source evidence before choosing a meaning page.</p>      <h2>FAQ quality note</h2>
+      <p>A strong Chinese surname FAQ should make the reader more careful, not just faster. Many visitors arrive with an English spelling from a passport, gravestone, school record, family story, or old immigration document. That spelling is useful, but it may not prove the Chinese character, pronunciation, origin, or meaning by itself.</p>
+      <p>The safest answer separates several facts: the written Chinese character, simplified or traditional form, Mandarin pinyin, regional pronunciation, English spelling, source document, family region, and any oral history. If these facts are mixed together, it becomes easy to assign the wrong surname meaning or borrow an origin story from a different family branch.</p>
+      <p>For casual learning, a short answer may be enough. For writing, teaching, family-history work, or a future paid checklist, the answer should show what is confirmed and what is only possible. This is especially important for English readers because common names can appear under many spellings and the same spelling can point to more than one Chinese surname.</p>
+      <p>For future monetization, surname worksheets or digital reports should follow the same structure. They can help readers organize spellings, characters, variants, source notes, and meaning references, but they should not claim to verify private ancestry without evidence. The FAQ should prepare readers for that responsible workflow.</p>      <h2>Baijiaxing and list questions</h2>
+      <p>The Hundred Family Surnames is useful as a cultural and historical reference, but it should not be treated as a complete ranking of modern surname frequency. Some names in the text are common today, some are less common, and the order reflects the history of the text rather than a simple modern popularity chart.</p>
+      <p>When readers compare Baijiaxing with common-surname tables, the page should explain the difference between a classical list, a modern frequency list, a meaning guide, and a family-history clue. These are related, but they answer different questions.</p>
+      <h2>Practical research questions</h2>
+      <p>If a reader is starting from overseas documents, the first practical step is to collect every spelling variation before choosing one explanation. Passport names, school records, association records, village books, gravestones, and oral pronunciation can each preserve a different piece of the same family-name puzzle.</p><h2>Name order examples</h2><p>When reviewing a source, write the surname, given name, spelling system, and document context as separate notes. This simple habit makes later comparison easier and reduces false matches.</p>
+    </section>`
+}));
 await writePage("/about/", simpleInfoPage({
   title: "About Chinese Surname Guide and Its Reference Scope",
   description: "Learn what Chinese Surname Guide covers, including surname meanings, common family names, romanization, and Baijiaxing reference content.",
@@ -1062,7 +1500,7 @@ await writePage("/contact/", simpleInfoPage({
   path: "/contact/",
   h1: "Contact",
   intro: "Use this page for corrections, feedback, or site-related discussion.",
-  body: `<section class="content-section article-body"><h2>Email</h2><p>Email: <a href="mailto:guan@shanyuegroup.com">guan@shanyuegroup.com</a></p><p>Please include the page URL, surname spelling, and Chinese character if your message is about a correction.</p></section><section class="content-section article-body"><h2>Scope</h2><p>The site can review public reference corrections, but it does not verify private family trees or personal genealogy claims.</p></section>`
+  body: `<section class="content-section article-body"><h2>Email</h2><p>Email: <a href="mailto:guan@shanyuegroup.com">guan@shanyuegroup.com</a></p><p>Please include the page URL, surname spelling, and Chinese character if your message is about a correction.</p></section><section class="content-section article-body"><h2>Scope</h2><p>The site can review public reference corrections, but it does not verify private family trees or personal genealogy claims. Include source context when possible so the request can be reviewed accurately.</p></section>`
 }));
 
 await writePage("/privacy/", simpleLegalPage({
@@ -1481,7 +1919,7 @@ const dailyArticles20260706 = [
         "title": "Why Wong has multiple possible links",
         "paragraphs": [
           "In many cases, Wong corresponds to Mandarin Huang or Wang, depending on the written Chinese character. Both are major surname lines, and both can appear as Wong in overseas communities. That means the English spelling alone cannot decide the origin.",
-          "The practical first step is to find the character used by the family. If the character is 黄, the research path differs from 王. If another character is involved, the path changes again. Good surname work begins with that written evidence."
+          "The practical first step is to find the character used by the family. If the character is 姒? the research path differs from 閻? If another character is involved, the path changes again. Good surname work begins with that written evidence."
         ]
       },
       {
@@ -1546,7 +1984,7 @@ const dailyArticles20260706 = [
       },
       {
         "q": "Is Wong the same as Huang?",
-        "a": "Sometimes. Wong may correspond to Huang in Mandarin when the character is 黄, but it can also correspond to other characters."
+        "a": "Sometimes. Wong may correspond to Huang in Mandarin when the character is 姒? but it can also correspond to other characters."
       },
       {
         "q": "Can Wong also be Wang?",
@@ -1586,6 +2024,7 @@ function dailyArticlePage20260706(article) {
     ${articleSearchBlock()}
     <section class="content-section article-body">
       <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>
     ${article.sections.map((section) => `<section class="content-section article-body"><h2>${escapeHtml(section.title)}</h2>${section.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}</section>`).join("")}
@@ -1607,6 +2046,12 @@ function dailyArticlePage20260706(article) {
   });
 }
 
+function geoPatchBlock(article) {
+  if (!article.geoPatch) return "";
+  const facts = article.geoPatch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  return `<div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Data anchor:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
+}
+
 for (const article of dailyArticles20260706) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
@@ -1618,33 +2063,33 @@ const dailyArticles20260708 = [
     "description": "Research Lee surname origin through Chinese characters, Li romanization, regional spellings, family records, and genealogy clues.",
     "h1": "Lee Surname Origin: Chinese Characters, Li Links, and Research Steps",
     "intro": "Lee surname origin cannot be confirmed from the English spelling alone because Lee can represent different Chinese characters and regional romanizations.",
-    "answer": "Lee surname origin is usually researched by identifying the Chinese character first; many Lee families connect to 鏉? written Li in Mandarin pinyin, but the correct origin depends on family records, dialect background, migration history, and older spellings.",
+    "answer": "Lee surname origin is usually researched by identifying the Chinese character first; many Lee families connect to 闁? written Li in Mandarin pinyin, but the correct origin depends on family records, dialect background, migration history, and older spellings.",
     "details": [
       "If you are researching the Lee surname, do not start by forcing every record into one modern spelling. Start with the oldest evidence your family has. A passport, grave inscription, clan association record, family book, temple record, school document, or immigration paper may preserve the character or a regional pronunciation that a modern search result cannot show.",
-      "The English spelling Lee is common across Chinese, Korean, and other East Asian contexts, so a Chinese surname page has to be careful. In a Chinese context, Lee often points toward 鏉? which is Li in Mandarin pinyin. Yet English spelling alone is not proof. Some families kept Lee because of Cantonese, Hokkien, older romanization, local official spelling, or migration paperwork.",
+      "The English spelling Lee is common across Chinese, Korean, and other East Asian contexts, so a Chinese surname page has to be careful. In a Chinese context, Lee often points toward 闁? which is Li in Mandarin pinyin. Yet English spelling alone is not proof. Some families kept Lee because of Cantonese, Hokkien, older romanization, local official spelling, or migration paperwork.",
       "A good first note for personal research has four fields: character, English spelling, dialect or language clue, and oldest source. Without those fields, a meaning or origin claim stays broad. With those fields, the search becomes more specific and less likely to mix unrelated families.",
-      "For casual cultural learning, it is reasonable to say that Lee is commonly connected with Li 鏉? For genealogy, the wording needs more caution. The visitor should understand the likely link without treating it as a verified family tree."
+      "For casual cultural learning, it is reasonable to say that Lee is commonly connected with Li 闁? For genealogy, the wording needs more caution. The visitor should understand the likely link without treating it as a verified family tree."
     ],
     "sections": [
       {
         "title": "Why the Chinese character comes first",
         "paragraphs": [
-          "The written character is the anchor for Chinese surname research. 鏉? 榛? 鍒? and other characters can sound or be written differently across regions, and English spelling may flatten those differences. If the family character is known, the origin path becomes much cleaner.",
+          "The written character is the anchor for Chinese surname research. 闁? 濮? 闁? and other characters can sound or be written differently across regions, and English spelling may flatten those differences. If the family character is known, the origin path becomes much cleaner.",
           "When the character is not known, collect clues before choosing a meaning. Ask whether older relatives pronounce the name closer to Lee, Li, Lei, Lai, or another form. Check whether documents mention Cantonese, Hakka, Hokkien, Teochew, Mandarin, Hong Kong, Taiwan, Singapore, Malaysia, or a specific ancestral village."
         ]
       },
       {
         "title": "Lee, Li, and regional spelling",
         "paragraphs": [
-          "Li is the modern Mandarin pinyin form for 鏉? one of the most common Chinese surnames. Lee is widely used in overseas communities because families often migrated before pinyin became standard or came from regions where another romanization was more natural.",
+          "Li is the modern Mandarin pinyin form for 闁? one of the most common Chinese surnames. Lee is widely used in overseas communities because families often migrated before pinyin became standard or came from regions where another romanization was more natural.",
           "That spelling history matters. Changing every Lee record to Li can erase migration evidence. For family research, keep the spelling exactly as it appears in each document, then add the character when confirmed. Different spellings can become clues rather than errors."
         ]
       },
       {
         "title": "Origin meaning versus family origin",
         "paragraphs": [
-          "Many quick explanations connect 鏉?with plum or plum tree language. That character note is useful, but it is not the same thing as a proven origin for one family. A surname can carry historical lineages, regional branches, and migration routes that cannot be solved by a single dictionary meaning.",
-          "The safer sentence is this: Lee often corresponds to Li 鏉?in Chinese surname research, and 鏉?has common character meanings, but personal origin needs family-specific evidence. That keeps the article helpful without pretending to verify ancestry from a spelling alone."
+          "Many quick explanations connect 闁?with plum or plum tree language. That character note is useful, but it is not the same thing as a proven origin for one family. A surname can carry historical lineages, regional branches, and migration routes that cannot be solved by a single dictionary meaning.",
+          "The safer sentence is this: Lee often corresponds to Li 闁?in Chinese surname research, and 闁?has common character meanings, but personal origin needs family-specific evidence. That keeps the article helpful without pretending to verify ancestry from a spelling alone."
         ]
       },
       {
@@ -1665,7 +2110,7 @@ const dailyArticles20260708 = [
         "title": "Best next step for researchers",
         "paragraphs": [
           "If you only need a cultural overview, read the Lee meaning page and compare the Chinese surname list. If you are building family notes, create an evidence table with character, spelling, source, date, place, and confidence level. That habit prevents later confusion.",
-          "If the character turns out to be 鏉? continue with Li and Lee records together. If the character is different, follow that character instead of forcing the family into the most common answer. The right path is the one supported by records."
+          "If the character turns out to be 闁? continue with Li and Lee records together. If the character is different, follow that character instead of forcing the family into the most common answer. The right path is the one supported by records."
         ]
       }
     ],
@@ -1702,7 +2147,7 @@ const dailyArticles20260708 = [
     "faqs": [
       {
         "q": "Is Lee a Chinese surname?",
-        "a": "Yes, Lee can be a Chinese surname, and it often corresponds to Li 鏉? but the exact character should be verified through family records."
+        "a": "Yes, Lee can be a Chinese surname, and it often corresponds to Li 闁? but the exact character should be verified through family records."
       },
       {
         "q": "Is Lee the same as Li?",
@@ -1710,7 +2155,7 @@ const dailyArticles20260708 = [
       },
       {
         "q": "What is the origin of the Lee surname?",
-        "a": "Lee surname origin depends on the Chinese character and family history behind the spelling; many Chinese Lee families connect to 鏉?"
+        "a": "Lee surname origin depends on the Chinese character and family history behind the spelling; many Chinese Lee families connect to 闁?"
       },
       {
         "q": "How should beginners research Lee surname origin?",
@@ -1744,10 +2189,10 @@ const dailyArticles20260708 = [
     "description": "Research Ng surname origin through Chinese characters, Cantonese romanization, Wu and Huang links, family records, and migration clues.",
     "h1": "Ng Surname Origin: Chinese Characters, Cantonese Spelling, and Research Steps",
     "intro": "Ng surname origin usually depends on the Chinese character behind the spelling, because Ng can represent more than one surname in overseas records.",
-    "answer": "Ng surname origin should be researched by first identifying the Chinese character; Ng often represents 鍚?in Cantonese-style spelling and may also appear in other surname contexts, so family records, dialect background, and older documents are essential.",
+    "answer": "Ng surname origin should be researched by first identifying the Chinese character; Ng often represents 闁?in Cantonese-style spelling and may also appear in other surname contexts, so family records, dialect background, and older documents are essential.",
     "details": [
       "Ng is one of the clearest examples of why Chinese surname research cannot rely on English spelling alone. The spelling is short, common in overseas communities, and strongly tied to regional pronunciation. A reader may know the family name as Ng for generations while not knowing which Chinese character older relatives used.",
-      "In many Cantonese contexts, Ng corresponds to 鍚? written Wu in Mandarin pinyin. In other contexts, similar spellings can point to different characters or regional conventions. That is why the first practical step is character verification, not a broad origin story.",
+      "In many Cantonese contexts, Ng corresponds to 闁? written Wu in Mandarin pinyin. In other contexts, similar spellings can point to different characters or regional conventions. That is why the first practical step is character verification, not a broad origin story.",
       "If you are researching a family line, collect documents before choosing a meaning. A gravestone, clan association record, old envelope, family book, wedding document, school record, or business sign may show the character. Even a partial photo can help when the English spelling is ambiguous.",
       "For general learning, it is fair to explain the common Ng-Wu link. For personal genealogy, keep the language bounded. A surname origin page can guide the search, but it cannot prove a reader's ancestry without family-specific evidence."
     ],
@@ -1755,21 +2200,21 @@ const dailyArticles20260708 = [
       {
         "title": "Why Ng needs a character check",
         "paragraphs": [
-          "Ng is a romanized spelling, not a Chinese character. That difference matters because romanization systems try to represent sound, while surname research needs the written form. If the family character is 鍚? the research path points toward Wu-related surname material. If the character differs, the path changes.",
+          "Ng is a romanized spelling, not a Chinese character. That difference matters because romanization systems try to represent sound, while surname research needs the written form. If the family character is 闁? the research path points toward Wu-related surname material. If the character differs, the path changes.",
           "The character check also protects against false confidence. A search result may say Ng means one thing, but the answer may only fit one character. Family documents are stronger than a generic list because they connect the spelling to the actual family record."
         ]
       },
       {
         "title": "Ng, Wu, and Cantonese romanization",
         "paragraphs": [
-          "Wu is the Mandarin pinyin form for 鍚? Ng is a common Cantonese-style spelling for the same character in many overseas communities. That does not make one spelling more correct than the other; they serve different historical and language contexts.",
+          "Wu is the Mandarin pinyin form for 闁? Ng is a common Cantonese-style spelling for the same character in many overseas communities. That does not make one spelling more correct than the other; they serve different historical and language contexts.",
           "For diaspora research, keep Ng in the family record instead of replacing it with Wu everywhere. Immigration files, school records, association memberships, and business documents may use Ng consistently. Those spellings help trace migration and community history."
         ]
       },
       {
         "title": "Origin notes and meaning limits",
         "paragraphs": [
-          "Wu surname material often connects 鍚?with historical state and lineage traditions. Those background notes are useful, but they should not be treated as a personal proof. A large surname can have many branches and regional stories.",
+          "Wu surname material often connects 闁?with historical state and lineage traditions. Those background notes are useful, but they should not be treated as a personal proof. A large surname can have many branches and regional stories.",
           "The safest reading is to separate three layers: the English spelling Ng, the Chinese character if known, and the specific family evidence. The first layer is visible. The second layer is likely but needs confirmation. The third layer is what turns a broad surname guide into a family history note."
         ]
       },
@@ -1791,7 +2236,7 @@ const dailyArticles20260708 = [
         "title": "Best next step after this page",
         "paragraphs": [
           "If you only need the common explanation, compare Ng with Wu surname meaning and the broader Chinese surnames guide. If you are working on genealogy, build a small evidence table and keep uncertain claims marked as possible rather than confirmed.",
-          "When the character is confirmed as 鍚? continue into Wu-focused meaning and origin material. When the character is not confirmed, keep the research question open. That is slower, but it is more accurate than choosing the most common result too early."
+          "When the character is confirmed as 闁? continue into Wu-focused meaning and origin material. When the character is not confirmed, keep the research question open. That is slower, but it is more accurate than choosing the most common result too early."
         ]
       }
     ],
@@ -1828,15 +2273,15 @@ const dailyArticles20260708 = [
     "faqs": [
       {
         "q": "Is Ng a Chinese surname?",
-        "a": "Yes. Ng is a Chinese surname spelling in many overseas communities, often linked with 鍚?in Cantonese-style romanization."
+        "a": "Yes. Ng is a Chinese surname spelling in many overseas communities, often linked with 闁?in Cantonese-style romanization."
       },
       {
         "q": "Is Ng the same as Wu?",
-        "a": "Ng often corresponds to Wu 鍚? but the family character should be verified before treating the spellings as the same line."
+        "a": "Ng often corresponds to Wu 闁? but the family character should be verified before treating the spellings as the same line."
       },
       {
         "q": "What is the origin of the Ng surname?",
-        "a": "Ng surname origin depends on the Chinese character and family records behind the spelling; many Ng families connect to Wu 鍚?"
+        "a": "Ng surname origin depends on the Chinese character and family records behind the spelling; many Ng families connect to Wu 闁?"
       },
       {
         "q": "How should beginners research Ng surname origin?",
@@ -2135,17 +2580,301 @@ for (const article of dailyArticles20260709) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 
+
+
+const dailyArticles20260711 = [
+  {
+    "title": "Zhou Surname Meaning: Character, Origin Context, and Variant Spellings",
+    "path": "/zhou-surname-meaning/",
+    "description": "Research Zhou surname meaning through character checks, origin context, Chou and Chow spellings, and family record evidence.",
+    "h1": "Zhou Surname Meaning: Character, Origin Context, and Variant Spellings",
+    "intro": "Zhou surname meaning is easier to read when the character, spelling variant, and family evidence are kept separate.",
+    "answer": "Zhou surname meaning should be read through the Chinese character, historical context, and variant spellings such as Chou or Chow; private family origin still needs records.",
+    "details": [
+      "Zhou surname meaning is a useful topic because the visitor usually wants a practical answer, not a decorative paragraph. The page should explain the main idea early, then show what changes the result, what should be checked, and which related guide should be opened next.",
+      "The search intent is surname meaning and origin research. That means the article should be concrete enough for a reader to act on it, but careful enough to avoid claims that are stronger than the evidence. Cultural reference pages need this balance because they often mix tradition, modern search behavior, and possible commercial paths.",
+      "The first check is the written Chinese character behind the English spelling. If this point is missing, the visitor may leave with an answer that looks complete but fails in the exact situation that brought them to the page. The strongest article makes that check visible near the beginning.",
+      "The second check is whether the family uses Zhou, Chou, Chow, or another regional spelling in older records. This gives the page a practical decision layer and keeps it from becoming a thin definition. A strong page should help the reader compare options, identify risk, and move to a better next step.",
+      "The page should also support future monetization without becoming sales copy. Advertising, affiliate products, paid reports, printable guides, or direct products can be added later only if the free page already gives a useful answer on its own.",
+      "Use this article as part of the wider site cluster. It should answer one focused question, link naturally to broader guides, and avoid unsupported promises. That structure helps both visitors and search engines understand why the page exists."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Zhou surname meaning",
+        "paragraphs": [
+          "Most visitors searching for Zhou surname meaning are trying to reduce uncertainty. They may need a year result, a buying path, a research clue, a craft decision, or a way to compare several similar pages. A useful opening should tell them what the topic means and what they should verify before trusting a simple answer.",
+          "The article should not hide the answer under broad background. Start with the direct answer, then explain the condition that can change it. This makes the page easier to read and more reliable when it is quoted by search snippets or answer engines."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the written Chinese character behind the English spelling before making a decision. This is the point most likely to change the answer, especially for visitors who arrive from a short keyword and do not yet know the full context.",
+          "Then check whether the family uses Zhou, Chou, Chow, or another regional spelling in older records. The second check gives the reader a way to compare alternatives instead of treating the article as a one-line definition. It also creates a natural internal-link path to the next guide."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "Responsible wording matters. The page can explain symbolic meaning, product fit, family-name evidence, or calendar logic, but it should not promise guaranteed luck, confirmed ancestry, perfect results, or one universal choice for every reader.",
+          "This is also important for business use. A page that gives cautious, useful guidance can later support an ad, product card, report, or checklist. A page that exaggerates claims may create distrust and weaken the site even if it attracts clicks."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is treating a famous dynasty association as proof of one private family branch. This mistake usually happens when the reader sees a familiar word and assumes the rest of the context is already known. The article should slow that step down and show what evidence or product detail is still needed.",
+          "Another mistake is merging Zhou, Chou, and Chow records without checking character and place evidence. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. That keeps the page useful instead of vague."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a focused answer before moving deeper into the site. It should work for quick reference, but it should also give enough context for people who care about accuracy, comparison, or buying decisions.",
+          "A second use case is topical authority. The page supports the site cluster by covering a specific long-tail question in depth and linking it to larger guides. That is stronger than publishing many short pages that repeat the same few sentences."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "Open the Zhou profile, compare surname meaning and origin pages, then record the source that confirms the character. This next step should be visible before the article ends so the visitor does not have to return to search immediately.",
+          "If the topic later receives product blocks, report offers, or downloadable resources, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Date, character, material, source, or use case",
+          "Small details can change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and practical fit",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for Zhou surname meaning?",
+        "a": "Zhou surname meaning should be read through the Chinese character, historical context, and variant spellings such as Chou or Chow; private family origin still needs records."
+      },
+      {
+        "q": "What should I check first for Zhou surname meaning?",
+        "a": "Check the written Chinese character behind the English spelling first, then compare whether the family uses Zhou, Chou, Chow, or another regional spelling in older records."
+      },
+      {
+        "q": "Is Zhou surname meaning enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Open the Zhou profile, compare surname meaning and origin pages, then record the source that confirms the character"
+      }
+    ],
+    "related": [
+      {
+        "title": "Chinese Surname Meanings",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning",
+        "description": "Read surname meanings carefully."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin",
+        "description": "Understand origin limits."
+      },
+      {
+        "title": "Common Chinese Surnames",
+        "path": "/common-chinese-surnames/",
+        "category": "Reference",
+        "description": "Compare common surnames."
+      }
+    ]
+  },
+  {
+    "title": "Xu Surname Meaning: Character Notes, Romanization, and Research Steps",
+    "path": "/xu-surname-meaning/",
+    "description": "Understand Xu surname meaning, character verification, Hsu and Tsui spelling possibilities, origin context, and careful research steps.",
+    "h1": "Xu Surname Meaning: Character Notes, Romanization, and Research Steps",
+    "intro": "Xu surname meaning depends on the Chinese character and romanization history, so the English spelling alone is only a starting clue.",
+    "answer": "Xu surname meaning should be researched by confirming the Chinese character, comparing romanization variants, and separating broad surname history from verified family evidence.",
+    "details": [
+      "Xu surname meaning is a useful topic because the visitor usually wants a practical answer, not a decorative paragraph. The page should explain the main idea early, then show what changes the result, what should be checked, and which related guide should be opened next.",
+      "The search intent is surname lookup and romanization research. That means the article should be concrete enough for a reader to act on it, but careful enough to avoid claims that are stronger than the evidence. Cultural reference pages need this balance because they often mix tradition, modern search behavior, and possible commercial paths.",
+      "The first check is the Chinese character because Xu can appear with older or regional romanization forms. If this point is missing, the visitor may leave with an answer that looks complete but fails in the exact situation that brought them to the page. The strongest article makes that check visible near the beginning.",
+      "The second check is older documents, family pronunciation, and whether spellings such as Hsu or Tsui appear in the record set. This gives the page a practical decision layer and keeps it from becoming a thin definition. A strong page should help the reader compare options, identify risk, and move to a better next step.",
+      "The page should also support future monetization without becoming sales copy. Advertising, affiliate products, paid reports, printable guides, or direct products can be added later only if the free page already gives a useful answer on its own.",
+      "Use this article as part of the wider site cluster. It should answer one focused question, link naturally to broader guides, and avoid unsupported promises. That structure helps both visitors and search engines understand why the page exists."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Xu surname meaning",
+        "paragraphs": [
+          "Most visitors searching for Xu surname meaning are trying to reduce uncertainty. They may need a year result, a buying path, a research clue, a craft decision, or a way to compare several similar pages. A useful opening should tell them what the topic means and what they should verify before trusting a simple answer.",
+          "The article should not hide the answer under broad background. Start with the direct answer, then explain the condition that can change it. This makes the page easier to read and more reliable when it is quoted by search snippets or answer engines."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the Chinese character because Xu can appear with older or regional romanization forms before making a decision. This is the point most likely to change the answer, especially for visitors who arrive from a short keyword and do not yet know the full context.",
+          "Then check older documents, family pronunciation, and whether spellings such as Hsu or Tsui appear in the record set. The second check gives the reader a way to compare alternatives instead of treating the article as a one-line definition. It also creates a natural internal-link path to the next guide."
+        ]
+      },
+      {
+        "title": "How to read the answer responsibly",
+        "paragraphs": [
+          "Responsible wording matters. The page can explain symbolic meaning, product fit, family-name evidence, or calendar logic, but it should not promise guaranteed luck, confirmed ancestry, perfect results, or one universal choice for every reader.",
+          "This is also important for business use. A page that gives cautious, useful guidance can later support an ad, product card, report, or checklist. A page that exaggerates claims may create distrust and weaken the site even if it attracts clicks."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is assuming modern pinyin Xu explains every older English spelling in a family archive. This mistake usually happens when the reader sees a familiar word and assumes the rest of the context is already known. The article should slow that step down and show what evidence or product detail is still needed.",
+          "Another mistake is choosing a meaning from a search result before confirming the character in family records. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. That keeps the page useful instead of vague."
+        ]
+      },
+      {
+        "title": "Best use cases",
+        "paragraphs": [
+          "The best use case for this page is a reader who needs a focused answer before moving deeper into the site. It should work for quick reference, but it should also give enough context for people who care about accuracy, comparison, or buying decisions.",
+          "A second use case is topical authority. The page supports the site cluster by covering a specific long-tail question in depth and linking it to larger guides. That is stronger than publishing many short pages that repeat the same few sentences."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "Use the surname lookup, collect older spellings, then compare meaning and origin pages after the character is confirmed. This next step should be visible before the article ends so the visitor does not have to return to search immediately.",
+          "If the topic later receives product blocks, report offers, or downloadable resources, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "Date, character, material, source, or use case",
+          "Small details can change the result"
+        ],
+        [
+          "Buying or planning",
+          "Quality signals and practical fit",
+          "The best option depends on real use"
+        ],
+        [
+          "Further research",
+          "Related guide and evidence level",
+          "Keeps the next step clear"
+        ]
+      ]
+    },
+    "faqs": [
+      {
+        "q": "What is the short answer for Xu surname meaning?",
+        "a": "Xu surname meaning should be researched by confirming the Chinese character, comparing romanization variants, and separating broad surname history from verified family evidence."
+      },
+      {
+        "q": "What should I check first for Xu surname meaning?",
+        "a": "Check the Chinese character because Xu can appear with older or regional romanization forms first, then compare older documents, family pronunciation, and whether spellings such as Hsu or Tsui appear in the record set."
+      },
+      {
+        "q": "Is Xu surname meaning enough for a final decision?",
+        "a": "It is enough for a starting point, but important decisions should use the practical checks and related guides."
+      },
+      {
+        "q": "What should I read next?",
+        "a": "Use the surname lookup, collect older spellings, then compare meaning and origin pages after the character is confirmed"
+      }
+    ],
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tool",
+        "description": "Search likely surname pages."
+      },
+      {
+        "title": "Chinese Surname Pronunciation",
+        "path": "/chinese-surname-pronunciation/",
+        "category": "Pronunciation",
+        "description": "Understand pinyin and variants."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin",
+        "description": "Read origin context carefully."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260711) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 await writeFile("dist/toolkit.js", clientScript(), "utf8");
 await writeFile("dist/styles.css", css() + themeCss(), "utf8");
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
 await writeFile("dist/robots.txt", robotsTxt(), "utf8");
+await writeFile("dist/ads.txt", "google.com, pub-1609779333813540, DIRECT, f08c47fec0942fa0\n", "utf8");
 await writeFile("dist/llms.txt", llmsTxt(), "utf8");
 await buildSeoReport();
+
+
+
+
+
+
+function enhanceThinContent(path, html) {
+  let extra = "";
+  if (["/chinese-surnames-faq/", "/faq/"].includes(path)) {
+    extra = `<section class="content-section article-body"><h2>How to use these Chinese surname answers</h2><p>The FAQ is meant to connect quick questions with deeper surname research. If a reader asks about surname order, start with the basic family-name-before-given-name rule. If the question is about meaning, open the individual surname page or the surname meaning guide. If the question is about spelling, compare pinyin, Cantonese, Hokkien, historical romanization, and overseas family usage before assuming two spellings represent the same origin.</p><p>Chinese surname research often needs context. A character can have a broad cultural history, a clan origin, regional pronunciation differences, and several English spellings. A useful page should explain what can be known from the surname itself and what cannot be safely inferred. This protects the site from overclaiming family history while still giving readers a practical path through Baijiaxing, common surnames, surname lookup, and pronunciation pages.</p></section>`;
+  } else if (path === "/surname-lookup/") {
+    extra = `<section class="content-section article-body"><h2>Reading surname lookup results carefully</h2><p>Use the lookup as a navigation tool, not as a complete family-history record. A matching pinyin spelling may point to several Chinese characters, and one Chinese character can appear under different romanized spellings overseas. After finding a candidate surname, open the meaning, origin, pronunciation, and common-variant pages to compare the evidence. This is especially important for names such as Li, Lee, Wong, Wang, Zhang, Cheung, Chen, Chan, Liu, Lau, Wu, Ng, and Zhao.</p></section>`;
+  } else if (path === "/guides/") {
+    extra = `<section class="content-section article-body"><h2>How to choose a surname guide</h2><p>Start with common surnames for broad context, surname meaning for interpretation, surname origin for historical notes, and pronunciation pages for spelling differences. The guide library should help readers move from a simple name question to a more careful explanation without pretending that every family line can be reconstructed from a single web page.</p></section>`;
+  }
+  if (extra) extra = extra.replace("</section>", `<p>Before treating a surname result as final, compare character, pronunciation, romanization, and context. The page should make clear whether it is giving a broad cultural explanation, a spelling comparison, or a link to deeper surname-specific research.</p><p>A final check is whether the reader understands the difference between a surname spelling and a surname origin. If that distinction is clear, the page can support search traffic without misleading genealogy claims.</p></section>`);
+  return extra && html.includes("</main>") ? html.replace("</main>", `${extra}</main>`) : html;
+}
 
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(join(file, ".."), { recursive: true });
-  await writeFile(file, html, "utf8");
+  await writeFile(file, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))), "utf8");
 }
 
 function sitemapXml() {
@@ -2218,8 +2947,8 @@ const dailyArticles20260710 = [
     "path": "/chan-surname-meaning/",
     "description": "Research Chan surname meaning through Chinese characters, Chen surname connection, Cantonese romanization, variants, and family record checks.",
     "h1": "Chan Surname Meaning: Chinese Characters, Chen Connection, and Research Notes",
-    "intro": "Chan surname meaning usually needs character verification because Chan is often a Cantonese romanization, commonly connected with Chen 陈, but it is not enough by itself.",
-    "answer": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 陈, but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge.",
+    "intro": "Chan surname meaning usually needs character verification because Chan is often a Cantonese romanization, commonly connected with Chen 闂? but it is not enough by itself.",
+    "answer": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 闂? but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge.",
     "details": [
       "This article focuses on Chan Surname Meaning because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
       "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
@@ -2281,7 +3010,7 @@ const dailyArticles20260710 = [
       {
         "title": "Practical next step",
         "paragraphs": [
-          "If the character is 陈, read the Chen surname page next and record Chan as a regional spelling.",
+          "If the character is 闂? read the Chen surname page next and record Chan as a regional spelling.",
           "Next, use the surname lookup, Chen meaning guide, Chinese surname pronunciation page, and origin guide to keep evidence organized."
         ]
       }
@@ -2289,7 +3018,7 @@ const dailyArticles20260710 = [
     "faqs": [
       {
         "q": "What is the quick answer for Chan Surname Meaning?",
-        "a": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 陈, but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge."
+        "a": "Chan is often used as a Cantonese spelling for the Chinese surname Chen 闂? but the reliable meaning depends on confirming the Chinese character in family records or direct family knowledge."
       },
       {
         "q": "Can Chan Surname Meaning be used for buying or paid products later?",
@@ -2358,16 +3087,16 @@ const dailyArticles20260710 = [
   {
     "title": "Chow Surname Meaning: Zhou Connection, Cantonese Spelling, and Origin Limits",
     "path": "/chow-surname-meaning/",
-    "description": "Understand Chow surname meaning through likely Zhou 周 connection, Cantonese spelling, character checks, variants, and cautious family-name research.",
+    "description": "Understand Chow surname meaning through likely Zhou 閸?connection, Cantonese spelling, character checks, variants, and cautious family-name research.",
     "h1": "Chow Surname Meaning: Zhou Connection, Cantonese Spelling, and Origin Limits",
-    "intro": "Chow surname meaning usually starts with romanization. Chow may correspond to Zhou 周 in many family-name contexts, but the Chinese character should be confirmed before making a genealogy claim.",
-    "answer": "Chow is commonly linked with the Chinese surname Zhou 周 in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records.",
+    "intro": "Chow surname meaning usually starts with romanization. Chow may correspond to Zhou 閸?in many family-name contexts, but the Chinese character should be confirmed before making a genealogy claim.",
+    "answer": "Chow is commonly linked with the Chinese surname Zhou 閸?in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records.",
     "details": [
       "This article focuses on Chow Surname Meaning because the search intent is practical. The reader needs a direct answer, enough context to avoid a weak assumption, and a clear next step inside the site.",
       "A short definition is not enough for this topic. Useful content has to separate the main answer from details such as date boundaries, material quality, spelling variants, product use case, or symbolic limits.",
       "The page is written as both a standalone answer and a routing page. It gives the reader enough information to act, then points toward broader guides, tools, and related pages when the question needs more depth.",
       "Use the information as educational guidance. It can support cultural learning, buying decisions, family-name research, craft planning, or content planning, but it should not be treated as legal, medical, financial, genealogy-certified, or guaranteed luck advice.",
-      "The first practical check is whether the family has the Chinese character. If the character is 周, the page can connect the spelling to Zhou and broader Zhou surname notes.",
+      "The first practical check is whether the family has the Chinese character. If the character is 閸? the page can connect the spelling to Zhou and broader Zhou surname notes.",
       "The second check is the source of the spelling. Chow may appear in overseas documents, family records, restaurant names, school records, or older immigration paperwork."
     ],
     "sections": [
@@ -2423,7 +3152,7 @@ const dailyArticles20260710 = [
       {
         "title": "Practical next step",
         "paragraphs": [
-          "If the character is 周, compare the Zhou surname profile and the common Chinese surname table.",
+          "If the character is 閸? compare the Zhou surname profile and the common Chinese surname table.",
           "Next, use the lookup tool, pronunciation guide, and surname origin article to record confirmed facts separately from possible explanations."
         ]
       }
@@ -2431,7 +3160,7 @@ const dailyArticles20260710 = [
     "faqs": [
       {
         "q": "What is the quick answer for Chow Surname Meaning?",
-        "a": "Chow is commonly linked with the Chinese surname Zhou 周 in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records."
+        "a": "Chow is commonly linked with the Chinese surname Zhou 閸?in many Cantonese or older romanization contexts, but the reliable answer depends on character confirmation and family records."
       },
       {
         "q": "Can Chow Surname Meaning be used for buying or paid products later?",
@@ -2511,6 +3240,1598 @@ function clientScript() {
 
 function css() {
   return `:root{--ink:#211d18;--muted:#62594e;--paper:#f7f2ea;--panel:#fffdfa;--line:#e3d6c7;--red:#9f3528;--red-dark:#7d291f;--gold:#b88c4a;--jade:#286b61;--blue:#2f4f63;--shadow:0 10px 28px rgba(47,37,23,.08)}*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);font-size:16px;line-height:1.62}a{color:inherit}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px clamp(18px,4vw,52px);background:rgba(247,242,234,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:17px;font-weight:780;white-space:nowrap}.brand-logo{display:block;width:34px;height:34px;border-radius:8px;box-shadow:0 8px 18px rgba(159,53,40,.18)}.nav{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.nav a{text-decoration:none;color:#554d45;font-size:15px;font-weight:720;line-height:1.2;padding:4px 0}.nav a:hover{color:var(--red)}main{min-height:70vh}.page-hero{padding:28px clamp(18px,4vw,52px) 16px;max-width:1160px;margin:auto}.page-hero h1{font-family:Georgia,serif;font-size:clamp(31px,3.6vw,46px);line-height:1.08;margin:9px 0 10px;color:#211b17}.intro{font-size:16px;max-width:760px;color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;background:rgba(40,107,97,.08);border:1px solid rgba(40,107,97,.18);text-transform:uppercase;letter-spacing:.05em;color:var(--jade);font-size:12px;line-height:1;font-weight:780;margin:0}.hero-grid,.content-section{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:22px;align-items:stretch}.tool-page{max-width:820px;margin:0 auto 22px;padding:0 clamp(18px,4vw,40px)}.tool-page .tool-panel{max-width:720px;margin:0 auto;padding:20px 22px}.tool-panel,.visual-panel,.content-section:not(.split),.fact-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px}.tool-panel{padding:22px;border-top:4px solid var(--red)}.tool-copy h2,.section-heading h2,.content-section h2{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,27px);line-height:1.18;margin:8px 0 10px;color:#241f1a}.content-section p{max-width:820px}.calculator-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end;margin-top:16px;max-width:620px}.match-form{grid-template-columns:1fr 1fr}.match-form button{grid-column:1/-1;width:100%}.calculator-form label{display:grid;gap:7px;font-size:14px;font-weight:720}.calculator-form input,.calculator-form select{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.calculator-form button,.button-link{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--red);color:#fff;font-size:14px;font-weight:780;text-decoration:none;padding:0 15px;cursor:pointer;white-space:nowrap}.button-link.secondary{background:#f2eadf;color:#3a3028;border:1px solid #dfd1bd}.calculator-form button:hover,.button-link:hover{background:var(--red-dark);color:#fff}.result-card{margin-top:16px;padding:16px;border-left:4px solid var(--jade);background:#eff7f3;border-radius:8px}.result-card h3{margin:0 0 10px;font-size:20px}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.visual-panel{position:relative;margin:0;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#fffaf0,#f1eadb);padding:18px}.visual-panel img{position:relative;width:92%;height:92%;object-fit:contain;filter:drop-shadow(0 18px 28px rgba(80,50,25,.12))}.ad-slot{max-width:1056px;margin:0 auto 22px;border:1px dashed #d7c8b5;background:#fffaf1;color:#8a7257;border-radius:8px;min-height:70px;display:grid;place-items:center;font-size:13px;font-weight:720}.section-heading{margin-bottom:14px}.fact-grid,.animal-grid,.step-grid,.guide-grid,.pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.guide-grid.compact{grid-template-columns:repeat(2,minmax(0,1fr))}.fact-grid div,.animal-card,.step-grid div,.guide-card,.pair-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}.animal-card{text-decoration:none;min-height:180px;display:grid;gap:7px;position:relative;grid-template-columns:50px minmax(0,1fr);grid-template-rows:auto auto 1fr;column-gap:16px;row-gap:6px;padding:20px 22px;overflow:hidden;isolation:isolate}.animal-card::after{content:"";position:absolute;right:-42px;bottom:-46px;z-index:0;width:92px;height:92px;border-radius:50%;background:rgba(184,140,74,.08);opacity:.32}.animal-card strong,.animal-card p,.animal-card>span{position:relative;z-index:1}.animal-card strong{grid-column:2;grid-row:1;padding-right:34px;margin-top:1px;color:#12100e;font-size:18px;font-weight:740}.animal-card>span:not(.animal-order):not(.animal-seal){grid-column:2;grid-row:2;color:#4d463f;font-size:14px}.animal-card p{grid-column:2;grid-row:3;margin-top:8px;color:var(--muted)}.animal-seal{position:relative!important;grid-column:1;grid-row:1/3;align-self:start;display:grid;place-items:center;width:50px;height:50px;border-radius:12px;background:#fff2e7;border:1px solid rgba(159,53,40,.24);color:var(--red);font-family:Georgia,serif;font-size:26px;font-weight:850;line-height:1;box-shadow:0 8px 16px rgba(60,40,20,.08)}.animal-order{position:absolute!important;right:18px;top:18px;z-index:2;color:#4f463d;font-size:13px;font-weight:760}.guide-card{text-decoration:none;display:grid;gap:8px;min-height:172px;background:linear-gradient(180deg,#fffefa,#fffaf2)}.guide-card span{font-size:12px;color:var(--jade);font-weight:780;text-transform:uppercase;letter-spacing:.05em}.guide-card strong{font-size:18px;font-weight:740}.guide-card p{margin:0;color:var(--muted)}.guide-filter-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}.guide-filter-nav button{border:1px solid var(--line);background:#fff;border-radius:999px;min-height:37px;padding:0 14px;font:inherit;font-weight:720;color:#4f463d;cursor:pointer}.guide-filter-nav button.is-active,.guide-filter-nav button:hover{background:#f3ebe0;border-color:#d6b57d;color:#352b22}.section-action{display:flex;justify-content:flex-start;margin-top:16px}.split{display:grid;grid-template-columns:1fr 1fr;gap:22px}.split>div{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:22px}.fact-card{display:grid;gap:8px}.fact-card strong{font-size:20px}.fact-card span{display:block;color:var(--muted)}.table-wrap{overflow:auto}.content-section table{width:100%;border-collapse:collapse;background:#fff;font-size:15px}.content-section th,.content-section td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.content-section th{background:#f1eadc;color:#352b22}.hanzi{font-family:Georgia,serif;font-size:24px;font-weight:800;color:var(--red)}.article-shell{max-width:1160px;margin:0 auto 22px;padding:0 clamp(18px,4vw,52px);display:grid;grid-template-columns:minmax(0,.96fr) minmax(270px,.44fr);gap:22px;align-items:start}.article-main{min-width:0}.article-sidebar{display:grid;gap:18px;position:sticky;top:92px}.sidebar-card{background:var(--panel);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:18px}.sidebar-card.compact{display:grid;gap:12px}.sidebar-link-list{display:grid;gap:12px}.sidebar-link-list a{text-decoration:none;display:grid;gap:4px;padding-bottom:12px;border-bottom:1px solid #ece2d4}.sidebar-link-list a:last-child{padding-bottom:0;border-bottom:0}.sidebar-link-list strong{font-size:15px}.sidebar-link-list span{font-size:14px;color:var(--muted)}.article-search{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(300px,1.1fr);gap:22px;align-items:end}.article-search h2{margin-bottom:0}.site-search-form{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;align-items:end}.site-search-form label{display:grid;gap:7px;font-size:14px;font-weight:720}.site-search-form input{height:43px;border:1px solid var(--line);border-radius:8px;padding:0 12px;font:inherit;background:#fff;width:100%;min-width:0}.site-search-form button{min-height:43px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:8px;background:var(--jade);color:#fff;font-size:14px;font-weight:780;padding:0 16px;cursor:pointer;white-space:nowrap}.site-search-form button:hover{background:#24594f}.article-body{background:transparent!important;border:0!important;box-shadow:none!important;padding-top:0;padding-bottom:0}.lead-answer{font-size:18px;line-height:1.72;color:#302820}.faq-list h2{margin-bottom:18px}.faq-categories{display:grid;gap:12px}.faq-category{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.faq-category summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 18px;cursor:pointer;font-weight:780;color:#2f2922;background:#fbf7ef}.faq-category summary small{color:var(--muted);font-size:13px;font-weight:720;white-space:nowrap}.faq-grid{display:grid;gap:12px;border-top:1px solid var(--line);padding:16px 18px 18px;background:#fffdf9}.faq-item{display:grid;grid-template-columns:minmax(260px,.36fr) minmax(0,.64fr);gap:0;overflow:hidden;border:1px solid #e6dac8;border-radius:8px;background:#fff;box-shadow:0 6px 16px rgba(47,37,23,.04)}.faq-item h3{display:flex;align-items:center;margin:0;padding:18px 20px;background:#f5efe5;border-right:1px solid #e2d4c0;font-size:16px;line-height:1.38;color:#211b17}.faq-item p{margin:0;padding:18px 20px;color:var(--muted);max-width:none;border-left:4px solid rgba(40,107,97,.2);background:#fff}.site-footer{display:grid;grid-template-columns:minmax(260px,1.15fr) minmax(420px,.85fr);align-items:start;margin-top:44px;padding:34px clamp(18px,4vw,52px);background:#24201b;color:#fffaf0;gap:28px}.footer-about strong{display:block;font-size:18px;margin-bottom:10px}.footer-about p{margin:0;color:#d7cbbd;line-height:1.72;font-size:14px}.footer-nav{display:grid!important;grid-template-columns:repeat(3,minmax(110px,1fr));gap:24px!important;align-items:start!important}.footer-nav div{display:grid;gap:8px}.footer-nav span{color:#bfae98;font-size:12px;font-weight:780;text-transform:uppercase;letter-spacing:.06em}.footer-nav a{text-decoration:none;font-size:14px;color:#fffaf0}.footer-nav a:hover{text-decoration:underline}.report-hero,.seo-table{background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}.report-hero{padding:22px}.report-summary{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:16px}.report-summary div{background:#fbf7ef;border:1px solid var(--line);border-radius:8px;padding:12px}.report-summary strong{display:block;font-size:24px}.report-summary span{color:var(--muted)}body:not(.page-home):not(.page-guides):not(.seo-report-page) .tool-page,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-body,body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-search,body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section{max-width:980px;margin-left:auto;margin-right:auto}@media(max-width:980px){.pair-grid,.guide-grid,.fact-grid,.animal-grid,.step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-shell{grid-template-columns:1fr}.article-sidebar{position:static}}@media(max-width:820px){body{font-size:15px}.site-header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start;gap:14px}.nav a{font-size:14px}.hero-grid,.split{grid-template-columns:1fr}.tool-page{max-width:100%;padding:0 16px}.tool-page .tool-panel{max-width:100%;padding:18px}.calculator-form,.match-form,.site-search-form,.article-search{grid-template-columns:1fr}.fact-grid,.animal-grid,.step-grid,.guide-grid,.guide-grid.compact,.report-summary{grid-template-columns:1fr}.page-hero{padding-top:24px}.page-hero h1{font-size:31px}.intro{font-size:16px}.faq-category summary{align-items:flex-start;flex-direction:column;gap:4px}.faq-grid{padding:12px}.faq-item{grid-template-columns:1fr}.faq-item h3{border-right:0;border-bottom:1px solid #e2d4c0}.faq-item p{border-left:0;border-top:4px solid rgba(40,107,97,.16)}.site-footer{grid-template-columns:1fr}.footer-nav{grid-template-columns:1fr 1fr!important}}`;
+}
+
+
+const dailyArticles20260713 = [
+  {
+    "title": "Cantonese Surnames: Romanization, Characters, and Family Record Checks",
+    "path": "/cantonese-surnames/",
+    "description": "Understand Cantonese surnames by romanization, Chinese characters, regional spelling, pronunciation limits, and family record checks.",
+    "h1": "Cantonese Surnames: Romanization, Characters, and Family Record Checks",
+    "intro": "Cantonese surnames are often recognized by spellings such as Wong, Chan, Lee, Ng, Cheung, and Lau, but the spelling alone does not prove one Chinese character.",
+    "answer": "Cantonese surnames should be researched by pairing the English spelling with the Chinese character, family records, and regional context; romanization alone is not enough.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "Surname research should separate romanized spelling, Chinese character, regional pronunciation, and private family evidence. A public guide can explain common patterns, but it cannot verify one reader's genealogy without records.",
+      "dataAnchor": "Cantonese surname research starts with spelling + Chinese character + family record context, not spelling alone.",
+      "facts": [
+        ["Primary clue", "Romanized spelling such as Wong, Chan, Lee, Ng, Cheung, or Lau"],
+        ["Required evidence", "Chinese character and family records"],
+        ["Common risk", "One English spelling may map to more than one character or region"],
+        ["Use limit", "Reference guide, not private genealogy verification"]
+      ]
+    },
+    "details": [
+      "Cantonese surnames should be read through romanization, Chinese characters, pronunciation, and family records, not as a loose label that can be copied from one chart to another. The practical value of the page is that it slows the decision down at the exact point where readers usually make mistakes: the written Chinese character behind the English spelling. A useful guide gives the quick answer first, then explains the condition, comparison, or buying check that can change the final choice. That structure helps a visitor act with confidence while still respecting the limits of cultural reference content.",
+      "Search intent for Cantonese surnames is usually practical. The reader may want a fast answer, a purchase decision, a family research clue, or a way to compare several similar pages. That is why the article should separate the stable reference point from the interpretation. For this topic, the stable point is the written Chinese character behind the English spelling; the interpretation comes after that, once the reader knows what is being compared.",
+      "The second layer is whether the spelling comes from Cantonese, Mandarin, Hokkien, Taishanese, or another family context. This is where thin articles often fail because they repeat a definition without showing how someone should use it. A better page names the tradeoff, gives a concrete example, and points to a related page that can answer the next question. That is also the safest way to prepare the page for ads, affiliate blocks, paid reports, or product cards later.",
+      "Commercial intent should be handled carefully. The free article must be useful before any paid product or recommendation appears. If the visitor can understand the decision without buying anything, the page earns trust. If a product or report is added later, it should extend the decision path instead of replacing the answer.",
+      "The language should stay specific and modest. Cultural symbols, names, materials, or calendar labels can be meaningful, but they should not be presented as guaranteed luck, verified ancestry, perfect compatibility, or one universal product choice. This makes the page stronger for readers and safer for long-term SEO.",
+      "Use this page as part of a cluster. It should connect Cantonese surnames to broader guides, tools, and comparison pages so the visitor does not have to return to search immediately. A focused long-tail page works best when it answers one question deeply and then offers a clear next step."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Cantonese surnames",
+        "paragraphs": [
+          "Most visitors searching for Cantonese surnames are not looking for a decorative encyclopedia entry. They are trying to decide what something means, what to buy, what to check, or whether a quick answer is safe to trust. That is why this guide begins with the direct answer and then explains the written Chinese character behind the English spelling.",
+          "The best page experience is simple but not shallow. Give the reader the answer, show the condition that can change it, and avoid burying the practical guidance under a long history section. Background matters, but it should support the decision rather than delay it."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the written Chinese character behind the English spelling before making the final decision. This is the detail most likely to change the answer, especially when the keyword looks simple but the real situation has a date, material, character, spelling, or use-case condition hidden inside it.",
+          "Then check whether the spelling comes from Cantonese, Mandarin, Hokkien, Taishanese, or another family context. The second check helps the reader compare alternatives and prevents the page from becoming a one-line definition. It also creates a natural path to internal links, tools, product categories, or a paid report entry if the visitor wants deeper help."
+        ]
+      },
+      {
+        "title": "How to avoid over-reading the answer",
+        "paragraphs": [
+          "A responsible guide should explain what the tradition, object, or name can reasonably say and what it cannot prove. A zodiac label does not prove character, a surname meaning does not prove a private family origin, and a craft symbol does not guarantee an outcome.",
+          "This boundary improves trust. Readers can still enjoy the cultural meaning, choose a gift, compare a material, or record a family clue, but they are not pushed into exaggerated claims. That tone is better for SEO quality, ad review, and future commercial pages."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is treating Wong, Wang, Huang, and Ong as one guaranteed surname without checking the character. This usually happens when a reader sees a familiar phrase and assumes the missing detail is not important. The page should slow down that moment and show exactly what still needs to be checked.",
+          "Another mistake is assuming an English spelling proves one exact village, dialect, or lineage branch. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. This keeps the article useful instead of vague and helps prevent duplicate thin pages."
+        ]
+      },
+      {
+        "title": "Where this topic becomes useful",
+        "paragraphs": [
+          "Cantonese surnames is most useful when it helps someone move from uncertainty to a clear next step. That may mean checking a date, choosing a material, confirming a Chinese character, comparing spellings, or deciding whether a gift or product page is relevant.",
+          "The page should also support topical authority. A single focused article can strengthen a whole cluster when it links back to the main guide and forward to the next practical resource. This is stronger than publishing several short pages that repeat the same answer."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The best next step is to record the spelling, ask for the Chinese character, then compare the surname lookup and origin pages. This gives the reader a practical route after the quick answer and reduces the chance that they leave the site to repeat the same search elsewhere.",
+          "If this topic later receives product blocks, report offers, downloadable checklists, or affiliate recommendations, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "the written Chinese character behind the English spelling",
+          "Small details can change the result"
+        ],
+        [
+          "Comparison",
+          "whether the spelling comes from Cantonese, Mandarin, Hokkien, Taishanese, or another family context",
+          "Helps readers choose between similar options"
+        ],
+        [
+          "Commercial next step",
+          "Product, report, or related guide fit",
+          "Keeps monetization aligned with user intent"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Surname Pronunciation",
+        "path": "/chinese-surname-pronunciation/",
+        "description": "Understand pinyin and romanization limits."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "description": "Read origin patterns responsibly."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "description": "Search common characters and variants."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are Cantonese surnames different from Chinese surnames?",
+        "a": "They are Chinese surnames written or pronounced through Cantonese and related romanization systems, so the character still matters."
+      },
+      {
+        "q": "Why do many Cantonese surnames have several spellings?",
+        "a": "Different regions, migration records, and romanization habits can produce spellings such as Wong, Chan, Cheung, Lau, Lee, or Ng."
+      },
+      {
+        "q": "Can I confirm ancestry from a Cantonese spelling?",
+        "a": "No. The spelling is a clue, but private ancestry needs characters, records, places, and family evidence."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Last Names for Genealogy: How to Check Characters, Dialects, and Records",
+    "path": "/chinese-last-names-genealogy/",
+    "description": "Use Chinese last names for genealogy research by checking characters, romanized spellings, dialects, family records, and origin claims carefully.",
+    "h1": "Chinese Last Names for Genealogy: How to Check Characters, Dialects, and Records",
+    "intro": "Chinese last names can support genealogy research, but the English spelling is only the starting clue, not the proof.",
+    "answer": "For genealogy, a Chinese last name should be checked through the Chinese character, older romanized spellings, dialect background, family records, and place evidence before making an origin claim.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "Genealogy use requires evidence beyond a public surname meaning page. The safest workflow is to record the character, spelling variants, older documents, known place, and any clan or family association names separately.",
+      "dataAnchor": "Chinese genealogy surname research = character + spelling variants + dialect clue + oldest record + known place.",
+      "facts": [
+        ["First evidence to collect", "Chinese character"],
+        ["Second evidence", "English spelling variants and dialect clues"],
+        ["Common risk", "Merging unrelated families because spellings look similar"],
+        ["Use limit", "Research checklist, not a guaranteed family-origin claim"]
+      ]
+    },
+    "details": [
+      "Chinese last names for genealogy should be read through characters, dialect spellings, migration records, and origin evidence, not as a loose label that can be copied from one chart to another. The practical value of the page is that it slows the decision down at the exact point where readers usually make mistakes: the Chinese character and any older spelling used in family documents. A useful guide gives the quick answer first, then explains the condition, comparison, or buying check that can change the final choice. That structure helps a visitor act with confidence while still respecting the limits of cultural reference content.",
+      "Search intent for Chinese last names for genealogy is usually practical. The reader may want a fast answer, a purchase decision, a family research clue, or a way to compare several similar pages. That is why the article should separate the stable reference point from the interpretation. For this topic, the stable point is the Chinese character and any older spelling used in family documents; the interpretation comes after that, once the reader knows what is being compared.",
+      "The second layer is whether the record connects the surname to a place, clan hall, village, or documented family branch. This is where thin articles often fail because they repeat a definition without showing how someone should use it. A better page names the tradeoff, gives a concrete example, and points to a related page that can answer the next question. That is also the safest way to prepare the page for ads, affiliate blocks, paid reports, or product cards later.",
+      "Commercial intent should be handled carefully. The free article must be useful before any paid product or recommendation appears. If the visitor can understand the decision without buying anything, the page earns trust. If a product or report is added later, it should extend the decision path instead of replacing the answer.",
+      "The language should stay specific and modest. Cultural symbols, names, materials, or calendar labels can be meaningful, but they should not be presented as guaranteed luck, verified ancestry, perfect compatibility, or one universal product choice. This makes the page stronger for readers and safer for long-term SEO.",
+      "Use this page as part of a cluster. It should connect Chinese last names for genealogy to broader guides, tools, and comparison pages so the visitor does not have to return to search immediately. A focused long-tail page works best when it answers one question deeply and then offers a clear next step."
+    ],
+    "sections": [
+      {
+        "title": "Start with the real question behind Chinese last names for genealogy",
+        "paragraphs": [
+          "Most visitors searching for Chinese last names for genealogy are not looking for a decorative encyclopedia entry. They are trying to decide what something means, what to buy, what to check, or whether a quick answer is safe to trust. That is why this guide begins with the direct answer and then explains the Chinese character and any older spelling used in family documents.",
+          "The best page experience is simple but not shallow. Give the reader the answer, show the condition that can change it, and avoid burying the practical guidance under a long history section. Background matters, but it should support the decision rather than delay it."
+        ]
+      },
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Check the Chinese character and any older spelling used in family documents before making the final decision. This is the detail most likely to change the answer, especially when the keyword looks simple but the real situation has a date, material, character, spelling, or use-case condition hidden inside it.",
+          "Then check whether the record connects the surname to a place, clan hall, village, or documented family branch. The second check helps the reader compare alternatives and prevents the page from becoming a one-line definition. It also creates a natural path to internal links, tools, product categories, or a paid report entry if the visitor wants deeper help."
+        ]
+      },
+      {
+        "title": "How to avoid over-reading the answer",
+        "paragraphs": [
+          "A responsible guide should explain what the tradition, object, or name can reasonably say and what it cannot prove. A zodiac label does not prove character, a surname meaning does not prove a private family origin, and a craft symbol does not guarantee an outcome.",
+          "This boundary improves trust. Readers can still enjoy the cultural meaning, choose a gift, compare a material, or record a family clue, but they are not pushed into exaggerated claims. That tone is better for SEO quality, ad review, and future commercial pages."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is building a family tree from a popular surname meaning page alone. This usually happens when a reader sees a familiar phrase and assumes the missing detail is not important. The page should slow down that moment and show exactly what still needs to be checked.",
+          "Another mistake is merging different romanized spellings without confirming the Chinese character. The better approach is to record the uncertain detail, compare the related guide, and make the next action explicit. This keeps the article useful instead of vague and helps prevent duplicate thin pages."
+        ]
+      },
+      {
+        "title": "Where this topic becomes useful",
+        "paragraphs": [
+          "Chinese last names for genealogy is most useful when it helps someone move from uncertainty to a clear next step. That may mean checking a date, choosing a material, confirming a Chinese character, comparing spellings, or deciding whether a gift or product page is relevant.",
+          "The page should also support topical authority. A single focused article can strengthen a whole cluster when it links back to the main guide and forward to the next practical resource. This is stronger than publishing several short pages that repeat the same answer."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The best next step is to start with the surname lookup, save every spelling variant, then compare origin guides with real records. This gives the reader a practical route after the quick answer and reduces the chance that they leave the site to repeat the same search elsewhere.",
+          "If this topic later receives product blocks, report offers, downloadable checklists, or affiliate recommendations, keep the same decision logic. The commercial layer should support the reader's decision, not replace clear free guidance."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Quick answer",
+          "Direct definition and first condition",
+          "Prevents a vague answer"
+        ],
+        [
+          "Accuracy",
+          "the Chinese character and any older spelling used in family documents",
+          "Small details can change the result"
+        ],
+        [
+          "Comparison",
+          "whether the record connects the surname to a place, clan hall, village, or documented family branch",
+          "Helps readers choose between similar options"
+        ],
+        [
+          "Commercial next step",
+          "Product, report, or related guide fit",
+          "Keeps monetization aligned with user intent"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "description": "Start with surname order and context."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "description": "Separate literal meaning from family evidence."
+      },
+      {
+        "title": "Rare Chinese Surnames",
+        "path": "/rare-chinese-surnames/",
+        "description": "Understand uncommon and compound names."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is a surname meaning enough for genealogy?",
+        "a": "No. Meaning is only context. Genealogy needs records, characters, places, dates, and family evidence."
+      },
+      {
+        "q": "Why does romanization matter in Chinese genealogy?",
+        "a": "Older records may use spellings from Cantonese, Hokkien, Taishanese, postal romanization, or family-specific habits."
+      },
+      {
+        "q": "What should I collect first?",
+        "a": "Collect the Chinese character, English spellings, older documents, known hometown, and any clan or family association names."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260713) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260714 = [
+  {
+    "title": "How to Find Your Chinese Surname Character from Family Records",
+    "path": "/find-your-chinese-surname-character/",
+    "description": "Find your Chinese surname character from family records, romanization clues, dialect notes, inscriptions, and genealogy sources.",
+    "h1": "How to Find Your Chinese Surname Character from Family Records",
+    "intro": "find your Chinese surname character is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
+    "answer": "Quick answer: To find your Chinese surname character, start with the oldest family record that preserves writing, then compare romanization, dialect background, ancestral place, and relatives' pronunciations before choosing a character from an online list.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The strongest evidence is a written character from a grave marker, family book, clan record, seal, old letter, passport, or immigration document. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
+      "dataAnchor": "Chinese surname character research = written record + romanization clue + dialect clue + ancestral place + cautious confirmation.",
+      "facts": [
+        [
+          "Main keyword",
+          "find your Chinese surname character"
+        ],
+        [
+          "First check",
+          "look for the written character in family records before trusting an English spelling"
+        ],
+        [
+          "Evidence point",
+          "The strongest evidence is a written character from a grave marker, family book, clan record, seal, old letter, passport, or immigration document."
+        ],
+        [
+          "Use limit",
+          "Cultural, educational, product, or family-reference guidance; not a guaranteed outcome claim."
+        ]
+      ]
+    },
+    "details": [
+      "find your Chinese surname character should begin with the decision the visitor is trying to make. Some readers want to buy something, some want to teach a class, some want to check a family clue, and some want wording that feels respectful. The page is strongest when it gives the direct answer first, then names the detail that can change the result. For this topic, that detail is to look for the written character in family records before trusting an English spelling.",
+      "The second step is to compare romanization, dialect, migration place, and older documents before recording a final answer. This keeps the page from becoming a plain definition. It also gives the reader a clear way to compare similar options. A person can look at the same symbol, name, gift, or cultural object and still need different advice depending on the occasion, material, audience, price, or evidence available.",
+      "The strongest pages in this group separate stable facts from interpretation. Stable facts are things such as a date boundary, written character, product material, finished size, visible knot form, or teaching rule. Interpretation is the meaning, gift message, classroom discussion, or symbolic wording built on top of those facts. Mixing the two makes the content sound confident but less useful.",
+      "Readers also need a safe limit. Traditional culture can carry rich meaning, but a page should not claim that a symbol guarantees luck, a surname spelling proves ancestry, a birthday sign fixes personality, or a product automatically solves a personal problem. Modest wording is not weaker. It is more credible because it tells the reader what can be checked and what should stay symbolic.",
+      "Commercial use should be handled through decision support. If a product, paid report, checklist, or recommendation is added later, the free section should still answer the question on its own. A visitor should understand why one choice is better than another before seeing any buying prompt. That is also the best structure for long-term trust and repeat visits.",
+      "Good examples for this topic include family books, gravestones, clan association papers, immigration files, old envelopes, seals, and relatives' handwritten notes. These examples make the advice concrete. They also create natural internal links to tools, product categories, tutorials, and related guides without forcing the reader through a sales page. The article should help first and only then offer the next step.",
+      "The most common mistake is choosing a character only because it sounds close in modern Mandarin. A clear article prevents that mistake by showing the check before the conclusion. When the answer has uncertainty, the wording should say what is likely, what is confirmed, and what still needs evidence. That approach works better than a short answer that sounds complete but leaves the real decision unresolved."
+    ],
+    "sections": [
+      {
+        "title": "What find your Chinese surname character really needs to answer",
+        "paragraphs": [
+          "The search phrase sounds simple, but the real need is usually practical. A reader may be choosing a gift, planning a lesson, checking a family record, comparing materials, or preparing wording for a product page. The article should not start by showing off background knowledge. It should first identify the decision and make the next action obvious.",
+          "For this page, the first action is to look for the written character in family records before trusting an English spelling. After that, the reader can use the rest of the guide with fewer mistakes. This order matters because many culture-related topics look familiar on the surface while hiding a detail that changes the final answer."
+        ]
+      },
+      {
+        "title": "Basic facts before interpretation",
+        "paragraphs": [
+          "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
+          "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "find your Chinese surname character can appear in family books, gravestones, clan association papers, immigration files, old envelopes, seals, and relatives' handwritten notes. Each case has a different risk. A gift needs safe wording and decent presentation. A product needs material and quality checks. A family clue needs evidence. A classroom activity needs respectful boundaries. The same cultural idea should be adapted to the situation instead of copied word for word.",
+          "When a page gives examples, it should explain why the example works. A short list alone is not enough. The better pattern is to name the example, show the check, then tell the reader what to avoid. That turns background information into something the visitor can use immediately."
+        ]
+      },
+      {
+        "title": "Buying, teaching, or research checks",
+        "paragraphs": [
+          "If the reader is buying something, ask for proof: material, size, finish, sample photos, package protection, care instructions, or personalization preview. If the reader is teaching, keep the activity inclusive and avoid ranking students by a cultural label. If the reader is researching family history, preserve the original spelling and look for written evidence before choosing a meaning.",
+          "These checks are simple, but they prevent most poor decisions. They also help the site connect informational pages with product pages, tools, or paid reports later. The connection should feel natural because the article has already explained the problem that the next page solves."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The main mistake is choosing a character only because it sounds close in modern Mandarin. Another mistake is treating a symbolic meaning as a fixed result. A third mistake is copying a phrase from another site without checking whether it fits the reader's situation. These errors create thin pages and weak user trust.",
+          "The fix is to write with conditions. Say when the answer applies, what evidence supports it, and when the reader should slow down. This creates a more natural article because it sounds like practical guidance rather than a list of claims."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "After reading this guide, the best next step is to compare the related guide or tool that answers the next practical question. A reader who needs a date check should use the calculator. A reader choosing a product should compare the buying guide. A reader checking a character should collect family evidence before finalizing a design.",
+          "This page should also be updated when new examples, products, or questions appear. The core answer can stay stable, while the examples and FAQ can grow from real article clusters. That gives the site a stronger topical structure without publishing many short pages that repeat the same point."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Fast answer",
+          "look for the written character in family records before trusting an English spelling",
+          "Prevents the most common wrong conclusion"
+        ],
+        [
+          "Better choice",
+          "compare romanization, dialect, migration place, and older documents before recording a final answer",
+          "Turns a definition into a usable decision"
+        ],
+        [
+          "Evidence",
+          "The strongest evidence is a written character from a grave marker, family book, clan record, seal, old letter, passport, or immigration document.",
+          "Keeps the page grounded in checkable details"
+        ],
+        [
+          "Safe wording",
+          "Use symbolic, educational, or practical language",
+          "Avoids exaggerated claims"
+        ],
+        [
+          "Next step",
+          "Open the related guide, tool, or product comparison",
+          "Keeps the visitor inside the topic cluster"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Related Guide",
+        "path": "/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Chinese Surnames",
+        "path": "/chinese-surnames/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Common Chinese Surnames",
+        "path": "/common-chinese-surnames/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for find your Chinese surname character?",
+        "a": "To find your Chinese surname character, start with the oldest family record that preserves writing, then compare romanization, dialect background, ancestral place, and relatives' pronunciations before choosing a character from an online list."
+      },
+      {
+        "q": "What should I check first for find your Chinese surname character?",
+        "a": "Check whether you need to look for the written character in family records before trusting an English spelling. This is the condition most likely to change the final answer or product choice."
+      },
+      {
+        "q": "Can I use find your Chinese surname character for gifts, products, or teaching?",
+        "a": "Yes, but adapt the wording to the situation. Use cultural, practical, or educational language and avoid promising guaranteed luck, verified ancestry, fixed personality, or certain outcomes."
+      },
+      {
+        "q": "What is the biggest mistake with find your Chinese surname character?",
+        "a": "The biggest mistake is choosing a character only because it sounds close in modern Mandarin. A careful page prevents that mistake by showing the evidence and the decision rule before the conclusion."
+      },
+      {
+        "q": "Where should I go after reading this find your Chinese surname character guide?",
+        "a": "Use the related guide, calculator, product comparison, or research checklist that answers the next practical question. That gives a clearer result than repeating the same broad search."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Surname Tattoo Meaning: Character Checks and Risks",
+    "path": "/chinese-surname-tattoo-meaning/",
+    "description": "Check Chinese surname tattoo meaning, character accuracy, family evidence, font choice, cultural risk, and safer alternatives.",
+    "h1": "Chinese Surname Tattoo Meaning: Character Checks and Risks",
+    "intro": "Chinese surname tattoo meaning is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
+    "answer": "Quick answer: A Chinese surname tattoo should only use a confirmed character, a readable font, and a meaning that has been checked against family evidence; the English spelling alone is not enough because many surnames share similar sounds or romanizations.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The reliable evidence is the confirmed written surname character and a second check from a fluent reader or family source. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
+      "dataAnchor": "Chinese surname tattoo decision = confirmed character + readable font + family evidence + second review + risk note.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese surname tattoo meaning"
+        ],
+        [
+          "First check",
+          "confirm the exact surname character before discussing design"
+        ],
+        [
+          "Evidence point",
+          "The reliable evidence is the confirmed written surname character and a second check from a fluent reader or family source."
+        ],
+        [
+          "Use limit",
+          "Cultural, educational, product, or family-reference guidance; not a guaranteed outcome claim."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese surname tattoo meaning should begin with the decision the visitor is trying to make. Some readers want to buy something, some want to teach a class, some want to check a family clue, and some want wording that feels respectful. The page is strongest when it gives the direct answer first, then names the detail that can change the result. For this topic, that detail is to confirm the exact surname character before discussing design.",
+      "The second step is to test font readability, stroke order, placement, and whether the meaning is personal rather than guessed. This keeps the page from becoming a plain definition. It also gives the reader a clear way to compare similar options. A person can look at the same symbol, name, gift, or cultural object and still need different advice depending on the occasion, material, audience, price, or evidence available.",
+      "The strongest pages in this group separate stable facts from interpretation. Stable facts are things such as a date boundary, written character, product material, finished size, visible knot form, or teaching rule. Interpretation is the meaning, gift message, classroom discussion, or symbolic wording built on top of those facts. Mixing the two makes the content sound confident but less useful.",
+      "Readers also need a safe limit. Traditional culture can carry rich meaning, but a page should not claim that a symbol guarantees luck, a surname spelling proves ancestry, a birthday sign fixes personality, or a product automatically solves a personal problem. Modest wording is not weaker. It is more credible because it tells the reader what can be checked and what should stay symbolic.",
+      "Commercial use should be handled through decision support. If a product, paid report, checklist, or recommendation is added later, the free section should still answer the question on its own. A visitor should understand why one choice is better than another before seeing any buying prompt. That is also the best structure for long-term trust and repeat visits.",
+      "Good examples for this topic include small wrist tattoos, family-name designs, memorial pieces, temporary tests, and calligraphy previews. These examples make the advice concrete. They also create natural internal links to tools, product categories, tutorials, and related guides without forcing the reader through a sales page. The article should help first and only then offer the next step.",
+      "The most common mistake is tattooing a character copied from a search result without family confirmation. A clear article prevents that mistake by showing the check before the conclusion. When the answer has uncertainty, the wording should say what is likely, what is confirmed, and what still needs evidence. That approach works better than a short answer that sounds complete but leaves the real decision unresolved."
+    ],
+    "sections": [
+      {
+        "title": "What Chinese surname tattoo meaning really needs to answer",
+        "paragraphs": [
+          "The search phrase sounds simple, but the real need is usually practical. A reader may be choosing a gift, planning a lesson, checking a family record, comparing materials, or preparing wording for a product page. The article should not start by showing off background knowledge. It should first identify the decision and make the next action obvious.",
+          "For this page, the first action is to confirm the exact surname character before discussing design. After that, the reader can use the rest of the guide with fewer mistakes. This order matters because many culture-related topics look familiar on the surface while hiding a detail that changes the final answer."
+        ]
+      },
+      {
+        "title": "Basic facts before interpretation",
+        "paragraphs": [
+          "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
+          "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese surname tattoo meaning can appear in small wrist tattoos, family-name designs, memorial pieces, temporary tests, and calligraphy previews. Each case has a different risk. A gift needs safe wording and decent presentation. A product needs material and quality checks. A family clue needs evidence. A classroom activity needs respectful boundaries. The same cultural idea should be adapted to the situation instead of copied word for word.",
+          "When a page gives examples, it should explain why the example works. A short list alone is not enough. The better pattern is to name the example, show the check, then tell the reader what to avoid. That turns background information into something the visitor can use immediately."
+        ]
+      },
+      {
+        "title": "Buying, teaching, or research checks",
+        "paragraphs": [
+          "If the reader is buying something, ask for proof: material, size, finish, sample photos, package protection, care instructions, or personalization preview. If the reader is teaching, keep the activity inclusive and avoid ranking students by a cultural label. If the reader is researching family history, preserve the original spelling and look for written evidence before choosing a meaning.",
+          "These checks are simple, but they prevent most poor decisions. They also help the site connect informational pages with product pages, tools, or paid reports later. The connection should feel natural because the article has already explained the problem that the next page solves."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The main mistake is tattooing a character copied from a search result without family confirmation. Another mistake is treating a symbolic meaning as a fixed result. A third mistake is copying a phrase from another site without checking whether it fits the reader's situation. These errors create thin pages and weak user trust.",
+          "The fix is to write with conditions. Say when the answer applies, what evidence supports it, and when the reader should slow down. This creates a more natural article because it sounds like practical guidance rather than a list of claims."
+        ]
+      },
+      {
+        "title": "Best next step",
+        "paragraphs": [
+          "After reading this guide, the best next step is to compare the related guide or tool that answers the next practical question. A reader who needs a date check should use the calculator. A reader choosing a product should compare the buying guide. A reader checking a character should collect family evidence before finalizing a design.",
+          "This page should also be updated when new examples, products, or questions appear. The core answer can stay stable, while the examples and FAQ can grow from real article clusters. That gives the site a stronger topical structure without publishing many short pages that repeat the same point."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Practical decision table",
+      "headers": [
+        "Reader goal",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Fast answer",
+          "confirm the exact surname character before discussing design",
+          "Prevents the most common wrong conclusion"
+        ],
+        [
+          "Better choice",
+          "test font readability, stroke order, placement, and whether the meaning is personal rather than guessed",
+          "Turns a definition into a usable decision"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the confirmed written surname character and a second check from a fluent reader or family source.",
+          "Keeps the page grounded in checkable details"
+        ],
+        [
+          "Safe wording",
+          "Use symbolic, educational, or practical language",
+          "Avoids exaggerated claims"
+        ],
+        [
+          "Next step",
+          "Open the related guide, tool, or product comparison",
+          "Keeps the visitor inside the topic cluster"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Related Guide",
+        "path": "/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Related",
+        "description": "Continue with a related guide that supports this topic cluster."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese surname tattoo meaning?",
+        "a": "A Chinese surname tattoo should only use a confirmed character, a readable font, and a meaning that has been checked against family evidence; the English spelling alone is not enough because many surnames share similar sounds or romanizations."
+      },
+      {
+        "q": "What should I check first for Chinese surname tattoo meaning?",
+        "a": "Check whether you need to confirm the exact surname character before discussing design. This is the condition most likely to change the final answer or product choice."
+      },
+      {
+        "q": "Can I use Chinese surname tattoo meaning for gifts, products, or teaching?",
+        "a": "Yes, but adapt the wording to the situation. Use cultural, practical, or educational language and avoid promising guaranteed luck, verified ancestry, fixed personality, or certain outcomes."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese surname tattoo meaning?",
+        "a": "The biggest mistake is tattooing a character copied from a search result without family confirmation. A careful page prevents that mistake by showing the evidence and the decision rule before the conclusion."
+      },
+      {
+        "q": "Where should I go after reading this Chinese surname tattoo meaning guide?",
+        "a": "Use the related guide, calculator, product comparison, or research checklist that answers the next practical question. That gives a clearer result than repeating the same broad search."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260714) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260715 = [
+  {
+    "title": "Chinese Surname Jewelry Meaning: Character Checks Before Necklaces and Rings",
+    "path": "/chinese-surname-jewelry-meaning/",
+    "description": "Check Chinese surname jewelry meaning before necklaces, rings, bracelets, engraving, family gifts, and character-based designs.",
+    "h1": "Chinese Surname Jewelry Meaning: Character Checks Before Necklaces and Rings",
+    "intro": "Chinese surname jewelry meaning is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
+    "answer": "Quick answer: Chinese surname jewelry should use a confirmed family character, a readable font, and modest wording that treats the design as a family-name keepsake rather than proof of ancestry.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
+      "dataAnchor": "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly. Chinese surname jewelry meaning decision = confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant + test font readability, stroke balance, metal size, and whether the design still looks clear at jewelry scale.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese surname jewelry meaning"
+        ],
+        [
+          "First check",
+          "confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant"
+        ],
+        [
+          "Second check",
+          "test font readability, stroke balance, metal size, and whether the design still looks clear at jewelry scale"
+        ],
+        [
+          "Use limit",
+          "Use cultural, practical, or family-reference wording; do not promise guaranteed luck, ancestry, personality, health, wealth, or relationship outcomes."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese surname jewelry meaning should start with the real decision behind the search. The visitor may be choosing a product, preparing a personalized design, planning a gift, or trying to avoid a cultural mistake. The direct answer helps, but the useful part is the check that comes next: confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant.",
+      "After that first check, the page needs a second practical step: test font readability, stroke balance, metal size, and whether the design still looks clear at jewelry scale. This is where many thin pages fail. They explain the symbol or product in a pleasant way, but they do not show the reader what can go wrong before money, time, or trust is spent.",
+      "The safest structure is to separate facts from interpretation. A fact might be a birth date, a written surname character, a product material, a finished size, a proof image, a cord type, or a package photo. Interpretation is the meaning, gift message, color choice, or design story built from those facts.",
+      "That separation also makes the page easier to expand later. If a product card, downloadable template, paid report, or comparison table is added, it should support the decision already explained on the page. The free answer still needs to stand on its own.",
+      "Good use cases include surname necklaces, signet-style rings, family bracelets, memorial pendants, graduation gifts, wedding keepsakes, and temporary design previews. These examples are not filler. They show where the advice changes. A keepsake gift needs different wording from a classroom chart. A personalized product needs a proof step. A wall item needs dimensions. A surname design needs evidence before style.",
+      "The main risk is simple: The biggest mistake is treating an English surname spelling as enough evidence for a permanent engraved character. The best way to prevent that mistake is to make the check visible before the conclusion. Readers should know what is confirmed, what is symbolic, and what still needs evidence.",
+      "Use modest language. A zodiac animal can mark a birth year, a surname character can carry family meaning, a knot can express a wish, and a pair of chopsticks can make a gift feel thoughtful. None of those details should be written as a guarantee of luck, identity, success, or origin."
+    ],
+    "sections": [
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Start by asking what the reader is trying to do. If the goal is a gift, the check is accuracy, wording, and presentation. If the goal is a product, the check is material, size, proof, and durability. If the goal is a family-name design, the check is evidence before style.",
+          "For this topic, the first check is to confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant. That step should happen before buying, printing, engraving, framing, or publishing a design. It is easier to fix uncertainty before the item is made than after it has been shipped or shared."
+        ]
+      },
+      {
+        "title": "Source, origin, evidence, and practice notes",
+        "paragraphs": [
+          "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly. That evidence does not need to be complicated, but it needs to be visible. A date boundary, product proof, family record, package photo, or material listing can prevent a page from becoming a vague meaning article.",
+          "Practice also matters. For a gift, practice means checking the wording with a real recipient in mind. For a product, it means looking at how the object will be used, cleaned, worn, hung, or stored. For a name or surname, it means recording where the character or spelling came from."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese surname jewelry meaning can appear in surname necklaces, signet-style rings, family bracelets, memorial pendants, graduation gifts, wedding keepsakes, and temporary design previews. Each case asks for a slightly different decision. A family gift needs warmth and evidence. A decor item needs size and placement. A personalized item needs proofing. A classroom or reference item needs clarity and limits.",
+          "When these use cases are mixed together, the advice becomes weak. The better route is to tell the reader which detail matters for the situation they actually have. That is what makes the page useful for search visitors and for later product or paid-report entry points."
+        ]
+      },
+      {
+        "title": "Buying and customization checks",
+        "paragraphs": [
+          "Before paying for a physical or custom item, check the proof. Names, years, characters, dates, dimensions, materials, and colors should be confirmed from the listing or preview. If the seller does not show the full item, close-up photos, or care details, the buyer is taking on more risk.",
+          "For personalized products, a small mistake becomes permanent. Check spelling, character shape, engraving size, print layout, and whether the design still reads clearly at the final scale. For simple products, check whether the item will survive normal handling, cleaning, shipping, or hanging."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The biggest mistake is treating an English surname spelling as enough evidence for a permanent engraved character. Another mistake is using wording that sounds stronger than the evidence. A cultural symbol can be meaningful without being written as a promise. A family character can be special without proving a complete genealogy.",
+          "A third mistake is buying by appearance alone. Beautiful photos can hide weak materials, poor sizing, unclear personalization, or unsupported claims. A stronger page teaches the reader to inspect the exact detail that changes the choice."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The next step is to open the related guide that solves the next piece of uncertainty. If the issue is date accuracy, use a calculator or year guide. If the issue is a surname character, use the lookup or research page. If the issue is product quality, compare material, size, packaging, and proof details.",
+          "Keep a short decision note before buying or publishing: what is confirmed, what source supports it, what the item is for, and what wording will be used. That small note prevents most avoidable mistakes and makes future updates to the site easier."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Accuracy",
+          "confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "test font readability, stroke balance, metal size, and whether the design still looks clear at jewelry scale",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use case",
+          "surname necklaces, signet-style rings, family bracelets, memorial pendants, graduation gifts, wedding keepsakes, and temporary design previews",
+          "Shows where advice changes"
+        ],
+        [
+          "Risk",
+          "The biggest mistake is treating an English surname spelling as enough evidence for a permanent engraved character.",
+          "Prevents common product or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Confirm the written character from records."
+      },
+      {
+        "title": "Chinese Surname Tattoo Meaning",
+        "path": "/chinese-surname-tattoo-meaning/",
+        "category": "Meaning Guides",
+        "description": "Check character risk before permanent designs."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Understand what surname meaning can and cannot prove."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese surname jewelry meaning?",
+        "a": "Chinese surname jewelry should use a confirmed family character, a readable font, and modest wording that treats the design as a family-name keepsake rather than proof of ancestry."
+      },
+      {
+        "q": "What should I check first for Chinese surname jewelry meaning?",
+        "a": "First, confirm the exact Chinese surname character before ordering a necklace, ring, bracelet, charm, or engraved pendant. This is the detail most likely to change the final answer or buying decision."
+      },
+      {
+        "q": "Can Chinese surname jewelry meaning be used for gifts or products?",
+        "a": "Yes, if the wording stays modest and the product or design is checked for accuracy, quality, size, and real use."
+      },
+      {
+        "q": "What is the common mistake with Chinese surname jewelry meaning?",
+        "a": "The biggest mistake is treating an English surname spelling as enough evidence for a permanent engraved character."
+      },
+      {
+        "q": "What evidence matters most for Chinese surname jewelry meaning?",
+        "a": "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Family Name Gift Ideas: Characters, Records, and Safe Wording",
+    "path": "/chinese-family-name-gift-ideas/",
+    "description": "Plan Chinese family name gift ideas with surname characters, family records, safe wording, design checks, and cultural limits.",
+    "h1": "Chinese Family Name Gift Ideas: Characters, Records, and Safe Wording",
+    "intro": "Chinese family name gift ideas is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
+    "answer": "Quick answer: Chinese family name gifts work best when the surname character is confirmed, the design explains the name modestly, and the gift avoids claiming a verified family origin without evidence.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
+      "dataAnchor": "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation. Chinese family name gift ideas decision = collect the Chinese character, English spelling, older spellings, and source before designing the gift + choose a format that fits the recipient, such as a print, card, seal-style artwork, pendant, family tree note, or framed explanation.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese family name gift ideas"
+        ],
+        [
+          "First check",
+          "collect the Chinese character, English spelling, older spellings, and source before designing the gift"
+        ],
+        [
+          "Second check",
+          "choose a format that fits the recipient, such as a print, card, seal-style artwork, pendant, family tree note, or framed explanation"
+        ],
+        [
+          "Use limit",
+          "Use cultural, practical, or family-reference wording; do not promise guaranteed luck, ancestry, personality, health, wealth, or relationship outcomes."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese family name gift ideas should start with the real decision behind the search. The visitor may be choosing a product, preparing a personalized design, planning a gift, or trying to avoid a cultural mistake. The direct answer helps, but the useful part is the check that comes next: collect the Chinese character, English spelling, older spellings, and source before designing the gift.",
+      "After that first check, the page needs a second practical step: choose a format that fits the recipient, such as a print, card, seal-style artwork, pendant, family tree note, or framed explanation. This is where many thin pages fail. They explain the symbol or product in a pleasant way, but they do not show the reader what can go wrong before money, time, or trust is spent.",
+      "The safest structure is to separate facts from interpretation. A fact might be a birth date, a written surname character, a product material, a finished size, a proof image, a cord type, or a package photo. Interpretation is the meaning, gift message, color choice, or design story built from those facts.",
+      "That separation also makes the page easier to expand later. If a product card, downloadable template, paid report, or comparison table is added, it should support the decision already explained on the page. The free answer still needs to stand on its own.",
+      "Good use cases include framed surname prints, family reunion cards, genealogy starter sheets, name-character pendants, wedding keepsakes, ancestry notebooks, and bilingual gift notes. These examples are not filler. They show where the advice changes. A keepsake gift needs different wording from a classroom chart. A personalized product needs a proof step. A wall item needs dimensions. A surname design needs evidence before style.",
+      "The main risk is simple: Do not invent a family origin story from a public surname meaning page when the family record is still missing. The best way to prevent that mistake is to make the check visible before the conclusion. Readers should know what is confirmed, what is symbolic, and what still needs evidence.",
+      "Use modest language. A zodiac animal can mark a birth year, a surname character can carry family meaning, a knot can express a wish, and a pair of chopsticks can make a gift feel thoughtful. None of those details should be written as a guarantee of luck, identity, success, or origin."
+    ],
+    "sections": [
+      {
+        "title": "What to check first",
+        "paragraphs": [
+          "Start by asking what the reader is trying to do. If the goal is a gift, the check is accuracy, wording, and presentation. If the goal is a product, the check is material, size, proof, and durability. If the goal is a family-name design, the check is evidence before style.",
+          "For this topic, the first check is to collect the Chinese character, English spelling, older spellings, and source before designing the gift. That step should happen before buying, printing, engraving, framing, or publishing a design. It is easier to fix uncertainty before the item is made than after it has been shipped or shared."
+        ]
+      },
+      {
+        "title": "Source, origin, evidence, and practice notes",
+        "paragraphs": [
+          "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation. That evidence does not need to be complicated, but it needs to be visible. A date boundary, product proof, family record, package photo, or material listing can prevent a page from becoming a vague meaning article.",
+          "Practice also matters. For a gift, practice means checking the wording with a real recipient in mind. For a product, it means looking at how the object will be used, cleaned, worn, hung, or stored. For a name or surname, it means recording where the character or spelling came from."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese family name gift ideas can appear in framed surname prints, family reunion cards, genealogy starter sheets, name-character pendants, wedding keepsakes, ancestry notebooks, and bilingual gift notes. Each case asks for a slightly different decision. A family gift needs warmth and evidence. A decor item needs size and placement. A personalized item needs proofing. A classroom or reference item needs clarity and limits.",
+          "When these use cases are mixed together, the advice becomes weak. The better route is to tell the reader which detail matters for the situation they actually have. That is what makes the page useful for search visitors and for later product or paid-report entry points."
+        ]
+      },
+      {
+        "title": "Buying and customization checks",
+        "paragraphs": [
+          "Before paying for a physical or custom item, check the proof. Names, years, characters, dates, dimensions, materials, and colors should be confirmed from the listing or preview. If the seller does not show the full item, close-up photos, or care details, the buyer is taking on more risk.",
+          "For personalized products, a small mistake becomes permanent. Check spelling, character shape, engraving size, print layout, and whether the design still reads clearly at the final scale. For simple products, check whether the item will survive normal handling, cleaning, shipping, or hanging."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "Do not invent a family origin story from a public surname meaning page when the family record is still missing. Another mistake is using wording that sounds stronger than the evidence. A cultural symbol can be meaningful without being written as a promise. A family character can be special without proving a complete genealogy.",
+          "A third mistake is buying by appearance alone. Beautiful photos can hide weak materials, poor sizing, unclear personalization, or unsupported claims. A stronger page teaches the reader to inspect the exact detail that changes the choice."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "The next step is to open the related guide that solves the next piece of uncertainty. If the issue is date accuracy, use a calculator or year guide. If the issue is a surname character, use the lookup or research page. If the issue is product quality, compare material, size, packaging, and proof details.",
+          "Keep a short decision note before buying or publishing: what is confirmed, what source supports it, what the item is for, and what wording will be used. That small note prevents most avoidable mistakes and makes future updates to the site easier."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "Accuracy",
+          "collect the Chinese character, English spelling, older spellings, and source before designing the gift",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "choose a format that fits the recipient, such as a print, card, seal-style artwork, pendant, family tree note, or framed explanation",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use case",
+          "framed surname prints, family reunion cards, genealogy starter sheets, name-character pendants, wedding keepsakes, ancestry notebooks, and bilingual gift notes",
+          "Shows where advice changes"
+        ],
+        [
+          "Risk",
+          "Do not invent a family origin story from a public surname meaning page when the family record is still missing.",
+          "Prevents common product or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search common surnames by spelling or character."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Build the evidence note before designing."
+      },
+      {
+        "title": "Chinese Surname Jewelry Meaning",
+        "path": "/chinese-surname-jewelry-meaning/",
+        "category": "Meaning Guides",
+        "description": "Use surname characters safely in products."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese family name gift ideas?",
+        "a": "Chinese family name gifts work best when the surname character is confirmed, the design explains the name modestly, and the gift avoids claiming a verified family origin without evidence."
+      },
+      {
+        "q": "What should I check first for Chinese family name gift ideas?",
+        "a": "First, collect the Chinese character, English spelling, older spellings, and source before designing the gift. This is the detail most likely to change the final answer or buying decision."
+      },
+      {
+        "q": "Can Chinese family name gift ideas be used for gifts or products?",
+        "a": "Yes, if the wording stays modest and the product or design is checked for accuracy, quality, size, and real use."
+      },
+      {
+        "q": "What is the common mistake with Chinese family name gift ideas?",
+        "a": "Do not invent a family origin story from a public surname meaning page when the family record is still missing."
+      },
+      {
+        "q": "What evidence matters most for Chinese family name gift ideas?",
+        "a": "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260715) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+const dailyArticles20260716 = [
+  {
+    "title": "Chinese Name Seal Gift: Surname Characters, Design Checks, and Safe Wording",
+    "path": "/chinese-name-seal-gift/",
+    "description": "Plan a Chinese name seal gift with confirmed surname characters, seal script risks, design proof, and careful family-name wording.",
+    "h1": "Chinese Name Seal Gift: Surname Characters, Design Checks, and Safe Wording",
+    "intro": "Chinese name seal gift is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
+    "answer": "Quick answer: A Chinese name seal gift should only use a confirmed character or name, a readable design proof, and wording that presents the seal as a cultural keepsake rather than verified ancestry.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The reliable evidence is a confirmed written character, family source, design proof, readable translation note, and a second review before production. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
+      "dataAnchor": "Chinese name seal gift decision = confirm the Chinese character, spelling, and source before approving seal carving or printed seal artwork + review the seal-style design with someone who can read Chinese because decorative seal forms can be hard for beginners to verify.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese name seal gift"
+        ],
+        [
+          "First check",
+          "confirm the Chinese character, spelling, and source before approving seal carving or printed seal artwork"
+        ],
+        [
+          "Second check",
+          "review the seal-style design with someone who can read Chinese because decorative seal forms can be hard for beginners to verify"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese name seal gift should begin with the action the reader is about to take. A visitor may be comparing a product, preparing a personalized gift, designing a printable, checking a family character, or deciding whether a symbolic phrase is safe to use. The page should answer that action before adding background.",
+      "The first decision point is to confirm the Chinese character, spelling, and source before approving seal carving or printed seal artwork. This check prevents the most visible mistake. It also makes the article more useful than a short definition because it gives the reader a concrete step before they buy, print, engrave, hang, carry, or share anything.",
+      "The second decision point is to review the seal-style design with someone who can read Chinese because decorative seal forms can be hard for beginners to verify. This is where commercial and informational intent meet. A product page needs materials, size, proof, and care details. A family-name page needs records and uncertainty notes. A cultural page needs modest wording and a clear boundary between symbolism and fact.",
+      "The strongest content separates stable evidence from interpretation. Stable evidence can be a date boundary, a written character, a material listing, a finished size, a product proof, a package photo, or a family record. Interpretation is the meaning, gift message, design choice, or style note built on top of that evidence.",
+      "Useful examples include surname seal gifts, desk decor, family reunion keepsakes, framed seal prints, wedding gifts, graduation presents, and genealogy starter kits. These use cases make the page practical because they show how the same cultural object can require different checks. A classroom chart is not the same as a necklace. A travel case is not the same as a table rest. A surname printable is not the same as a verified family tree.",
+      "The main mistake to prevent is this: The biggest mistake is approving a stylized seal because it looks traditional without confirming the actual character and reading direction. A good page puts that warning near the decision point, not only at the end. Readers should understand what to verify while they still have time to change the product, wording, or design.",
+      "Commercial additions can come later, but they should not replace the answer. Affiliate products, direct products, paid reports, printable downloads, or comparison cards should extend the decision path already explained here. That keeps the page useful for readers and safer for long-term SEO."
+    ],
+    "sections": [
+      {
+        "title": "Start with the decision, not the decoration",
+        "paragraphs": [
+          "Many pages about Chinese name seal gift become decorative too quickly. They talk about beauty, tradition, or meaning before helping the reader decide what to check. A stronger page begins with the practical action: choose the sign, confirm the character, inspect the product, compare the case, or review the design proof.",
+          "That order matters because mistakes usually happen before purchase or personalization. Once a necklace is engraved, a printable is shared, a case is ordered, or a seal is carved, a small uncertainty becomes harder to fix."
+        ]
+      },
+      {
+        "title": "Evidence and source anchor",
+        "paragraphs": [
+          "The reliable evidence is a confirmed written character, family source, design proof, readable translation note, and a second review before production. This source layer is what keeps the page from becoming a vague cultural explanation. The reader should see which facts are stable and which parts are interpretation or personal choice.",
+          "For search and AI answer quality, the page should repeat the decision rule in plain language. The reader needs to know what to check first, what can change the answer, and where the evidence comes from. That is more useful than a long history section with no action step."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese name seal gift can be used in surname seal gifts, desk decor, family reunion keepsakes, framed seal prints, wedding gifts, graduation presents, and genealogy starter kits. The best page does not treat those situations as identical. Each use case changes the risk: wrong sign, unclear character, bad fit, weak material, poor packaging, or overconfident wording.",
+          "When the use case is clear, the next link becomes natural. A product shopper needs a buying guide. A family researcher needs a lookup or evidence page. A teacher needs a classroom-safe explanation. A gift buyer needs wording that feels warm without making unsupported promises."
+        ]
+      },
+      {
+        "title": "Buying, printing, and personalization checks",
+        "paragraphs": [
+          "Before buying or producing anything, review the proof. Check names, dates, character shapes, animal signs, material, size, dimensions, package photos, care instructions, and whether the item will be used, worn, hung, stored, or carried. A small proof step prevents most avoidable problems.",
+          "For personalized or printable items, keep a record of what was confirmed. The note can be simple: source, spelling, character, date, product size, and wording. This makes the decision easier to review later and helps the site add templates or product blocks without rewriting the page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "The biggest mistake is approving a stylized seal because it looks traditional without confirming the actual character and reading direction. Another mistake is writing a symbolic phrase as though it guarantees a result. Cultural meaning can be valuable without being overstated. A gift can express a wish without promising luck, identity, or destiny.",
+          "A third mistake is judging from one attractive photo. Product photos can hide scale, attachment quality, engraving readability, cleaning limits, or weak packaging. The safer approach is to compare the exact detail that affects real use."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "After reading this page, open the related guide that resolves the next uncertainty. If the question is accuracy, use a calculator, lookup, or year guide. If the question is product quality, compare material, size, finish, case, packaging, and proof. If the question is family meaning, collect the source record first.",
+          "This topic can grow into product recommendations, printable downloads, paid checks, or bundle pages later. The foundation should stay the same: answer the practical question first, keep evidence visible, and use careful wording for cultural meaning."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the Chinese character, spelling, and source before approving seal carving or printed seal artwork",
+          "Prevents the main wrong answer"
+        ],
+        [
+          "Practical fit",
+          "review the seal-style design with someone who can read Chinese because decorative seal forms can be hard for beginners to verify",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is a confirmed written character, family source, design proof, readable translation note, and a second review before production.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use cases",
+          "surname seal gifts, desk decor, family reunion keepsakes, framed seal prints, wedding gifts, graduation presents, and genealogy starter kits",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "The biggest mistake is approving a stylized seal because it looks traditional without confirming the actual character and reading direction.",
+          "Prevents preventable buying or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Confirm the written character first."
+      },
+      {
+        "title": "Chinese Family Name Gift Ideas",
+        "path": "/chinese-family-name-gift-ideas/",
+        "category": "Gift Guides",
+        "description": "Plan family-name gifts with evidence."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Understand character meaning limits."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese name seal gift?",
+        "a": "A Chinese name seal gift should only use a confirmed character or name, a readable design proof, and wording that presents the seal as a cultural keepsake rather than verified ancestry."
+      },
+      {
+        "q": "What should I check first for Chinese name seal gift?",
+        "a": "First, confirm the Chinese character, spelling, and source before approving seal carving or printed seal artwork. That is the detail most likely to change the final decision."
+      },
+      {
+        "q": "Can Chinese name seal gift be used for gifts, products, or downloads?",
+        "a": "Yes, if the evidence is checked, the product or file is practical, and the wording stays modest rather than promising a guaranteed outcome."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese name seal gift?",
+        "a": "The biggest mistake is approving a stylized seal because it looks traditional without confirming the actual character and reading direction."
+      },
+      {
+        "q": "What evidence matters most for Chinese name seal gift?",
+        "a": "The reliable evidence is a confirmed written character, family source, design proof, readable translation note, and a second review before production."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Surname Family Tree Printable: Characters, Records, and Evidence Notes",
+    "path": "/chinese-surname-family-tree-printable/",
+    "description": "Create a Chinese surname family tree printable with characters, romanization, records, source notes, and cautious origin wording.",
+    "h1": "Chinese Surname Family Tree Printable: Characters, Records, and Evidence Notes",
+    "intro": "Chinese surname family tree printable is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
+    "answer": "Quick answer: A Chinese surname family tree printable should record the surname character, English spelling, older spellings, known dialect, source record, and uncertainty notes before adding origin claims.",
+    "geoPatch": {
+      "noteLabel": "Source note",
+      "note": "The useful evidence is a family book, gravestone, old certificate, clan note, bilingual document, letter, or direct family confirmation. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
+      "dataAnchor": "Chinese surname family tree printable decision = collect the surname character, English spelling, older spellings, source record, and known family place before designing the printable + leave space for uncertainty notes so the sheet does not turn guesses into family facts.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese surname family tree printable"
+        ],
+        [
+          "First check",
+          "collect the surname character, English spelling, older spellings, source record, and known family place before designing the printable"
+        ],
+        [
+          "Second check",
+          "leave space for uncertainty notes so the sheet does not turn guesses into family facts"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese surname family tree printable should begin with the action the reader is about to take. A visitor may be comparing a product, preparing a personalized gift, designing a printable, checking a family character, or deciding whether a symbolic phrase is safe to use. The page should answer that action before adding background.",
+      "The first decision point is to collect the surname character, English spelling, older spellings, source record, and known family place before designing the printable. This check prevents the most visible mistake. It also makes the article more useful than a short definition because it gives the reader a concrete step before they buy, print, engrave, hang, carry, or share anything.",
+      "The second decision point is to leave space for uncertainty notes so the sheet does not turn guesses into family facts. This is where commercial and informational intent meet. A product page needs materials, size, proof, and care details. A family-name page needs records and uncertainty notes. A cultural page needs modest wording and a clear boundary between symbolism and fact.",
+      "The strongest content separates stable evidence from interpretation. Stable evidence can be a date boundary, a written character, a material listing, a finished size, a product proof, a package photo, or a family record. Interpretation is the meaning, gift message, design choice, or style note built on top of that evidence.",
+      "Useful examples include genealogy worksheets, family reunion handouts, ancestry notebooks, surname research PDFs, classroom culture projects, framed family notes, and digital downloads. These use cases make the page practical because they show how the same cultural object can require different checks. A classroom chart is not the same as a necklace. A travel case is not the same as a table rest. A surname printable is not the same as a verified family tree.",
+      "The main mistake to prevent is this: A common mistake is putting a neat origin story into the printable before the character, place, and source record have been confirmed. A good page puts that warning near the decision point, not only at the end. Readers should understand what to verify while they still have time to change the product, wording, or design.",
+      "Commercial additions can come later, but they should not replace the answer. Affiliate products, direct products, paid reports, printable downloads, or comparison cards should extend the decision path already explained here. That keeps the page useful for readers and safer for long-term SEO."
+    ],
+    "sections": [
+      {
+        "title": "Start with the decision, not the decoration",
+        "paragraphs": [
+          "Many pages about Chinese surname family tree printable become decorative too quickly. They talk about beauty, tradition, or meaning before helping the reader decide what to check. A stronger page begins with the practical action: choose the sign, confirm the character, inspect the product, compare the case, or review the design proof.",
+          "That order matters because mistakes usually happen before purchase or personalization. Once a necklace is engraved, a printable is shared, a case is ordered, or a seal is carved, a small uncertainty becomes harder to fix."
+        ]
+      },
+      {
+        "title": "Evidence and source anchor",
+        "paragraphs": [
+          "The useful evidence is a family book, gravestone, old certificate, clan note, bilingual document, letter, or direct family confirmation. This source layer is what keeps the page from becoming a vague cultural explanation. The reader should see which facts are stable and which parts are interpretation or personal choice.",
+          "For search and AI answer quality, the page should repeat the decision rule in plain language. The reader needs to know what to check first, what can change the answer, and where the evidence comes from. That is more useful than a long history section with no action step."
+        ]
+      },
+      {
+        "title": "Examples and use cases",
+        "paragraphs": [
+          "Chinese surname family tree printable can be used in genealogy worksheets, family reunion handouts, ancestry notebooks, surname research PDFs, classroom culture projects, framed family notes, and digital downloads. The best page does not treat those situations as identical. Each use case changes the risk: wrong sign, unclear character, bad fit, weak material, poor packaging, or overconfident wording.",
+          "When the use case is clear, the next link becomes natural. A product shopper needs a buying guide. A family researcher needs a lookup or evidence page. A teacher needs a classroom-safe explanation. A gift buyer needs wording that feels warm without making unsupported promises."
+        ]
+      },
+      {
+        "title": "Buying, printing, and personalization checks",
+        "paragraphs": [
+          "Before buying or producing anything, review the proof. Check names, dates, character shapes, animal signs, material, size, dimensions, package photos, care instructions, and whether the item will be used, worn, hung, stored, or carried. A small proof step prevents most avoidable problems.",
+          "For personalized or printable items, keep a record of what was confirmed. The note can be simple: source, spelling, character, date, product size, and wording. This makes the decision easier to review later and helps the site add templates or product blocks without rewriting the page."
+        ]
+      },
+      {
+        "title": "Common mistakes",
+        "paragraphs": [
+          "A common mistake is putting a neat origin story into the printable before the character, place, and source record have been confirmed. Another mistake is writing a symbolic phrase as though it guarantees a result. Cultural meaning can be valuable without being overstated. A gift can express a wish without promising luck, identity, or destiny.",
+          "A third mistake is judging from one attractive photo. Product photos can hide scale, attachment quality, engraving readability, cleaning limits, or weak packaging. The safer approach is to compare the exact detail that affects real use."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "After reading this page, open the related guide that resolves the next uncertainty. If the question is accuracy, use a calculator, lookup, or year guide. If the question is product quality, compare material, size, finish, case, packaging, and proof. If the question is family meaning, collect the source record first.",
+          "This topic can grow into product recommendations, printable downloads, paid checks, or bundle pages later. The foundation should stay the same: answer the practical question first, keep evidence visible, and use careful wording for cultural meaning."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "collect the surname character, English spelling, older spellings, source record, and known family place before designing the printable",
+          "Prevents the main wrong answer"
+        ],
+        [
+          "Practical fit",
+          "leave space for uncertainty notes so the sheet does not turn guesses into family facts",
+          "Connects meaning to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is a family book, gravestone, old certificate, clan note, bilingual document, letter, or direct family confirmation.",
+          "Keeps the page trustworthy"
+        ],
+        [
+          "Use cases",
+          "genealogy worksheets, family reunion handouts, ancestry notebooks, surname research PDFs, classroom culture projects, framed family notes, and digital downloads",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "A common mistake is putting a neat origin story into the printable before the character, place, and source record have been confirmed.",
+          "Prevents preventable buying or wording errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search common surnames by spelling or character."
+      },
+      {
+        "title": "Chinese Last Names for Genealogy",
+        "path": "/chinese-last-names-genealogy/",
+        "category": "Origin Guides",
+        "description": "Use records before origin claims."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Start from evidence."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese surname family tree printable?",
+        "a": "A Chinese surname family tree printable should record the surname character, English spelling, older spellings, known dialect, source record, and uncertainty notes before adding origin claims."
+      },
+      {
+        "q": "What should I check first for Chinese surname family tree printable?",
+        "a": "First, collect the surname character, English spelling, older spellings, source record, and known family place before designing the printable. That is the detail most likely to change the final decision."
+      },
+      {
+        "q": "Can Chinese surname family tree printable be used for gifts, products, or downloads?",
+        "a": "Yes, if the evidence is checked, the product or file is practical, and the wording stays modest rather than promising a guaranteed outcome."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese surname family tree printable?",
+        "a": "A common mistake is putting a neat origin story into the printable before the character, place, and source record have been confirmed."
+      },
+      {
+        "q": "What evidence matters most for Chinese surname family tree printable?",
+        "a": "The useful evidence is a family book, gravestone, old certificate, clan note, bilingual document, letter, or direct family confirmation."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260716) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
+
+
+
+
+const dailyArticles20260717 = [
+  {
+    "title": "Find Your Chinese Surname Character: Records, Spelling, and Lookup Steps",
+    "path": "/find-your-chinese-surname-character/",
+    "description": "Find your Chinese surname character by comparing family records, romanized spellings, dialect clues, and source evidence.",
+    "h1": "Find Your Chinese Surname Character: Records, Spelling, and Lookup Steps",
+    "intro": "If you are comparing find your Chinese surname character, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
+    "answer": "Quick answer: To find your Chinese surname character, start from family evidence first, then compare romanized spelling, dialect background, old records, and surname lookup results.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives.",
+      "dataAnchor": "find your Chinese surname character decision = collect any written family source before trusting an English spelling alone + compare the spelling with Mandarin pinyin, Cantonese, Hokkien, older immigration spellings, and known ancestral place clues.",
+      "facts": [
+        [
+          "Main keyword",
+          "find your Chinese surname character"
+        ],
+        [
+          "First check",
+          "collect any written family source before trusting an English spelling alone"
+        ],
+        [
+          "Second check",
+          "compare the spelling with Mandarin pinyin, Cantonese, Hokkien, older immigration spellings, and known ancestral place clues"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "find your Chinese surname character is a practical search because the reader is usually close to an action. They may be choosing a product, checking a birth date, comparing a report, preparing a gift, confirming a written character, or deciding whether a symbolic phrase is safe to use. The page needs to answer the real decision first, then add cultural context.",
+      "The first decision is to collect any written family source before trusting an English spelling alone. This is the step most likely to change the final answer. If it is skipped, the reader may buy the wrong item, assign the wrong sign, choose the wrong character, or repeat a meaning that sounds neat but is not supported by evidence.",
+      "The second decision is to compare the spelling with Mandarin pinyin, Cantonese, Hokkien, older immigration spellings, and known ancestral place clues. This is where a short definition becomes useful. A real reader needs to know what to inspect, what to compare, and which detail should stop the decision until it is confirmed.",
+      "The evidence layer matters. The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives. That evidence does not remove all uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include genealogy research, family reunion notes, surname gifts, school projects, immigration records, and name-character confirmation. Those situations should not be treated as identical. A gift buyer, beginner, teacher, family researcher, and product shopper all need different checks even when they search the same keyword.",
+      "The main risk is simple: The common mistake is assuming one English spelling maps to one Chinese character when several characters or dialect routes may be possible. Put that warning near the decision point, not after a long background section, because the reader still has time to change the product, wording, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, or gift bundle should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the reader's actual decision",
+        "paragraphs": [
+          "The best first step is not a history lesson. For find your Chinese surname character, the reader needs to know what to check before committing to a purchase, report, printable, gift, or interpretation. A direct answer saves time and prevents the kind of small error that becomes expensive after engraving, printing, shipping, or sharing.",
+          "That decision-first structure also makes the content easier to trust. Once the practical check is clear, cultural meaning can be added without making the page feel like a dictionary entry or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify before you rely on it",
+        "paragraphs": [
+          "Start by asking whether the important fact has been confirmed. In this case, the first check is to collect any written family source before trusting an English spelling alone. If that evidence is missing, the safest answer is to slow down and gather it before treating the result as final.",
+          "Next, apply the practical check: compare the spelling with Mandarin pinyin, Cantonese, Hokkien, older immigration spellings, and known ancestral place clues. This turns the topic into a usable decision. It also helps separate a strong page, product, or report from one that looks attractive but does not give enough proof."
+        ]
+      },
+      {
+        "title": "Examples that change the answer",
+        "paragraphs": [
+          "find your Chinese surname character can appear in genealogy research, family reunion notes, surname gifts, school projects, immigration records, and name-character confirmation. Each context changes the standard. A classroom or family-reference use needs clarity. A product use needs materials, size, and care details. A symbolic gift needs careful wording. A personal report needs correct input before interpretation.",
+          "This is why a single broad answer is rarely enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives. If those details are hidden or vague, the reader should not treat the result as final.",
+          "The warning sign to remember is this: The common mistake is assuming one English spelling maps to one Chinese character when several characters or dialect routes may be possible. A polished design, confident phrase, or attractive photo does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, year chart, surname profile, or material comparison before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach gives the topic room to support products, paid reports, printables, or gift bundles later while still leaving the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "collect any written family source before trusting an English spelling alone",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "compare the spelling with Mandarin pinyin, Cantonese, Hokkien, older immigration spellings, and known ancestral place clues",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "genealogy research, family reunion notes, surname gifts, school projects, immigration records, and name-character confirmation",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is assuming one English spelling maps to one Chinese character when several characters or dialect routes may be possible.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search common surnames by spelling or character."
+      },
+      {
+        "title": "Chinese Surname Pronunciation",
+        "path": "/chinese-surname-pronunciation/",
+        "category": "Pronunciation",
+        "description": "Understand spelling and pronunciation risk."
+      },
+      {
+        "title": "Chinese Surname Origins",
+        "path": "/chinese-surname-origin/",
+        "category": "Origin Guides",
+        "description": "Read origin notes with evidence limits."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for find your Chinese surname character?",
+        "a": "To find your Chinese surname character, start from family evidence first, then compare romanized spelling, dialect background, old records, and surname lookup results."
+      },
+      {
+        "q": "What should I check first for find your Chinese surname character?",
+        "a": "First, collect any written family source before trusting an English spelling alone. That is the detail most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with find your Chinese surname character?",
+        "a": "The common mistake is assuming one English spelling maps to one Chinese character when several characters or dialect routes may be possible."
+      },
+      {
+        "q": "What evidence matters most for find your Chinese surname character?",
+        "a": "The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives."
+      },
+      {
+        "q": "Can find your Chinese surname character support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Family Name Gift Ideas: Characters, Prints, and Safe Wording",
+    "path": "/chinese-family-name-gift-ideas/",
+    "description": "Plan Chinese family name gift ideas with confirmed characters, framed prints, seal-style art, genealogy notes, and careful wording.",
+    "h1": "Chinese Family Name Gift Ideas: Characters, Prints, and Safe Wording",
+    "intro": "If you are comparing Chinese family name gift ideas, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
+    "answer": "Quick answer: A Chinese family name gift should use a confirmed character, a readable design, and wording that treats the item as a cultural keepsake rather than proof of ancestry.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from.",
+      "dataAnchor": "Chinese family name gift ideas decision = confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake + review the design proof for character accuracy, layout, translation note, size, material, and whether the recipient can understand the meaning.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese family name gift ideas"
+        ],
+        [
+          "First check",
+          "confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake"
+        ],
+        [
+          "Second check",
+          "review the design proof for character accuracy, layout, translation note, size, material, and whether the recipient can understand the meaning"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese family name gift ideas is a practical search because the reader is usually close to an action. They may be choosing a product, checking a birth date, comparing a report, preparing a gift, confirming a written character, or deciding whether a symbolic phrase is safe to use. The page needs to answer the real decision first, then add cultural context.",
+      "The first decision is to confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake. This is the step most likely to change the final answer. If it is skipped, the reader may buy the wrong item, assign the wrong sign, choose the wrong character, or repeat a meaning that sounds neat but is not supported by evidence.",
+      "The second decision is to review the design proof for character accuracy, layout, translation note, size, material, and whether the recipient can understand the meaning. This is where a short definition becomes useful. A real reader needs to know what to inspect, what to compare, and which detail should stop the decision until it is confirmed.",
+      "The evidence layer matters. The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from. That evidence does not remove all uncertainty, but it gives the reader a stable base before interpretation, design, packaging, or purchase wording is added.",
+      "Common use cases include framed surname prints, reunion gifts, name seal gifts, ancestry notebooks, classroom projects, and family-history starter kits. Those situations should not be treated as identical. A gift buyer, beginner, teacher, family researcher, and product shopper all need different checks even when they search the same keyword.",
+      "The main risk is simple: The common mistake is designing a polished gift around an unverified character or a generic origin story that may not match the family. Put that warning near the decision point, not after a long background section, because the reader still has time to change the product, wording, or next step.",
+      "Commercial offers can be added only when the free answer is already useful. A paid report, product card, printable, or gift bundle should support the decision path rather than replace clear guidance."
+    ],
+    "sections": [
+      {
+        "title": "Start with the reader's actual decision",
+        "paragraphs": [
+          "The best first step is not a history lesson. For Chinese family name gift ideas, the reader needs to know what to check before committing to a purchase, report, printable, gift, or interpretation. A direct answer saves time and prevents the kind of small error that becomes expensive after engraving, printing, shipping, or sharing.",
+          "That decision-first structure also makes the content easier to trust. Once the practical check is clear, cultural meaning can be added without making the page feel like a dictionary entry or a generic shopping paragraph."
+        ]
+      },
+      {
+        "title": "What to verify before you rely on it",
+        "paragraphs": [
+          "Start by asking whether the important fact has been confirmed. In this case, the first check is to confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake. If that evidence is missing, the safest answer is to slow down and gather it before treating the result as final.",
+          "Next, apply the practical check: review the design proof for character accuracy, layout, translation note, size, material, and whether the recipient can understand the meaning. This turns the topic into a usable decision. It also helps separate a strong page, product, or report from one that looks attractive but does not give enough proof."
+        ]
+      },
+      {
+        "title": "Examples that change the answer",
+        "paragraphs": [
+          "Chinese family name gift ideas can appear in framed surname prints, reunion gifts, name seal gifts, ancestry notebooks, classroom projects, and family-history starter kits. Each context changes the standard. A classroom or family-reference use needs clarity. A product use needs materials, size, and care details. A symbolic gift needs careful wording. A personal report needs correct input before interpretation.",
+          "This is why a single broad answer is rarely enough. The right next step depends on what the reader is trying to do and what evidence is already available."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from. If those details are hidden or vague, the reader should not treat the result as final.",
+          "The warning sign to remember is this: The common mistake is designing a polished gift around an unverified character or a generic origin story that may not match the family. A polished design, confident phrase, or attractive photo does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "How to use the result responsibly",
+        "paragraphs": [
+          "Use the result as a practical reference, not as an absolute promise. Cultural symbols, zodiac signs, surname characters, tableware choices, and craft gifts can all carry meaning, but the meaning should stay connected to evidence and real use.",
+          "After the first answer is clear, move to the most specific related page. That keeps the reader from getting stuck on a broad topic when the real question is about a material, date boundary, character source, compatibility pair, gift format, or tutorial step."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, year chart, surname profile, or material comparison before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging. If wording is the concern, keep the message warm but modest.",
+          "This approach gives the topic room to support products, paid reports, printables, or gift bundles later while still leaving the current page useful on its own."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "review the design proof for character accuracy, layout, translation note, size, material, and whether the recipient can understand the meaning",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "framed surname prints, reunion gifts, name seal gifts, ancestry notebooks, classroom projects, and family-history starter kits",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is designing a polished gift around an unverified character or a generic origin story that may not match the family.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Name Seal Gift",
+        "path": "/chinese-name-seal-gift/",
+        "category": "Gift Guides",
+        "description": "Check character proof before seal design."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Confirm the written character first."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read meaning with context."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese family name gift ideas?",
+        "a": "A Chinese family name gift should use a confirmed character, a readable design, and wording that treats the item as a cultural keepsake rather than proof of ancestry."
+      },
+      {
+        "q": "What should I check first for Chinese family name gift ideas?",
+        "a": "First, confirm the surname character, spelling, and source before ordering a print, seal, ornament, or keepsake. That is the detail most likely to change the final answer."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese family name gift ideas?",
+        "a": "The common mistake is designing a polished gift around an unverified character or a generic origin story that may not match the family."
+      },
+      {
+        "q": "What evidence matters most for Chinese family name gift ideas?",
+        "a": "The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from."
+      },
+      {
+        "q": "Can Chinese family name gift ideas support products, gifts, or paid reports?",
+        "a": "Yes, but only when the free explanation gives a complete decision path and the offer does not replace the core answer."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260717) {
+  await writePage(article.path, dailyArticlePage20260706(article));
 }
 
 function themeCss() {
@@ -2595,6 +4916,10 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
+
+
+
 
 
 

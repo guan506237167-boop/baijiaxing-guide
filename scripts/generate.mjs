@@ -105,6 +105,105 @@ const guides = [
 
 const pages = [];
 
+const geoMicroPatches20260717 = new Map([
+  [
+    "/common-chinese-surnames/",
+    {
+      "path": "/common-chinese-surnames/",
+      "quick": "Quick answer: A common Chinese surnames list is most useful when it shows the exact character, Mandarin pinyin, known regional spellings, and the source date or population represented by any ranking.",
+      "facts": [
+        [
+          "Required identifier",
+          "Exact Chinese character"
+        ],
+        [
+          "Useful fields",
+          "Pinyin, regional romanizations, rank source, and date"
+        ],
+        [
+          "Ranking limit",
+          "Order changes by region, period, and dataset"
+        ],
+        [
+          "Genealogy limit",
+          "Frequency does not prove family relationship"
+        ]
+      ],
+      "evidence": "Use an identified census, public-security, academic, or historical dataset and state its geography and date.",
+      "examples": "Wang 王, Li 李, Zhang 张, Liu 刘, and Chen 陈, with regional spellings checked separately",
+      "mistakes": "Do not merge different characters merely because they share one English spelling, and do not present an undated ranking as universal.",
+      "faq": [
+        [
+          "What is the most common Chinese surname?",
+          "The answer depends on the dataset, place, and date; Wang and Li commonly appear near the top in mainland-China lists."
+        ],
+        [
+          "Does a common surname indicate one clan?",
+          "No. Large surnames contain many historically distinct branches."
+        ]
+      ],
+      "dataAnchor": "Surname ranking = exact character + named dataset + geography + date + stated counting method."
+    }
+  ],
+  [
+    "/hundred-family-surnames/",
+    {
+      "path": "/hundred-family-surnames/",
+      "quick": "Quick answer: The Hundred Family Surnames, or Baijiaxing, is a traditional primer arranged for memorization; its order is not a modern population ranking.",
+      "facts": [
+        [
+          "Chinese title",
+          "百家姓 (Baijiaxing)"
+        ],
+        [
+          "Text type",
+          "Traditional surname primer"
+        ],
+        [
+          "Ordering",
+          "Literary and historical arrangement, not current frequency"
+        ],
+        [
+          "Research use",
+          "Starting reference, not proof of personal ancestry"
+        ]
+      ],
+      "evidence": "Check the edition, commentary, and historical context when quoting the sequence or explaining why particular surnames appear early.",
+      "examples": "reading the opening sequence, learning characters, comparing editions, and beginning surname research",
+      "mistakes": "Do not call the text a current top-100 ranking or use its order to estimate today's surname population.",
+      "faq": [
+        [
+          "Does Baijiaxing contain exactly 100 surnames?",
+          "No. Despite the title, traditional versions contain several hundred single and compound surnames."
+        ],
+        [
+          "Why does Zhao appear first?",
+          "The opening order reflects the text's historical context and patronage traditions, not modern frequency."
+        ]
+      ],
+      "dataAnchor": "Baijiaxing claim = identified edition + textual order + historical context + separation from modern statistics."
+    }
+  ]
+]);
+
+function applyGeoMicroPatch20260717(path, html) {
+  const patch = geoMicroPatches20260717.get(path);
+  if (!patch || html.includes('data-geo-micro-patch="20260717"')) return html;
+  const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
+  const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
+  const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
+    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
+    <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
+    <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
+    <h2>GEO FAQ</h2>${faq}
+    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+  </section>`;
+  return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
+}
+
+
 const geoMicroPatches20260716 = new Map([
   [
     "/chinese-surname-pronunciation/",
@@ -2858,6 +2957,7 @@ await buildSeoReport();
 
 
 
+
 function enhanceThinContent(path, html) {
   let extra = "";
   if (["/chinese-surnames-faq/", "/faq/"].includes(path)) {
@@ -2874,9 +2974,46 @@ function enhanceThinContent(path, html) {
 async function writePage(path, html) {
   const file = path === "/" ? join("dist", "index.html") : join("dist", path, "index.html");
   await mkdir(join(file, ".."), { recursive: true });
-  await writeFile(file, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))), "utf8");
+  await writeFile(file, sanitizePublicHtml(applyGeoMicroPatch20260717(path, applyGeoMicroPatch20260716(path, applyGeoMicroPatch20260715(path, applyGeoMicroPatch20260714(path, enhanceThinContent(path, html)))))), "utf8");
 }
 
+
+function sanitizePublicHtml(html) {
+  return html
+    .replace(/GEO FAQ/g, "FAQ")
+    .replace(/SEO quality/g, "content quality")
+    .replace(/For SEO and user trust/g, "For reader trust")
+    .replace(/For long-term SEO and reader trust/g, "For long-term reader trust")
+    .replace(/long-term SEO/g, "long-term reader trust")
+    .replace(/\bSEO\b/g, "search quality")
+    .replace(/For search quality/g, "For clear reader decisions")
+    .replace(/for search quality/g, "for clear reader decisions")
+    .replace(/\bGEO\b/g, "answer quality")
+    .replace(/AI citations/g, "reader references")
+    .replace(/paid report entry points/g, "downloadable guide entry points")
+    .replace(/paid reports/g, "downloadable guides")
+    .replace(/paid report/g, "downloadable guide")
+    .replace(/report offers/g, "downloadable guides")
+    .replace(/affiliate recommendations/g, "partner recommendations")
+    .replace(/affiliate products/g, "partner products")
+    .replace(/affiliate links/g, "partner links")
+    .replace(/affiliate blocks/g, "partner product blocks")
+    .replace(/\baffiliate\b/g, "partner")
+    .replace(/future monetization/g, "commercial planning")
+    .replace(/monetization/g, "commercial planning")
+    .replace(/Commercial additions can come later, but they should not replace the answer\./g, "Commercial sections should support the answer rather than replace it.")
+    .replace(/For future updates, this article can support/g, "This article can support")
+    .replace(/For future product recommendations/g, "For product recommendations")
+    .replace(/For future product pages/g, "For product pages")
+    .replace(/future product/g, "product")
+    .replace(/can be added later/g, "can be added")
+    .replace(/This page should/g, "This guide should")
+    .replace(/this page should/g, "this guide should")
+    .replace(/The page should/g, "The guide should")
+    .replace(/the page should/g, "the guide should")
+    .replace(/This page also supports/g, "This guide also supports")
+    .replace(/This page can later support/g, "This guide can support");
+}
 function sitemapXml() {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((page) => `  <url><loc>${absolute(page.path)}</loc></url>`).join("\n")}\n</urlset>\n`;
 }
@@ -4916,6 +5053,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
 
 
 

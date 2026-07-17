@@ -647,7 +647,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta property="og:image" content="${SITE.url}/assets/surname-archive-hero.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/styles.css?v=${SITE.assetVersion}">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1609779333813540" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6842801448671174" crossorigin="anonymous"></script>
   ${analyticsSnippet()}
   ${schema}
 </head>
@@ -2948,7 +2948,7 @@ await writeFile("dist/toolkit.js", clientScript(), "utf8");
 await writeFile("dist/styles.css", css() + themeCss(), "utf8");
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
 await writeFile("dist/robots.txt", robotsTxt(), "utf8");
-await writeFile("dist/ads.txt", "google.com, pub-1609779333813540, DIRECT, f08c47fec0942fa0\n", "utf8");
+await writeFile("dist/ads.txt", "google.com, pub-6842801448671174, DIRECT, f08c47fec0942fa0\n", "utf8");
 await writeFile("dist/llms.txt", llmsTxt(), "utf8");
 await buildSeoReport();
 
@@ -5054,6 +5054,7 @@ body:not(.page-home):not(.page-guides):not(.seo-report-page) .content-section th
 @media(max-width:640px){.surname-hero-copy h2{font-size:40px}.surname-lookup-strip{grid-template-columns:1fr}.surname-stats,.origin-grid,.surname-section .animal-grid{grid-template-columns:1fr}.surname-photo-card,.surname-photo-card img{min-height:300px}.surname-photo-card figcaption{right:14px;bottom:14px}.article-search{padding:22px!important;gap:18px}.site-search-form{grid-template-columns:1fr}.site-search-form button{width:100%}.page-guides .content-section:not(.article-search){padding:24px!important}.page-guides .guide-card{padding:20px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-main>.content-section{padding:24px!important}body:not(.page-home):not(.page-guides):not(.seo-report-page) .article-shell{gap:22px}}
 `;
 }
+
 
 
 

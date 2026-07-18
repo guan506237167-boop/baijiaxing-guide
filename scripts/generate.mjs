@@ -29,6 +29,18 @@ const surnames = [
 
 const guides = [
   {
+  "title": "Most Common Chinese Last Names: Characters, Spelling, and Meaning Checks",
+  "path": "/most-common-chinese-last-names/",
+  "category": "Surname Guides",
+  "description": "Read common Chinese last names with characters, romanized spellings, pronunciation notes, and careful meaning checks."
+},
+  {
+  "title": "Chinese Ancestry Surname Records: What to Collect Before a Lookup",
+  "path": "/chinese-ancestry-surname-records/",
+  "category": "Research Guides",
+  "description": "Collect Chinese ancestry surname records with characters, old spellings, village clues, family books, documents, and uncertainty notes."
+},
+  {
   "title": "Chinese Name Seal Gift: Surname Characters, Design Checks, and Safe Wording",
   "path": "/chinese-name-seal-gift/",
   "category": "Gift Guides",
@@ -4971,6 +4983,336 @@ const dailyArticles20260717 = [
 for (const article of dailyArticles20260717) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+
+const dailyArticles20260718 = [
+  {
+    "title": "Most Common Chinese Last Names: Characters, Spelling, and Meaning Checks",
+    "path": "/most-common-chinese-last-names/",
+    "description": "Read common Chinese last names with characters, romanized spellings, pronunciation notes, and careful meaning checks.",
+    "h1": "Most Common Chinese Last Names: Characters, Spelling, and Meaning Checks",
+    "intro": "If you are comparing most common Chinese last names, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
+    "answer": "Quick answer: The most common Chinese last names are useful for lookup and learning, but each spelling should still be checked against the actual Chinese character and dialect background.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
+      "dataAnchor": "most common Chinese last names decision = identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form + compare the spelling with common surname characters before assuming the meaning or origin is correct.",
+      "facts": [
+        [
+          "Main keyword",
+          "most common Chinese last names"
+        ],
+        [
+          "First check",
+          "identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form"
+        ],
+        [
+          "Second check",
+          "compare the spelling with common surname characters before assuming the meaning or origin is correct"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "most common Chinese last names is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
+      "Begin by asking what would make the decision wrong. For this topic, the first check is to identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form. If that step is skipped, the reader may choose the wrong sign, character, size, material, package, or wording before they notice the problem.",
+      "The second check is to compare the spelling with common surname characters before assuming the meaning or origin is correct. This is where a short answer becomes useful for a real visitor. It gives the reader something to compare, inspect, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation. That evidence does not remove every uncertainty, but it gives the reader a stable base before they add design, interpretation, packaging, or a paid report.",
+      "Common use cases include surname lookup, genealogy research, family gifts, school projects, pronunciation checks, and family-name printables. Those situations need different levels of caution. A classroom note can stay simple. A gift needs careful wording. A product choice needs dimensions and material proof. A family record needs source notes.",
+      "The main risk is simple: A common mistake is treating one English spelling as one surname when several Chinese characters or dialect paths may share a similar spelling. Put that warning near the decision point. The reader should see the risk while there is still time to change the product, chart, character, print, or message.",
+      "A commercial offer can be added later when it supports the decision. Product cards, paid reports, printables, gift bundles, and affiliate links should extend the free answer rather than replace it. That keeps the page useful and easier to trust."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use most common Chinese last names is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, compare the spelling with common surname characters before assuming the meaning or origin is correct. This second check turns the topic from a broad cultural idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, or family source. The answer becomes clearer when that evidence is visible.",
+          "most common Chinese last names often appears in surname lookup, genealogy research, family gifts, school projects, pronunciation checks, and family-name printables. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, and surnames, that means source, spelling, date boundary, character, or pronunciation.",
+          "A common mistake is treating one English spelling as one surname when several Chinese characters or dialect paths may share a similar spelling. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, compatibility page, surname lookup, material guide, bracelet page, holder guide, or decoration page. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use most common Chinese last names as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, or paid report is added, keep the free answer complete. A reader should understand the main choice before they see the offer. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "compare the spelling with common surname characters before assuming the meaning or origin is correct",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "surname lookup, genealogy research, family gifts, school projects, pronunciation checks, and family-name printables",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "A common mistake is treating one English spelling as one surname when several Chinese characters or dialect paths may share a similar spelling.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search by spelling or character."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Confirm the written character."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read meanings with limits."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for most common Chinese last names?",
+        "a": "The most common Chinese last names are useful for lookup and learning, but each spelling should still be checked against the actual Chinese character and dialect background."
+      },
+      {
+        "q": "What should I check first for most common Chinese last names?",
+        "a": "First, identify whether the reader has a Chinese character, Mandarin pinyin, Cantonese spelling, Hokkien spelling, or only an English surname form. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with most common Chinese last names?",
+        "a": "A common mistake is treating one English spelling as one surname when several Chinese characters or dialect paths may share a similar spelling."
+      },
+      {
+        "q": "What evidence matters most for most common Chinese last names?",
+        "a": "The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation."
+      },
+      {
+        "q": "Can most common Chinese last names support products, gifts, printables, or paid reports?",
+        "a": "Yes, but the free answer should remain useful first. Any product, printable, or report should support the decision path instead of replacing it."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Ancestry Surname Records: What to Collect Before a Lookup",
+    "path": "/chinese-ancestry-surname-records/",
+    "description": "Collect Chinese ancestry surname records with characters, old spellings, village clues, family books, documents, and uncertainty notes.",
+    "h1": "Chinese Ancestry Surname Records: What to Collect Before a Lookup",
+    "intro": "If you are comparing Chinese ancestry surname records, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
+    "answer": "Quick answer: Chinese ancestry surname records work best when you collect the written surname, older spellings, place clues, family documents, and uncertainty notes before choosing an origin story.",
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
+      "dataAnchor": "Chinese ancestry surname records decision = collect written family evidence before relying on a modern English spelling or an online surname summary + separate confirmed facts from guesses about village, dialect, clan branch, migration route, and surname origin.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese ancestry surname records"
+        ],
+        [
+          "First check",
+          "collect written family evidence before relying on a modern English spelling or an online surname summary"
+        ],
+        [
+          "Second check",
+          "separate confirmed facts from guesses about village, dialect, clan branch, migration route, and surname origin"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, or family-reference wording; avoid guaranteed claims about luck, ancestry, personality, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese ancestry surname records is a practical search because the reader is usually close to an action. They may be buying a product, planning a gift, checking a birth date, confirming a surname character, comparing a chart, or deciding whether a symbolic phrase is safe to use. The useful answer comes before the background.",
+      "Begin by asking what would make the decision wrong. For this topic, the first check is to collect written family evidence before relying on a modern English spelling or an online surname summary. If that step is skipped, the reader may choose the wrong sign, character, size, material, package, or wording before they notice the problem.",
+      "The second check is to separate confirmed facts from guesses about village, dialect, clan branch, migration route, and surname origin. This is where a short answer becomes useful for a real visitor. It gives the reader something to compare, inspect, or confirm before money, time, personalization, or family meaning is involved.",
+      "The evidence layer matters. The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives. That evidence does not remove every uncertainty, but it gives the reader a stable base before they add design, interpretation, packaging, or a paid report.",
+      "Common use cases include genealogy notebooks, family reunion sheets, ancestry printables, surname-character gifts, school projects, and family-history research plans. Those situations need different levels of caution. A classroom note can stay simple. A gift needs careful wording. A product choice needs dimensions and material proof. A family record needs source notes.",
+      "The main risk is simple: The main mistake is filling a neat family tree with an attractive origin claim before the character, place, and source record have been confirmed. Put that warning near the decision point. The reader should see the risk while there is still time to change the product, chart, character, print, or message.",
+      "A commercial offer can be added later when it supports the decision. Product cards, paid reports, printables, gift bundles, and affiliate links should extend the free answer rather than replace it. That keeps the page useful and easier to trust."
+    ],
+    "sections": [
+      {
+        "title": "Start with the exact decision",
+        "paragraphs": [
+          "The safest way to use Chinese ancestry surname records is to name the decision first. Are you checking accuracy, choosing a gift, comparing a material, ordering a personalized item, planning a printable, or preparing a short explanation for someone else? Each purpose changes what matters.",
+          "For a beginner, the best first step is usually a simple check. For a buyer, the best first step is product fit. For a family researcher, the best first step is evidence. For a gift giver, the best first step is wording that feels warm without sounding like a guarantee."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "The first verification step is to collect written family evidence before relying on a modern English spelling or an online surname summary. This check is not busywork. It protects the reader from the most visible mistake and creates a clean starting point for the rest of the decision.",
+          "After that, separate confirmed facts from guesses about village, dialect, clan branch, migration route, and surname origin. This second check turns the topic from a broad cultural idea into a practical choice. It also helps the reader compare two options without relying only on photos, short labels, or a confident one-sentence claim."
+        ]
+      },
+      {
+        "title": "Evidence and practical examples",
+        "paragraphs": [
+          "The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives. Strong evidence is usually plain. It may be a date, character, measurement, product photo, material listing, care note, or family source. The answer becomes clearer when that evidence is visible.",
+          "Chinese ancestry surname records often appears in genealogy notebooks, family reunion sheets, ancestry printables, surname-character gifts, school projects, and family-history research plans. A small example shows why context matters. A zodiac chart for a classroom can be simple, but a paid compatibility report needs correct birth dates. A decorative knot can be symbolic, but a bracelet also needs wrist fit. A surname article can explain meaning, but a family gift needs the exact character."
+        ]
+      },
+      {
+        "title": "Quality signals and warning signs",
+        "paragraphs": [
+          "Look for details that can be checked before the decision is final. For products, that means measurements, material, finish, closure, cleaning, packaging, and scale photos. For names, signs, and surnames, that means source, spelling, date boundary, character, or pronunciation.",
+          "The main mistake is filling a neat family tree with an attractive origin claim before the character, place, and source record have been confirmed. Another warning sign is language that sounds too absolute. Cultural symbols can carry good wishes and family meaning, but they should not be written as proof of personality, ancestry, fate, health, money, or relationship outcomes."
+        ]
+      },
+      {
+        "title": "Reader paths",
+        "paragraphs": [
+          "Beginners should start with the simplest lookup or comparison page. Buyers should compare concrete product details. Gift givers should confirm the detail that will be printed, engraved, worn, carried, or displayed. Researchers should save source notes before turning a clue into a family fact.",
+          "If the topic is still broad, move to the related guide that answers the next uncertainty. That may be a calculator, compatibility page, surname lookup, material guide, bracelet page, holder guide, or decoration page. A smaller next step is usually more useful than reading another broad overview."
+        ]
+      },
+      {
+        "title": "Responsible use",
+        "paragraphs": [
+          "Use Chinese ancestry surname records as a practical reference, not as an absolute promise. The cultural layer can make a gift, chart, keepsake, or product more meaningful, but the decision still needs evidence, fit, and clear wording.",
+          "When a product, printable, or paid report is added, keep the free answer complete. A reader should understand the main choice before they see the offer. That approach is better for trust and better for long-term search value."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "collect written family evidence before relying on a modern English spelling or an online surname summary",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "separate confirmed facts from guesses about village, dialect, clan branch, migration route, and surname origin",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "genealogy notebooks, family reunion sheets, ancestry printables, surname-character gifts, school projects, and family-history research plans",
+          "Shows where advice changes"
+        ],
+        [
+          "Common risk",
+          "The main mistake is filling a neat family tree with an attractive origin claim before the character, place, and source record have been confirmed.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Chinese Surname Family Tree Printable",
+        "path": "/chinese-surname-family-tree-printable/",
+        "category": "Research Guides",
+        "description": "Build a record-first worksheet."
+      },
+      {
+        "title": "Chinese Last Names for Genealogy",
+        "path": "/chinese-last-names-genealogy/",
+        "category": "Origin Guides",
+        "description": "Use genealogy clues carefully."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Start from the character."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese ancestry surname records?",
+        "a": "Chinese ancestry surname records work best when you collect the written surname, older spellings, place clues, family documents, and uncertainty notes before choosing an origin story."
+      },
+      {
+        "q": "What should I check first for Chinese ancestry surname records?",
+        "a": "First, collect written family evidence before relying on a modern English spelling or an online surname summary. That detail is most likely to change the final decision."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese ancestry surname records?",
+        "a": "The main mistake is filling a neat family tree with an attractive origin claim before the character, place, and source record have been confirmed."
+      },
+      {
+        "q": "What evidence matters most for Chinese ancestry surname records?",
+        "a": "The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives."
+      },
+      {
+        "q": "Can Chinese ancestry surname records support products, gifts, printables, or paid reports?",
+        "a": "Yes, but the free answer should remain useful first. Any product, printable, or report should support the decision path instead of replacing it."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260718) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
+
 
 function themeCss() {
   return `

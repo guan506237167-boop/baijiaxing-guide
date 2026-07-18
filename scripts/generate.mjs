@@ -713,6 +713,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
         <a href="/faq/">FAQ</a>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
+        <a href="/disclaimer/">Disclaimer</a>
       </div>
     </nav>
   </footer>
@@ -1639,6 +1640,36 @@ await writePage("/terms/", simpleLegalPage({
     { title: "Reference use", text: "Content is provided for general educational and informational use only." },
     { title: "No genealogy guarantee", text: "The site does not verify private family records, lineage claims, or personal ancestry." },
     { title: "Content boundaries", text: "Surname meanings and origins are simplified reference explanations and should be checked against primary records for formal research." }
+  ]
+}));
+
+await writePage("/disclaimer/", simpleLegalPage({
+  title: "Disclaimer for Chinese Family Names Educational Content",
+  description: "Read the Chinese Family Names disclaimer covering educational content, cultural reference material, practical guidance, ads, affiliate links, and external resources.",
+  path: "/disclaimer/",
+  h1: "Disclaimer",
+  intro: "Chinese Family Names provides general educational information and practical reference content. This disclaimer explains how to read the site's pages, tools, cultural notes, comparisons, and possible commercial references.",
+  sections: [
+    { title: "Educational use only", text: "Content about Chinese surnames, family-name meanings, romanization, character lookup, and cultural reference material is provided for learning, comparison, and general reference. It is not professional advice. Readers should treat each page as a starting point for understanding a topic, not as a final decision rule for health, safety, legal, financial, personal, or commercial choices." },
+    { title: "Stable facts and interpretation", text: "Many pages mix stable reference points with interpretation. Stable details include written character, pronunciation, spelling system, source context, and visible variant. Interpretation begins when a page explains meaning, use, gift message, comparison, or next step. Separating those two layers helps readers check what is factual and what is contextual." },
+    { title: "What can vary", text: "Information can vary by regional romanization, family branch, dialect pronunciation, migration history, and source tradition. A short explanation may be useful for a beginner, but it cannot cover every historical source, household practice, product listing, classroom standard, or cultural tradition. Use the page as guidance, then compare details when the choice matters." },
+    { title: "No guaranteed outcomes", text: "The site does not guarantee personal ancestry, legal identity, exact family history, or clan membership. If a page mentions a meaning, practice tip, buying note, compatibility idea, or research clue, that statement should be read as educational context rather than a promise that a specific result will happen." },
+    { title: "Reader checks", text: "When you use a page, check the page title, the main answer, the examples, the related links, and the date or source context where available. If you are making a purchase or personal decision, compare more than one page and write down what still needs verification." },
+    { title: "Buying and product references", text: "Some pages may discuss products, materials, gifts, tools, downloads, or future paid resources. For buyers, the next step is to check price, quality, seller terms, delivery, refund policy, size, material, and use case before paying. The site cannot inspect every external listing." },
+    { title: "Affiliate links and ads", text: "The site may display ads, use analytics, include affiliate links, or test commercial pages. Advertising does not change the basic reading rule: a recommendation or link should be judged by practical evidence, clear limits, and whether it fits the reader's real situation." },
+    { title: "External links", text: "External links are provided for context, citation, shopping, tools, or further reading. A link does not mean the site controls the external page, agrees with every claim, guarantees availability, or accepts responsibility for third-party privacy, checkout, delivery, or content standards." },
+    { title: "Corrections", text: "Pages may be corrected or expanded when better examples, clearer wording, stronger internal links, or reader feedback make the content more useful. If you find a mistake, send the page URL, the exact sentence, and a short explanation through the contact page." },
+    { title: "Updates", text: "A page may change after publication. Internal links, examples, tables, tool wording, images, and summaries can be revised when the topic becomes clearer or when the site adds a better supporting guide. Older screenshots or saved copies may not match the current version." },
+    { title: "Personal judgment", text: "Use normal judgment when comparing advice. If a claim sounds too strong, look for the stable fact behind it. If the fact is missing, treat the claim as uncertain. If the decision has cost, safety, identity, or relationship impact, check more reliable specialist sources." },
+    { title: "Children and classroom use", text: "Parents, teachers, and tutors may use public pages as learning support, but they should adapt the material to age, classroom context, language level, and local rules. Printable or classroom use should keep source links visible and avoid presenting simplified notes as complete scholarship." },
+    { title: "Images and examples", text: "Images, examples, tables, and comparison cards are used to explain ideas. They may not represent every style, product, historical source, family habit, or regional practice. Treat them as examples that make a topic easier to understand, not as exhaustive catalogs." },
+    { title: "Email and contact limits", text: "Contact messages are used for site feedback, correction review, and relevant business communication. Do not send passwords, payment details, sensitive identity documents, private records, or urgent personal requests. The site may not respond to messages outside its scope." },
+    { title: "FAQ", text: "Is every page professional advice? No, it is educational reference. Can meanings differ by source? Yes, cultural explanations can vary. Should buyers check product details? Yes, always compare material, quality, price, use case, and seller terms. Can users request corrections? Yes, use the contact page." },
+    { title: "Practical next step", text: "If you are unsure, open the most closely related guide, compare the checklist points, and decide what still needs checking. This is better than relying on one short answer. Good use of the site means reading the answer, checking the boundary, and choosing the next step carefully." },
+    { title: "Limits of short answers", text: "Quick answers are designed to help readers understand the main point quickly, but they are not enough for every decision. When the topic involves money, identity, learning plans, gifts, family history, or safety, read the deeper guide and compare the practical checklist." },
+    { title: "No account or payment advice", text: "Public reference pages do not ask visitors to create an account or send payment details. If paid resources, reports, or product pages are added later, readers should review checkout terms, delivery details, refund rules, and support information before buying." },
+    { title: "Local context matters", text: "A recommendation can depend on country, language, classroom setting, family tradition, restaurant habit, shipping location, or product availability. If a page gives a general rule, treat it as a helpful starting point and adjust it to the local context." },
+    { title: "How to compare pages", text: "When two pages seem different, compare the exact question each page answers. One page may explain a broad meaning, while another handles a tool result, product choice, tutorial step, or narrow search query. That difference usually explains the wording." }
   ]
 }));
 

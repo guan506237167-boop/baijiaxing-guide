@@ -1,4 +1,4 @@
-﻿import { mkdir, readdir, readFile, rm, writeFile, copyFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, rm, writeFile, copyFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const SITE = {
@@ -28,6 +28,8 @@ const surnames = [
 ];
 
 const guides = [
+  { title: "Chan Surname Meaning", path: "/chan-surname-meaning/", category: "Surname Guides", description: "Read Chan surname meaning with character checks, regional spelling context, and family-record limits." },
+  { title: "Chow Surname Meaning", path: "/chow-surname-meaning/", category: "Surname Guides", description: "Read Chow surname meaning with romanization context, character checks, and genealogy cautions." },
   {
   "title": "Most Common Chinese Last Names: Characters, Spelling, and Meaning Checks",
   "path": "/most-common-chinese-last-names/",
@@ -5312,6 +5314,9 @@ const dailyArticles20260718 = [
 for (const article of dailyArticles20260718) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+
+// dailyArticles20260718 sitemap refresh
+await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
 
 
 function themeCss() {

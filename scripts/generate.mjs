@@ -6359,6 +6359,7 @@ const dailyArticles20260721 = [
 for (const article of dailyArticles20260721) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
+await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
 
 function themeCss() {
   return `

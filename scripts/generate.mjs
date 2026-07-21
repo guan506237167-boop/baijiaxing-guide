@@ -28,6 +28,8 @@ const surnames = [
 ];
 
 const guides = [
+  { title: "Chinese Last Name Meaning: How to Read a Surname Without Guessing", path: "/chinese-last-name-meaning/", category: "Meaning Guides", description: "Read Chinese last name meaning by checking characters, romanization, family records, dialect clues, and safe interpretation limits." },
+  { title: "Chinese Surname Research Checklist: Records, Spellings, and Family Proof", path: "/chinese-surname-research-checklist/", category: "Research Guides", description: "Use a Chinese surname research checklist to compare records, spellings, dialect clues, family sources, and character evidence." },
   { title: "Chinese Surname Tattoo Ideas: Character Checks and Safe Design", path: "/chinese-surname-tattoo-ideas/", category: "Gift Guides", description: "Plan Chinese surname tattoo ideas with confirmed characters, family evidence, font checks, placement notes, and careful meaning boundaries." },
   { title: "Chinese Surname Wall Art: Character Proof, Layout, and Gift Wording", path: "/chinese-surname-wall-art/", category: "Gift Guides", description: "Create Chinese surname wall art with confirmed characters, readable layout, family source notes, print checks, and safe gift wording." },
   {
@@ -527,7 +529,7 @@ function applyGeoMicroPatch20260714(path, html) {
 function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
-  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+  return `.daily-visual-block{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0;padding:22px;border:1px solid #ead6b8;border-radius:10px;background:linear-gradient(135deg,#fff8ed,#eef7f1);box-shadow:0 12px 28px rgba(47,37,23,.06)}.daily-visual-block span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.daily-visual-block h2{margin:8px 0 8px}.daily-visual-block p{margin:0;color:var(--muted)}.daily-visual-steps{display:grid;gap:10px}.daily-visual-step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}.daily-visual-step strong{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d6b06e;color:#231d18}.daily-visual-step span{font-size:14px;line-height:1.45;color:#2f2922;text-transform:none;letter-spacing:0;font-weight:650}@media(max-width:760px){.daily-visual-block{grid-template-columns:1fr}}<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
     <h2>Quick Answer and Evidence Check</h2>
     <p>${escapeHtml(patch.quick)}</p>
     <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
@@ -2182,12 +2184,18 @@ const dailyArticles20260706 = [
   }
 ];
 
+
+function dailyVisualBlock20260722(article) {
+  const points = (article.visual?.points || []).slice(0, 3).map((point, index) => `<div class="daily-visual-step"><strong>${index + 1}</strong><span>${escapeHtml(point)}</span></div>`).join("");
+  return `<div class="daily-visual-block"><div><span>${escapeHtml(article.visual?.label || "Guide visual")}</span><h2>${escapeHtml(article.keyword || article.title)}</h2><p>Use the visual checklist before acting on the article. It keeps the page scannable and prevents the answer from becoming a plain text block.</p></div><div class="daily-visual-steps">${points}</div></div>`;
+}
+
 function dailyArticlePage20260706(article) {
   const rows = article.table.rows.map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
   const body = `
     ${articleSearchBlock()}
     <section class="content-section article-body">
-      <p class="lead-answer">${escapeHtml(article.answer)}</p>
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>\n      ${dailyVisualBlock20260722(article)}\n      ${dailyVisualBlock20260722(article)}
       ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>
@@ -6360,6 +6368,330 @@ for (const article of dailyArticles20260721) {
   await writePage(article.path, dailyArticlePage20260706(article));
 }
 await writeFile("dist/sitemap.xml", sitemapXml(), "utf8");
+
+
+const dailyArticles20260722 = [
+  {
+    "title": "Chinese Last Name Meaning: How to Read a Surname Without Guessing",
+    "path": "/chinese-last-name-meaning/",
+    "description": "Read Chinese last name meaning by checking characters, romanization, family records, dialect clues, and safe interpretation limits.",
+    "h1": "Chinese Last Name Meaning: How to Read a Surname Without Guessing",
+    "intro": "If you are comparing Chinese last name meaning, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: A Chinese last name meaning depends on the confirmed written character, not the English spelling alone. Start with family evidence before reading origin or meaning notes.",
+    "visual": {
+      "label": "Meaning Guides",
+      "points": [
+        "confirm the exact Chinese character behind the surname",
+        "compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The reliable evidence is a family record, gravestone, old document, clan note, bilingual certificate, or direct confirmation from relatives.",
+      "dataAnchor": "Chinese last name meaning decision = confirm the exact Chinese character behind the surname + compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese last name meaning"
+        ],
+        [
+          "First check",
+          "confirm the exact Chinese character behind the surname"
+        ],
+        [
+          "Second check",
+          "compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese last name meaning is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to confirm the exact Chinese character behind the surname. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The reliable evidence is a family record, gravestone, old document, clan note, bilingual certificate, or direct confirmation from relatives. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include genealogy research, surname gifts, tattoo checks, classroom notes, ancestry projects, and family wall art. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is assuming one English surname spelling always maps to one Chinese character and one origin story. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For Chinese last name meaning, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to confirm the exact Chinese character behind the surname.",
+          "Then apply the second check: compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for genealogy research. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The reliable evidence is a family record, gravestone, old document, clan note, bilingual certificate, or direct confirmation from relatives.",
+          "The warning sign to remember is this: The common mistake is assuming one English surname spelling always maps to one Chinese character and one origin story. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "confirm the exact Chinese character behind the surname",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "compare romanized spelling with Mandarin, Cantonese, Hokkien, and older immigration spellings",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The reliable evidence is a family record, gravestone, old document, clan note, bilingual certificate, or direct confirmation from relatives.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "genealogy research, surname gifts, tattoo checks, classroom notes, ancestry projects, and family wall art",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is assuming one English surname spelling always maps to one Chinese character and one origin story.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Search common surname spellings."
+      },
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Confirm the character."
+      },
+      {
+        "title": "Chinese Surname Meaning",
+        "path": "/chinese-surname-meaning/",
+        "category": "Meaning Guides",
+        "description": "Read meaning with context."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese last name meaning?",
+        "a": "A Chinese last name meaning depends on the confirmed written character, not the English spelling alone. Start with family evidence before reading origin or meaning notes."
+      },
+      {
+        "q": "What should I check first for Chinese last name meaning?",
+        "a": "First, confirm the exact Chinese character behind the surname."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese last name meaning?",
+        "a": "The common mistake is assuming one English surname spelling always maps to one Chinese character and one origin story."
+      },
+      {
+        "q": "What evidence matters most for Chinese last name meaning?",
+        "a": "The reliable evidence is a family record, gravestone, old document, clan note, bilingual certificate, or direct confirmation from relatives."
+      }
+    ]
+  },
+  {
+    "title": "Chinese Surname Research Checklist: Records, Spellings, and Family Proof",
+    "path": "/chinese-surname-research-checklist/",
+    "description": "Use a Chinese surname research checklist to compare records, spellings, dialect clues, family sources, and character evidence.",
+    "h1": "Chinese Surname Research Checklist: Records, Spellings, and Family Proof",
+    "intro": "If you are comparing Chinese surname research checklist, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
+    "answer": "Quick Answer: A Chinese surname research checklist should start with written family evidence, then compare spellings, dialect background, migration records, and possible characters.",
+    "visual": {
+      "label": "Research Guides",
+      "points": [
+        "collect written evidence before choosing a character or origin note",
+        "record every spelling variation and the source where it appears",
+        "Use modest, practical wording"
+      ]
+    },
+    "geoPatch": {
+      "noteLabel": "Evidence note",
+      "note": "The useful evidence is the surname character, romanized spelling, dialect clue, family place, document date, and source reliability.",
+      "dataAnchor": "Chinese surname research checklist decision = collect written evidence before choosing a character or origin note + record every spelling variation and the source where it appears.",
+      "facts": [
+        [
+          "Main keyword",
+          "Chinese surname research checklist"
+        ],
+        [
+          "First check",
+          "collect written evidence before choosing a character or origin note"
+        ],
+        [
+          "Second check",
+          "record every spelling variation and the source where it appears"
+        ],
+        [
+          "Use limit",
+          "Use cultural, educational, product, family-reference, or practical wording; avoid guaranteed claims about luck, ancestry, health, money, or relationships."
+        ]
+      ]
+    },
+    "details": [
+      "Chinese surname research checklist is a practical search because the reader usually needs more than a definition. They may be checking a date, choosing a product, preparing a gift, confirming a character, teaching a cultural topic, or deciding whether a symbolic phrase is safe to use.",
+      "The first decision is to collect written evidence before choosing a character or origin note. This is the step most likely to change the answer, so it should appear before any decorative meaning or product suggestion.",
+      "The second decision is to record every spelling variation and the source where it appears. This turns a broad topic into a working checklist that can be used before buying, printing, teaching, sharing, or relying on the result.",
+      "The evidence layer matters. The useful evidence is the surname character, romanized spelling, dialect clue, family place, document date, and source reliability. That evidence does not remove every uncertainty, but it gives the reader a stable base before interpretation, packaging, design, or purchase wording is added.",
+      "Common use cases include family trees, reunion materials, surname prints, name seals, school projects, and ancestry notebooks. These situations should not be treated as identical because each one changes the standard for accuracy, durability, wording, and visual proof.",
+      "The main risk is simple: The common mistake is treating a polished lookup result as proof without saving the source that supports it. Put that warning near the decision point because the reader still has time to change the product, wording, input, or next step.",
+      "This guide uses a visual checklist, a fact table, examples, FAQ, and related links so the page does not become a plain block of text. The goal is a page that is easy to scan, useful to readers, and safer for SEO and GEO extraction."
+    ],
+    "sections": [
+      {
+        "title": "Start with the practical decision",
+        "paragraphs": [
+          "For Chinese surname research checklist, the page should answer what to check, what can go wrong, and which detail should be verified before the next action.",
+          "This structure protects cultural meaning because symbolism can be explained after the practical check is clear. The reader gets context without being pushed into a rigid rule."
+        ]
+      },
+      {
+        "title": "What to verify first",
+        "paragraphs": [
+          "Start by asking whether the key fact has been confirmed. In this case, the first check is to collect written evidence before choosing a character or origin note.",
+          "Then apply the second check: record every spelling variation and the source where it appears. This separates a useful recommendation from a page or product that looks attractive but does not provide enough proof."
+        ]
+      },
+      {
+        "title": "Example scenario",
+        "paragraphs": [
+          "Imagine a reader using this page for family trees. The safest answer starts with the visible facts, then compares context, then chooses the next page or checklist.",
+          "If the answer still feels uncertain, the reader should treat the result as provisional. A modest next step is more useful than a confident claim that ignores missing evidence."
+        ]
+      },
+      {
+        "title": "Quality checks and warning signs",
+        "paragraphs": [
+          "A reliable choice should make the key evidence visible. The useful evidence is the surname character, romanized spelling, dialect clue, family place, document date, and source reliability.",
+          "The warning sign to remember is this: The common mistake is treating a polished lookup result as proof without saving the source that supports it. A confident phrase, attractive photo, or polished design does not solve that problem by itself."
+        ]
+      },
+      {
+        "title": "Recommended next step",
+        "paragraphs": [
+          "If accuracy is the concern, open the calculator, lookup, source guide, material comparison, or meaning page before buying or sharing. If product quality is the concern, compare dimensions, material, care, photos, and packaging.",
+          "After reading, save one sentence that explains what changed in your understanding. This keeps the page useful as a working guide rather than a passive article."
+        ]
+      }
+    ],
+    "table": {
+      "title": "Decision checklist",
+      "headers": [
+        "Decision point",
+        "What to check",
+        "Why it matters"
+      ],
+      "rows": [
+        [
+          "First check",
+          "collect written evidence before choosing a character or origin note",
+          "Prevents the most visible wrong answer"
+        ],
+        [
+          "Practical fit",
+          "record every spelling variation and the source where it appears",
+          "Connects the topic to real use"
+        ],
+        [
+          "Evidence",
+          "The useful evidence is the surname character, romanized spelling, dialect clue, family place, document date, and source reliability.",
+          "Keeps the answer trustworthy"
+        ],
+        [
+          "Use cases",
+          "family trees, reunion materials, surname prints, name seals, school projects, and ancestry notebooks",
+          "Shows where the advice changes"
+        ],
+        [
+          "Common risk",
+          "The common mistake is treating a polished lookup result as proof without saving the source that supports it.",
+          "Prevents avoidable buying, wording, or lookup errors"
+        ]
+      ]
+    },
+    "related": [
+      {
+        "title": "Find Your Chinese Surname Character",
+        "path": "/find-your-chinese-surname-character/",
+        "category": "Research Guides",
+        "description": "Start with evidence."
+      },
+      {
+        "title": "Chinese Family Name Gift Ideas",
+        "path": "/chinese-family-name-gift-ideas/",
+        "category": "Gift Guides",
+        "description": "Use confirmed characters."
+      },
+      {
+        "title": "Surname Lookup",
+        "path": "/surname-lookup/",
+        "category": "Tools",
+        "description": "Compare surname spellings."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the quick answer for Chinese surname research checklist?",
+        "a": "A Chinese surname research checklist should start with written family evidence, then compare spellings, dialect background, migration records, and possible characters."
+      },
+      {
+        "q": "What should I check first for Chinese surname research checklist?",
+        "a": "First, collect written evidence before choosing a character or origin note."
+      },
+      {
+        "q": "What is the biggest mistake with Chinese surname research checklist?",
+        "a": "The common mistake is treating a polished lookup result as proof without saving the source that supports it."
+      },
+      {
+        "q": "What evidence matters most for Chinese surname research checklist?",
+        "a": "The useful evidence is the surname character, romanized spelling, dialect clue, family place, document date, and source reliability."
+      }
+    ]
+  }
+];
+
+for (const article of dailyArticles20260722) {
+  await writePage(article.path, dailyArticlePage20260706(article));
+}
 
 function themeCss() {
   return `

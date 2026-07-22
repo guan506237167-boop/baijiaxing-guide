@@ -9,6 +9,44 @@ const SITE = {
 };
 
 const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "G-9D7CV8SXGQ";
+const INDEXABLE_PATHS_RESCUE_20260722 = new Set([
+  "/",
+  "/guides/",
+  "/surname-lookup/",
+  "/chinese-surnames/",
+  "/common-chinese-surnames/",
+  "/hundred-family-surnames/",
+  "/chinese-surname-meaning/",
+  "/chinese-surname-origin/",
+  "/chinese-surname-pronunciation/",
+  "/most-common-chinese-last-names/",
+  "/find-your-chinese-surname-character/",
+  "/chinese-family-name-gift-ideas/",
+  "/lee-surname-meaning/",
+  "/wang-surname-meaning/",
+  "/chen-surname-meaning/",
+  "/zhang-surname-origin/",
+  "/liu-surname-meaning/",
+  "/zhou-surname-meaning/",
+  "/lin-surname-meaning/",
+  "/chinese-surnames-faq/",
+  "/faq/",
+  "/about/",
+  "/contact/",
+  "/privacy/",
+  "/terms/",
+  "/disclaimer/"
+]);
+
+function isIndexablePath(path) {
+  return INDEXABLE_PATHS_RESCUE_20260722.has(path);
+}
+
+function sitemapPages() {
+  const seen = new Set();
+  return pages.filter((page) => isIndexablePath(page.path) && !seen.has(page.path) && seen.add(page.path));
+}
+
 const keywordRows = parseCsv(await readFile("docs/keyword-library/baijiaxing-keyword-library.csv", "utf8"));
 const referenceKeywords = keywordRows.filter((row) => row.category === "reference-list").slice(0, 16);
 const meaningKeywords = keywordRows.filter((row) => row.category === "meaning-origin").slice(0, 24);
@@ -146,7 +184,7 @@ const geoMicroPatches20260717 = new Map([
     "/common-chinese-surnames/",
     {
       "path": "/common-chinese-surnames/",
-      "quick": "Quick answer: A common Chinese surnames list is most useful when it shows the exact character, Mandarin pinyin, known regional spellings, and the source date or population represented by any ranking.",
+      "quick": "Short answer: A common Chinese surnames list is most useful when it shows the exact character, Mandarin pinyin, known regional spellings, and the source date or population represented by any ranking.",
       "facts": [
         [
           "Required identifier",
@@ -185,7 +223,7 @@ const geoMicroPatches20260717 = new Map([
     "/hundred-family-surnames/",
     {
       "path": "/hundred-family-surnames/",
-      "quick": "Quick answer: The Hundred Family Surnames, or Baijiaxing, is a traditional primer arranged for memorization; its order is not a modern population ranking.",
+      "quick": "Short answer: The Hundred Family Surnames, or Baijiaxing, is a traditional primer arranged for memorization; its order is not a modern population ranking.",
       "facts": [
         [
           "Chinese title",
@@ -228,13 +266,13 @@ function applyGeoMicroPatch20260717(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260717">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -245,7 +283,7 @@ const geoMicroPatches20260716 = new Map([
     "/chinese-surname-pronunciation/",
     {
       "path": "/chinese-surname-pronunciation/",
-      "quick": "Quick answer: Chinese surname pronunciation should be tied to a specific written character and language variety, because one English spelling may represent different Mandarin, Cantonese, or other regional readings.",
+      "quick": "Short answer: Chinese surname pronunciation should be tied to a specific written character and language variety, because one English spelling may represent different Mandarin, Cantonese, or other regional readings.",
       "facts": [
         [
           "Main task",
@@ -284,7 +322,7 @@ const geoMicroPatches20260716 = new Map([
     "/chinese-surname-origin/",
     {
       "path": "/chinese-surname-origin/",
-      "quick": "Quick answer: A Chinese surname origin page can summarize documented traditions for a character, but it cannot prove one family's ancestry without records linking people, dates, and places.",
+      "quick": "Short answer: A Chinese surname origin page can summarize documented traditions for a character, but it cannot prove one family's ancestry without records linking people, dates, and places.",
       "facts": [
         [
           "Main task",
@@ -327,13 +365,13 @@ function applyGeoMicroPatch20260716(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260716">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -344,7 +382,7 @@ const geoMicroPatches20260715 = new Map([
     "/surname-lookup/",
     {
       "path": "/surname-lookup/",
-      "quick": "Quick answer: A Chinese surname lookup is most reliable when it starts with the exact written character and then compares pronunciation, romanization, family records, and regional context.",
+      "quick": "Short answer: A Chinese surname lookup is most reliable when it starts with the exact written character and then compares pronunciation, romanization, family records, and regional context.",
       "facts": [
         [
           "Main task",
@@ -383,7 +421,7 @@ const geoMicroPatches20260715 = new Map([
     "/chinese-last-names-genealogy/",
     {
       "path": "/chinese-last-names-genealogy/",
-      "quick": "Quick answer: Chinese surname genealogy should begin with verified family documents and places, then use the surname character to connect records without assuming that everyone with the same name shares one lineage.",
+      "quick": "Short answer: Chinese surname genealogy should begin with verified family documents and places, then use the surname character to connect records without assuming that everyone with the same name shares one lineage.",
       "facts": [
         [
           "Main task",
@@ -426,13 +464,13 @@ function applyGeoMicroPatch20260715(path, html) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   const block = `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260715">
-    <h2>Quick Answer and Evidence Check</h2><p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <h2>What to Check First</h2><p>${escapeHtml(patch.quick)}</p>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
   return html.includes("</main>") ? html.replace("</main>", `${block}</main>`) : `${html}${block}`;
 }
@@ -443,7 +481,7 @@ const geoMicroPatches20260714 = new Map([
     "/lee-surname-meaning/",
     {
       "path": "/lee-surname-meaning/",
-      "quick": "Quick answer: Lee surname meaning depends on the confirmed Chinese character, because the English spelling Lee can represent different East Asian names and several romanization histories.",
+      "quick": "Short answer: Lee surname meaning depends on the confirmed Chinese character, because the English spelling Lee can represent different East Asian names and several romanization histories.",
       "facts": [
         [
           "Main topic",
@@ -482,7 +520,7 @@ const geoMicroPatches20260714 = new Map([
     "/cantonese-surnames/",
     {
       "path": "/cantonese-surnames/",
-      "quick": "Quick answer: Cantonese surnames should be checked by spelling, pronunciation, Chinese character, and family record context because one English form can hide several character possibilities.",
+      "quick": "Short answer: Cantonese surnames should be checked by spelling, pronunciation, Chinese character, and family record context because one English form can hide several character possibilities.",
       "facts": [
         [
           "Main topic",
@@ -530,15 +568,15 @@ function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
   return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
-    <h2>Quick Answer and Evidence Check</h2>
+    <h2>What to Check First</h2>
     <p>${escapeHtml(patch.quick)}</p>
-    <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
     <p><strong>Source note:</strong> ${escapeHtml(patch.evidence)}</p>
     <p><strong>Examples and use cases:</strong> ${escapeHtml(patch.examples)}.</p>
     <p><strong>Common mistake:</strong> ${escapeHtml(patch.mistakes)}</p>
     <h2>GEO FAQ</h2>
     ${faq}
-    <p><strong>Data anchor:</strong> ${escapeHtml(patch.dataAnchor)}</p>
+    <p><strong>Reference note:</strong> ${escapeHtml(patch.dataAnchor)}</p>
   </section>`;
 }
 
@@ -659,6 +697,7 @@ function pageClass(path) {
 
 function pageLayout({ title, description, path, h1, intro, body, faqs = [], pageType = "WebPage", extraSchema = "", articleSidebar = false, heroLabel = "Chinese surname reference" }) {
   const canonical = absolute(path);
+  const robotsMeta = isIndexablePath(path) ? "" : `\n  <meta name="robots" content="noindex, follow">`;
   const schema = [
     jsonLd({ "@context": "https://schema.org", "@type": pageType, name: title, description, url: canonical, inLanguage: "en" }),
     breadcrumbSchema([{ name: "Home", url: "/" }, { name: h1, url: path }]),
@@ -675,6 +714,7 @@ function pageLayout({ title, description, path, h1, intro, body, faqs = [], page
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
+  ${robotsMeta}
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
@@ -2221,7 +2261,7 @@ function dailyArticlePage20260706(article) {
 function geoPatchBlock(article) {
   if (!article.geoPatch) return "";
   const facts = article.geoPatch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
-  return `<div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Data anchor:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
+  return `<div class="table-wrap"><table><thead><tr><th>Key detail</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div><p><strong>${escapeHtml(article.geoPatch.noteLabel)}:</strong> ${escapeHtml(article.geoPatch.note)}</p><p><strong>Reference note:</strong> ${escapeHtml(article.geoPatch.dataAnchor)}</p>`;
 }
 
 for (const article of dailyArticles20260706) {
@@ -3088,7 +3128,7 @@ function sanitizePublicHtml(html) {
     .replace(/This page can later support/g, "This guide can support");
 }
 function sitemapXml() {
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map((page) => `  <url><loc>${absolute(page.path)}</loc></url>`).join("\n")}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPages().map((page) => `  <url><loc>${absolute(page.path)}</loc></url>`).join("\n")}\n</urlset>\n`;
 }
 
 function robotsTxt() {
@@ -3732,7 +3772,7 @@ const dailyArticles20260714 = [
     "description": "Find your Chinese surname character from family records, romanization clues, dialect notes, inscriptions, and genealogy sources.",
     "h1": "Find Your Chinese Surname Character: Records and Lookup",
     "intro": "find your Chinese surname character is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: To find your Chinese surname character, start with the oldest family record that preserves writing, then compare romanization, dialect background, ancestral place, and relatives' pronunciations before choosing a character from an online list.",
+    "answer": "Short answer: To find your Chinese surname character, start with the oldest family record that preserves writing, then compare romanization, dialect background, ancestral place, and relatives' pronunciations before choosing a character from an online list.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The strongest evidence is a written character from a grave marker, family book, clan record, seal, old letter, passport, or immigration document. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -3774,7 +3814,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -3893,7 +3933,7 @@ const dailyArticles20260714 = [
     "description": "Check Chinese surname tattoo meaning, character accuracy, family evidence, font choice, cultural risk, and safer alternatives.",
     "h1": "Chinese Surname Tattoo Meaning: Character Checks and Risks",
     "intro": "Chinese surname tattoo meaning is a practical search because the reader usually wants a clear decision, not only a definition. The safest answer starts with the key check and then explains how to use the result responsibly.",
-    "answer": "Quick answer: A Chinese surname tattoo should only use a confirmed character, a readable font, and a meaning that has been checked against family evidence; the English spelling alone is not enough because many surnames share similar sounds or romanizations.",
+    "answer": "Short answer: A Chinese surname tattoo should only use a confirmed character, a readable font, and a meaning that has been checked against family evidence; the English spelling alone is not enough because many surnames share similar sounds or romanizations.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The reliable evidence is the confirmed written surname character and a second check from a fluent reader or family source. This page treats tradition, product use, and family records as reference evidence. Meanings are explained as cultural or practical guidance, not as verified promises about luck, ancestry, personality, health, money, or relationships.",
@@ -3935,7 +3975,7 @@ const dailyArticles20260714 = [
         ]
       },
       {
-        "title": "Basic facts before interpretation",
+        "title": "Key details before interpretation",
         "paragraphs": [
           "A responsible explanation gives the facts before the meaning. The fact may be a date range, a character, a material, a knot form, a package size, a classroom rule, or a visible product feature. The meaning comes later and should be written as a careful reading of those facts.",
           "This is also useful for AI answers and search snippets. If the page states the fact clearly, then repeats the decision rule in normal language, answer engines can summarize it without turning the page into a vague cultural claim. The reader also gets a better experience because the important condition is easy to find."
@@ -4061,7 +4101,7 @@ const dailyArticles20260715 = [
     "description": "Check Chinese surname jewelry meaning before necklaces, rings, bracelets, engraving, family gifts, and character-based designs.",
     "h1": "Chinese Surname Jewelry Meaning: Character Checks",
     "intro": "Chinese surname jewelry meaning is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: Chinese surname jewelry should use a confirmed family character, a readable font, and modest wording that treats the design as a family-name keepsake rather than proof of ancestry.",
+    "answer": "Short answer: Chinese surname jewelry should use a confirmed family character, a readable font, and modest wording that treats the design as a family-name keepsake rather than proof of ancestry.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The reliable evidence is a written family character from records or relatives plus a second review from someone who can read Chinese clearly. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -4222,7 +4262,7 @@ const dailyArticles20260715 = [
     "description": "Plan Chinese family name gift ideas with surname characters, family records, safe wording, design checks, and cultural limits.",
     "h1": "Chinese Family Name Gift Ideas: Characters, Records, and Safe Wording",
     "intro": "Chinese family name gift ideas is a practical topic because readers usually want to make a decision: what to buy, what to customize, what to print, or what wording is safe to use.",
-    "answer": "Quick answer: Chinese family name gifts work best when the surname character is confirmed, the design explains the name modestly, and the gift avoids claiming a verified family origin without evidence.",
+    "answer": "Short answer: Chinese family name gifts work best when the surname character is confirmed, the design explains the name modestly, and the gift avoids claiming a verified family origin without evidence.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The evidence should come from family books, inscriptions, bilingual documents, old letters, clan notes, or direct family confirmation. The page treats cultural meaning, product use, and family evidence as separate layers, so the reader can enjoy the tradition without turning it into an unsupported promise.",
@@ -4390,7 +4430,7 @@ const dailyArticles20260716 = [
     "description": "Plan a Chinese name seal gift with confirmed surname characters, seal script risks, design proof, and careful family-name wording.",
     "h1": "Chinese Name Seal Gift: Character and Design Checks",
     "intro": "Chinese name seal gift is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A Chinese name seal gift should only use a confirmed character or name, a readable design proof, and wording that presents the seal as a cultural keepsake rather than verified ancestry.",
+    "answer": "Short answer: A Chinese name seal gift should only use a confirmed character or name, a readable design proof, and wording that presents the seal as a cultural keepsake rather than verified ancestry.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The reliable evidence is a confirmed written character, family source, design proof, readable translation note, and a second review before production. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -4551,7 +4591,7 @@ const dailyArticles20260716 = [
     "description": "Create a Chinese surname family tree printable with characters, romanization, records, source notes, and cautious origin wording.",
     "h1": "Chinese Surname Family Tree Printable: Records Checklist",
     "intro": "Chinese surname family tree printable is a practical topic because the reader usually wants to buy, print, gift, customize, or verify something before taking action.",
-    "answer": "Quick answer: A Chinese surname family tree printable should record the surname character, English spelling, older spellings, known dialect, source record, and uncertainty notes before adding origin claims.",
+    "answer": "Short answer: A Chinese surname family tree printable should record the surname character, English spelling, older spellings, known dialect, source record, and uncertainty notes before adding origin claims.",
     "geoPatch": {
       "noteLabel": "Source note",
       "note": "The useful evidence is a family book, gravestone, old certificate, clan note, bilingual document, letter, or direct family confirmation. The guidance separates evidence, product checks, and symbolic wording so the page stays useful without overclaiming what tradition or design can prove.",
@@ -4723,7 +4763,7 @@ const dailyArticles20260717 = [
     "description": "Find your Chinese surname character by comparing family records, romanized spellings, dialect clues, and source evidence.",
     "h1": "Find Your Chinese Surname Character: Records and Lookup",
     "intro": "If you are comparing find your Chinese surname character, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: To find your Chinese surname character, start from family evidence first, then compare romanized spelling, dialect background, old records, and surname lookup results.",
+    "answer": "Short answer: To find your Chinese surname character, start from family evidence first, then compare romanized spelling, dialect background, old records, and surname lookup results.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is a family book, gravestone, certificate, old letter, clan association record, bilingual document, or direct confirmation from older relatives.",
@@ -4884,7 +4924,7 @@ const dailyArticles20260717 = [
     "description": "Plan Chinese family name gift ideas with confirmed characters, framed prints, seal-style art, genealogy notes, and careful wording.",
     "h1": "Chinese Family Name Gift Ideas: Characters, Prints, and Safe Wording",
     "intro": "If you are comparing Chinese family name gift ideas, start with the practical decision in front of you: what needs to be checked before a purchase, lookup, gift, report, or design becomes final.",
-    "answer": "Quick answer: A Chinese family name gift should use a confirmed character, a readable design, and wording that treats the item as a cultural keepsake rather than proof of ancestry.",
+    "answer": "Short answer: A Chinese family name gift should use a confirmed character, a readable design, and wording that treats the item as a cultural keepsake rather than proof of ancestry.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is the confirmed surname character, the family source, the design proof, and a note explaining where the character came from.",
@@ -5052,7 +5092,7 @@ const dailyArticles20260718 = [
     "description": "Read common Chinese last names with characters, romanized spellings, pronunciation notes, and careful meaning checks.",
     "h1": "Most Common Chinese Last Names: Character and Meaning Checks",
     "intro": "If you are comparing most common Chinese last names, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: The most common Chinese last names are useful for lookup and learning, but each spelling should still be checked against the actual Chinese character and dialect background.",
+    "answer": "Short answer: The most common Chinese last names are useful for lookup and learning, but each spelling should still be checked against the actual Chinese character and dialect background.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is a written character, family record, bilingual document, clan note, gravestone, older spelling, or direct family confirmation. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -5213,7 +5253,7 @@ const dailyArticles20260718 = [
     "description": "Collect Chinese ancestry surname records with characters, old spellings, village clues, family books, documents, and uncertainty notes.",
     "h1": "Chinese Ancestry Surname Records: What to Collect Before a Lookup",
     "intro": "If you are comparing Chinese ancestry surname records, start with the choice in front of you: what must be checked before a date, character, gift, product, printable, or symbolic meaning becomes final.",
-    "answer": "Quick answer: Chinese ancestry surname records work best when you collect the written surname, older spellings, place clues, family documents, and uncertainty notes before choosing an origin story.",
+    "answer": "Short answer: Chinese ancestry surname records work best when you collect the written surname, older spellings, place clues, family documents, and uncertainty notes before choosing an origin story.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence can include a family book, old certificate, immigration record, gravestone, letter, clan association record, village note, or confirmation from older relatives. Keep symbolic or cultural wording modest, and separate confirmed facts from interpretation.",
@@ -5381,7 +5421,7 @@ const dailyArticles20260719 = [
     "description": "Understand Gao surname meaning with the Chinese character, pinyin, older spelling clues, origin limits, and family-record checks.",
     "h1": "Gao Surname Meaning: Character, Origin Clues, and Research Limits",
     "intro": "If you are searching for Gao surname meaning, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: Gao surname meaning is usually discussed through the character Gao, but a reliable family explanation should still confirm the written character, spelling history, and any family source before claiming an origin.",
+    "answer": "Short answer: Gao surname meaning is usually discussed through the character Gao, but a reliable family explanation should still confirm the written character, spelling history, and any family source before claiming an origin.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence can include the Chinese character, family book, gravestone, immigration record, older romanized spelling, village note, or confirmation from relatives. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -5542,7 +5582,7 @@ const dailyArticles20260719 = [
     "description": "Read Ma surname meaning with character checks, Mandarin and dialect spelling notes, origin cautions, and family-record evidence.",
     "h1": "Ma Surname Meaning: Character Checks, Variants, and Family Records",
     "intro": "If you are searching for Ma surname meaning, start with the real decision in front of you. The right answer depends on what needs to be checked before a date, character, product, craft material, classroom note, gift, or family detail becomes final.",
-    "answer": "Quick answer: Ma surname meaning can be explained clearly only after the written Chinese character is confirmed; the short English spelling alone is not enough for a careful origin or genealogy note.",
+    "answer": "Short answer: Ma surname meaning can be explained clearly only after the written Chinese character is confirmed; the short English spelling alone is not enough for a careful origin or genealogy note.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes the written character, pinyin or dialect spelling, old certificates, family books, gravestones, letters, clan notes, and place clues. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -5710,7 +5750,7 @@ const dailyArticles20260720 = [
     "description": "Understand Chen surname meaning with character checks, romanization notes, origin cautions, and family-record evidence.",
     "h1": "Chen Surname Meaning: Character and Family Records",
     "intro": "If you are searching for Chen surname meaning, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: Chen surname meaning should start with the written Chinese character and family evidence, because the English spelling alone cannot prove one origin or one family line.",
+    "answer": "Short answer: Chen surname meaning should start with the written Chinese character and family evidence, because the English spelling alone cannot prove one origin or one family line.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes the written character, family book, old certificate, gravestone, immigration record, village note, clan clue, or confirmation from relatives. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -5871,7 +5911,7 @@ const dailyArticles20260720 = [
     "description": "Read Lin surname meaning with character confirmation, pronunciation notes, spelling variants, origin limits, and family records.",
     "h1": "Lin Surname Meaning: Character and Origin Limits",
     "intro": "If you are searching for Lin surname meaning, start with the real decision in front of you. The useful answer depends on what should be checked before a product, reading, cultural note, gift, family detail, or report becomes final.",
-    "answer": "Quick answer: Lin surname meaning is most reliable when the Chinese character is confirmed first, then pronunciation, spelling history, and family records are used as supporting clues.",
+    "answer": "Short answer: Lin surname meaning is most reliable when the Chinese character is confirmed first, then pronunciation, spelling history, and family records are used as supporting clues.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "Useful evidence includes the written character, pinyin or dialect spelling, old documents, family books, gravestones, letters, clan notes, and place clues. Keep cultural, family, symbolic, and product wording modest, and separate confirmed details from interpretation.",
@@ -6046,7 +6086,7 @@ const dailyArticles20260721 = [
     "description": "Plan Chinese surname tattoo ideas with confirmed characters, family evidence, font checks, placement notes, and careful meaning boundaries.",
     "h1": "Chinese Surname Tattoo Ideas: Character Checks and Safe Design",
     "intro": "If you are comparing Chinese surname tattoo ideas, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: A Chinese surname tattoo should use a confirmed character, a readable design, and modest wording; the English spelling alone is not enough proof for permanent body art.",
+    "answer": "Short answer: A Chinese surname tattoo should use a confirmed character, a readable design, and modest wording; the English spelling alone is not enough proof for permanent body art.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The reliable evidence is a family record, handwritten confirmation, old document, gravestone, clan note, or direct confirmation of the Chinese character.",
@@ -6207,7 +6247,7 @@ const dailyArticles20260721 = [
     "description": "Create Chinese surname wall art with confirmed characters, readable layout, family source notes, print checks, and safe gift wording.",
     "h1": "Chinese Surname Wall Art: Character Proof, Layout, and Gift Wording",
     "intro": "If you are comparing Chinese surname wall art, start with the real decision in front of you. The useful answer depends on what must be checked before a purchase, lookup, gift, design, report, or cultural note becomes final.",
-    "answer": "Quick answer: Chinese surname wall art is strongest when the character is confirmed, the layout is readable, and the caption explains the source without making unsupported ancestry claims.",
+    "answer": "Short answer: Chinese surname wall art is strongest when the character is confirmed, the layout is readable, and the caption explains the source without making unsupported ancestry claims.",
     "geoPatch": {
       "noteLabel": "Evidence note",
       "note": "The useful evidence is the confirmed surname character, the family source, a design proof, a translation note, and any record explaining why that character was chosen.",
@@ -6377,7 +6417,7 @@ const dailyArticles20260722 = [
     "description": "Read Chinese last name meaning by checking characters, romanization, family records, dialect clues, and safe interpretation limits.",
     "h1": "Chinese Last Name Meaning: How to Read a Surname Without Guessing",
     "intro": "If you are comparing Chinese last name meaning, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: A Chinese last name meaning depends on the confirmed written character, not the English spelling alone. Start with family evidence before reading origin or meaning notes.",
+    "answer": "Short answer: A Chinese last name meaning depends on the confirmed written character, not the English spelling alone. Start with family evidence before reading origin or meaning notes.",
     "visual": {
       "label": "Meaning Guides",
       "points": [
@@ -6535,7 +6575,7 @@ const dailyArticles20260722 = [
     "description": "Use a Chinese surname research checklist to compare records, spellings, dialect clues, family sources, and character evidence.",
     "h1": "Chinese Surname Research Checklist: Records, Spellings, and Family Proof",
     "intro": "If you are comparing Chinese surname research checklist, start with the decision the reader is actually trying to make. The best answer explains what to check first, what evidence matters, and what should not be overclaimed.",
-    "answer": "Quick Answer: A Chinese surname research checklist should start with written family evidence, then compare spellings, dialect background, migration records, and possible characters.",
+    "answer": "Short answer: A Chinese surname research checklist should start with written family evidence, then compare spellings, dialect background, migration records, and possible characters.",
     "visual": {
       "label": "Research Guides",
       "points": [

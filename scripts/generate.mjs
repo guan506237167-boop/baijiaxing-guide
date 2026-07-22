@@ -529,7 +529,7 @@ function applyGeoMicroPatch20260714(path, html) {
 function blockForGeoMicroPatch20260714(patch) {
   const facts = patch.facts.map((row) => `<tr><td>${escapeHtml(row[0])}</td><td>${escapeHtml(row[1])}</td></tr>`).join("");
   const faq = patch.faq.map((item) => `<h3>${escapeHtml(item[0])}</h3><p>${escapeHtml(item[1])}</p>`).join("");
-  return `.daily-visual-block{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin:22px 0;padding:22px;border:1px solid #ead6b8;border-radius:10px;background:linear-gradient(135deg,#fff8ed,#eef7f1);box-shadow:0 12px 28px rgba(47,37,23,.06)}.daily-visual-block span{color:var(--jade);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em}.daily-visual-block h2{margin:8px 0 8px}.daily-visual-block p{margin:0;color:var(--muted)}.daily-visual-steps{display:grid;gap:10px}.daily-visual-step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}.daily-visual-step strong{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d6b06e;color:#231d18}.daily-visual-step span{font-size:14px;line-height:1.45;color:#2f2922;text-transform:none;letter-spacing:0;font-weight:650}@media(max-width:760px){.daily-visual-block{grid-template-columns:1fr}}<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
+  return `<section class="content-section article-body geo-micro-patch" data-geo-micro-patch="20260714">
     <h2>Quick Answer and Evidence Check</h2>
     <p>${escapeHtml(patch.quick)}</p>
     <div class="table-wrap"><table><thead><tr><th>Basic fact</th><th>Answer</th></tr></thead><tbody>${facts}</tbody></table></div>
@@ -2186,8 +2186,8 @@ const dailyArticles20260706 = [
 
 
 function dailyVisualBlock20260722(article) {
-  const points = (article.visual?.points || []).slice(0, 3).map((point, index) => `<div class="daily-visual-step"><strong>${index + 1}</strong><span>${escapeHtml(point)}</span></div>`).join("");
-  return `<div class="daily-visual-block"><div><span>${escapeHtml(article.visual?.label || "Guide visual")}</span><h2>${escapeHtml(article.keyword || article.title)}</h2><p>Use the visual checklist before acting on the article. It keeps the page scannable and prevents the answer from becoming a plain text block.</p></div><div class="daily-visual-steps">${points}</div></div>`;
+  const points = (article.visual?.points || []).slice(0, 3).map((point, index) => `<div style="display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;background:#fffdf8;border:1px solid rgba(80,55,30,.16);border-radius:10px;padding:10px 12px;"><strong style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#d6b06e;color:#231d18;font-weight:850;line-height:1;">${index + 1}</strong><span style="display:block;color:#2f2922;font-size:14px;line-height:1.45;font-weight:650;text-transform:none;letter-spacing:0;">${escapeHtml(point)}</span></div>`).join("");
+  return `<div class="daily-visual-block" style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(260px,.95fr);gap:18px;margin:22px 0;padding:22px;border:1px solid #ead6b8;border-radius:12px;background:linear-gradient(135deg,#fff8ed,#eef7f1);box-shadow:0 12px 28px rgba(47,37,23,.08);color:#2f2922;"><div><span style="display:block;color:#286058;font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.05em;">${escapeHtml(article.visual?.label || "Guide visual")}</span><h2 style="margin:8px 0 8px;color:#231d18;font-family:Inter,Segoe UI,Arial,sans-serif;font-size:clamp(24px,2.3vw,34px);line-height:1.18;">${escapeHtml(article.keyword || article.title)}</h2><p style="margin:0;color:#5d5044;line-height:1.65;">Use the visual checklist before acting on the article. It keeps the page scannable and prevents the answer from becoming a plain text block.</p></div><div style="display:grid;gap:10px;">${points}</div></div>`;
 }
 
 function dailyArticlePage20260706(article) {
@@ -2195,7 +2195,7 @@ function dailyArticlePage20260706(article) {
   const body = `
     ${articleSearchBlock()}
     <section class="content-section article-body">
-      <p class="lead-answer">${escapeHtml(article.answer)}</p>\n      ${dailyVisualBlock20260722(article)}\n      ${dailyVisualBlock20260722(article)}
+      <p class="lead-answer">${escapeHtml(article.answer)}</p>\n      ${dailyVisualBlock20260722(article)}
       ${geoPatchBlock(article)}
       ${article.details.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
     </section>

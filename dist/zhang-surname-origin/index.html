@@ -28,8 +28,8 @@
 
 
 <style id="p1-enhancement-20260724">
-.p1-enhancement{margin:28px 0;padding:24px;border:1px solid rgba(85,55,30,.14);border-radius:16px;background:#fffaf0;box-shadow:0 12px 28px rgba(52,39,25,.06)}
-.p1-enhancement h2{margin:0 0 12px;font-size:clamp(24px,3vw,34px);line-height:1.18}
+.p1-enhancement{box-sizing:border-box;width:min(820px,calc(100% - 32px));max-width:820px;margin:24px auto;padding:22px;border:1px solid rgba(85,55,30,.14);border-radius:12px;background:#fffaf0;box-shadow:0 10px 24px rgba(52,39,25,.05)}
+.p1-enhancement h2{margin:0 0 12px;font-size:clamp(21px,2vw,28px);line-height:1.24}
 .p1-enhancement p,.p1-enhancement li,.p1-enhancement dd{color:#45392f;line-height:1.72}
 .p1-quick-answer{border-left:6px solid #8f5a22;background:#f5ead8;padding:18px 20px;border-radius:14px;margin:20px 0}
 .p1-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}
@@ -37,15 +37,14 @@
 .p1-facts dt{font-weight:800;color:#2e2118;margin-bottom:6px}
 .p1-facts dd{margin:0}
 .p1-visuals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0}
-.p1-visuals figure{margin:0;background:#fff;border:1px solid rgba(80,52,28,.12);border-radius:14px;padding:10px}
-.p1-visuals img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
-.p1-visuals figcaption{font-size:13px;color:#6d6258;margin-top:8px;line-height:1.45}
+.p1-visuals figure{margin:0;background:#fff;border:1px solid rgba(80,52,28,.12);border-radius:12px;padding:8px}
+.p1-visuals img{display:block;width:100%;height:auto;max-height:220px;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
 .p1-reference{width:100%;border-collapse:collapse;margin:18px 0;background:#fff}
 .p1-reference th,.p1-reference td{border:1px solid rgba(80,52,28,.14);padding:12px;text-align:left;vertical-align:top}
 .p1-next-step{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
 .p1-next-step a{display:inline-flex;align-items:center;min-height:42px;padding:10px 16px;border-radius:999px;background:#2f473d;color:#fff7e6;text-decoration:none;font-weight:800}
 .p1-next-step a.secondary{background:#f1dfbf;color:#332417}
-@media(max-width:760px){.p1-facts,.p1-visuals{grid-template-columns:1fr}.p1-enhancement{padding:18px}}
+@media(max-width:760px){.p1-facts,.p1-visuals{grid-template-columns:1fr}.p1-enhancement{box-sizing:border-box;width:min(820px,calc(100% - 32px));max-width:820px;margin:24px auto;padding:22px;border:1px solid rgba(85,55,30,.14);border-radius:12px;background:#fffaf0;box-shadow:0 10px 24px rgba(52,39,25,.05)}}
 </style>
 
 </head>
@@ -90,9 +89,9 @@
     <div><dt>Useful comparison</dt><dd>Compare pinyin, dialect forms, older records, and common surname lists.</dd></div>
     <div><dt>Boundary</dt><dd>This page supports cultural reference, not genealogy proof or legal identity verification.</dd></div>
   </dl>
-  <div class="p1-visuals" aria-label="Surname research visuals"><figure><img src="/assets/surname-archive-hero.webp" alt="zhang surname origin - archival family name records and surname notes"><figcaption>Start with the written character and the source record.</figcaption></figure>
-<figure><img src="/assets/surname-classic-books.webp" alt="zhang surname origin - classic Chinese surname books and reference pages"><figcaption>Compare classic lists, pinyin, and older spellings carefully.</figcaption></figure>
-<figure><img src="/assets/surname-seal-research.webp" alt="zhang surname origin - surname character seal and research desk"><figcaption>Keep gift wording and family research separate unless records support it.</figcaption></figure></div>
+  <div class="p1-visuals" aria-label="Surname research visuals"><figure><img src="/assets/surname-archive-hero.webp" alt="zhang surname origin - archival family name records and surname notes"></figure>
+<figure><img src="/assets/surname-classic-books.webp" alt="zhang surname origin - classic Chinese surname books and reference pages"></figure>
+<figure><img src="/assets/surname-seal-research.webp" alt="zhang surname origin - surname character seal and research desk"></figure></div>
   <h2>Quick Reference</h2>
   <table class="p1-reference">
     <tbody>
